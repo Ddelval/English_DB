@@ -590,8 +590,7 @@ public static String exceptions="";
 	 */
 	@SuppressWarnings("unchecked")
 	private Scene result(int i,double width,double height) {
-		Button pron_ex1, pron_ex2,pron_ex3;
-		Text tit,ex2=null,ex1=null,ex3=null, use = null;
+		Text tit;
 		res_tit = Font.font("Helvetica",FontWeight.BOLD,20);
 		res_text = Font.font("Helvetica",FontWeight.LIGHT, 14);
 		res_head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 18);
@@ -605,195 +604,7 @@ public static String exceptions="";
 		tit.setFont(res_tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.CENTER);
-		/*
-		int len = ex_f.getExampVec().size();
-		pron_eng= new Button("Say");
-		res_eng = new Label(ex_f.getEnglish());
-		res_eng.setAlignment(Pos.TOP_LEFT);
-		res_eng.setFont(res_extext);
-		res_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
 		
-		res_eng.setOnMouseClicked(new EventHandler(){
-			@Override
-			public void handle(Event event) {
-				Facade.Speak(res_eng.getText());
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-				
-			}
-		});
-		
-		
-		res_pronun = new Label(ex_f.getPronunciation());
-		res_pronun.setAlignment(Pos.TOP_RIGHT);
-		res_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
-		res_pronun.setFont(res_extext);
-		
-		res_pronun.setOnMouseClicked(new EventHandler(){
-			@Override
-			public void handle(Event event) {
-				Facade.Speak(res_eng.getText());
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-				
-			}
-		});
-		if(len>0) {
-			res_ex_eng_1 = new Label(ex_f.getExample(0).getEng_example());
-			res_ex_eng_1.setAlignment(Pos.TOP_CENTER);
-			res_ex_eng_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-			res_ex_eng_1.setFont(res_text);
-			res_ex_eng_1.setWrapText(true);
-			res_ex_eng_1.setOnMouseClicked(new EventHandler(){
-				@Override
-				public void handle(Event event) {
-					Facade.Speak(res_ex_eng_1.getText());
-					mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-					
-				}
-			});
-			res_ex_esp_1 = new Label(ex_f.getExample(0).getEsp_example());
-			res_ex_esp_1.setAlignment(Pos.TOP_CENTER);
-			res_ex_esp_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-			res_ex_esp_1.setFont(res_text);
-			res_ex_esp_1.setWrapText(true);
-			res_esp_1 = new Label("Translation: "+ex_f.getExample(0).getTranslation());
-			res_esp_1.setAlignment(Pos.TOP_CENTER);
-			res_esp_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-			res_esp_1.setFont(res_text);
-			ex1 = new Text("Example 1: ");
-			ex1.setFont(this.res_head);
-			//ex1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-			ex1.setTextAlignment(TextAlignment.LEFT);
-			
-			GridPane.setFillWidth(res_ex_eng_1, true);
-			GridPane.setFillWidth(res_ex_esp_1, true);
-			GridPane.setFillWidth(res_esp_1, true);
-			GridPane.setFillWidth(ex1, true);
-			if(len>1) {
-				res_ex_eng_2 = new Label(ex_f.getExample(1).getEng_example());
-				res_ex_eng_2.setAlignment(Pos.TOP_CENTER);
-				res_ex_eng_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-				res_ex_eng_2.setFont(res_text);
-				res_ex_eng_2.setWrapText(true);
-				res_ex_eng_2.setOnMouseClicked(new EventHandler(){
-					@Override
-					public void handle(Event event) {
-						Facade.Speak(res_ex_eng_2.getText());
-						mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-						
-					}
-				});
-				res_ex_esp_2 = new Label(ex_f.getExample(1).getEsp_example());
-				res_ex_esp_2.setAlignment(Pos.TOP_CENTER);
-				res_ex_esp_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-				res_ex_esp_2.setFont(res_text);
-				res_ex_esp_2.setWrapText(true);
-				res_esp_2 = new Label("Translation: "+ex_f.getExample(1).getTranslation());
-				res_esp_2.setAlignment(Pos.CENTER);
-				res_esp_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-				res_esp_2.setFont(res_text);
-				ex2 = new Text("Example 2: ");
-				ex2.setFont(this.res_head);
-				ex2.setFontSmoothingType(FontSmoothingType.LCD);
-				ex2.setTextAlignment(TextAlignment.LEFT);
-				
-				GridPane.setFillWidth(res_ex_eng_2, true);
-				GridPane.setFillWidth(res_ex_esp_2, true);
-				GridPane.setFillWidth(res_esp_2, true);
-				GridPane.setFillWidth(ex2, true);
-				if(len>2) {
-					res_ex_eng_3 = new Label(ex_f.getExample(2).getEng_example());
-					res_ex_eng_3.setAlignment(Pos.TOP_CENTER);
-					res_ex_eng_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-					res_ex_eng_3.setFont(res_text);
-					res_ex_eng_3.setWrapText(true);
-					res_ex_eng_3.setOnMouseClicked(new EventHandler(){
-						@Override
-						public void handle(Event event) {
-							Facade.Speak(res_ex_eng_3.getText());
-							mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-							
-						}
-					});
-					res_ex_esp_3 = new Label(ex_f.getExample(2).getEsp_example());
-					res_ex_esp_3.setAlignment(Pos.TOP_CENTER);
-					res_ex_esp_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-					res_ex_esp_3.setFont(res_text);
-					res_ex_esp_3.setWrapText(true);
-					res_esp_3 = new Label("Translation: "+ex_f.getExample(2).getTranslation());
-					res_esp_3.setAlignment(Pos.CENTER);
-					res_esp_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-					res_esp_3.setFont(res_text);
-					
-					ex3 = new Text("Example 3: ");
-					ex3.setFont(this.res_head);
-					ex3.setFontSmoothingType(FontSmoothingType.LCD);
-					ex3.setTextAlignment(TextAlignment.LEFT);
-					
-					GridPane.setFillWidth(res_ex_eng_3, true);
-					GridPane.setFillWidth(res_ex_esp_3, true);
-					GridPane.setFillWidth(res_esp_3, true);
-					GridPane.setFillWidth(ex3, true);
-					
-				}
-			}
-		}
-		if(!ex_f.getUse().equals("")) {
-			use = new Text("Use notes: ");
-			use.setFont(this.res_head);
-			use.setFontSmoothingType(FontSmoothingType.LCD);
-			use.setTextAlignment(TextAlignment.CENTER);
-			this.use=new TextArea(ex_f.getUse());
-			this.use.setEditable(false);
-		}
-		GridPane.setFillWidth(res_eng, true);
-		GridPane.setFillWidth(res_pronun, true);
-		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add     (res_eng, 0, 0);
-		grid.add  (res_pronun, 1, 0);
-		if(len>0) {
-			grid.add         (ex1, 0, 1, 2, 1);
-			grid.add(res_ex_eng_1, 0, 2, 2, 1);
-			grid.add(res_ex_esp_1, 0, 3, 2, 1);
-			grid.add   (res_esp_1, 0, 4,2,1);
-			if(len>1) {
-				grid.add         (ex2, 0, 5, 2, 1);
-				grid.add(res_ex_eng_2, 0, 6, 2, 1);
-				grid.add(res_ex_esp_2, 0, 7, 2, 1);
-				grid.add   (res_esp_2, 0, 8,2, 1);
-				if(len>2) {
-					grid.add         (ex3, 0, 9, 2, 1);
-					grid.add(res_ex_eng_3, 0, 10, 2, 1);
-					grid.add(res_ex_esp_3, 0, 11, 2, 1);
-					grid.add   (res_esp_3, 0, 12, 2, 1);
-				}
-			}
-		}
-		if(!ex_f.getUse().equals("")) {
-			//The switch is only for the row count
-			switch(len) {
-				case 1:{
-					grid.add(use, 0, 5, 2, 1);
-					grid.add(this.use, 0, 6, 2, 1);
-					break;
-				}
-				case 2:{
-					grid.add(use, 0, 9, 2, 1);
-					grid.add(this.use, 0, 10, 2, 1);
-					break;
-				}
-				case 3:{
-					grid.add(use, 0, 13, 2, 1);
-					grid.add(this.use, 0, 14, 2, 1);
-					break;
-				}
-			}
-		}
-		grid.setBorder(new Border(new BorderStroke(null, BorderStrokeStyle.SOLID, new CornerRadii(10), BorderWidths.DEFAULT, new Insets(5,5,5,5))));
-		*/
 		v = new VBox();
 		v.setAlignment(Pos.TOP_CENTER);
 		v.setFillWidth(true);
@@ -821,21 +632,6 @@ public static String exceptions="";
 			VBox.setMargin(but, new Insets(10,0,15,0));
 			
 		}
-		/*int height1 =345;
-		switch(len) {
-			case 2:{
-				height1+=120;
-				break;
-			}
-			case 3:{
-				height1+=240;
-				break;
-			}
-		}
-		if(!ex_f.getUse().equals("")){
-			height1+=120;
-			
-		}*/
 		v.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
