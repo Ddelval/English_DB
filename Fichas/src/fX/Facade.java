@@ -20,6 +20,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Facade {
+	public final static int s_speed=170;
+	static Speak sp;
 	public static String basicfilter(String s) {
 		if(s.equals("")) {
 			return s;
@@ -165,13 +167,26 @@ public class Facade {
 	}
 	public static void updateConfig(String id, String newValue) {
 		Connection con=UConnection.getConnection();
+		boolean b=false;
 		try {
 			String sql="UPDATE config SET data='"+newValue+"' WHERE id='"+id+"'";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.execute();
+			if(ps.getUpdateCount()==0) {
+				throw new Exception("The row could not be found");
+			}
 			
 		}
 		catch(Exception ex) {
+			b=false;
+			try {
+				String sql="INSERT INTO config values ('"+id+"','"+newValue+"')";
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.execute();
+				b=true;
+			}
+			catch(Exception e){b=false;}
+			if(b) return;
 			ex.printStackTrace();
 			MainWindow.exceptions=ex.getMessage();
 		}
@@ -259,7 +274,7 @@ public class Facade {
 				b=true;
 			}
 			else {
-				MainWindow.exceptions="No hay ninguna ficha";
+				MainWindow.exceptions="All stored words are already known";
 			}
 			
 		}
@@ -278,6 +293,7 @@ public class Facade {
 	 */
 	public static String execute (String sql, boolean result) {
 		String s="";
+		int colcount;
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
 		ResultSet rs=null;
@@ -288,24 +304,23 @@ public class Facade {
 				if(rs.next()){
 					StringBuilder sb = new StringBuilder("");
 				do {
-					sb.append(Integer.toString(rs.getInt("count")));
-					sb.append("\n");
-					sb.append(rs.getString("eng"));
-					sb.append("\n");
-					sb.append(rs.getString("Examp"));
-					sb.append("\n");
-					sb.append(rs.getString("use"));
-					sb.append("\n");
-					sb.append(rs.getString("pronunciation"));
-					sb.append("\n");
-					sb.append(rs.getString("known"));
+					colcount=rs.getMetaData().getColumnCount();
+					for(int i=1;i<=colcount;++i) {
+						sb.append(rs.getMetaData().getColumnLabel(i));
+						sb.append(": ");
+						sb.append(rs.getObject(i).toString());
+						sb.append("\n");
+					}
 					sb.append("\n\n");
-					s=sb.toString();
+					
+					
 					
 				}while(rs.next());
+				s=sb.toString();
 				}
+					
 				else {
-					s="No hay resultado que mostrar";
+					s="There is no result to show";
 				}
 			}
 			
@@ -352,7 +367,7 @@ public class Facade {
 			}
 			else {
 				con.rollback();
-				MainWindow.exceptions="La eliminación afectaría a más de una fila. Ha sido cancelada";
+				MainWindow.exceptions="The deletion may affect more than one row. It has been cancelled";
 			}
 			
 		}
@@ -470,9 +485,74 @@ public class Facade {
 		return l;
 	}
 	public static void Speak(String s) {
+		int speed;
 		String v=Facade.getConfig("voice");
-		Speak sp= new Speak(s,v);
+		String au=Facade.getConfig("s_speed");
+		if(au!="") {
+			speed =Integer.parseInt(au);
+		}
+		else {
+			speed=s_speed;
+		}
+		if(sp!=null&&sp.isAlive()) return;
+		sp= new Speak(s,v,speed);
 		sp.start();
+	}
+	public static void SpeakwDelay(String s) {
+		int speed,delay;
+		String v=Facade.getConfig("voice");
+		String au=Facade.getConfig("s_speed");
+		String del=Facade.getConfig("s_delay");
+		if(au!="") {
+			speed =Integer.parseInt(au);
+		}
+		else {
+			speed=s_speed;
+		}
+		if(del!="") {
+			delay=Integer.parseInt(del);
+		}
+		else {
+			delay=MainWindow.waitt;
+		}
+		if(sp!=null&&sp.isAlive()) return;
+		sp= new Speak(s,v,delay,speed);
+		sp.start();
+	}
+	public static ArrayList<Voice> getVoices(){
+		ArrayList<Voice> arr= new ArrayList<Voice>();
+		ProcessBuilder processBuilder = new ProcessBuilder();
+
+
+		processBuilder.command("bash","-c", "say -v ? ");
+
+
+		try {
+
+			Process process = processBuilder.start();
+
+			StringBuilder output = new StringBuilder();
+
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(process.getInputStream()));
+
+			String line;
+			Voice v;
+			while ((line = reader.readLine()) != null) {
+				v=new Voice(line);
+				arr.add(v);
+			}
+
+			int exitVal = process.waitFor();
+			if(exitVal!=0) {
+				throw new Exception("Exit value: 1");
+			}
+
+		} catch (Exception e) {
+			MainWindow.exceptions=e.getMessage();
+		}
+		return arr;
+		
 	}
 	
 }

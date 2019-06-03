@@ -3,13 +3,24 @@ package fX;
 public class Speak extends Thread {
 	private String text;
 	private String voice;
-	public Speak(String t,String v) {
+	private int tim,speed; 
+	public Speak(String t,String v,int s) {
 		text=t;
 		voice=v;
+		speed=s;
+		tim=0;
+	}
+	public Speak(String t,String v,int ti,int s) {
+		text=t;
+		voice=v;
+		speed=s;
+		tim=ti;
 	}
 	public void run() {
 		try {
-			Process p=Runtime.getRuntime().exec("say -v "+voice+" "+text);
+			if(tim!=0)this.sleep(tim);
+			String s="say -v "+voice+" -r "+Integer.toString(speed)+" "+text;
+			Process p=Runtime.getRuntime().exec(s);
 			int exitVal =p.waitFor();
 			if(exitVal==0) {
 				//Success
@@ -20,7 +31,6 @@ public class Speak extends Thread {
 		}
 		catch (Exception ex) {
 			MainWindow.exceptions=ex.getMessage();
-			MainWindow.mssgWindow(MainWindow.primaryStage.getWidth(), MainWindow.primaryStage.getHeight());
 		}
 	}
 }

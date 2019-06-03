@@ -2,7 +2,9 @@ package fX;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
+import java.util.Stack;
 import java.util.Vector;
 
 import javafx.application.Application;
@@ -25,6 +27,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.input.KeyCode;
@@ -47,6 +50,10 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionListener;
 import java.math.*;
 public class MainWindow extends Application{
 
@@ -62,7 +69,11 @@ private TextArea indications;
 private Button add;
 TextField ex_eng;
 private final double I_w=550;
-private final double I_h=770;
+private final double I_h=800;
+
+Stack<ArrayList<Ficha>> mem;
+private final int s_amount=10;
+
 // Exam scene
 private Label ex_pronun;
 private TextArea  ex_examp;
@@ -72,6 +83,7 @@ private Example ex_e;
 private int ex_index;
 private final double E_w=500;
 private final double E_h=220;
+public static final int waitt=1000;
 //Result
 private Font res_tit, res_head, res_text, res_extext;
 private Label res_eng, res_pronun;
@@ -98,6 +110,7 @@ private TextArea sql_result;
 private Button reset;
 private final double A_w=500;
 private final double A_h=400;
+ArrayList<Voice> arrv;
 //Backup	
 private Button b_backup,b_restore;
 private TextField tf_backup, tf_restore;
@@ -106,6 +119,7 @@ public static String exceptions="";
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		/***  Fonts definition  ***/
+		this.exceptions="";
 		tit = Font.font("Helvetica",FontWeight.BOLD,20);
 		text = Font.font("Helvetica",FontWeight.LIGHT, 14);
 		head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 15);
@@ -117,7 +131,7 @@ public static String exceptions="";
 		this.primaryStage.setTitle("Vocabulary Archive");
 		this.primaryStage.setScene(mainMenu());
 		this.primaryStage.show();
-		detail(Facade.getRndFicha(),100,100);
+		
 	}
 	private Scene mainMenu () {
 		Text title;
@@ -219,8 +233,13 @@ public static String exceptions="";
 		pronunciation.setFont(this.text);
 		pronunciation.setFontSmoothingType(FontSmoothingType.LCD);
 		
-		
+		Text state = new Text("New");
+		state.setFont(this.tit);
+		state.setFontSmoothingType(FontSmoothingType.LCD);
+		Text suggestions = new Text();
+		suggestions.setTextAlignment(TextAlignment.CENTER);
 		eng = new TextField();
+		mem=null;
 		eng.setOnAction(new EventHandler<ActionEvent>(){
 
 			@Override
@@ -229,8 +248,136 @@ public static String exceptions="";
 					mssgWindow("This word is already in the system.",primaryStage.getWidth(),primaryStage.getHeight());
 				}
 				else {
-					mssgWindow("This word is not in the system.",primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow("This word is NOT in the system.",primaryStage.getWidth(),primaryStage.getHeight());
 				}
+			}
+			
+		});
+		eng.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			
+			@Override
+			public void handle(KeyEvent event) {
+				String s="";
+				
+					if(event.getCode()==KeyCode.BACK_SPACE) {
+						if(eng.getText().length()==0) {
+							state.setText("New");
+							return;
+						}
+						s=eng.getText().substring(0, eng.getText().length()-1);
+						boolean found=false;
+						Iterator<Ficha> it;
+						Ficha f;
+						if(mem.size()<=1) {
+							state.setText("New");
+							suggestions.setText("");
+							return;
+						}
+						mem.pop();
+						it=mem.peek().iterator();
+						while(it.hasNext()) {
+							f=it.next();
+							if(f.getEnglish().toLowerCase().equals(s.toLowerCase())) {
+								found=true;
+								break;
+							}
+						}
+						if(found) {
+							state.setText("Not new");
+						}
+						else state.setText("New");
+					}
+					else if(!event.getText().equals("")){
+						s=eng.getText()+event.getText();
+						boolean found=false;
+						ArrayList<Ficha> nal= new ArrayList<Ficha>();
+						Iterator<Ficha> it;
+						Ficha f;
+						if(mem==null||mem.isEmpty()) {
+							state.setText("New");
+							mem=new Stack<ArrayList<Ficha>>();
+							mem.push(Facade.getAll());
+						}
+						it=mem.peek().iterator();
+						while(it.hasNext()) {
+							f=it.next();
+							if(f.getEnglish().toLowerCase().equals(s.toLowerCase())) {
+								found=true;
+								nal.add(f);
+							}
+							else if(f.getEnglish().toLowerCase().contains(s.toLowerCase())) {
+								nal.add(f);
+							}
+						}
+						mem.push(nal);
+						if(found) {
+							state.setText("Not new");
+						}
+						else state.setText("New");
+					}
+					Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(s), null);
+					if(mem!=null&&mem.size()>1&&!s.equals("")) {
+						String str="";
+						Ficha f;
+						int i;
+						Iterator<Ficha> it=mem.peek().iterator();
+						for(i=0;i<s_amount;++i) {
+							if(!it.hasNext()) break;
+							while(it.hasNext()) {
+								f=it.next();
+								if(f.getEnglish().toLowerCase().startsWith(s.toLowerCase())) {
+									str+=f.getEnglish();
+									str+="   ";
+									break;
+								}
+								
+							}
+							if(!it.hasNext()) break;
+						}
+						if(i==s_amount) {
+							suggestions.setText(str);
+							return;
+						}
+						it=mem.peek().iterator();
+						for(;i<s_amount;++i) {
+							if(!it.hasNext()) break;
+							while(it.hasNext()) {
+								f=it.next();
+								if(f.getEnglish().toLowerCase().endsWith(s.toLowerCase())) {
+									str+=f.getEnglish();
+									str+="   ";
+									break;
+								}
+								
+							}
+							if(!it.hasNext()) break;
+						}
+						if(i==s_amount) {
+							suggestions.setText(str);
+							return;
+						}
+						it=mem.peek().iterator();
+						for(;i<s_amount;++i) {
+							if(!it.hasNext()) break;
+							while(it.hasNext()) {
+								f=it.next();
+								if(f.getEnglish().toLowerCase().contains(s.toLowerCase())&&!(f.getEnglish().toLowerCase().startsWith(s.toLowerCase()))&&!(f.getEnglish().toLowerCase().endsWith(s.toLowerCase()))) {
+									str+=f.getEnglish();
+									str+="   ";
+									break;
+								}
+								
+							}
+							if(!it.hasNext()) break;
+						}
+						suggestions.setText(str);
+						return;
+					}
+					else {
+						suggestions.setText("");
+					}
+					
+				
 			}
 			
 		});
@@ -294,6 +441,11 @@ public static String exceptions="";
 		GridPane.setFillWidth(pronunciation,true);
 		GridPane.setFillWidth(add,true);
 		GridPane.setFillWidth(indications, true);
+		HBox h= new HBox();
+		h.setAlignment(Pos.CENTER);
+		HBox.setMargin(eng, new Insets(0,10,0,10));
+		HBox.setHgrow(eng, Priority.ALWAYS);
+		h.getChildren().addAll(ing,eng,state);
 		
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10,10,10,10));
@@ -302,28 +454,30 @@ public static String exceptions="";
 		grid.setVgap(10);
 		grid.add(menu, 0, 0, 2, 1);
 		grid.add(tit, 0, 1, 2, 1);
-		grid.add(ing, 0, 2);
-		grid.add(eng, 1, 2);
-		grid.add(ex1, 0, 3, 2, 1);
-		grid.add(engExamp1, 0, 4, 2, 1);
-		grid.add(espExamp1, 0, 5, 2, 1);
-		grid.add(trad1, 0, 6);
-		grid.add(esp1, 1, 6);
-		grid.add(ex2, 0, 7, 2, 1);
-		grid.add(engExamp2, 0, 8, 2, 1);
-		grid.add(espExamp2, 0, 9, 2, 1);
-		grid.add(trad2, 0, 10);
-		grid.add(esp2, 1, 10);
-		grid.add(ex3, 0, 11, 2, 1);
-		grid.add(engExamp3, 0, 12, 2, 1);
-		grid.add(espExamp3, 0, 13, 2, 1);
-		grid.add(trad3, 0, 14);
-		grid.add(esp3, 1, 14);
-		grid.add(indicate, 0, 15,2,1);
-		grid.add(indications, 0, 16, 2, 1);
-		grid.add(pronunciation, 0, 17, 2, 1);
-		grid.add(pronun, 0, 18, 2, 1);
-		grid.add(add, 0, 19, 2, 1);
+		grid.add(h, 0, 2,2,1);
+		grid.add(suggestions, 0, 3,2,1);
+		grid.add(pronunciation, 0, 4, 2, 1);
+		grid.add(pronun, 0, 5, 2, 1);
+		
+		grid.add(ex1, 0, 6, 2, 1);
+		grid.add(engExamp1, 0, 7, 2, 1);
+		grid.add(espExamp1, 0, 8, 2, 1);
+		grid.add(trad1, 0, 9);
+		grid.add(esp1, 1, 9);
+		grid.add(ex2, 0, 10, 2, 1);
+		grid.add(engExamp2, 0, 11, 2, 1);
+		grid.add(espExamp2, 0, 12, 2, 1);
+		grid.add(trad2, 0, 13);
+		grid.add(esp2, 1, 14);
+		grid.add(ex3, 0, 15, 2, 1);
+		grid.add(engExamp3, 0, 16, 2, 1);
+		grid.add(espExamp3, 0, 17, 2, 1);
+		grid.add(trad3, 0, 18);
+		grid.add(esp3, 1, 18);
+		grid.add(indicate, 0, 19,2,1);
+		grid.add(indications, 0, 20, 2, 1);
+		
+		grid.add(add, 0, 21, 2, 1);
 		Scene scene = new Scene(grid,I_w,I_h);
 		primaryStage.setX(primaryStage.getX()-(I_w-width)/2);
 		primaryStage.setY(primaryStage.getY()-(I_h+22-height)/2);
@@ -354,10 +508,18 @@ public static String exceptions="";
 		ex_eng.setEditable(false);
 		ex_eng.setBackground(Background.EMPTY);
 		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_eng.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_eng.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
 		ex_pronun = new Label(ex_f.getPronunciation());
 		ex_pronun.setAlignment(Pos.TOP_RIGHT);
 		ex_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
 		ex_pronun.setFont(extext2);
+		ex_pronun.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_eng.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
 		ex_examp= new TextArea(ex_e.getEng_example());
 		ex_examp.setWrapText(true);
 		ex_examp.setEditable(false);
@@ -365,6 +527,10 @@ public static String exceptions="";
 		ex_examp.setBackground(null);
 		ex_examp.setPadding(new Insets(0,0,0,0));
 		ex_examp.setCenterShape(true);
+		ex_examp.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_examp.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
 		ex_spa = new TextField();
 		ex_spa.setOnAction((ActionEvent e)->{
 			if(ex_e.getTranslation().toUpperCase().equals(Facade.autotrim(ex_spa.getText().toUpperCase()))) {
@@ -406,6 +572,9 @@ public static String exceptions="";
 		scene.getStylesheets().add("/Data.css");
 		primaryStage.setX(primaryStage.getX()-(E_w-width)/2);
 		primaryStage.setY(primaryStage.getY()-(E_h+22-height)/2);
+		if(Facade.getConfig("s_readauto").equals("1")) {
+			Facade.SpeakwDelay(ex_examp.getText());
+		}
 		
 		
 		return scene;
@@ -779,6 +948,16 @@ public static String exceptions="";
 		table.getColumns().addAll(key,english, ex1, ex2, ex3, pronunciation, use,known);
 		table.minHeightProperty().bind(primaryStage.heightProperty().subtract(150));
 		table.getSortOrder().add(english);
+		table.setOnMouseClicked(new EventHandler() {
+
+			@Override
+			public void handle(Event event) {
+				Ficha f=new Ficha(table.getSelectionModel().getSelectedItem());
+				detail(f,primaryStage.getWidth(),primaryStage.getHeight());
+				
+			}
+			
+		});
 		eliminate = new Button("Delete");
 		eliminate.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20));
 		eliminate.setOnAction((ActionEvent e)->{
@@ -887,7 +1066,7 @@ public static String exceptions="";
 		consol.setContent(grid);
 		
 		//Settings
-		Tab adjust = new Tab ("Settings");
+		Tab adjust = new Tab ("Other");
 		reset = new Button ("Mark all as unknown");
 		reset.setFont(text);
 		reset.setOnAction((ActionEvent e)->{
@@ -973,35 +1152,156 @@ public static String exceptions="";
 		backup.setClosable(false);
 		
 		//Voice
+		
+
 		Tab voice = new Tab ("Voice");
 		Label la = new Label("Select the voice:");
 		ComboBox<String> cb = new ComboBox<String>();
-		cb.getItems().addAll("Daniel (GB)","Alex (US)","Fred (US)", "Victoria (US)","Fiona (Scot)", "Veena (IN)", "Karen (AU)", "Moira (IE)", 
-				"Tessa (ZA)");
+		if(arrv==null)arrv=Facade.getVoices();
+		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		if(Facade.getConfig("s_showall").equals("1")) {
+			for(Voice v: arrv) {
+				cb.getItems().add(v.toString());
+			}
+		}
+		else {
+			for(Voice v: arrv) {
+				if(v.getLanguage().equals("en")) {
+					cb.getItems().add(v.toString());
+				}
+			}
+		}
 		String s=Facade.getConfig("voice");
 		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-		switch(s) {
-			case "Daniel": cb.getSelectionModel().select(cb.getItems().indexOf("Daniel (GB)")); break;
-			case "Alex": cb.getSelectionModel().select(cb.getItems().indexOf("Alex (US)")); break;
-			case "Fred": cb.getSelectionModel().select(cb.getItems().indexOf("Fred (US)")); break;
-			case "Victoria": cb.getSelectionModel().select(cb.getItems().indexOf("Victoria (US)")); break;
-			case "Fiona": cb.getSelectionModel().select(cb.getItems().indexOf("Fiona (Scot)")); break;
-			case "Veena": cb.getSelectionModel().select(cb.getItems().indexOf("Veena (IN)")); break;
-			case "Tessa": cb.getSelectionModel().select(cb.getItems().indexOf("Tessa (ZA)")); break;
+		
+		for(Voice v:arrv) {
+			if(v.getName().equals(s)) {
+				cb.getSelectionModel().select(cb.getItems().indexOf(v.toString()));
+				break;
+			}
 		}
 		
 		cb.setOnAction((ActionEvent e)->{
-			Facade.updateConfig("voice", cb.getSelectionModel().getSelectedItem().substring(0, cb.getSelectionModel().getSelectedItem().indexOf('(')-1));
+			String strg=cb.getSelectionModel().getSelectedItem();
+			if(strg!=null) {
+				Facade.updateConfig("voice", strg.substring(0, strg.indexOf('(')-1));
+				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			}
+			
+		});
+		
+		
+		Label ls=new Label("Select the speed (WPM)");
+		TextField tf= new TextField(Facade.getConfig("s_speed"));
+		tf.setOnKeyTyped((KeyEvent e)->{
+			try {
+				tf.appendText(e.getCharacter());
+				e.consume();
+				Facade.updateConfig("s_speed", Integer.toString(Integer.parseInt(tf.getText())));
+			}
+			catch(Exception ex) {}
 			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
 		});
+		CheckBox ceeb= new CheckBox();
+		ceeb.setSelected(false);
+		ceeb.setAllowIndeterminate(false);
+		if(Facade.getConfig("s_readauto").equals("1")) {
+			ceeb.setSelected(true);
+		}
+		ceeb.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				String s;
+				s=(ceeb.isSelected())? "1":"0";
+				Facade.updateConfig("s_readauto", s);
+				
+			}
+			
+		});
+		
+		Label ww = new Label("Automatic exam example reading");
+		Label aa= new Label("Delay:");
+		Label aab= new Label("Enable:");
+		TextField dl=new TextField(Facade.getConfig("s_delay"));
+		dl.setOnKeyTyped((KeyEvent e)->{
+			try {
+				dl.appendText(e.getCharacter());
+				e.consume();
+				Facade.updateConfig("s_delay", Integer.toString(Integer.parseInt(dl.getText())));
+			}
+			catch(Exception ex) {}
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
+		CheckBox cbb= new CheckBox("Show all installed voices");
+		cbb.setAllowIndeterminate(false);
+		if(Facade.getConfig("s_showall").equals("1")) {
+			cbb.setSelected(true);
+		}
+		else {
+			cbb.setSelected(false);
+		}
+		cbb.setOnAction(new EventHandler<ActionEvent>(){
+
+			@Override
+			public void handle(ActionEvent event) {
+				String s;
+				s=(cbb.isSelected())? "1":"0";
+				Facade.updateConfig("s_showall", s);
+				
+				
+				cb.getItems().clear();
+				if(s.equals("1")) {
+					for(Voice v: arrv) {
+						cb.getItems().add(v.toString());
+					}
+				}
+				else {
+					for(Voice v: arrv) {
+						if(v.getLanguage().equals("en")) {
+							cb.getItems().add(v.toString());
+						}
+					}
+				}
+				String str=Facade.getConfig("voice");
+				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				
+				for(Voice v:arrv) {
+					if(v.getName().equals(str)) {
+						cb.getSelectionModel().select(cb.getItems().indexOf(v.toString()));
+						break;
+					}
+				}
+				
+				
+				
+				
+				
+			}
+			
+		});
+		
 		VBox va = new VBox();
+		HBox hh= new HBox();
+		hh.getChildren().addAll(aab,ceeb,aa,dl);
+		hh.setAlignment(Pos.CENTER);
 		va.setPadding(new Insets(10,10,10,10));
-		va.getChildren().addAll(la,cb);
+		VBox.setMargin(cb, new Insets(10,0,5,0));
+		VBox.setMargin(ls, new Insets(10,0,5,0));
+		VBox.setMargin(ww, new Insets(10,0,5,0));
+		VBox.setMargin(cbb, new Insets(20,0,5,0));
+		
+		HBox.setMargin(aab, new Insets(0,0,0,10));
+		HBox.setMargin(ceeb, new Insets(0,0,0,10));
+		HBox.setMargin(aa, new Insets(0,0,0,10));
+		HBox.setMargin(dl, new Insets(0,0,0,10));
+		HBox.setHgrow(dl, Priority.ALWAYS);
+		va.getChildren().addAll(la,cb,ls,tf,ww,hh,cbb);
 		va.setAlignment(Pos.TOP_CENTER);
 		voice.setContent(va);
 		voice.setClosable(false);
 		
-		tp.getTabs().addAll(consol,adjust,backup,voice);
+		tp.getTabs().addAll(consol,backup,voice,adjust);
 		VBox vb= new VBox();
 		vb.setAlignment(Pos.TOP_CENTER);
 		VBox.setVgrow(tp, Priority.ALWAYS);
@@ -1042,6 +1342,7 @@ public static String exceptions="";
 				esp3.clear();
 				pronun.clear();
 				indications.clear();
+				mem=null;
 				eng.setPromptText("Enter successfully");
 			}
 			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
@@ -1060,6 +1361,7 @@ public static String exceptions="";
 	}
 	*/
 	static public void mssgWindow(double width, double height) {
+		if(exceptions==null) exceptions="";
 		if(!exceptions.equals("")) {
 			Stage stage = new Stage();
 			Label l = new Label(exceptions);
@@ -1440,7 +1742,7 @@ public static String exceptions="";
 		res_eng = new Label(f.getEnglish());
 		res_eng.setAlignment(Pos.TOP_LEFT);
 		res_eng.setFont(res_extext);
-		res_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		res_eng.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
 		
 		res_eng.setOnMouseClicked(new EventHandler(){
 			@Override
@@ -1454,7 +1756,7 @@ public static String exceptions="";
 		
 		res_pronun = new Label(f.getPronunciation());
 		res_pronun.setAlignment(Pos.TOP_RIGHT);
-		res_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		res_pronun.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
 		res_pronun.setFont(res_extext);
 		res_pronun.setTextAlignment(TextAlignment.RIGHT);
 		res_pronun.setOnMouseClicked(new EventHandler(){
@@ -1468,7 +1770,7 @@ public static String exceptions="";
 		if(len>0) {
 			res_ex_eng_1 = new Label(f.getExample(0).getEng_example());
 			res_ex_eng_1.setAlignment(Pos.TOP_CENTER);
-			res_ex_eng_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+			res_ex_eng_1.minWidthProperty().bind(stage.widthProperty().subtract(30));
 			res_ex_eng_1.setFont(res_text);
 			res_ex_eng_1.setWrapText(true);
 			res_ex_eng_1.setTextAlignment(TextAlignment.CENTER);
@@ -1483,13 +1785,13 @@ public static String exceptions="";
 			
 			res_ex_esp_1 = new Label(f.getExample(0).getEsp_example());
 			res_ex_esp_1.setAlignment(Pos.TOP_CENTER);
-			res_ex_esp_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+			res_ex_esp_1.minWidthProperty().bind(stage.widthProperty().subtract(30));
 			res_ex_esp_1.setFont(res_text);
 			res_ex_esp_1.setWrapText(true);
 			res_ex_esp_1.setTextAlignment(TextAlignment.CENTER);
 			res_esp_1 = new Label("Translation: "+f.getExample(0).getTranslation());
 			res_esp_1.setAlignment(Pos.TOP_CENTER);
-			res_esp_1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+			res_esp_1.minWidthProperty().bind(stage.widthProperty().subtract(30));
 			res_esp_1.setFont(res_text);
 			res_esp_1.setTextAlignment(TextAlignment.CENTER);
 			ex1 = new Text("Example 1: ");
@@ -1504,7 +1806,7 @@ public static String exceptions="";
 			if(len>1) {
 				res_ex_eng_2 = new Label(f.getExample(1).getEng_example());
 				res_ex_eng_2.setAlignment(Pos.TOP_CENTER);
-				res_ex_eng_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+				res_ex_eng_2.minWidthProperty().bind(stage.widthProperty().subtract(30));
 				res_ex_eng_2.setFont(res_text);
 				res_ex_eng_2.setWrapText(true);
 				res_ex_eng_2.setTextAlignment(TextAlignment.CENTER);
@@ -1518,13 +1820,13 @@ public static String exceptions="";
 				});
 				res_ex_esp_2 = new Label(f.getExample(1).getEsp_example());
 				res_ex_esp_2.setAlignment(Pos.TOP_CENTER);
-				res_ex_esp_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+				res_ex_esp_2.minWidthProperty().bind(stage.widthProperty().subtract(30));
 				res_ex_esp_2.setFont(res_text);
 				res_ex_esp_2.setTextAlignment(TextAlignment.CENTER);
 				res_ex_esp_2.setWrapText(true);
 				res_esp_2 = new Label("Translation: "+f.getExample(1).getTranslation());
 				res_esp_2.setAlignment(Pos.CENTER);
-				res_esp_2.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+				res_esp_2.minWidthProperty().bind(stage.widthProperty().subtract(30));
 				res_esp_2.setFont(res_text);
 				res_esp_2.setTextAlignment(TextAlignment.CENTER);
 				ex2 = new Text("Example 2: ");
@@ -1539,7 +1841,7 @@ public static String exceptions="";
 				if(len>2) {
 					res_ex_eng_3 = new Label(f.getExample(2).getEng_example());
 					res_ex_eng_3.setAlignment(Pos.TOP_CENTER);
-					res_ex_eng_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+					res_ex_eng_3.minWidthProperty().bind(stage.widthProperty().subtract(30));
 					res_ex_eng_3.setFont(res_text);
 					res_ex_eng_3.setWrapText(true);
 					res_ex_eng_3.setTextAlignment(TextAlignment.CENTER);
@@ -1553,13 +1855,13 @@ public static String exceptions="";
 					});
 					res_ex_esp_3 = new Label(f.getExample(2).getEsp_example());
 					res_ex_esp_3.setAlignment(Pos.TOP_CENTER);
-					res_ex_esp_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+					res_ex_esp_3.minWidthProperty().bind(stage.widthProperty().subtract(30));
 					res_ex_esp_3.setFont(res_text);
 					res_ex_esp_3.setTextAlignment(TextAlignment.CENTER);
 					res_ex_esp_3.setWrapText(true);
 					res_esp_3 = new Label("Translation: "+f.getExample(2).getTranslation());
 					res_esp_3.setAlignment(Pos.CENTER);
-					res_esp_3.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+					res_esp_3.minWidthProperty().bind(stage.widthProperty().subtract(30));
 					res_esp_3.setFont(res_text);
 					res_esp_3.setTextAlignment(TextAlignment.CENTER);
 					ex3 = new Text("Example 3: ");
