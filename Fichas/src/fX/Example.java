@@ -3,18 +3,20 @@ package fX;
 public class Example {
 	private String translation;
 	private String eng_example, esp_example;
-	private boolean known=false;
+	private boolean knownEtoS=false;
+	private boolean knownStoE=false;
 	public Example(String eng_example, String esp_example, String translation) {
 		this.translation=translation;
 		this.eng_example=eng_example;
 		this.esp_example=esp_example;
 		
 	}
-	public Example(String eng_example, String esp_example, String translation, boolean b) {
+	public Example(String eng_example, String esp_example, String translation, boolean EtoS,boolean StoE) {
 		this.translation=translation;
 		this.eng_example=eng_example;
 		this.esp_example=esp_example;
-		this.known=b;
+		this.knownEtoS=EtoS;
+		this.knownStoE=StoE;
 	}
 	public Example (String str) {
 		eng_example= str.substring(0, str.indexOf('|'));
@@ -23,7 +25,17 @@ public class Example {
 		str=str.substring(str.indexOf('|')+1);
 		translation= str.substring(0, str.indexOf('|'));
 		str=str.substring(str.indexOf('|')+1);
-		known=Boolean.parseBoolean(str);
+		if(str.contains("|")) {
+			//New one
+			knownEtoS=Boolean.parseBoolean(str.substring(0,str.indexOf('|')));
+			str=str.substring(str.indexOf('|')+1);
+			knownStoE=Boolean.parseBoolean(str);
+		}
+		else {
+			//Old one
+			knownEtoS=Boolean.parseBoolean(str);
+		}
+		
 	}
 	public String toString() {
 		StringBuilder s = new StringBuilder(eng_example);
@@ -32,7 +44,9 @@ public class Example {
 		s.append("|");
 		s.append(translation);
 		s.append("|");
-		s.append(Boolean.toString(known));
+		s.append(Boolean.toString(knownEtoS));
+		s.append("|");
+		s.append(Boolean.toString((knownStoE)));
 		return s.toString();
 	}
 	public String toBasicString() {
@@ -44,8 +58,11 @@ public class Example {
 		return s.toString();
 	}
 	
-	public boolean getKnown () {
-		return known;
+	public boolean getEtoSKnown () {
+		return knownEtoS;
+	}
+	public boolean getStoEKnown () {
+		return knownEtoS;
 	}
 	public String getTranslation() {
 		return translation;
@@ -65,8 +82,11 @@ public class Example {
 	public void setEsp_example(String esp_example) {
 		this.esp_example = esp_example;
 	}
-	public void setKnown(boolean b) {
-		this.known=b;
+	public void setEtoSKnown(boolean b) {
+		this.knownEtoS=b;
+	}
+	public void setStoEKnown (boolean b) {
+		this.knownStoE=b;
 	}
 	
 }

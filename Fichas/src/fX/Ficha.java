@@ -8,7 +8,8 @@ public class Ficha {
 	private Vector <Example> examp;
 	private String use;
 	private int DBkey;
-	private boolean known=false;
+	private boolean knownEtoS=false;
+	private boolean knownStoE=false;
 	
 	
 	public Ficha(String english, String pronunciation, String use) {
@@ -22,7 +23,8 @@ public class Ficha {
 		this.examp=o.f.getExampVec();
 		this.use=o.f.getUse();
 		this.DBkey=o.f.getDBkey();
-		this.known=o.f.getKnown();
+		this.knownEtoS=o.f.getKnownEtoS();
+		this.knownStoE=o.f.getKnownEtoS();
 		
 	}
 	public Ficha(String s) {
@@ -93,31 +95,57 @@ public class Ficha {
 		sb.append("%%");
 		sb.append(pronunciation);
 		sb.append("%%");
-		sb.append(Boolean.toString(known));
+		sb.append(Boolean.toString(knownEtoS));
+		sb.append("%%");
+		sb.append(Boolean.toString(knownEtoS));
 		sb.append("%%");
 		return sb.toString();
 	}
-	public boolean allKnown() {
+	public boolean allKnownEtoS() {
 			boolean b = true;
 			for(int i=0; i<examp.size();i++) {
-				if(examp.elementAt(i).getKnown()==false) {
+				if(examp.elementAt(i).getEtoSKnown()==false) {
 					b=false;
 				}
 			}
 			return b;
 		
 	}
-	public void setUnknown() {
+	public boolean allKnownStoE() {
+		boolean b = true;
+		for(int i=0; i<examp.size();i++) {
+			if(examp.elementAt(i).getStoEKnown()==false) {
+				b=false;
+			}
+		}
+		return b;
+	
+}
+	public void setUnknownEtoS() {
 		for (int i=0; i<examp.size();i++) {
-			examp.elementAt(i).setKnown(false);
+			examp.elementAt(i).setEtoSKnown(false);
 		}
 		
 	}
-	public void setExKnown(int index) {
+	public void setUnknownStoE() {
+		for (int i=0; i<examp.size();i++) {
+			examp.elementAt(i).setStoEKnown(false);
+		}
+		
+	}
+	public void setExKnownEtoS(int index) {
 		if(index<examp.size()) {
-			examp.elementAt(index).setKnown(true);
-			if(allKnown()) {
-				setKnown(true);
+			examp.elementAt(index).setEtoSKnown(true);
+			if(allKnownEtoS()) {
+				setKnownEtoS(true);
+			}
+		}
+	}
+	public void setExKnownStoE(int index) {
+		if(index<examp.size()) {
+			examp.elementAt(index).setStoEKnown(true);
+			if(allKnownStoE()) {
+				setKnownStoE(true);
 			}
 		}
 	}
@@ -150,9 +178,22 @@ public class Ficha {
 		}
 	}
 	
-	public boolean getExampleKnown(int i) {
+	public boolean getExampleKnownEtoS(int i) {
 		if(i<examp.size()) {
-			if( examp.elementAt(i).getKnown()) {
+			if( examp.elementAt(i).getEtoSKnown()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
+	}
+	public boolean getExampleKnownStoE(int i) {
+		if(i<examp.size()) {
+			if( examp.elementAt(i).getStoEKnown()) {
 				return true;
 			}
 			else {
@@ -171,8 +212,11 @@ public class Ficha {
 			this.examp.remove(i);
 		}
 	}
-	public boolean getKnown() {
-		return known;
+	public boolean getKnownEtoS() {
+		return knownEtoS;
+	}
+	public boolean getKnownStoE() {
+		return knownStoE;
 	}
 	public String getEnglish() {
 		return english;
@@ -215,8 +259,11 @@ public class Ficha {
 	public void setUse (String use) {
 		this.use=use;
 	}
-	public void setKnown(boolean b) {
-		known = b;
+	public void setKnownEtoS(boolean b) {
+		knownEtoS = b;
+	}
+	public void setKnownStoE(boolean b) {
+		knownStoE = b;
 	}
 	
 }

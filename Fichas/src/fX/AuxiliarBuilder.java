@@ -238,7 +238,7 @@ public class AuxiliarBuilder {
 		
 		GridPane.setFillWidth(res_eng, true);
 		GridPane.setFillWidth(res_pronun, true);
-		GridPane.setFillWidth(res_ex_eng_1, true);
+		
 		GridPane grid = new GridPane();
 		
 		grid.setPadding(new Insets(10,10,10,10));
@@ -252,6 +252,7 @@ public class AuxiliarBuilder {
 		if(len>0) {
 			GridPane.setFillHeight(res_ex_eng_1, true);
 			GridPane.setFillHeight(res_ex_esp_1, true);
+			GridPane.setFillWidth(res_ex_eng_1, true);
 			GridPane.setFillHeight(h1, true);
 			grid.add         (ex1, 0, 1, 2, 1);
 			grid.add(res_ex_eng_1, 0, 2, 2, 1);
@@ -283,17 +284,17 @@ public class AuxiliarBuilder {
 			GridPane.setFillHeight(TAuse, false);
 			switch(len) {
 				case 1:{
-					grid.add(use, 0, 5, 2, 1);
+					grid.add  (use, 0, 5, 2, 1);
 					grid.add(TAuse, 0, 6, 2, 1);
 					break;
 				}
 				case 2:{
-					grid.add(use, 0, 9, 2, 1);
+					grid.add  (use, 0,  9, 2, 1);
 					grid.add(TAuse, 0, 10, 2, 1);
 					break;
 				}
 				case 3:{
-					grid.add(use, 0, 13, 2, 1);
+					grid.add  (use, 0, 13, 2, 1);
 					grid.add(TAuse, 0, 14, 2, 1);
 					break;
 				}

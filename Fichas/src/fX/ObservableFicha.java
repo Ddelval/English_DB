@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class ObservableFicha {
 	public SimpleIntegerProperty DBkey;
-	public SimpleStringProperty english, pronunciation, use, ex1,ex2,ex3, known;
+	public SimpleStringProperty english, pronunciation, use, ex1,ex2,ex3, knownEtoS, knownStoE;
 	public Ficha f;
 	public ObservableFicha(Ficha f) {
 		this.f=f;
@@ -13,41 +13,79 @@ public class ObservableFicha {
 		english = new SimpleStringProperty(f.getEnglish());
 		pronunciation = new SimpleStringProperty(f.getPronunciation());
 		use = new SimpleStringProperty(f.getUse());
-		if(f.getKnown()) {
-			known = new SimpleStringProperty("Todo");
+		
+		if(f.getKnownEtoS()) {
+			knownEtoS= new SimpleStringProperty("All");
 		}
 		else {
-			if(f.getExampleKnown(0)) {
-				if(f.getExampleKnown(1)) {
-					known = new SimpleStringProperty("Ejemplos 1 y 2");
+			if(f.getExampleKnownEtoS(0)) {
+				if(f.getExampleKnownEtoS(1)) {
+					knownEtoS = new SimpleStringProperty("Example 1 y 2");
 				}
 				else {
-					known = new SimpleStringProperty("Ejemplo 1");
-					if(f.getExampleKnown(2)) {
-						known = new SimpleStringProperty("Ejemplos 1 y 3");
+					knownEtoS = new SimpleStringProperty("Example 1");
+					if(f.getExampleKnownEtoS(2)) {
+						knownEtoS = new SimpleStringProperty("Example 1 y 3");
 					}
 				}
 			}
 			else {
-				if(f.getExampleKnown(1)) {
-					if(f.getExampleKnown(2)){
-						known = new SimpleStringProperty("Ejemplos 2 y 3");
+				if(f.getExampleKnownEtoS(1)) {
+					if(f.getExampleKnownEtoS(2)){
+						knownEtoS = new SimpleStringProperty("Example 2 y 3");
 					}
 					else {
-						known = new SimpleStringProperty("Ejemplo 2");
+						knownEtoS = new SimpleStringProperty("Example 2");
 					}
 				}
 				else {
-					if(f.getExampleKnown(2)) {
-						known = new SimpleStringProperty("Ejemplo 3");
+					if(f.getExampleKnownEtoS(2)) {
+						knownEtoS = new SimpleStringProperty("Example 3");
 					}
 					else {
-						known = new SimpleStringProperty("Ninguno");
+						knownEtoS = new SimpleStringProperty("None");
 					}
 				}
 				
 			}
 		}
+		
+		if(f.getKnownStoE()) {
+			knownStoE= new SimpleStringProperty("All");
+		}
+		else {
+			if(f.getExampleKnownEtoS(0)) {
+				if(f.getExampleKnownStoE(1)) {
+					knownStoE = new SimpleStringProperty("Example 1 y 2");
+				}
+				else {
+					knownStoE = new SimpleStringProperty("Example 1");
+					if(f.getExampleKnownStoE(2)) {
+						knownStoE = new SimpleStringProperty("Example 1 y 3");
+					}
+				}
+			}
+			else {
+				if(f.getExampleKnownStoE(1)) {
+					if(f.getExampleKnownStoE(2)){
+						knownStoE = new SimpleStringProperty("Example 2 y 3");
+					}
+					else {
+						knownStoE = new SimpleStringProperty("Example 2");
+					}
+				}
+				else {
+					if(f.getExampleKnownStoE(2)) {
+						knownStoE = new SimpleStringProperty("Example 3");
+					}
+					else {
+						knownStoE = new SimpleStringProperty("None");
+					}
+				}
+				
+			}
+		}
+		
 		int siz = f.getExampVec().size();
 		if(siz>0) {
 			ex1 = new SimpleStringProperty(f.getExample(0).toBasicString());
@@ -108,8 +146,11 @@ public class ObservableFicha {
 			return ex3.get();
 		}
 	}
-	public String getKnown() {
-		return known.get();
+	public String getKnownEtoS() {
+		return knownEtoS.get();
+	}
+	public String getKnownStoE() {
+		return knownStoE.get();
 	}
 	
 }

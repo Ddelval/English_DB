@@ -61,7 +61,7 @@ public class MainWindow extends Application{
 public static Stage primaryStage;
 private Font tit, head, text, extext,extext2;
 private HBox menu;
-private Button b_intro, b_exam, b_consul, b_options;
+private Button b_intro, b_exam, b_consul, b_options, b_StoE;
 private final double M_w=400;
 private final double M_h=110;
 //Introduction scene
@@ -150,10 +150,10 @@ public static String exceptions="";
 			//setPositionOnScreen(width,height);
 			eng.requestFocus();
 		});
-		b_exam = new Button("Test");
+		b_exam = new Button("Test E to S");
 		b_exam.setFont(text);
 		b_exam.setOnAction((ActionEvent e)->{
-			if(Facade.checkAvailability()) {
+			if(Facade.checkAvailabilityEtoS()) {
 				double width=primaryStage.getWidth();
 				double height = primaryStage.getHeight();
 				primaryStage.setScene(exam(width,height));
@@ -166,6 +166,10 @@ public static String exceptions="";
 			}
 			
 		});
+		b_StoE=new Button("Test S to E");
+		b_StoE.setFont(text);
+		
+		
 		b_consul = new Button ("Database");
 		b_consul.setFont(text);
 		b_consul.setOnAction((ActionEvent e)->{
@@ -185,6 +189,7 @@ public static String exceptions="";
 		
 		HBox.setMargin(b_intro, new Insets(0,0,0,10));
 		HBox.setMargin(b_exam, new Insets(0,0,0,10));
+		HBox.setMargin(b_StoE, new Insets(0,0,0,10));
 		HBox.setMargin(b_consul, new Insets(0,0,0,10));
 		HBox.setMargin(b_options, new Insets(0,0,0,10));
 		menu = new HBox();
@@ -487,14 +492,127 @@ public static String exceptions="";
 		
 	}
 	private Scene exam (double width,double height) {
-		ex_f = Facade.getRndFicha();
+		ex_f = Facade.getRndFichaEtoS();
 		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
 		Vector <Example> v = ex_f.getExampVec();
 		//Reduce the number of examples to 1
 		if(v.size()>1) {
 			Random r = new Random();
 			ex_index = r.nextInt(v.size()-1)+1;
-			while(v.elementAt(ex_index).getKnown()) {
+			while(v.elementAt(ex_index).getEtoSKnown()) {
+				ex_index = r.nextInt(v.size()-1);
+			}
+			ex_e=v.elementAt(ex_index);
+		}
+		else if(v.size()==0) {
+			ex_e=null;
+		}
+		else {
+			ex_index=0;
+			ex_e=v.elementAt(0);
+		}
+		ex_eng = new TextField(ex_f.getEnglish());
+		ex_eng.setAlignment(Pos.CENTER_LEFT);
+		ex_eng.setFont(extext);
+		ex_eng.setPadding(new Insets(0,0,0,10));
+		ex_eng.setEditable(false);
+		ex_eng.setBackground(Background.EMPTY);
+		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_eng.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_eng.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
+		ex_pronun = new Label(ex_f.getPronunciation());
+		ex_pronun.setAlignment(Pos.TOP_RIGHT);
+		ex_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_pronun.setFont(extext2);
+		ex_pronun.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_eng.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
+		if(ex_e!=null) {
+		ex_examp= new TextArea(ex_e.getEng_example());
+		ex_examp.setWrapText(true);
+		ex_examp.setEditable(false);
+		ex_examp.setFont(extext);
+		ex_examp.setBackground(null);
+		ex_examp.setPadding(new Insets(0,0,0,0));
+		ex_examp.setCenterShape(true);
+		ex_examp.setOnMouseClicked((Event e)->{
+			Facade.Speak(ex_examp.getText());
+			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		});
+		}
+		else {
+			ex_examp= new TextArea("");
+			ex_examp.setWrapText(true);
+			ex_examp.setEditable(false);
+			ex_examp.setFont(extext);
+			ex_examp.setBackground(null);
+			ex_examp.setPadding(new Insets(0,0,0,0));
+			ex_examp.setCenterShape(true);
+		}
+		ex_spa = new TextField();
+		ex_spa.setOnAction((ActionEvent e)->{
+			if(ex_e.getTranslation().toUpperCase().equals(Facade.autotrim(ex_spa.getText().toUpperCase()))) {
+				double d_width = primaryStage.getWidth();
+				double d_height=primaryStage.getHeight();
+				primaryStage.setScene(result(1,d_width,d_height));
+				
+				//setPositionOnScreen(width, height);
+				this.v.requestFocus();
+				ex_f.setExKnownEtoS(ex_index);
+				Facade.updateFicha(ex_f);
+				ex_f.getExampVec().elementAt(ex_index).setEtoSKnown(true);
+				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			}
+			else {
+				double d_width=primaryStage.getWidth();
+				double d_height = primaryStage.getHeight();primaryStage.setScene(result(0,d_width,d_height));
+				//setPositionOnScreen(width,height);
+				this.v.requestFocus();
+			}
+		});
+		GridPane.setFillWidth(ex_eng, true);
+		GridPane.setFillWidth(ex_pronun, true);
+		GridPane.setFillWidth(ex_examp, false);
+		GridPane.setFillWidth(ex_spa, true);
+		GridPane.setMargin(ex_pronun, new Insets(0,0,0,10));
+		GridPane.setMargin(ex_eng, new Insets(0,10,0,0));
+		GridPane grid = new GridPane();
+		grid.setPadding(new Insets(10,10,10,10));
+		grid.setAlignment(Pos.TOP_CENTER);
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.add(menu, 0, 0, 2, 1);
+		grid.add(ex_eng, 0, 2);
+		grid.add(ex_pronun, 1, 2);
+		grid.add(ex_examp, 0, 3, 2, 1);
+		grid.add(ex_spa, 0, 4, 2, 1);
+		ex_spa.requestFocus();
+		Scene scene = new Scene(grid,E_w,E_h);
+		scene.getStylesheets().add("/Data.css");
+		primaryStage.setX(primaryStage.getX()-(E_w-width)/2);
+		primaryStage.setY(primaryStage.getY()-(E_h+22-height)/2);
+		if(Facade.getConfig("s_readauto").equals("1")) {
+			Facade.SpeakwDelay(ex_examp.getText());
+		}
+		
+		
+		return scene;
+		
+	}
+	
+	
+	private Scene examStoE (double width,double height) {
+		ex_f = Facade.getRndFichaStoE();
+		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		Vector <Example> v = ex_f.getExampVec();
+		//Reduce the number of examples to 1
+		if(v.size()>1) {
+			Random r = new Random();
+			ex_index = r.nextInt(v.size()-1)+1;
+			while(v.elementAt(ex_index).getStoEKnown()) {
 				ex_index = r.nextInt(v.size()-1);
 			}
 			ex_e=v.elementAt(ex_index);
@@ -542,9 +660,9 @@ public static String exceptions="";
 				
 				//setPositionOnScreen(width, height);
 				this.v.requestFocus();
-				ex_f.setExKnown(ex_index);
+				ex_f.setExKnownEtoS(ex_index);
 				Facade.updateFicha(ex_f);
-				ex_f.getExampVec().elementAt(ex_index).setKnown(true);
+				ex_f.getExampVec().elementAt(ex_index).setEtoSKnown(true);
 				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
 			}
 			else {
@@ -583,6 +701,15 @@ public static String exceptions="";
 		return scene;
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * 
 	 * @param i A value of 0 equals failure whereas a 1 equals success
@@ -637,7 +764,7 @@ public static String exceptions="";
 			public void handle(KeyEvent event) {
 				
 				if(event.getCode()==KeyCode.ENTER) {
-					if(Facade.checkAvailability()) {
+					if(Facade.checkAvailabilityEtoS()) {
 						double width=primaryStage.getWidth();
 						double height = primaryStage.getHeight();
 						primaryStage.setScene(exam(width,height));
@@ -746,11 +873,14 @@ public static String exceptions="";
 		TableColumn<ObservableFicha, String> use = new TableColumn<ObservableFicha, String>("Use");
 		use.setMinWidth(30);
 		use.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("use"));
-		TableColumn<ObservableFicha, String> known = new TableColumn<ObservableFicha, String>("Known");
-		known.setMinWidth(100);
-		known.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("known"));
+		TableColumn<ObservableFicha, String> knownEtoS = new TableColumn<ObservableFicha, String>("Known EtoS");
+		knownEtoS.setMinWidth(100);
+		knownEtoS.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("KnownEtoS"));
+		TableColumn<ObservableFicha, String> knownStoE = new TableColumn<ObservableFicha, String>("Known StoE");
+		knownEtoS.setMinWidth(100);
+		knownEtoS.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("KnownStoE"));
 		table.setItems(data);
-		table.getColumns().addAll(key,english, ex1, ex2, ex3, pronunciation, use,known);
+		table.getColumns().addAll(key,english, ex1, ex2, ex3, pronunciation, use,knownEtoS,knownStoE);
 		table.minHeightProperty().bind(primaryStage.heightProperty().subtract(150));
 		table.getSortOrder().add(english);
 		table.setOnMouseClicked(new EventHandler() {
@@ -1306,7 +1436,7 @@ public static String exceptions="";
 		Button b2 = new Button("Confirmar");
 		b2.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
 		b2.setOnAction((ActionEvent e)->{
-			Facade.updateAllKnown(false);
+			Facade.updateAllKnownEtoS(false);
 			stage.close();
 			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
 		});
@@ -1443,23 +1573,23 @@ public static String exceptions="";
 					up_f.clearExamples();
 					if(!up_engExamp1.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp1.getText(), up_espExamp1.getText(), up_esp1.getText())));
-						up_f.getExample(0).setKnown(up_known_1.isSelected());
+						up_f.getExample(0).setEtoSKnown(up_known_1.isSelected());
 					}
 					
 					if(!up_engExamp2.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp2.getText(), up_espExamp2.getText(), up_esp2.getText())));
-						up_f.getExample(1).setKnown(up_known_2.isSelected());
+						up_f.getExample(1).setEtoSKnown(up_known_2.isSelected());
 					}
 					
 					if(!up_engExamp3.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp3.getText(), up_espExamp3.getText(), up_esp3.getText())));
-						up_f.getExample(2).setKnown(up_known_3.isSelected());
+						up_f.getExample(2).setEtoSKnown(up_known_3.isSelected());
 					}
-					if(up_f.allKnown()){
-						up_f.setKnown(true);
+					if(up_f.allKnownEtoS()){
+						up_f.setKnownEtoS(true);
 					}
 					else {
-						up_f.setKnown(false);
+						up_f.setKnownEtoS(false);
 					}
 					Facade.updateFicha(up_f);
 					mssgWindow("Success", primaryStage.getWidth(),primaryStage.getHeight());
@@ -1478,15 +1608,15 @@ public static String exceptions="";
 			
 		});
 		up_known_1= new CheckBox("Known");
-		if(f.getExampleKnown(0)) {
+		if(f.getExampleKnownEtoS(0)) {
 			up_known_1.setSelected(true);
 		}
 		up_known_2= new CheckBox("Known");
-		if(f.getExampleKnown(1)) {
+		if(f.getExampleKnownEtoS(1)) {
 			up_known_2.setSelected(true);
 		}
 		up_known_3= new CheckBox("Known");
-		if(f.getExampleKnown(2)) {
+		if(f.getExampleKnownEtoS(2)) {
 			up_known_3.setSelected(true);
 		}
 		

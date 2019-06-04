@@ -35,16 +35,16 @@ public class UConnection {
 	public static void main(String[]args) {
 		try {
 			con=UConnection.getConnection();
-			/*PreparedStatement p =con.prepareStatement("DROP TABLE log ");
+			PreparedStatement p =con.prepareStatement("DROP TABLE log ");
 			p.execute();
-			p = con.prepareStatement("CREATE TABLE log (count INTEGER IDENTITY, eng VARCHAR(100), Examp VARCHAR(10000), pronunciation VARCHAR(100), use VARCHAR (10000), known BOOLEAN DEFAULT FALSE NOT NULL, PRIMARY KEY (count))");
-			p.execute();*/
+			p = con.prepareStatement("CREATE TABLE log (count INTEGER IDENTITY, eng VARCHAR(100), Examp VARCHAR(10000), pronunciation VARCHAR(100), use VARCHAR (10000), knownEtoS BOOLEAN DEFAULT FALSE NOT NULL,knownStoE BOOLEAN DEFAULT FALSE NOT NULL, PRIMARY KEY (count))");
+			p.execute();
 			/*PreparedStatement p = con.prepareStatement("CREATE TABLE config (id VARCHAR(100),data VARCHAR (100),PRIMARY KEY (id))");
 			p.execute();
 			*/
-			PreparedStatement p = con.prepareStatement("INSERT INTO config VALUES('voice','Alex')");
+			/*PreparedStatement p = con.prepareStatement("INSERT INTO config VALUES('voice','Alex')");
 			p.execute();
-			
+			*/
 			/*Ficha f= new Ficha("Start", "∫t","No \n never");
 			Example x= new Example("I started the race","Empecé la carrera", "Empezar");
 			f.addExample(x);

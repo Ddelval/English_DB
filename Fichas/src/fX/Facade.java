@@ -223,7 +223,7 @@ public class Facade {
 			MainWindow.exceptions=ex.getMessage();
 		}
 	}
-	public static void updateAllKnown(boolean b) 
+	public static void updateAllKnownEtoS(boolean b) 
 	{
 		Connection con = UConnection.getConnection();
 		String sql  = "SELECT count, Examp, known FROM log WHERE known='"+Boolean.toString(b).toUpperCase()+"'";
@@ -235,7 +235,30 @@ public class Facade {
 			while(rs.next()) {
 				f = new Ficha("","", "");
 				f.setSQLExamples(rs.getString("Examp"));
-				f.setUnknown();
+				f.setUnknownEtoS();
+				ps=con.prepareStatement("UPDATE log SET Examp='"+f.getExamplesString().replace("'","\"%&/%\"")+"', known='FALSE' WHERE count="+Integer.toString(rs.getInt("count")));
+				ps.executeUpdate();
+			}
+			
+		}
+		catch (SQLException ex) {
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+		}
+	}
+	public static void updateAllKnownStoE(boolean b) 
+	{
+		Connection con = UConnection.getConnection();
+		String sql  = "SELECT count, Examp, known FROM log WHERE known='"+Boolean.toString(b).toUpperCase()+"'";
+		ResultSet rs;
+		Ficha f;
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				f = new Ficha("","", "");
+				f.setSQLExamples(rs.getString("Examp"));
+				f.setUnknownStoE();
 				ps=con.prepareStatement("UPDATE log SET Examp='"+f.getExamplesString().replace("'","\"%&/%\"")+"', known='FALSE' WHERE count="+Integer.toString(rs.getInt("count")));
 				ps.executeUpdate();
 			}
@@ -250,7 +273,7 @@ public class Facade {
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
 		String sql="UPDATE log SET eng='"+f.getEnglish().replace("'", "%&/%")+"', Examp='"+f.getExamplesString().replace("'", "%&/%")
-				  +"', pronunciation='"+f.getPronunciation().replace("'", "%&/%")+"', use='"+f.getUse().replace("'", "%&/%")+"', known='"+Boolean.toString(f.getKnown())+"' WHERE count="+Integer.toString(f.getDBkey());
+				  +"', pronunciation='"+f.getPronunciation().replace("'", "%&/%")+"', use='"+f.getUse().replace("'", "%&/%")+"', knownEtoS='"+Boolean.toString(f.getKnownEtoS())+"', knownStoE='"+Boolean.toString(f.getKnownStoE())+"' WHERE count="+Integer.toString(f.getDBkey());
 		try
 		{
 			ps=con.prepareStatement(sql);
@@ -261,9 +284,33 @@ public class Facade {
 			MainWindow.exceptions=ex.getMessage();
 		}
 	}
-	public static boolean checkAvailability() {
+	public static boolean checkAvailabilityEtoS() {
 		Connection con = UConnection.getConnection();
-		String sql= "SELECT * FROM log WHERE known='FALSE'";
+		String sql= "SELECT * FROM log WHERE knownEtoS='FALSE'";
+		boolean b = false;
+		try 
+		{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs= ps.executeQuery();
+			if(rs.next()) 
+			{
+				b=true;
+			}
+			else {
+				MainWindow.exceptions="All stored words are already known";
+			}
+			
+		}
+		catch(Exception ex) {
+			
+			MainWindow.exceptions=ex.getMessage();
+			
+		}
+		return b;		
+	}
+	public static boolean checkAvailabilityStoE() {
+		Connection con = UConnection.getConnection();
+		String sql= "SELECT * FROM log WHERE knownEtoS='FALSE'";
 		boolean b = false;
 		try 
 		{
@@ -391,7 +438,8 @@ public class Facade {
 				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
 				f.setSQLExamples(rs.getString("Examp"));
 				f.setDBkey(rs.getInt("count"));
-				f.setKnown(rs.getBoolean("known"));
+				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
+				f.setKnownStoE(rs.getBoolean("knownStoE"));
 				l.add(new ObservableFicha(f));
 			}
 			
@@ -420,7 +468,8 @@ public class Facade {
 				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
 				f.setSQLExamples(rs.getString("Examp"));
 				f.setDBkey(rs.getInt("count"));
-				f.setKnown(rs.getBoolean("known"));
+				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
+				f.setKnownStoE(rs.getBoolean("knownStoE"));
 				l.add(new ObservableFicha(f));
 			}
 			
@@ -434,9 +483,32 @@ public class Facade {
 		
 		return FXCollections.observableList(l);
 	}
-	public static Ficha getRndFicha () {
+	public static Ficha getRndFichaEtoS () {
 		Connection con = UConnection.getConnection();
-		String sql= "SELECT * FROM log WHERE known='FALSE' ORDER BY RAND() LIMIT 1";
+		String sql= "SELECT * FROM log WHERE knownEtoS='FALSE' ORDER BY RAND() LIMIT 1";
+		Ficha f= new Ficha("","","");
+		try {
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs= ps.executeQuery();
+			rs.next();
+			f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
+			f.setSQLExamples(rs.getString("Examp"));
+			f.setDBkey(rs.getInt("count"));
+			
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+			
+		}
+		
+		return f;
+		
+	}
+	public static Ficha getRndFichaStoE () {
+		Connection con = UConnection.getConnection();
+		String sql= "SELECT * FROM log WHERE knownStoE='FALSE' ORDER BY RAND() LIMIT 1";
 		Ficha f= new Ficha("","","");
 		try {
 			
@@ -470,7 +542,7 @@ public class Facade {
 				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
 				f.setSQLExamples(rs.getString("Examp"));
 				f.setDBkey(rs.getInt("count"));
-				f.setKnown(rs.getBoolean("known"));
+				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
 				l.add(f);
 			}
 			
