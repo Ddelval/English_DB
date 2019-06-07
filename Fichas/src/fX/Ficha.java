@@ -149,6 +149,22 @@ public class Ficha {
 			}
 		}
 	}
+	public void setExUnKnownStoE(int index) {
+		if(index<examp.size()) {
+			examp.elementAt(index).setStoEKnown(false);
+			if(allKnownStoE()==false) {
+				setKnownStoE(false);
+			}
+		}
+	}
+	public void setExUnKnownEtoS(int index) {
+		if(index<examp.size()) {
+			examp.elementAt(index).setEtoSKnown(false);
+			if(allKnownEtoS()==false) {
+				setKnownEtoS(false);
+			}
+		}
+	}
 	public String getExamplesString() {
 		if(examp==null) {
 			return "";

@@ -4,10 +4,6 @@ package fX;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javafx.stage.Stage;
 
 public class UConnection {
 	private static Connection con = null;
@@ -24,13 +20,9 @@ public class UConnection {
 			catch(Exception ex){
 				ex.printStackTrace();
 			}
-			finally {
-				return con;
-			}
-		}
-		else {
-			return con;
-		}
+		}	
+		return con;
+		
 	}
 	public static void main(String[]args) {
 		try {

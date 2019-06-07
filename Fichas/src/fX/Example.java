@@ -62,7 +62,7 @@ public class Example {
 		return knownEtoS;
 	}
 	public boolean getStoEKnown () {
-		return knownEtoS;
+		return knownStoE;
 	}
 	public String getTranslation() {
 		return translation;

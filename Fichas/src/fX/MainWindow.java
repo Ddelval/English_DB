@@ -8,6 +8,7 @@ import java.util.Stack;
 import java.util.Vector;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,51 +21,47 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.effect.BlendMode;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontSmoothingType;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.ActionListener;
-import java.math.*;
 public class MainWindow extends Application{
 
 public static Stage primaryStage;
-private Font tit, head, text, extext,extext2;
+public static Font tit, head;
+public static Font text;
+private Font extext;
+private Font extext2;
 private HBox menu;
 private Button b_intro, b_exam, b_consul, b_options, b_StoE;
-private final double M_w=400;
+private final double M_w=500;
 private final double M_h=110;
 //Introduction scene
+private Font textf;
 private TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, pronun;
 private TextArea indications;
 private Button add;
@@ -86,22 +83,19 @@ private final double E_w=500;
 private final double E_h=220;
 public static final int waitt=1000;
 //Result
-private Font res_tit, res_head, res_text, res_extext;
-private Label res_eng, res_pronun;
-private Label res_ex_eng_1, res_ex_eng_2, res_ex_eng_3, res_ex_esp_1, res_ex_esp_2, res_ex_esp_3;
-private Label res_esp_1, res_esp_2, res_esp_3;
-private TextArea use;
-private VBox v;
+private Font res_tit;
+private VBox v,vv;
 public static Stage resStage;
 //Consult
-private TableView<ObservableFicha> table;
-private ObservableList <ObservableFicha> data;
+public static TableView<ObservableFicha> table;
+public static ObservableList <ObservableFicha> data;
 private Button eliminate, edit;
 //Update
 private TextField up_eng, up_engExamp1,up_engExamp2, up_engExamp3, up_espExamp1, up_espExamp2, up_espExamp3, up_esp1, up_esp2, up_esp3, up_pronun;
 private TextArea up_indications;
 private Button update;
-private CheckBox up_known_1, up_known_2, up_known_3;
+private CheckBox up_known_E_1, up_known_E_2, up_known_E_3;
+private CheckBox up_known_S_1, up_known_S_2, up_known_S_3;
 private Ficha up_f;
 //SQLConsole
 private TextField sql_query;
@@ -118,21 +112,22 @@ private Button b_backup,b_restore;
 private TextField tf_backup, tf_restore;
 //Exceptions
 public static String exceptions="";
+public static double scale=1.5;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		/***  Fonts definition  ***/
-		this.exceptions="";
-		tit = Font.font("Helvetica",FontWeight.BOLD,20);
-		text = Font.font("Helvetica",FontWeight.LIGHT, 14);
-		head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 15);
-		extext= Font.font("Helvetica Neue", FontWeight.BOLD,17);
-		extext2= Font.font("Helvetica Neue", FontWeight.NORMAL,17);
-		
+		MainWindow.exceptions="";
+		tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
+		text = Font.font("Helvetica",FontWeight.LIGHT, 14*scale);
+		head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 15*scale);
+		extext= Font.font("Helvetica Neue", FontWeight.BOLD,17*scale);
+		extext2= Font.font("Arial", FontWeight.NORMAL,18*scale);
+		textf= Font.font("Helvetica",FontWeight.NORMAL,12*scale);
 		/***  Initialization ***/
-		this.primaryStage=primaryStage;
-		this.primaryStage.setTitle("Vocabulary Archive");
-		this.primaryStage.setScene(mainMenu());
-		this.primaryStage.show();
+		MainWindow.primaryStage=primaryStage;
+		MainWindow.primaryStage.setTitle("Vocabulary Archive");
+		MainWindow.primaryStage.setScene(mainMenu());
+		MainWindow.primaryStage.show();
 		
 	}
 	private Scene mainMenu () {
@@ -156,19 +151,32 @@ public static String exceptions="";
 			if(Facade.checkAvailabilityEtoS()) {
 				double width=primaryStage.getWidth();
 				double height = primaryStage.getHeight();
-				primaryStage.setScene(exam(width,height));
+				primaryStage.setScene(examEtoS(width,height));
 				System.out.println(primaryStage.getWidth());
 				System.out.println(primaryStage.getHeight());
 				ex_spa.requestFocus();
 			}
 			else {
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 			}
 			
 		});
 		b_StoE=new Button("Test S to E");
 		b_StoE.setFont(text);
-		
+		b_StoE.setOnAction((ActionEvent e)->{
+			if(Facade.checkAvailabilityStoE()) {
+				double width=primaryStage.getWidth();
+				double height = primaryStage.getHeight();
+				primaryStage.setScene(examStoE(width,height));
+				System.out.println(primaryStage.getWidth());
+				System.out.println(primaryStage.getHeight());
+				ex_spa.requestFocus();
+			}
+			else {
+				mssgWindow();
+			}
+			
+		});
 		
 		b_consul = new Button ("Database");
 		b_consul.setFont(text);
@@ -187,30 +195,30 @@ public static String exceptions="";
 			//setPositionOnScreen(width,height);
 		});
 		
-		HBox.setMargin(b_intro, new Insets(0,0,0,10));
-		HBox.setMargin(b_exam, new Insets(0,0,0,10));
-		HBox.setMargin(b_StoE, new Insets(0,0,0,10));
-		HBox.setMargin(b_consul, new Insets(0,0,0,10));
-		HBox.setMargin(b_options, new Insets(0,0,0,10));
+		HBox.setMargin(b_intro, new Insets(0,0,0,10*scale));
+		HBox.setMargin(b_exam, new Insets(0,0,0,10*scale));
+		HBox.setMargin(b_StoE, new Insets(0,0,0,10*scale));
+		HBox.setMargin(b_consul, new Insets(0,0,0,10*scale));
+		HBox.setMargin(b_options, new Insets(0,0,0,10*scale));
 		menu = new HBox();
 		menu.setAlignment(Pos.TOP_CENTER);
-		menu.getChildren().addAll(b_intro,b_exam,b_consul,b_options);
+		menu.getChildren().addAll(b_intro,b_exam,b_StoE,b_consul,b_options);
 		VBox v = new VBox();
 		v.setAlignment(Pos.TOP_CENTER);
-		v.setPadding(new Insets(10,10,10,10));
+		v.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		v.getChildren().addAll(title,menu);
-		VBox.setMargin(menu, new Insets(15,0,0,0));
-		Scene scene = new Scene(v,M_w,M_h);
+		VBox.setMargin(menu, new Insets(15*scale,0,0,0));
+		Scene scene = new Scene(v,M_w*scale,M_h*scale);
 		return scene;
 	}
 	private Scene introduction(double width,double height) {
 		
 		Text tit = new Text("Addition of words");
-		tit.setFont(this.tit);
+		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.CENTER);
 		Text ing = new Text("English:");
-		ing.setFont(this.text);
+		ing.setFont(MainWindow.text);
 		ing.setFontSmoothingType(FontSmoothingType.LCD);
 		Text ex1 = new Text("Example 1");
 		ex1.setFont(head);
@@ -225,37 +233,39 @@ public static String exceptions="";
 		ex3.setFontSmoothingType(FontSmoothingType.LCD);
 		ex3.setTextAlignment(TextAlignment.CENTER);
 		Text trad1 = new Text("Translation:");
-		trad1.setFont(this.text);
+		trad1.setFont(MainWindow.text);
 		trad1.setFontSmoothingType(FontSmoothingType.LCD);
 		Text trad2 = new Text("Translation:");
-		trad2.setFont(this.text);
+		trad2.setFont(MainWindow.text);
 		trad2.setFontSmoothingType(FontSmoothingType.LCD);
 		Text trad3 = new Text("Translation:");
-		trad3.setFont(this.text);
+		trad3.setFont(MainWindow.text);
 		trad3.setFontSmoothingType(FontSmoothingType.LCD);
 		Text indicate = new Text("Use notes");
-		indicate.setFont(this.text);
+		indicate.setFont(MainWindow.text);
 		indicate.setFontSmoothingType(FontSmoothingType.LCD);
 		Text pronunciation = new Text("Pronunciation");
-		pronunciation.setFont(this.text);
+		pronunciation.setFont(MainWindow.text);
 		pronunciation.setFontSmoothingType(FontSmoothingType.LCD);
 		
 		Text state = new Text("New");
-		state.setFont(this.tit);
+		state.setFont(MainWindow.tit);
 		state.setFontSmoothingType(FontSmoothingType.LCD);
 		Text suggestions = new Text();
 		suggestions.setTextAlignment(TextAlignment.CENTER);
+		suggestions.setFont(textf);
 		eng = new TextField();
+		eng.setFont(textf);
 		mem=null;
 		eng.setOnAction(new EventHandler<ActionEvent>(){
 
 			@Override
 			public void handle(ActionEvent event) {
 				if(Facade.selectSome(Facade.autotrim(eng.getText())).size()!=0) {
-					mssgWindow("This word is already in the system.",primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow("This word is already in the system.");
 				}
 				else {
-					mssgWindow("This word is NOT in the system.",primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow("This word is NOT in the system.");
 				}
 			}
 			
@@ -394,7 +404,16 @@ public static String exceptions="";
 		espExamp1 = new TextField();
 		espExamp2 = new TextField();
 		espExamp3 = new TextField();
+		
+		engExamp1.setFont(textf);
+		engExamp2.setFont(textf);
+		engExamp3.setFont(textf);
+		espExamp1.setFont(textf);
+		espExamp2.setFont(textf);
+		espExamp3.setFont(textf);
+		
 		indications = new TextArea();
+		indications.setFont(textf);
 		indications.maxWidthProperty().bind(primaryStage.widthProperty());
 		indications.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
@@ -415,20 +434,26 @@ public static String exceptions="";
 		esp1 = new TextField();
 		esp2 = new TextField();
 		esp3 = new TextField();
+		
+		esp1.setFont(textf);
+		esp2.setFont(textf);
+		esp3.setFont(textf);
+		
 		pronun = new TextField();
+		pronun.setFont(textf);
 		add= new Button("Add");
 		add.maxWidthProperty().bind(primaryStage.widthProperty());
-		add.setFont(this.text);
+		add.setFont(MainWindow.text);
 		add.setOnAction((ActionEvent e)->{
 			if(Facade.selectSome(Facade.autotrim(eng.getText())).size()!=0) {
-				confirmWindowintro("This word is already in the system. Are you sure you wan to include it?",primaryStage.getWidth(),primaryStage.getHeight());
+				confirmWindowintro("This word is already in the system. Are you sure you wan to include it?");
 			}
 			else {
 				add();
 			}
 			
 		});
-		
+		engExamp1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
 		GridPane.setFillWidth(tit,true);
 		GridPane.setFillWidth(menu, true);
 		GridPane.setFillWidth(eng, true);
@@ -450,15 +475,15 @@ public static String exceptions="";
 		GridPane.setFillWidth(indications, true);
 		HBox h= new HBox();
 		h.setAlignment(Pos.CENTER);
-		HBox.setMargin(eng, new Insets(0,10,0,10));
+		HBox.setMargin(eng, new Insets(0,10*scale,0,10*scale));
 		HBox.setHgrow(eng, Priority.ALWAYS);
 		h.getChildren().addAll(ing,eng,state);
 		
 		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
+		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
+		grid.setHgap(10*scale);
+		grid.setVgap(10*scale);
 		grid.add(menu, 0, 0, 2, 1);
 		grid.add(tit, 0, 1, 2, 1);
 		grid.add(h, 0, 2,2,1);
@@ -475,25 +500,25 @@ public static String exceptions="";
 		grid.add(engExamp2, 0, 11, 2, 1);
 		grid.add(espExamp2, 0, 12, 2, 1);
 		grid.add(trad2, 0, 13);
-		grid.add(esp2, 1, 14);
-		grid.add(ex3, 0, 15, 2, 1);
-		grid.add(engExamp3, 0, 16, 2, 1);
-		grid.add(espExamp3, 0, 17, 2, 1);
-		grid.add(trad3, 0, 18);
-		grid.add(esp3, 1, 18);
-		grid.add(indicate, 0, 19,2,1);
-		grid.add(indications, 0, 20, 2, 1);
+		grid.add(esp2, 1, 13);
+		grid.add(ex3, 0, 14, 2, 1);
+		grid.add(engExamp3, 0, 15, 2, 1);
+		grid.add(espExamp3, 0, 16, 2, 1);
+		grid.add(trad3, 0, 17);
+		grid.add(esp3, 1, 17);
+		grid.add(indicate, 0, 18,2,1);
+		grid.add(indications, 0, 19, 2, 1);
 		
 		grid.add(add, 0, 21, 2, 1);
-		Scene scene = new Scene(grid,I_w,I_h);
-		primaryStage.setX(primaryStage.getX()-(I_w-width)/2);
-		primaryStage.setY(primaryStage.getY()-(I_h+22-height)/2);
+		Scene scene = new Scene(grid,I_w*scale,I_h*scale);
+		primaryStage.setX(primaryStage.getX()-(I_w*scale-width)/2);
+		primaryStage.setY(primaryStage.getY()-(I_h*scale+22-height)/2);
 		return scene;
 		
 	}
-	private Scene exam (double width,double height) {
+	private Scene examEtoS (double width,double height) {
 		ex_f = Facade.getRndFichaEtoS();
-		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		mssgWindow();
 		Vector <Example> v = ex_f.getExampVec();
 		//Reduce the number of examples to 1
 		if(v.size()>1) {
@@ -514,21 +539,21 @@ public static String exceptions="";
 		ex_eng = new TextField(ex_f.getEnglish());
 		ex_eng.setAlignment(Pos.CENTER_LEFT);
 		ex_eng.setFont(extext);
-		ex_eng.setPadding(new Insets(0,0,0,10));
+		ex_eng.setPadding(new Insets(0,0,0,10*scale));
 		ex_eng.setEditable(false);
 		ex_eng.setBackground(Background.EMPTY);
-		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30*scale));
 		ex_eng.setOnMouseClicked((Event e)->{
 			Facade.Speak(ex_eng.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		ex_pronun = new Label(ex_f.getPronunciation());
 		ex_pronun.setAlignment(Pos.TOP_RIGHT);
-		ex_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30*scale));
 		ex_pronun.setFont(extext2);
 		ex_pronun.setOnMouseClicked((Event e)->{
 			Facade.Speak(ex_eng.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		if(ex_e!=null) {
 		ex_examp= new TextArea(ex_e.getEng_example());
@@ -540,7 +565,7 @@ public static String exceptions="";
 		ex_examp.setCenterShape(true);
 		ex_examp.setOnMouseClicked((Event e)->{
 			Facade.Speak(ex_examp.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		}
 		else {
@@ -553,22 +578,23 @@ public static String exceptions="";
 			ex_examp.setCenterShape(true);
 		}
 		ex_spa = new TextField();
+		ex_spa.setFont(textf);
 		ex_spa.setOnAction((ActionEvent e)->{
 			if(ex_e.getTranslation().toUpperCase().equals(Facade.autotrim(ex_spa.getText().toUpperCase()))) {
 				double d_width = primaryStage.getWidth();
 				double d_height=primaryStage.getHeight();
-				primaryStage.setScene(result(1,d_width,d_height));
+				primaryStage.setScene(resultEtoS(1,d_width,d_height));
 				
 				//setPositionOnScreen(width, height);
 				this.v.requestFocus();
 				ex_f.setExKnownEtoS(ex_index);
 				Facade.updateFicha(ex_f);
 				ex_f.getExampVec().elementAt(ex_index).setEtoSKnown(true);
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 			}
 			else {
 				double d_width=primaryStage.getWidth();
-				double d_height = primaryStage.getHeight();primaryStage.setScene(result(0,d_width,d_height));
+				double d_height = primaryStage.getHeight();primaryStage.setScene(resultEtoS(0,d_width,d_height));
 				//setPositionOnScreen(width,height);
 				this.v.requestFocus();
 			}
@@ -577,10 +603,10 @@ public static String exceptions="";
 		GridPane.setFillWidth(ex_pronun, true);
 		GridPane.setFillWidth(ex_examp, false);
 		GridPane.setFillWidth(ex_spa, true);
-		GridPane.setMargin(ex_pronun, new Insets(0,0,0,10));
-		GridPane.setMargin(ex_eng, new Insets(0,10,0,0));
+		GridPane.setMargin(ex_pronun, new Insets(0,0,0,10*scale));
+		GridPane.setMargin(ex_eng, new Insets(0,10*scale,0,0));
 		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
+		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
 		grid.setHgap(10);
 		grid.setVgap(10);
@@ -590,10 +616,10 @@ public static String exceptions="";
 		grid.add(ex_examp, 0, 3, 2, 1);
 		grid.add(ex_spa, 0, 4, 2, 1);
 		ex_spa.requestFocus();
-		Scene scene = new Scene(grid,E_w,E_h);
+		Scene scene = new Scene(grid,E_w*scale,E_h*scale);
 		scene.getStylesheets().add("/Data.css");
-		primaryStage.setX(primaryStage.getX()-(E_w-width)/2);
-		primaryStage.setY(primaryStage.getY()-(E_h+22-height)/2);
+		primaryStage.setX(primaryStage.getX()-(E_w*scale-width)/2);
+		primaryStage.setY(primaryStage.getY()-(E_h*scale+22-height)/2);
 		if(Facade.getConfig("s_readauto").equals("1")) {
 			Facade.SpeakwDelay(ex_examp.getText());
 		}
@@ -606,7 +632,7 @@ public static String exceptions="";
 	
 	private Scene examStoE (double width,double height) {
 		ex_f = Facade.getRndFichaStoE();
-		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		mssgWindow();
 		Vector <Example> v = ex_f.getExampVec();
 		//Reduce the number of examples to 1
 		if(v.size()>1) {
@@ -621,26 +647,18 @@ public static String exceptions="";
 			ex_index=0;
 			ex_e=v.elementAt(0);
 		}
-		ex_eng = new TextField(ex_f.getEnglish());
+		ex_eng = new TextField(ex_e.getTranslation());
 		ex_eng.setAlignment(Pos.CENTER_LEFT);
 		ex_eng.setFont(extext);
-		ex_eng.setPadding(new Insets(0,0,0,10));
+		ex_eng.setPadding(new Insets(0,0,0,10*scale));
 		ex_eng.setEditable(false);
 		ex_eng.setBackground(Background.EMPTY);
-		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
+		ex_eng.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30*scale));
 		ex_eng.setOnMouseClicked((Event e)->{
 			Facade.Speak(ex_eng.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
-		ex_pronun = new Label(ex_f.getPronunciation());
-		ex_pronun.setAlignment(Pos.TOP_RIGHT);
-		ex_pronun.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30));
-		ex_pronun.setFont(extext2);
-		ex_pronun.setOnMouseClicked((Event e)->{
-			Facade.Speak(ex_eng.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-		});
-		ex_examp= new TextArea(ex_e.getEng_example());
+		ex_examp= new TextArea(ex_e.getEsp_example());
 		ex_examp.setWrapText(true);
 		ex_examp.setEditable(false);
 		ex_examp.setFont(extext);
@@ -649,35 +667,32 @@ public static String exceptions="";
 		ex_examp.setCenterShape(true);
 		ex_examp.setOnMouseClicked((Event e)->{
 			Facade.Speak(ex_examp.getText());
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		ex_spa = new TextField();
+		ex_spa.setFont(textf);
 		ex_spa.setOnAction((ActionEvent e)->{
-			if(ex_e.getTranslation().toUpperCase().equals(Facade.autotrim(ex_spa.getText().toUpperCase()))) {
+			if(ex_f.getEnglish().toUpperCase().equals(Facade.autotrim(ex_spa.getText().toUpperCase()))) {
 				double d_width = primaryStage.getWidth();
 				double d_height=primaryStage.getHeight();
-				primaryStage.setScene(result(1,d_width,d_height));
-				
-				//setPositionOnScreen(width, height);
-				this.v.requestFocus();
-				ex_f.setExKnownEtoS(ex_index);
+				primaryStage.setScene(resultStoE(1,d_width,d_height));
+				this.vv.requestFocus();
+				ex_f.setExKnownStoE(ex_index);
 				Facade.updateFicha(ex_f);
-				ex_f.getExampVec().elementAt(ex_index).setEtoSKnown(true);
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				ex_f.getExampVec().elementAt(ex_index).setStoEKnown(true);
+				mssgWindow();
 			}
 			else {
 				double d_width=primaryStage.getWidth();
-				double d_height = primaryStage.getHeight();primaryStage.setScene(result(0,d_width,d_height));
+				double d_height = primaryStage.getHeight();primaryStage.setScene(resultStoE(0,d_width,d_height));
 				//setPositionOnScreen(width,height);
-				this.v.requestFocus();
+				this.vv.requestFocus();
 			}
 		});
 		GridPane.setFillWidth(ex_eng, true);
-		GridPane.setFillWidth(ex_pronun, true);
 		GridPane.setFillWidth(ex_examp, false);
 		GridPane.setFillWidth(ex_spa, true);
-		GridPane.setMargin(ex_pronun, new Insets(0,0,0,10));
-		GridPane.setMargin(ex_eng, new Insets(0,10,0,0));
+		GridPane.setMargin(ex_eng, new Insets(0,10*scale,0,0));
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10,10,10,10));
 		grid.setAlignment(Pos.TOP_CENTER);
@@ -685,17 +700,13 @@ public static String exceptions="";
 		grid.setVgap(10);
 		grid.add(menu, 0, 0, 2, 1);
 		grid.add(ex_eng, 0, 2);
-		grid.add(ex_pronun, 1, 2);
 		grid.add(ex_examp, 0, 3, 2, 1);
 		grid.add(ex_spa, 0, 4, 2, 1);
 		ex_spa.requestFocus();
-		Scene scene = new Scene(grid,E_w,E_h);
+		Scene scene = new Scene(grid,E_w*scale,E_h*scale);
 		scene.getStylesheets().add("/Data.css");
-		primaryStage.setX(primaryStage.getX()-(E_w-width)/2);
-		primaryStage.setY(primaryStage.getY()-(E_h+22-height)/2);
-		if(Facade.getConfig("s_readauto").equals("1")) {
-			Facade.SpeakwDelay(ex_examp.getText());
-		}
+		primaryStage.setX(primaryStage.getX()-(E_w*scale-width)/2);
+		primaryStage.setY(primaryStage.getY()-(E_h*scale+22-height)/2);
 		
 		
 		return scene;
@@ -715,13 +726,9 @@ public static String exceptions="";
 	 * @param i A value of 0 equals failure whereas a 1 equals success
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
-	private Scene result(int i,double width,double height) {
+	private Scene resultEtoS(int i,double width,double height) {
 		Text tit;
-		res_tit = Font.font("Helvetica",FontWeight.BOLD,20);
-		res_text = Font.font("Helvetica",FontWeight.LIGHT, 14);
-		res_head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 18);
-		res_extext= Font.font("Helvetica Neue", FontWeight.BOLD,17);
+		res_tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
 		if(i==1) {
 			tit= new Text("Correct:");
 		}
@@ -736,7 +743,7 @@ public static String exceptions="";
 		v.setAlignment(Pos.TOP_CENTER);
 		v.setFillWidth(true);
 		v.getChildren().addAll(menu,tit);
-		VBox.setMargin(tit, new Insets(10,0,0,0));
+		VBox.setMargin(tit, new Insets(10*scale,0,0,0));
 		Scene s = AuxiliarBuilder.displayFicha(ex_f, primaryStage);
 		HBox b=new HBox();
 		b.getChildren().add(s.getRoot());
@@ -746,7 +753,7 @@ public static String exceptions="";
 		if(i==0) {
 			
 			Text res = new Text("Your answer has been: \""+ex_spa.getText()+"\". It was expected: "+ex_e.getTranslation());
-			res.wrappingWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+			res.wrappingWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
 			res.setFont(text);
 			res.setFontSmoothingType(FontSmoothingType.LCD);
 			res.setTextAlignment(TextAlignment.LEFT);
@@ -754,10 +761,32 @@ public static String exceptions="";
 			v.getChildren().add(res);
 			
 			Button but =new Button("Mark as correct");
-			but.maxWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+			but.maxWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
 			v.getChildren().add(but);
-			VBox.setMargin(but, new Insets(10,0,15,0));
-			
+			but.setFont(text);
+			VBox.setMargin(but, new Insets(10*scale,0,15*scale,0));
+			but.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					ex_f.setExKnownEtoS(ex_index);
+					Facade.updateFicha(ex_f);
+					mssgWindow();
+					if(Facade.checkAvailabilityEtoS()) {
+						double width=primaryStage.getWidth();
+						double height = primaryStage.getHeight();
+						primaryStage.setScene(examEtoS(width,height));
+						ex_spa.requestFocus();
+					}
+					else {
+						
+					}
+					mssgWindow();
+				}
+				
+				
+				
+			});
 		}
 		v.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
@@ -767,32 +796,169 @@ public static String exceptions="";
 					if(Facade.checkAvailabilityEtoS()) {
 						double width=primaryStage.getWidth();
 						double height = primaryStage.getHeight();
-						primaryStage.setScene(exam(width,height));
+						primaryStage.setScene(examEtoS(width,height));
 						ex_spa.requestFocus();
 					}
 					else {
 						
 					}
-					mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow();
+				}
+				else if (event.getCode()==KeyCode.CONTROL) {
+					if(i==0) {
+						ex_f.setExKnownEtoS(ex_index);
+						Facade.updateFicha(ex_f);
+					}
+					else {
+						ex_f.setExUnKnownEtoS(ex_index);
+						Facade.updateFicha(ex_f);
+					}
+					mssgWindow();
+					if(Facade.checkAvailabilityEtoS()) {
+						double width=primaryStage.getWidth();
+						double height = primaryStage.getHeight();
+						primaryStage.setScene(examEtoS(width,height));
+						ex_spa.requestFocus();
+					}
+					else {
+						
+					}
+					mssgWindow();
 				}
 				
 			}
 			
 		});
-		int height1=(int)AuxiliarBuilder.expHeight+150;
-		Scene scene = new Scene(v,500,height1);
-		primaryStage.setX(primaryStage.getX()-(500-width)/2);
-		primaryStage.setY(primaryStage.getY()-(height1+20-height)/2);
+		int height1=(int)AuxiliarBuilder.expHeight+ (int)(150*MainWindow.scale);
+		if(i!=0)height1-=70*scale;
+		double wid=Math.max(500*scale,AuxiliarBuilder.expWidth);
+		wid+=20;
+		Scene scene = new Scene(v,wid,height1);
+		primaryStage.setX(primaryStage.getX()-(wid-width)/2);
+		primaryStage.setY(primaryStage.getY()-((height1+20*MainWindow.scale)-height)/2);
+		return scene;
+		
+	}
+	private Scene resultStoE(int i,double width,double height) {
+		Text tit;
+		res_tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
+		if(i==1) {
+			tit= new Text("Correct:");
+		}
+		else {
+			tit = new Text("The answer does not seem correct");
+		}
+		tit.setFont(res_tit);
+		tit.setFontSmoothingType(FontSmoothingType.LCD);
+		tit.setTextAlignment(TextAlignment.CENTER);
+		
+		vv = new VBox();
+		vv.setAlignment(Pos.TOP_CENTER);
+		vv.setFillWidth(true);
+		vv.getChildren().addAll(menu,tit);
+		VBox.setMargin(tit, new Insets(10*scale,0,0,0));
+		Scene s = AuxiliarBuilder.displayFicha(ex_f, primaryStage);
+		HBox b=new HBox();
+		b.getChildren().add(s.getRoot());
+		vv.getChildren().add(b);
+		//VBox.setMargin(grid, new Insets(20,0,20,0));
+		
+		if(i==0) {
+			
+			Text res = new Text("Your answer has been: \""+ex_spa.getText()+"\". It was expected: "+ex_f.getEnglish());
+			res.wrappingWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
+			res.setFont(text);
+			res.setFontSmoothingType(FontSmoothingType.LCD);
+			res.setTextAlignment(TextAlignment.LEFT);
+			GridPane.setFillWidth(res, true);
+			vv.getChildren().add(res);
+			
+			Button but =new Button("Mark as correct");
+			but.setFont(text);
+			but.maxWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
+			vv.getChildren().add(but);
+			VBox.setMargin(but, new Insets(10*scale,0,15*scale,0));
+			but.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					ex_f.setExKnownStoE(ex_index);
+					Facade.updateFicha(ex_f);
+					mssgWindow();
+					if(Facade.checkAvailabilityStoE()) {
+						double width=primaryStage.getWidth();
+						double height = primaryStage.getHeight();
+						primaryStage.setScene(examStoE(width,height));
+						ex_spa.requestFocus();
+					}
+					else {
+						
+					}
+					mssgWindow();
+				}
+				
+				
+				
+			});
+		}
+		vv.setOnKeyPressed(new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent event) {
+				
+				if(event.getCode()==KeyCode.ENTER) {
+					if(Facade.checkAvailabilityStoE()) {
+						double width=primaryStage.getWidth();
+						double height = primaryStage.getHeight();
+						primaryStage.setScene(examStoE(width,height));
+						ex_spa.requestFocus();
+					}
+					else {
+						
+					}
+					mssgWindow();
+				}
+				else if (event.getCode()==KeyCode.CONTROL) {
+					if(i==0) {
+						ex_f.setExKnownStoE(ex_index);
+						Facade.updateFicha(ex_f);
+					}
+					else {
+						ex_f.setExUnKnownStoE(ex_index);
+						Facade.updateFicha(ex_f);
+					}
+					mssgWindow();
+					if(Facade.checkAvailabilityStoE()) {
+						double width=primaryStage.getWidth();
+						double height = primaryStage.getHeight();
+						primaryStage.setScene(examStoE(width,height));
+						ex_spa.requestFocus();
+					}
+					else {
+						
+					}
+					mssgWindow();
+				}
+				
+			}
+			
+		});
+		int height1=(int)AuxiliarBuilder.expHeight+ (int)(150*MainWindow.scale);
+		if(i!=0)height1-=70*scale;
+		double wid=Math.max(500*scale,AuxiliarBuilder.expWidth);
+		wid+=20;
+		Scene scene = new Scene(vv,wid,height1);
+		primaryStage.setX(primaryStage.getX()-(wid-width)/2);
+		primaryStage.setY(primaryStage.getY()-((height1+20*MainWindow.scale)-height)/2);
 		return scene;
 		
 	}
 	private Scene consult(double width,double height) {
 		Text tit =new Text("Database");
-		tit.setFont(this.tit);
+		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.CENTER);
 		TextField tfs= new TextField();
-		tfs.setFont(this.text);
+		tfs.setFont(MainWindow.text);
 		tfs.setPromptText("Search");
 		tfs.setOnKeyReleased(new EventHandler<KeyEvent>() {
 
@@ -851,45 +1017,228 @@ public static String exceptions="";
 		table.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		table.getSelectionModel().setCellSelectionEnabled(false);
 		data = Facade.selectAll();
-		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		mssgWindow();
 		TableColumn<ObservableFicha, Integer> key = new TableColumn<ObservableFicha, Integer>("Index");
-		key.setMinWidth(30);
+		key.setMinWidth(30*scale);
 		key.setCellValueFactory(new PropertyValueFactory<ObservableFicha, Integer> ("DBkey"));
-		TableColumn<ObservableFicha, String> english = new TableColumn<ObservableFicha, String>("English");
-		english.setMinWidth(30);
-		english.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("english"));
-		TableColumn<ObservableFicha, String> ex1 = new TableColumn<ObservableFicha, String>("Ex.1");
-		ex1.setMinWidth(30);
-		ex1.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex1"));
-		TableColumn<ObservableFicha, String> ex2 = new TableColumn<ObservableFicha, String>("Ex.2");
-		ex2.setMinWidth(30);
-		ex2.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex2"));
-		TableColumn<ObservableFicha, String> ex3 = new TableColumn<ObservableFicha, String>("Ex.3");
-		ex3.setMinWidth(30);
-		ex3.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex3"));
-		TableColumn<ObservableFicha, String> pronunciation = new TableColumn<ObservableFicha, String>("Pronunciation");
-		pronunciation.setMinWidth(30);
-		pronunciation.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("pronunciation"));
-		TableColumn<ObservableFicha, String> use = new TableColumn<ObservableFicha, String>("Use");
-		use.setMinWidth(30);
-		use.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("use"));
-		TableColumn<ObservableFicha, String> knownEtoS = new TableColumn<ObservableFicha, String>("Known EtoS");
-		knownEtoS.setMinWidth(100);
-		knownEtoS.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("KnownEtoS"));
-		TableColumn<ObservableFicha, String> knownStoE = new TableColumn<ObservableFicha, String>("Known StoE");
-		knownEtoS.setMinWidth(100);
-		knownEtoS.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("KnownStoE"));
-		table.setItems(data);
-		table.getColumns().addAll(key,english, ex1, ex2, ex3, pronunciation, use,knownEtoS,knownStoE);
-		table.minHeightProperty().bind(primaryStage.heightProperty().subtract(150));
-		table.getSortOrder().add(english);
-		table.setOnMouseClicked(new EventHandler() {
+		key.setCellFactory(new Callback<TableColumn<ObservableFicha, Integer>,TableCell<ObservableFicha, Integer>>(){
 
 			@Override
-			public void handle(Event event) {
+			public TableCell<ObservableFicha, Integer> call(TableColumn<ObservableFicha, Integer> param) {
+				return new TableCell<ObservableFicha,Integer>(){
+					@Override
+					public void updateItem(Integer item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(Integer.toString(item));
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> english = new TableColumn<ObservableFicha, String>("English");
+		english.setMinWidth(30*scale);
+		english.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("english"));
+		english.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> ex1 = new TableColumn<ObservableFicha, String>("Ex.1");
+		ex1.setMinWidth(30*scale);
+		ex1.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex1"));
+		ex1.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> ex2 = new TableColumn<ObservableFicha, String>("Ex.2");
+		ex2.setMinWidth(30*scale);
+		ex2.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex2"));
+		ex2.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> ex3 = new TableColumn<ObservableFicha, String>("Ex.3");
+		ex3.setMinWidth(30*scale);
+		ex3.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("ex3"));
+		ex3.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> pronunciation = new TableColumn<ObservableFicha, String>("Pronunciation");
+		pronunciation.setMinWidth(30*scale);
+		pronunciation.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("pronunciation"));
+		pronunciation.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> use = new TableColumn<ObservableFicha, String>("Use");
+		use.setMinWidth(30*scale);
+		use.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("use"));
+		use.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> knownEtoS = new TableColumn<ObservableFicha, String>("Known EtoS");
+		knownEtoS.setMinWidth(130*scale);
+		knownEtoS.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("knownetos"));
+		knownEtoS.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		TableColumn<ObservableFicha, String> knownStoE = new TableColumn<ObservableFicha, String>("Known StoE");
+		knownStoE.setMinWidth(130*scale);
+		knownStoE.setCellValueFactory(new PropertyValueFactory<ObservableFicha, String> ("knownstoe"));
+		knownStoE.setCellFactory(new Callback<TableColumn<ObservableFicha, String>,TableCell<ObservableFicha, String>>(){
+
+			@Override
+			public TableCell<ObservableFicha, String> call(TableColumn<ObservableFicha, String> param) {
+				return new TableCell<ObservableFicha,String>(){
+					@Override
+					public void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if(isEmpty()) {
+							setText("");
+						}
+						else {
+							setFont(text);
+							setText(item);
+						}
+					}
+				};
+			}
+			
+		});
+		table.setItems(data);
+		
+		table.getColumns().addAll(key,english, ex1, ex2, ex3, pronunciation, use,knownEtoS,knownStoE);
+		
+		table.minHeightProperty().bind(primaryStage.heightProperty().subtract(150*scale));
+		table.getSortOrder().add(english);
+		table.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				if(event.getClickCount()==2) {
 				Ficha f=new Ficha(table.getSelectionModel().getSelectedItem());
 				detail(f,primaryStage.getWidth(),primaryStage.getHeight());
-				
+				}
 			}
 			
 		});
@@ -906,7 +1255,8 @@ public static String exceptions="";
 			
 		});
 		eliminate = new Button("Delete");
-		eliminate.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20));
+		eliminate.setFont(text);
+		eliminate.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20*scale));
 		eliminate.setOnAction((ActionEvent e)->{
 			if(table.getSelectionModel().getSelectedIndex()!=-1) {
 				ObservableList<Integer> i = table.getSelectionModel().getSelectedIndices();
@@ -917,25 +1267,30 @@ public static String exceptions="";
 						v.add(table.getSelectionModel().getSelectedItems().get(j));
 					}
 					
-					confirmWindow("¿Desea eliminar "+i.size()+" filas?", v,primaryStage.getWidth(),primaryStage.getHeight());
+					confirmWindow("¿Desea eliminar "+i.size()+" filas?", v);
 					data=Facade.selectAll();
 					table.setItems(data);
 					table.refresh();
-					mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+					table.getSortOrder().clear();
+					table.getSortOrder().add(english);
+					mssgWindow();
 				}
 				else {
 					//There is only one row selected
-					confirmWindow("¿Desea eliminar "+(data.get(table.getSelectionModel().getSelectedIndex()).getEnglish())+"?",table.getSelectionModel().getSelectedItem().getDBkey(),primaryStage.getWidth(),primaryStage.getHeight() );
+					confirmWindow("¿Desea eliminar "+(data.get(table.getSelectionModel().getSelectedIndex()).getEnglish())+"?",table.getSelectionModel().getSelectedItem().getDBkey());
 					data=Facade.selectAll();
 					table.setItems(data);
 					table.refresh();
-					mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+					table.getSortOrder().clear();
+					table.getSortOrder().add(english);
+					mssgWindow();
 				}
 			}
 			
 		});
 		edit = new Button("Edit");
-		edit.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20));
+		edit.setFont(text);
+		edit.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20*scale));
 		edit.setOnAction((ActionEvent e)->{
 			if(table.getSelectionModel().getSelectedIndex()!=-1) {
 				if( table.getSelectionModel().getSelectedIndices().size()<2) {
@@ -945,15 +1300,15 @@ public static String exceptions="";
 					
 				}
 				else {
-					mssgWindow("Select only one one row",primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow("Select only one one row");
 				}
 			}
 			else {
-				mssgWindow("Select a row", primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow("Select a row");
 			}
 		});
 		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
+		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
 		grid.setHgap(10);
 		grid.setVgap(10);
@@ -963,16 +1318,18 @@ public static String exceptions="";
 		grid.add(table, 0, 2, 2, 1);
 		grid.add(eliminate, 0, 3);
 		grid.add(edit, 1, 3);
-		Scene scene = new Scene(grid,800,600);
-		primaryStage.setX(primaryStage.getX()-(800-width)/2);
-		primaryStage.setY(primaryStage.getY()-(622-height)/2);
+		double w = 800*scale;
+		double h= 600*scale;
+		Scene scene = new Scene(grid,w,h);
+		primaryStage.setX(primaryStage.getX()-(w-width)/2);
+		primaryStage.setY(primaryStage.getY()-(h-height)/2);
 		return scene;
 		
 	}
 	private Scene options(double width,double height) {
-		Font up_head = head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 17);
+		Font up_head = head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 17*scale);
 		Text tit = new Text("Settings");
-		tit.setFont(this.tit);
+		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.LEFT);
 		
@@ -980,54 +1337,68 @@ public static String exceptions="";
 		
 		
 		sql_query= new TextField();
-		sql_query.minWidthProperty().bind(primaryStage.widthProperty().subtract(150));
+		sql_query.setFont(textf);
+		sql_query.minWidthProperty().bind(primaryStage.widthProperty().subtract(150*scale));
 		sql_query.setPromptText("Enter the command");
 		sql_w_result= new CheckBox("Result");
-		sql_w_result.setFont(this.text);
+		sql_w_result.setFont(MainWindow.text);
 		execute = new Button("Execute");
-		execute.setFont(this.text);
+		execute.setFont(MainWindow.text);
 		execute.setOnAction( (ActionEvent e)->{
 			System.out.println(sql_query.getText());
 			System.out.println(Facade.execute(sql_query.getText(), sql_w_result.isSelected()));
 			sql_result.setText(Facade.execute(sql_query.getText(), sql_w_result.isSelected()));
 		});
 		sql_result = new TextArea("");
-		sql_result.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
-		sql_result.minHeightProperty().bind(primaryStage.heightProperty().subtract(250));
+		sql_result.setFont(textf);
+		sql_result.minWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
+		sql_result.minHeightProperty().bind(primaryStage.heightProperty().subtract(250*scale));
 		GridPane.setFillWidth(menu, true);
 		GridPane.setFillWidth(sql_query, true);
 		GridPane.setFillWidth(execute, true);
 		GridPane.setFillWidth(sql_result, true);
 		TabPane tp = new TabPane();
 		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
+		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
+		grid.setHgap(10*scale);
+		grid.setVgap(10*scale);
 		grid.add   (sql_query, 0, 0);
 		grid.add(sql_w_result, 1, 0);
 		grid.add     (execute, 0, 1, 2, 1);
 		grid.add  (sql_result, 0, 2, 2, 1);
 		Tab consol = new Tab("SQL console");
 		consol.setClosable(false);
+		consol.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		consol.setContent(grid);
 		
 		//Settings
 		Tab adjust = new Tab ("Other");
+		adjust.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		reset = new Button ("Mark all as unknown");
 		reset.setFont(text);
 		reset.setOnAction((ActionEvent e)->{
-			confirmWindow("Are you sure you want to make every register as unknown?", primaryStage.getWidth(),primaryStage.getHeight());
+			confirmWindow("Are you sure you want to make every register as unknown?");
 		});
+		Text scal = new Text("Select the scale for the graphical interface");
+		scal.setFont(text);
+		TextField ts = new TextField();
+		ts.setFont(textf);
+		HBox sb = new HBox();
+		sb.getChildren().addAll(scal,ts);
+		sb.setPadding(new Insets(10,0,10,0));
+		HBox.setHgrow(ts, Priority.ALWAYS);
+		HBox.setMargin(ts, new Insets(0,0,0,10));
 		VBox vbox = new VBox();
-		vbox.setPadding(new Insets(10,10,10,10));
-		vbox.getChildren().add(reset);
+		vbox.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		vbox.getChildren().addAll(reset,sb);
 		vbox.setAlignment(Pos.TOP_CENTER);
 		adjust.setContent(vbox);
 		adjust.setClosable(false);
 		
 		//Backup
 		Tab backup = new Tab("Backup");
+		backup.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		Text back =new Text("Save backup");
 		back.setFont(up_head);
 		back.setFontSmoothingType(FontSmoothingType.LCD);
@@ -1035,7 +1406,9 @@ public static String exceptions="";
 		rest.setFont(up_head);
 		rest.setFontSmoothingType(FontSmoothingType.LCD);
 		tf_backup = new TextField(Facade.getConfig("backupPath"));
+		tf_backup.setFont(textf);
 		tf_restore = new TextField("");
+		tf_restore.setFont(textf);
 		tf_restore.setOnKeyTyped(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
@@ -1047,53 +1420,55 @@ public static String exceptions="";
 			
 		});
 		b_backup = new Button("Backup");
+		b_backup.setFont(text);
 		b_backup.minWidthProperty().bind(primaryStage.widthProperty().subtract(20));
 		b_backup.setOnAction((ActionEvent e)->{
 			String s =Facade.basicfilter(tf_backup.getText());
 			Facade.updateConfig("backupPath", s);
 			Facade.backup(s);
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		b_restore = new Button ("Restore");
 		b_restore.setDisable(true);
+		b_restore.setFont(text);
 		b_restore.setOnAction((ActionEvent e)->{
 			if(!tf_restore.getText().equals("")) {
 				Facade.restore(tf_restore.getText());
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 			}
 		});
 		b_restore.minWidthProperty().bind(primaryStage.widthProperty().subtract(20));
 		VBox vb2 = new VBox();
 		HBox h1 = new HBox();
 		h1.setAlignment(Pos.TOP_LEFT);
-		h1.setPadding(new Insets(10,0,5,0));
+		h1.setPadding(new Insets(10*scale,0,5*scale,0));
 		h1.getChildren().add(back);
 		HBox h2 = new HBox();
 		h2.setAlignment(Pos.TOP_CENTER);
-		h2.setPadding(new Insets(5,0,5,0));
+		h2.setPadding(new Insets(5*scale,0,5*scale,0));
 		h2.getChildren().add(tf_backup);
 		HBox h3 = new HBox();
 		h3.setAlignment(Pos.TOP_CENTER);
-		h3.setPadding(new Insets(5,0,5,0));
+		h3.setPadding(new Insets(5*scale,0,5*scale,0));
 		h3.getChildren().add(b_backup);
 		HBox h4 = new HBox();
 		h4.setAlignment(Pos.TOP_LEFT);
-		h4.setPadding(new Insets(5,0,5,0));
+		h4.setPadding(new Insets(5*scale,0,5*scale,0));
 		h4.getChildren().add(rest);
 		HBox h5 = new HBox();
 		h5.setAlignment(Pos.TOP_CENTER);
-		h5.setPadding(new Insets(5,0,5,0));
+		h5.setPadding(new Insets(5*scale,0,5*scale,0));
 		h5.getChildren().add(tf_restore);
 		HBox h6 = new HBox();
 		h6.setAlignment(Pos.TOP_CENTER);
-		h6.setPadding(new Insets(5,0,5,0));
+		h6.setPadding(new Insets(5*scale,0,5*scale,0));
 		h6.getChildren().add(b_restore);
 		HBox.setHgrow(tf_backup, Priority.ALWAYS);
 		HBox.setHgrow(b_backup, Priority.ALWAYS);
 		HBox.setHgrow(tf_restore, Priority.ALWAYS);
 		HBox.setHgrow(b_backup, Priority.ALWAYS);
 		vb2.setAlignment(Pos.TOP_CENTER);
-		vb2.setPadding(new Insets(10,10,10,10));
+		vb2.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		vb2.getChildren().addAll(h1, h2, h3, h4, h5, h6);
 		backup.setContent(vb2);
 		backup.setClosable(false);
@@ -1102,10 +1477,13 @@ public static String exceptions="";
 		
 
 		Tab voice = new Tab ("Voice");
+		voice.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		Label la = new Label("Select the voice:");
+		la.setFont(text);
 		ComboBox<String> cb = new ComboBox<String>();
+		cb.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		if(arrv==null)arrv=Facade.getVoices();
-		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		mssgWindow();
 		if(Facade.getConfig("s_showall").equals("1")) {
 			for(Voice v: arrv) {
 				cb.getItems().add(v.toString());
@@ -1119,7 +1497,7 @@ public static String exceptions="";
 			}
 		}
 		String s=Facade.getConfig("voice");
-		mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+		mssgWindow();
 		
 		for(Voice v:arrv) {
 			if(v.getName().equals(s)) {
@@ -1132,14 +1510,16 @@ public static String exceptions="";
 			String strg=cb.getSelectionModel().getSelectedItem();
 			if(strg!=null) {
 				Facade.updateConfig("voice", strg.substring(0, strg.indexOf('(')-1));
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 			}
 			
 		});
 		
 		
 		Label ls=new Label("Select the speed (WPM)");
+		ls.setFont(text);
 		TextField tf= new TextField(Facade.getConfig("s_speed"));
+		tf.setFont(textf);
 		tf.setOnKeyTyped((KeyEvent e)->{
 			try {
 				tf.appendText(e.getCharacter());
@@ -1147,10 +1527,11 @@ public static String exceptions="";
 				Facade.updateConfig("s_speed", Integer.toString(Integer.parseInt(tf.getText())));
 			}
 			catch(Exception ex) {}
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		CheckBox ceeb= new CheckBox();
 		ceeb.setSelected(false);
+		ceeb.setFont(text);
 		ceeb.setAllowIndeterminate(false);
 		if(Facade.getConfig("s_readauto").equals("1")) {
 			ceeb.setSelected(true);
@@ -1168,9 +1549,13 @@ public static String exceptions="";
 		});
 		
 		Label ww = new Label("Automatic exam example reading");
+		ww.setFont(text);
 		Label aa= new Label("Delay:");
+		aa.setFont(text);
 		Label aab= new Label("Enable:");
+		aab.setFont(text);
 		TextField dl=new TextField(Facade.getConfig("s_delay"));
+		dl.setFont(textf);
 		dl.setOnKeyTyped((KeyEvent e)->{
 			try {
 				dl.appendText(e.getCharacter());
@@ -1178,9 +1563,10 @@ public static String exceptions="";
 				Facade.updateConfig("s_delay", Integer.toString(Integer.parseInt(dl.getText())));
 			}
 			catch(Exception ex) {}
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		});
 		CheckBox cbb= new CheckBox("Show all installed voices");
+		cbb.setFont(text);
 		cbb.setAllowIndeterminate(false);
 		if(Facade.getConfig("s_showall").equals("1")) {
 			cbb.setSelected(true);
@@ -1211,7 +1597,7 @@ public static String exceptions="";
 					}
 				}
 				String str=Facade.getConfig("voice");
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 				
 				for(Voice v:arrv) {
 					if(v.getName().equals(str)) {
@@ -1232,35 +1618,34 @@ public static String exceptions="";
 		HBox hh= new HBox();
 		hh.getChildren().addAll(aab,ceeb,aa,dl);
 		hh.setAlignment(Pos.CENTER);
-		va.setPadding(new Insets(10,10,10,10));
-		VBox.setMargin(cb, new Insets(10,0,5,0));
-		VBox.setMargin(ls, new Insets(10,0,5,0));
-		VBox.setMargin(ww, new Insets(10,0,5,0));
-		VBox.setMargin(cbb, new Insets(20,0,5,0));
+		va.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		VBox.setMargin(cb, new Insets(10*scale,0,5*scale,0));
+		VBox.setMargin(ls, new Insets(10*scale,0,5*scale,0));
+		VBox.setMargin(ww, new Insets(10*scale,0,5*scale,0));
+		VBox.setMargin(cbb, new Insets(20*scale,0,5*scale,0));
 		
-		HBox.setMargin(aab, new Insets(0,0,0,10));
-		HBox.setMargin(ceeb, new Insets(0,0,0,10));
-		HBox.setMargin(aa, new Insets(0,0,0,10));
-		HBox.setMargin(dl, new Insets(0,0,0,10));
+		HBox.setMargin(aab, new Insets(0,0,0,10*scale));
+		HBox.setMargin(ceeb, new Insets(0,0,0,10*scale));
+		HBox.setMargin(aa, new Insets(0,0,0,10*scale));
+		HBox.setMargin(dl, new Insets(0,0,0,10*scale));
 		HBox.setHgrow(dl, Priority.ALWAYS);
 		va.getChildren().addAll(la,cb,ls,tf,ww,hh,cbb);
 		va.setAlignment(Pos.TOP_CENTER);
 		voice.setContent(va);
 		voice.setClosable(false);
-		
 		tp.getTabs().addAll(consol,backup,voice,adjust);
 		VBox vb= new VBox();
 		vb.setAlignment(Pos.TOP_CENTER);
 		VBox.setVgrow(tp, Priority.ALWAYS);
 		VBox.setVgrow(menu, Priority.NEVER);
-		VBox.setMargin(menu, new Insets(10,10,10,10));
+		VBox.setMargin(menu, new Insets(10*scale,10*scale,10*scale,10*scale));
 		HBox h = new HBox(tit);
-		h.setPadding(new Insets(0,0,10,10));
+		h.setPadding(new Insets(0,0,10*scale,10*scale));
 		h.setAlignment(Pos.CENTER_LEFT);
 		vb.getChildren().addAll(menu, h,tp);
-		Scene scene = new Scene(vb,A_w,A_h);
-		primaryStage.setX(primaryStage.getX()-(A_w-width)/2);
-		primaryStage.setY(primaryStage.getY()-(A_h+22-height)/2);
+		Scene scene = new Scene(vb,A_w*scale,A_h*scale);
+		primaryStage.setX(primaryStage.getX()-(A_w*scale-width)/2);
+		primaryStage.setY(primaryStage.getY()-(A_h*scale+22-height)/2);
 		return scene;
 	}
 	public void add() {
@@ -1292,7 +1677,7 @@ public static String exceptions="";
 				mem=null;
 				eng.setPromptText("Enter successfully");
 			}
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+			mssgWindow();
 		}
 	}
 	/**
@@ -1307,202 +1692,122 @@ public static String exceptions="";
 		
 	}
 	*/
-	static public void mssgWindow(double width, double height) {
+	static public void mssgWindow() {
 		if(exceptions==null) exceptions="";
 		if(!exceptions.equals("")) {
-			Stage stage = new Stage();
-			Label l = new Label(exceptions);
-			l.setTextAlignment(TextAlignment.CENTER);
-			l.minWidthProperty().bind(stage.widthProperty());
-			l.setPadding(new Insets(10,10,10,10));
-			l.setWrapText(true);
-			Scene sc = new Scene(l,Math.max(Math.min(l.getPrefWidth()+30,800),300),l.getPrefHeight()+40);
-			stage.setScene(sc);
-			stage.setX(primaryStage.getX()-(Math.max(Math.min(l.getPrefWidth()+30,800),300)-width)/2);
-			stage.setY(primaryStage.getY()-(l.getPrefHeight()+62-height)/2);
-			stage.show();
+			mssgWindow(exceptions);
 			exceptions="";
 		}
 		
 		
 	}
-	public void mssgWindow(String s, double width, double height) {
+	public static void mssgWindow(String s) {
 		
-			Stage stage = new Stage();
-			Label l = new Label(s);
-			l.setTextAlignment(TextAlignment.CENTER);
-			l.minWidthProperty().bind(stage.widthProperty());
-			l.setPadding(new Insets(10,10,10,10));
-			l.setWrapText(true);
-			Scene sc = new Scene(l,Math.max(Math.min(l.getPrefWidth()+30,800),300),l.getPrefHeight()+40);
-			stage.setScene(sc);
-			stage.setX(primaryStage.getX()-(Math.max(Math.min(l.getPrefWidth()+30,800),300)-width)/2);
-			stage.setY(primaryStage.getY()-(l.getPrefHeight()+62-height)/2);
-			l.requestFocus();
-			l.setOnKeyPressed(new EventHandler<KeyEvent>() {
+		Platform.runLater(new Runnable() {
+		    @Override
+		    public void run() {
+		    	new Mssgwindow(s);
+		    }
+		});
+			
+		
+	}
+	public void confirmWindow(String s, Object list) {
+		Platform.runLater(new Runnable() {
+		    @Override
+		    public void run() {
+		    	ConfirmWindow m= new ConfirmWindow(s);
+		    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
 
-				@Override
-				public void handle(KeyEvent event) {
-					stage.close();
-					
-				}
-				
-			});
-			stage.show();
-			
+					@Override
+					public void handle(ActionEvent event) {
+						if(list instanceof Integer) {
+							Facade.eliminateFicha((Integer)list);
+						}
+						else if(list instanceof Vector){
+							Facade.eliminateFicha((Vector<ObservableFicha>)list);
+						}
+						
+						m.close();
+						MainWindow.data=Facade.selectAll();
+						MainWindow.table.setItems(MainWindow.data);
+						MainWindow.table.refresh();
+						MainWindow.table.getSortOrder().add(MainWindow.table.getColumns().get(1));
+						MainWindow.mssgWindow();
+						
+					}
+		    		
+		    	};
+		    	m.setOkEvent(e1);
+		    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						m.close();	
+					}
+		    	};
+		    	m.setCancelEvent(e2);
+		    }
+		});
+	}
+	public void confirmWindow(String s) {
+		
+		Platform.runLater(new Runnable() {
+		    @Override
+		    public void run() {
+		    	ConfirmWindow m= new ConfirmWindow(s);
+		    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						Facade.updateAllKnownEtoS(false);
+						m.close();
+						mssgWindow();
+					}
+		    	};
+		    	m.setOkEvent(e1);
+		    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						m.close();	
+					}
+		    	};
+		    	m.setCancelEvent(e2);
+		    }
+		});
 		
 	}
-	public void confirmWindow(String s, Vector<ObservableFicha> list, double width, double height) {
-		Stage stage = new Stage();
-		Label l = new Label(s);
-		l.setTextAlignment(TextAlignment.CENTER);
-		l.minWidthProperty().bind(stage.widthProperty().subtract(30));
-		l.setPadding(new Insets(10,10,10,10));
-		l.setWrapText(true);
-		Button b2 = new Button("Confirmar");
-		b2.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		b2.setOnAction((ActionEvent e)->{
-			Facade.eliminateFicha(list);
-			stage.close();
-			data=Facade.selectAll();
-			table.setItems(data);
-			table.refresh();
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+	public void confirmWindowintro(String s) {
+		
+		Platform.runLater(new Runnable() {
+		    @Override
+		    public void run() {
+		    	ConfirmWindow m= new ConfirmWindow(s);
+		    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						add();
+						m.close();
+					}
+		    	};
+		    	m.setOkEvent(e1);
+		    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						m.close();	
+					}
+		    	};
+		    	m.setCancelEvent(e2);
+		    }
 		});
-		Button b1 = new Button ("Cancelar");
-		b1.setOnAction((ActionEvent e)->{
-			stage.close();
-		});
-		b1.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add(l, 0, 0, 2, 1);
-		grid.add(b1, 0, 1);
-		grid.add(b2, 1, 1);
-		Scene sc = new Scene(grid,Math.max(Math.min(grid.getPrefWidth()+30,800),300),grid.getPrefHeight()+40);
-		stage.setScene(sc);
-		stage.setX(primaryStage.getX()-(Math.max(Math.min(grid.getPrefWidth()+30,800),300)-width)/2);
-		stage.setY(primaryStage.getY()-(grid.getPrefHeight()+62-height)/2);
-		stage.show();
-		b1.requestFocus();
-	}
-	public void confirmWindow(String s, int list, double width, double height) {
-		Stage stage = new Stage();
-		Label l = new Label(s);
-		l.setTextAlignment(TextAlignment.CENTER);
-		l.minWidthProperty().bind(stage.widthProperty().subtract(30));
-		l.setPadding(new Insets(10,10,10,10));
-		l.setWrapText(true);
-		Button b2 = new Button("Confirmar");
-		b2.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		b2.setOnAction((ActionEvent e)->{
-			Facade.eliminateFicha(list);
-			stage.close();
-			data=Facade.selectAll();
-			table.setItems(data);
-			table.refresh();
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-		});
-		Button b1 = new Button ("Cancelar");
-		b1.setOnAction((ActionEvent e)->{
-			stage.close();
-		});
-		b1.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add(l, 0, 0, 2, 1);
-		grid.add(b1, 0, 1);
-		grid.add(b2, 1, 1);
-		Scene sc = new Scene(grid,Math.max(Math.min(grid.getPrefWidth()+30,800),300),grid.getPrefHeight()+120);
-		stage.setScene(sc);
-		stage.setX(primaryStage.getX()-(Math.max(Math.min(grid.getPrefWidth()+30,800),300)-width)/2);
-		stage.setY(primaryStage.getY()-(grid.getPrefHeight()+122-height)/2);;
-		stage.show();
-		b1.requestFocus();
-	}
-	public void confirmWindow(String s, double width, double height) {
-		Stage stage = new Stage();
-		Label l = new Label(s);
-		l.setTextAlignment(TextAlignment.CENTER);
-		l.minWidthProperty().bind(stage.widthProperty().subtract(30));
-		l.setPadding(new Insets(10,10,10,10));
-		l.setWrapText(true);
-		Button b2 = new Button("Confirmar");
-		b2.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		b2.setOnAction((ActionEvent e)->{
-			Facade.updateAllKnownEtoS(false);
-			stage.close();
-			mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
-		});
-		Button b1 = new Button ("Cancelar");
-		b1.setOnAction((ActionEvent e)->{
-			stage.close();
-		});
-		b1.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(30));
-		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add(l, 0, 0, 2, 1);
-		grid.add(b1, 0, 1);
-		grid.add(b2, 1, 1);
-		Scene sc = new Scene(grid,Math.max(Math.min(grid.getPrefWidth()+30,800),300),grid.getPrefHeight()+120);
-		stage.setScene(sc);
-		stage.setX(primaryStage.getX()-(Math.max(Math.min(grid.getPrefWidth()+30,800),300)-width)/2);
-		stage.setY(primaryStage.getY()-(grid.getPrefHeight()+120-height)/2);;
-		stage.show();
-		b1.requestFocus();
-	}
-	public void confirmWindowintro(String s, double width, double height) {
-		Stage stage = new Stage();
-		Label l = new Label(s);
-		l.setTextAlignment(TextAlignment.CENTER);
-		l.minWidthProperty().bind(stage.widthProperty().subtract(30));
-		l.setPadding(new Insets(10,10,10,10));
-		l.setWrapText(true);
-		Button b2 = new Button("Confirmar");
-		b2.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(10));
-		b2.setOnAction((ActionEvent e)->{
-			add();
-			stage.close();
-			
-		});
-		Button b1 = new Button ("Cancelar");
-		b1.setOnAction((ActionEvent e)->{
-			stage.close();
-		});
-		b1.minWidthProperty().bind(stage.widthProperty().divide(2).subtract(10));
-		GridPane grid = new GridPane();
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add(l, 0, 0, 2, 1);
-		grid.add(b1, 0, 1);
-		grid.add(b2, 1, 1);
-		Scene sc = new Scene(grid,Math.max(Math.min(grid.getPrefWidth()+30,900),300),grid.getPrefHeight()+120);
-		stage.setScene(sc);
-		stage.setX(primaryStage.getX()-(Math.max(Math.min(grid.getPrefWidth()+30,800),300)-width)/2);
-		stage.setY(primaryStage.getY()-(grid.getPrefHeight()+120-height)/2);;
-		stage.show();
-		b1.requestFocus();
 	}
 	public void editWindow(Ficha f, double width, double height) {
 		up_f=f;
 		Stage stage = new Stage();
 		Text tit = new Text("Update");
-		tit.setFont(this.tit);
+		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.CENTER);
 		Text ing = new Text("English:");
-		ing.setFont(this.text);
+		ing.setFont(MainWindow.text);
 		ing.setFontSmoothingType(FontSmoothingType.LCD);
 		Text ex1 = new Text("Example 1");
 		ex1.setFont(head);
@@ -1517,19 +1822,19 @@ public static String exceptions="";
 		ex3.setFontSmoothingType(FontSmoothingType.LCD);
 		ex3.setTextAlignment(TextAlignment.CENTER);
 		Text trad1 = new Text("Translation:");
-		trad1.setFont(this.text);
+		trad1.setFont(MainWindow.text);
 		trad1.setFontSmoothingType(FontSmoothingType.LCD);
 		Text trad2 = new Text("Translation:");
-		trad2.setFont(this.text);
+		trad2.setFont(MainWindow.text);
 		trad2.setFontSmoothingType(FontSmoothingType.LCD);
 		Text trad3 = new Text("Translation:");
-		trad3.setFont(this.text);
+		trad3.setFont(MainWindow.text);
 		trad3.setFontSmoothingType(FontSmoothingType.LCD);
 		Text indicate = new Text("Use instructions");
-		indicate.setFont(this.text);
+		indicate.setFont(MainWindow.text);
 		indicate.setFontSmoothingType(FontSmoothingType.LCD);
 		Text pronunciation = new Text("Pronunciation");
-		pronunciation.setFont(this.text);
+		pronunciation.setFont(MainWindow.text);
 		pronunciation.setFontSmoothingType(FontSmoothingType.LCD);
 		
 		
@@ -1563,7 +1868,8 @@ public static String exceptions="";
 		up_pronun = new TextField(f.getPronunciation());
 		update= new Button("Update");
 		update.maxWidthProperty().bind(stage.widthProperty());
-		update.setFont(this.text);
+		update.setFont(MainWindow.text);
+		
 		update.setOnAction((ActionEvent e)->{
 			if(!up_eng.getText().equals("")) {
 				try {
@@ -1573,17 +1879,22 @@ public static String exceptions="";
 					up_f.clearExamples();
 					if(!up_engExamp1.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp1.getText(), up_espExamp1.getText(), up_esp1.getText())));
-						up_f.getExample(0).setEtoSKnown(up_known_1.isSelected());
+						up_f.getExample(0).setEtoSKnown(up_known_E_1.isSelected());
+						up_f.getExample(0).setStoEKnown(up_known_S_1.isSelected());
 					}
 					
 					if(!up_engExamp2.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp2.getText(), up_espExamp2.getText(), up_esp2.getText())));
-						up_f.getExample(1).setEtoSKnown(up_known_2.isSelected());
+						up_f.getExample(1).setEtoSKnown(up_known_E_2.isSelected());
+						up_f.getExample(1).setStoEKnown(up_known_S_2.isSelected());
+
 					}
 					
 					if(!up_engExamp3.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp3.getText(), up_espExamp3.getText(), up_esp3.getText())));
-						up_f.getExample(2).setEtoSKnown(up_known_3.isSelected());
+						up_f.getExample(2).setEtoSKnown(up_known_E_3.isSelected());
+						up_f.getExample(1).setStoEKnown(up_known_S_2.isSelected());
+
 					}
 					if(up_f.allKnownEtoS()){
 						up_f.setKnownEtoS(true);
@@ -1591,34 +1902,160 @@ public static String exceptions="";
 					else {
 						up_f.setKnownEtoS(false);
 					}
+					if(up_f.allKnownStoE()) {
+						up_f.setKnownStoE(true);
+					}
+					else {
+						up_f.setKnownStoE(false);
+					}
 					Facade.updateFicha(up_f);
-					mssgWindow("Success", primaryStage.getWidth(),primaryStage.getHeight());
+					mssgWindow("Success");
 				}
 				catch(Exception ex) {
 					
 				}
-				mssgWindow(primaryStage.getWidth(),primaryStage.getHeight());
+				mssgWindow();
 				stage.close();
 				data=Facade.selectAll();
 				table.setItems(data);
+				table.getSortOrder().add(table.getColumns().get(1));
 				//table.refresh();
 				
 				
 			}
 			
 		});
-		up_known_1= new CheckBox("Known");
-		if(f.getExampleKnownEtoS(0)) {
-			up_known_1.setSelected(true);
-		}
-		up_known_2= new CheckBox("Known");
-		if(f.getExampleKnownEtoS(1)) {
-			up_known_2.setSelected(true);
-		}
-		up_known_3= new CheckBox("Known");
-		if(f.getExampleKnownEtoS(2)) {
-			up_known_3.setSelected(true);
-		}
+		Tooltip t= new Tooltip();
+		t.setText("English to Spanish");
+		up_known_E_1 = new CheckBox();
+		up_known_E_2 = new CheckBox();
+		up_known_E_3 = new CheckBox();
+		up_known_E_1.setSelected(f.getExampleKnownEtoS(0));
+		up_known_E_2.setSelected(f.getExampleKnownEtoS(1));
+		up_known_E_3.setSelected(f.getExampleKnownEtoS(2));
+		
+		up_known_E_1.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.show(up_known_E_1,up_known_E_1.localToScreen(up_known_E_1.getBoundsInLocal()).getMaxX(),up_known_E_1.localToScreen(up_known_E_1.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_E_1.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.hide();
+				
+			}
+			
+		});
+		
+		up_known_E_2.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.show(up_known_E_2,up_known_E_2.localToScreen(up_known_E_2.getBoundsInLocal()).getMaxX(),up_known_E_2.localToScreen(up_known_E_2.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_E_2.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.hide();
+				
+			}
+			
+		});
+		
+		up_known_E_3.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.show(up_known_E_3,up_known_E_3.localToScreen(up_known_E_3.getBoundsInLocal()).getMaxX(),up_known_E_3.localToScreen(up_known_E_3.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_E_3.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t.hide();
+				
+			}
+			
+		});
+		
+		Tooltip t2= new Tooltip();
+		t2.setText("Spanish to English");
+		
+		up_known_S_1 = new CheckBox();
+		up_known_S_2 = new CheckBox();
+		up_known_S_3 = new CheckBox();
+		
+		up_known_S_1.setSelected(f.getExampleKnownStoE(0));
+		up_known_S_2.setSelected(f.getExampleKnownStoE(1));
+		up_known_S_3.setSelected(f.getExampleKnownStoE(2));
+		
+		up_known_S_1.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.show(up_known_S_1,up_known_S_1.localToScreen(up_known_S_1.getBoundsInLocal()).getMaxX(),up_known_S_1.localToScreen(up_known_S_1.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_S_1.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.hide();
+				
+			}
+			
+		});
+		up_known_S_2.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.show(up_known_S_2,up_known_S_2.localToScreen(up_known_S_2.getBoundsInLocal()).getMaxX(),up_known_S_2.localToScreen(up_known_S_2.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_S_2.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.hide();
+				
+			}
+			
+		});
+		up_known_S_3.setOnMouseEntered(new EventHandler <MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.show(up_known_S_3,up_known_S_3.localToScreen(up_known_S_3.getBoundsInLocal()).getMaxX(),up_known_S_3.localToScreen(up_known_S_3.getBoundsInLocal()).getMaxY());
+				
+			}
+			
+		});
+		up_known_S_3.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				t2.hide();
+				
+			}
+			
+		});
 		
 		
 		GridPane.setFillWidth(tit,true);
@@ -1639,8 +2076,24 @@ public static String exceptions="";
 		GridPane.setFillWidth(pronunciation,true);
 		GridPane.setFillWidth(update,true);
 		GridPane.setFillWidth(up_indications, true);
-		
+		GridPane.setHgrow(up_eng, Priority.ALWAYS);
+		GridPane.setHgrow(up_engExamp1, Priority.ALWAYS);
+		GridPane.setHgrow(up_engExamp2, Priority.ALWAYS);
+		GridPane.setHgrow(up_engExamp3, Priority.ALWAYS);
+		GridPane.setHgrow(up_espExamp1, Priority.ALWAYS);
+		GridPane.setHgrow(up_espExamp2, Priority.ALWAYS);
+		GridPane.setHgrow(up_espExamp3, Priority.ALWAYS);
+		GridPane.setHgrow(up_esp1, Priority.ALWAYS);
+		GridPane.setHgrow(up_esp2, Priority.ALWAYS);
+		GridPane.setHgrow(up_esp3, Priority.ALWAYS);
+		GridPane.setHgrow(up_pronun, Priority.ALWAYS);
+		GridPane.setHgrow(update, Priority.ALWAYS);
+		GridPane.setHgrow(up_indications, Priority.ALWAYS);
+		GridPane.setHgrow(up_known_E_1, Priority.NEVER);
+		up_engExamp3.minWidthProperty().bind(stage.widthProperty().subtract(30).subtract(up_known_E_1.widthProperty()));
 		GridPane grid = new GridPane();
+		grid.minWidthProperty().bind(stage.widthProperty().subtract(30));
+		grid.maxWidthProperty().bind(stage.maxWidthProperty());
 		grid.setPadding(new Insets(10,10,10,10));
 		grid.setAlignment(Pos.TOP_CENTER);
 		grid.setHgap(10);
@@ -1649,57 +2102,43 @@ public static String exceptions="";
 		grid.add           (ing, 0, 1);
 		grid.add        (up_eng, 1, 1, 2, 1);
 		grid.add           (ex1, 0, 2, 3, 1);
-		grid.add  (up_engExamp1, 0, 3, 3, 1);
-		grid.add  (up_espExamp1, 0, 4, 3, 1);
+		grid.add  (up_engExamp1, 0, 3, 2, 1);
+		grid.add  (up_known_E_1, 2, 3, 1, 1);
+		grid.add  (up_espExamp1, 0, 4, 2, 1);
+		grid.add  (up_known_S_1, 2, 4, 1, 1);
 		grid.add         (trad1, 0, 5);
-		grid.add       (up_esp1, 1, 5);
-		grid.add    (up_known_1, 2, 5);
+		grid.add       (up_esp1, 1, 5, 2, 1);
 		grid.add           (ex2, 0, 6, 3, 1);
-		grid.add  (up_engExamp2, 0, 7, 3, 1);
-		grid.add  (up_espExamp2, 0, 8, 3, 1);
+		grid.add  (up_engExamp2, 0, 7, 2, 1);
+		grid.add  (up_known_E_2, 2, 7, 1, 1);
+		grid.add  (up_espExamp2, 0, 8, 2, 1);
+		grid.add  (up_known_S_2, 2, 8, 1, 1);
 		grid.add         (trad2, 0, 9);
-		grid.add       (up_esp2, 1, 9);
-		grid.add    (up_known_2, 2, 9);
+		grid.add       (up_esp2, 1, 9, 2, 1);
 		grid.add           (ex3, 0, 10, 3, 1);
-		grid.add  (up_engExamp3, 0, 11, 3, 1);
-		grid.add  (up_espExamp3, 0, 12, 3, 1);
+		grid.add  (up_engExamp3, 0, 11, 2, 1);
+		grid.add  (up_known_E_3, 2, 11, 1, 1);
+		grid.add  (up_espExamp3, 0, 12, 2, 1);
+		grid.add  (up_known_S_3, 2, 12, 1, 1);
 		grid.add         (trad3, 0, 13);
-		grid.add       (up_esp3, 1, 13);
-		grid.add    (up_known_3, 2, 13);
+		grid.add       (up_esp3, 1, 13, 2, 1);
 		grid.add      (indicate, 0, 14, 3, 1);
 		grid.add(up_indications, 0, 15, 3, 1);
 		grid.add (pronunciation, 0, 16, 3, 1);
 		grid.add     (up_pronun, 0, 17, 3, 1);
 		grid.add        (update, 0, 18, 3, 1);
-		Scene scene = new Scene(grid,420,750);
+		Scene scene = new Scene(grid,510,750);
 		stage.setX(primaryStage.getX()-(420-width)/2);
-		stage.setY(primaryStage.getY()-(772-height)/2);;
-		
+		stage.setY(primaryStage.getY()-(772-height)/2);
 		stage.setScene(scene);
 		stage.show();
 	}
 	public void detail(Ficha f,double width,double height) {
 		resStage = new Stage();
 		
-		int len = f.getExampVec().size();
-		int height1 =245;
-		switch(len) {
-			case 2:{
-				height1+=120;
-				break;
-			}
-			case 3:{
-				height1+=240;
-				break;
-			}
-		}
-		if(!f.getUse().equals("")){
-			height1+=120;
-			
-		}
-		resStage.setX(primaryStage.getX()-(500-width)/2);
-		resStage.setY(primaryStage.getY()-(height1+20-height)/2);
 		resStage.setScene(AuxiliarBuilder.displayFicha(f,resStage));
+		resStage.setX(primaryStage.getX()-(AuxiliarBuilder.expWidth-width)/2);
+		resStage.setY(primaryStage.getY()-(AuxiliarBuilder.expHeight+20-height)/2);
 		resStage.show();
 		
 	}

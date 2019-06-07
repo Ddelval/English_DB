@@ -100,7 +100,6 @@ public class Facade {
 			int size =Integer.parseInt(data.substring(0, data.indexOf("\n")));
 			String aux="";
 			ArrayList<Ficha> arrl = new ArrayList<Ficha>();
-			Ficha f;
 			for(int i=0; i<(size);i++) {
 				data=data.substring(data.indexOf("\n\n@#\n")+5);
 				aux=data.substring(0,data.indexOf("\n\n@#\n"));
@@ -115,7 +114,7 @@ public class Facade {
 			catch(Exception ex) {
 				
 			}
-			execute("CREATE TABLE log (count INTEGER IDENTITY, eng VARCHAR(100), Examp VARCHAR(10000), pronunciation VARCHAR(100), use VARCHAR (10000), known BOOLEAN DEFAULT FALSE NOT NULL, PRIMARY KEY (count))",false);
+			execute("CREATE TABLE log (count INTEGER IDENTITY, eng VARCHAR(100), Examp VARCHAR(10000), pronunciation VARCHAR(100), use VARCHAR (10000), knownEtoS BOOLEAN DEFAULT FALSE NOT NULL,knownStoE BOOLEAN DEFAULT FALSE NOT NULL, PRIMARY KEY (count))",false);
 			insertAll(arrl);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -128,17 +127,10 @@ public class Facade {
 		Connection con = UConnection.getConnection();
 		try {
 			for(int i=0;i<arrl.size();i++) {
-				String sql="INSERT INTO log(eng,Examp,use, pronunciation)  VALUES ("+arrl.get(i).toSQLString()+")";
+				String sql="INSERT INTO log(eng,Examp,use, pronunciation,knownEtoS,knownStoE)  VALUES ("+arrl.get(i).toSQLString()+",'"+arrl.get(i).getKnownEtoS()+"','"+arrl.get(i).getKnownStoE()+"')";
 				PreparedStatement ps= con.prepareStatement(sql);
 				ps.execute();
 			}
-			/*StringBuilder sql = new StringBuilder("INSERT INTO log(eng,Examp,use, pronunciation)  VALUES ("+arrl.get(0).toSQLString()+")"); 
-			for(int i=1;i<arrl.size();i++) {
-				sql.append("\n");
-				sql.append("INSERT INTO log(eng,Examp,use, pronunciation)  VALUES ("+arrl.get(i).toSQLString()+")");
-			}
-			PreparedStatement ps= con.prepareStatement(sql.toString());
-			ps.execute();*/
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -210,10 +202,23 @@ public class Facade {
 			MainWindow.exceptions=e.getMessage();
 		}
 	} 
-	public static void updateFichaKnown(boolean b, Ficha f) 
+	public static void updateFichaKnownEtoS(boolean b, Ficha f) 
 	{
 		Connection con = UConnection.getConnection();
-		String sql  = "UPDATE log SET known='"+ Boolean.toString(b).toUpperCase() + "' WHERE count="+f.getDBkey();
+		String sql  = "UPDATE log SET knownEtoS='"+ Boolean.toString(b).toUpperCase() + "' WHERE count="+f.getDBkey();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.execute();
+		}
+		catch (SQLException ex) {
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+		}
+	}
+	public static void updateFichaKnownStoE(boolean b, Ficha f) 
+	{
+		Connection con = UConnection.getConnection();
+		String sql  = "UPDATE log SET knownStoE='"+ Boolean.toString(b).toUpperCase() + "' WHERE count="+f.getDBkey();
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.execute();
@@ -603,7 +608,6 @@ public class Facade {
 
 			Process process = processBuilder.start();
 
-			StringBuilder output = new StringBuilder();
 
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(process.getInputStream()));
