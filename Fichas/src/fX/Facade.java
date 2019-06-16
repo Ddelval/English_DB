@@ -563,35 +563,17 @@ public class Facade {
 	}
 	public static void Speak(String s) {
 		int speed;
-		String v=Facade.getConfig("voice");
-		String au=Facade.getConfig("s_speed");
-		if(au!="") {
-			speed =Integer.parseInt(au);
-		}
-		else {
-			speed=s_speed;
-		}
+		String v=MainWindow.cfd.voice;
+		speed=MainWindow.cfd.s_speed;
 		if(sp!=null&&sp.isAlive()) return;
 		sp= new Speak(s,v,speed);
 		sp.start();
 	}
 	public static void SpeakwDelay(String s) {
 		int speed,delay;
-		String v=Facade.getConfig("voice");
-		String au=Facade.getConfig("s_speed");
-		String del=Facade.getConfig("s_delay");
-		if(au!="") {
-			speed =Integer.parseInt(au);
-		}
-		else {
-			speed=s_speed;
-		}
-		if(del!="") {
-			delay=Integer.parseInt(del);
-		}
-		else {
-			delay=MainWindow.waitt;
-		}
+		String v=MainWindow.cfd.voice;
+		speed=MainWindow.cfd.s_speed;
+		delay=MainWindow.cfd.s_delay;
 		if(sp!=null&&sp.isAlive()) return;
 		sp= new Speak(s,v,delay,speed);
 		sp.start();

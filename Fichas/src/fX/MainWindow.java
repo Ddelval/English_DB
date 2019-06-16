@@ -103,7 +103,7 @@ private CheckBox sql_w_result;
 private Button execute;
 private TextArea sql_result;
 //Adjust
-private Button reset;
+private Button resetEtoS;
 private final double A_w=500;
 private final double A_h=400;
 ArrayList<Voice> arrv;
@@ -112,9 +112,13 @@ private Button b_backup,b_restore;
 private TextField tf_backup, tf_restore;
 //Exceptions
 public static String exceptions="";
-public static double scale=1.5;
+public static double scale=1;
+
+public static ConfigData cfd;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		cfd= new ConfigData();
+		scale=cfd.scaling;
 		/***  Fonts definition  ***/
 		MainWindow.exceptions="";
 		tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
@@ -123,6 +127,8 @@ public static double scale=1.5;
 		extext= Font.font("Helvetica Neue", FontWeight.BOLD,17*scale);
 		extext2= Font.font("Arial", FontWeight.NORMAL,18*scale);
 		textf= Font.font("Helvetica",FontWeight.NORMAL,12*scale);
+		
+		
 		/***  Initialization ***/
 		MainWindow.primaryStage=primaryStage;
 		MainWindow.primaryStage.setTitle("Vocabulary Archive");
@@ -620,7 +626,7 @@ public static double scale=1.5;
 		scene.getStylesheets().add("/Data.css");
 		primaryStage.setX(primaryStage.getX()-(E_w*scale-width)/2);
 		primaryStage.setY(primaryStage.getY()-(E_h*scale+22-height)/2);
-		if(Facade.getConfig("s_readauto").equals("1")) {
+		if(cfd.s_readauto) {
 			Facade.SpeakwDelay(ex_examp.getText());
 		}
 		
@@ -1375,25 +1381,50 @@ public static double scale=1.5;
 		//Settings
 		Tab adjust = new Tab ("Other");
 		adjust.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
-		reset = new Button ("Mark all as unknown");
-		reset.setFont(text);
-		reset.setOnAction((ActionEvent e)->{
-			confirmWindow("Are you sure you want to make every register as unknown?");
-		});
-		Text scal = new Text("Select the scale for the graphical interface");
+		
+		Text scal = new Text("Select the scale for the graphical interface:");
 		scal.setFont(text);
-		TextField ts = new TextField();
+		TextField ts = new TextField(Double.toString(cfd.scaling));
 		ts.setFont(textf);
+		ts.setOnAction((ActionEvent e)->{
+			cfd.update_scaling(Double.parseDouble(ts.getText()));
+		});
 		HBox sb = new HBox();
 		sb.getChildren().addAll(scal,ts);
 		sb.setPadding(new Insets(10,0,10,0));
 		HBox.setHgrow(ts, Priority.ALWAYS);
 		HBox.setMargin(ts, new Insets(0,0,0,10));
-		VBox vbox = new VBox();
-		vbox.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-		vbox.getChildren().addAll(reset,sb);
-		vbox.setAlignment(Pos.TOP_CENTER);
-		adjust.setContent(vbox);
+		
+		Text t = new Text ("Set as unknown");
+		t.setFont(head);
+		t.setTextAlignment(TextAlignment.LEFT);
+		resetEtoS = new Button ("English to Spanish");
+		resetEtoS.setFont(text);
+		resetEtoS.setOnAction((ActionEvent e)->{
+			confirmWindowEtoS("Are you sure you want to make every register as unknown from English to Spanish?");
+		});
+		Button resetStoE = new Button("Spanish to English");
+		resetStoE.setFont(text);
+		resetStoE.setOnAction((ActionEvent e)->{
+			confirmWindowStoE("Are you sure you want to make every register as unknown from Spanish to English?");
+		});
+		
+		GridPane g = new GridPane();
+		GridPane.setFillWidth(resetEtoS, true);
+		GridPane.setFillWidth(resetStoE, true);
+		GridPane.setHgrow(resetEtoS,Priority.ALWAYS);
+		resetEtoS.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30*scale));
+		GridPane.setHgrow(resetStoE,Priority.ALWAYS);
+		resetStoE.minWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(30*scale));
+		g.setHgap(10*scale);
+		g.setVgap(10*scale);
+		g.add(scal, 0, 0,2,1);
+		g.add(ts, 0, 1,2,1);
+		g.add(t, 0, 2,2,1);
+		g.add(resetEtoS, 0, 3);
+		g.add(resetStoE, 1, 3);
+		g.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		adjust.setContent(g);
 		adjust.setClosable(false);
 		
 		//Backup
@@ -1405,7 +1436,7 @@ public static double scale=1.5;
 		Text rest =new Text("Restore from backup");
 		rest.setFont(up_head);
 		rest.setFontSmoothingType(FontSmoothingType.LCD);
-		tf_backup = new TextField(Facade.getConfig("backupPath"));
+		tf_backup = new TextField(cfd.backupPath);
 		tf_backup.setFont(textf);
 		tf_restore = new TextField("");
 		tf_restore.setFont(textf);
@@ -1424,7 +1455,7 @@ public static double scale=1.5;
 		b_backup.minWidthProperty().bind(primaryStage.widthProperty().subtract(20));
 		b_backup.setOnAction((ActionEvent e)->{
 			String s =Facade.basicfilter(tf_backup.getText());
-			Facade.updateConfig("backupPath", s);
+			cfd.update_backupPath(s);
 			Facade.backup(s);
 			mssgWindow();
 		});
@@ -1484,7 +1515,7 @@ public static double scale=1.5;
 		cb.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		if(arrv==null)arrv=Facade.getVoices();
 		mssgWindow();
-		if(Facade.getConfig("s_showall").equals("1")) {
+		if(cfd.s_showall) {
 			for(Voice v: arrv) {
 				cb.getItems().add(v.toString());
 			}
@@ -1496,8 +1527,7 @@ public static double scale=1.5;
 				}
 			}
 		}
-		String s=Facade.getConfig("voice");
-		mssgWindow();
+		String s=cfd.voice;
 		
 		for(Voice v:arrv) {
 			if(v.getName().equals(s)) {
@@ -1509,8 +1539,7 @@ public static double scale=1.5;
 		cb.setOnAction((ActionEvent e)->{
 			String strg=cb.getSelectionModel().getSelectedItem();
 			if(strg!=null) {
-				Facade.updateConfig("voice", strg.substring(0, strg.indexOf('(')-1));
-				mssgWindow();
+				cfd.update_voice(strg.substring(0, strg.indexOf('(')-1));
 			}
 			
 		});
@@ -1518,13 +1547,13 @@ public static double scale=1.5;
 		
 		Label ls=new Label("Select the speed (WPM)");
 		ls.setFont(text);
-		TextField tf= new TextField(Facade.getConfig("s_speed"));
+		TextField tf= new TextField(Integer.toString(cfd.s_speed));
 		tf.setFont(textf);
 		tf.setOnKeyTyped((KeyEvent e)->{
 			try {
 				tf.appendText(e.getCharacter());
 				e.consume();
-				Facade.updateConfig("s_speed", Integer.toString(Integer.parseInt(tf.getText())));
+				cfd.update_s_speed(Integer.parseInt(tf.getText()));
 			}
 			catch(Exception ex) {}
 			mssgWindow();
@@ -1533,16 +1562,14 @@ public static double scale=1.5;
 		ceeb.setSelected(false);
 		ceeb.setFont(text);
 		ceeb.setAllowIndeterminate(false);
-		if(Facade.getConfig("s_readauto").equals("1")) {
+		if(cfd.s_readauto) {
 			ceeb.setSelected(true);
 		}
 		ceeb.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				String s;
-				s=(ceeb.isSelected())? "1":"0";
-				Facade.updateConfig("s_readauto", s);
+				cfd.update_s_readauto(ceeb.isSelected());
 				
 			}
 			
@@ -1554,13 +1581,13 @@ public static double scale=1.5;
 		aa.setFont(text);
 		Label aab= new Label("Enable:");
 		aab.setFont(text);
-		TextField dl=new TextField(Facade.getConfig("s_delay"));
+		TextField dl=new TextField(Integer.toString(cfd.s_delay));
 		dl.setFont(textf);
 		dl.setOnKeyTyped((KeyEvent e)->{
 			try {
 				dl.appendText(e.getCharacter());
 				e.consume();
-				Facade.updateConfig("s_delay", Integer.toString(Integer.parseInt(dl.getText())));
+				cfd.update_s_delay(Integer.parseInt(dl.getText()));
 			}
 			catch(Exception ex) {}
 			mssgWindow();
@@ -1568,7 +1595,7 @@ public static double scale=1.5;
 		CheckBox cbb= new CheckBox("Show all installed voices");
 		cbb.setFont(text);
 		cbb.setAllowIndeterminate(false);
-		if(Facade.getConfig("s_showall").equals("1")) {
+		if(cfd.s_showall) {
 			cbb.setSelected(true);
 		}
 		else {
@@ -1578,10 +1605,7 @@ public static double scale=1.5;
 
 			@Override
 			public void handle(ActionEvent event) {
-				String s;
-				s=(cbb.isSelected())? "1":"0";
-				Facade.updateConfig("s_showall", s);
-				
+				cfd.update_s_showall(cbb.isSelected());
 				
 				cb.getItems().clear();
 				if(s.equals("1")) {
@@ -1596,8 +1620,7 @@ public static double scale=1.5;
 						}
 					}
 				}
-				String str=Facade.getConfig("voice");
-				mssgWindow();
+				String str=cfd.voice;
 				
 				for(Voice v:arrv) {
 					if(v.getName().equals(str)) {
@@ -1639,10 +1662,10 @@ public static double scale=1.5;
 		VBox.setVgrow(tp, Priority.ALWAYS);
 		VBox.setVgrow(menu, Priority.NEVER);
 		VBox.setMargin(menu, new Insets(10*scale,10*scale,10*scale,10*scale));
-		HBox h = new HBox(tit);
-		h.setPadding(new Insets(0,0,10*scale,10*scale));
-		h.setAlignment(Pos.CENTER_LEFT);
-		vb.getChildren().addAll(menu, h,tp);
+		HBox hh1 = new HBox(tit);
+		hh1.setPadding(new Insets(0,0,10*scale,10*scale));
+		hh1.setAlignment(Pos.CENTER_LEFT);
+		vb.getChildren().addAll(menu, hh1,tp);
 		Scene scene = new Scene(vb,A_w*scale,A_h*scale);
 		primaryStage.setX(primaryStage.getX()-(A_w*scale-width)/2);
 		primaryStage.setY(primaryStage.getY()-(A_h*scale+22-height)/2);
@@ -1749,7 +1772,7 @@ public static double scale=1.5;
 		    }
 		});
 	}
-	public void confirmWindow(String s) {
+	public void confirmWindowEtoS(String s) {
 		
 		Platform.runLater(new Runnable() {
 		    @Override
@@ -1759,6 +1782,33 @@ public static double scale=1.5;
 					@Override
 					public void handle(ActionEvent event) {
 						Facade.updateAllKnownEtoS(false);
+						m.close();
+						mssgWindow();
+					}
+		    	};
+		    	m.setOkEvent(e1);
+		    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						m.close();	
+					}
+		    	};
+		    	m.setCancelEvent(e2);
+		    }
+		});
+		
+	}
+	
+	public void confirmWindowStoE(String s) {
+		
+		Platform.runLater(new Runnable() {
+		    @Override
+		    public void run() {
+		    	ConfirmWindow m= new ConfirmWindow(s);
+		    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						Facade.updateAllKnownStoE(false);
 						m.close();
 						mssgWindow();
 					}
