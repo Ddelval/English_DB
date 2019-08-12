@@ -1,8 +1,13 @@
 package fX;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,6 +19,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.Vector;
 
 import javafx.collections.FXCollections;
@@ -58,6 +65,120 @@ public class Facade {
 			s.replace("\n ", "\n");
 			return s;
 		}
+	}
+	public static String cleanLabel (String in, String label) {
+		String end="</"+label;
+		StringBuilder s = new StringBuilder(label);
+		s.reverse();
+		s.append('<');
+		String beg=s.toString();
+		
+		StringBuilder sb= new StringBuilder(in);
+		while(sb.toString().contains(end)) {
+			int i=sb.indexOf(end)+end.length();
+			StringBuilder sa=new StringBuilder(sb.toString());
+			sa.reverse();
+			int b=sb.length()-sa.indexOf(beg,sa.length()-i-1)-beg.length();
+			sb=sb.delete(b, i);
+			//System.out.println(sb.toString());
+		}
+		return sb.toString();
+	}
+	/**
+	 * 
+	 * @param sql The statement to be executed
+	 * @param result whether or not there is a result expected
+	 * @return
+	 */
+	public static String execute (String sql, boolean result) {
+		String s="";
+		int colcount;
+		Connection con = UConnection.getConnection();
+		PreparedStatement ps;
+		ResultSet rs=null;
+		try {
+			ps=con.prepareStatement(sql);
+			if(result) {
+				rs=ps.executeQuery();
+				if(rs.next()){
+					StringBuilder sb = new StringBuilder("");
+				do {
+					colcount=rs.getMetaData().getColumnCount();
+					for(int i=1;i<=colcount;++i) {
+						sb.append(rs.getMetaData().getColumnLabel(i));
+						sb.append(": ");
+						sb.append(rs.getObject(i).toString());
+						sb.append("\n");
+					}
+					sb.append("\n\n");
+					
+					
+					
+				}while(rs.next());
+				s=sb.toString();
+				}
+					
+				else {
+					s="There is no result to show";
+				}
+			}
+			
+			else {
+				//No result expected
+				 s = Integer.toString(ps.executeUpdate());
+			}
+			
+		}
+		catch(SQLException ex) {
+			s=ex.getMessage();
+			ex.printStackTrace();
+		}
+		return s;
+	}
+	public static String getConfig(String id) {
+		Connection con=UConnection.getConnection();
+		String s="";
+		try {
+			String sql="SELECT (data) FROM config WHERE id='"+id+"'";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs =ps.executeQuery();
+			while(rs.next()) {
+				s=rs.getString("data");
+			}
+			
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+		}
+		return s;
+	}
+	public static void updateConfig(String id, String newValue) {
+		Connection con=UConnection.getConnection();
+		boolean b=false;
+		try {
+			String sql="UPDATE config SET data='"+newValue+"' WHERE id='"+id+"'";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.execute();
+			if(ps.getUpdateCount()==0) {
+				throw new Exception("The row could not be found");
+			}
+			
+		}
+		catch(Exception ex) {
+			b=false;
+			try {
+				String sql="INSERT INTO config values ('"+id+"','"+newValue+"')";
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.execute();
+				b=true;
+			}
+			catch(Exception e){b=false;}
+			if(b) return;
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+		}
+		
 	}
 	/**
 	 *  This method creates a file that starts with the length of the database, then a separator(\n\n@\n) and then all Ficha objects with separators between them
@@ -123,6 +244,74 @@ public class Facade {
 		}
 		
 	}
+	public static ArrayList<Ficha> selectSomeRaw(String s){
+		Connection con = UConnection.getConnection();
+		String sql= "SELECT * FROM log ";
+		sql+="WHERE eng='"+s.replace("'", "%&/%");
+		sql+="' ORDER BY count";
+		ArrayList<Ficha> l = new ArrayList<Ficha>();
+		Ficha f= new Ficha("","","");
+		try {
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs= ps.executeQuery();
+			while(rs.next()) {
+				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
+				f.setSQLExamples(rs.getString("Examp"));
+				f.setDBkey(rs.getInt("count"));
+				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
+				f.setKnownStoE(rs.getBoolean("knownStoE"));
+				l.add(f);
+			}
+			
+			
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+			
+		}
+		return l;
+	}
+	public static ObservableList<ObservableFicha> selectSome (String s){
+		ArrayList<ObservableFicha> dat= new ArrayList<ObservableFicha>();
+		ArrayList<Ficha> a=selectSomeRaw(s);
+		a.forEach(e->dat.add(new ObservableFicha(e)));
+		return FXCollections.observableList(dat);
+	}
+	public static ArrayList<Ficha> getAll(){
+		Connection con = UConnection.getConnection();
+		String sql= "SELECT * FROM log ORDER BY count";
+		ArrayList<Ficha> l = new ArrayList<Ficha>();
+		Ficha f= new Ficha("","","");
+		try {
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs= ps.executeQuery();
+			while(rs.next()) {
+				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
+				f.setSQLExamples(rs.getString("Examp"));
+				f.setDBkey(rs.getInt("count"));
+				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
+				l.add(f);
+			}
+			
+			
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+			MainWindow.exceptions=ex.getMessage();
+			
+		}
+		
+		return l;
+	}
+	public static ObservableList<ObservableFicha> selectAll (){
+		ArrayList<ObservableFicha> dat= new ArrayList<ObservableFicha>();
+		ArrayList<Ficha> a=getAll();
+		a.forEach(e->dat.add(new ObservableFicha(e)));
+		return FXCollections.observableList(dat);
+	}
 	public static void insertAll(ArrayList<Ficha> arrl) {
 		Connection con = UConnection.getConnection();
 		try {
@@ -139,52 +328,6 @@ public class Facade {
 			MainWindow.exceptions=e.getMessage();
 		}
 	} 
-	public static String getConfig(String id) {
-		Connection con=UConnection.getConnection();
-		String s="";
-		try {
-			String sql="SELECT (data) FROM config WHERE id='"+id+"'";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs =ps.executeQuery();
-			while(rs.next()) {
-				s=rs.getString("data");
-			}
-			
-		}
-		catch(Exception ex) {
-			ex.printStackTrace();
-			MainWindow.exceptions=ex.getMessage();
-		}
-		return s;
-	}
-	public static void updateConfig(String id, String newValue) {
-		Connection con=UConnection.getConnection();
-		boolean b=false;
-		try {
-			String sql="UPDATE config SET data='"+newValue+"' WHERE id='"+id+"'";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.execute();
-			if(ps.getUpdateCount()==0) {
-				throw new Exception("The row could not be found");
-			}
-			
-		}
-		catch(Exception ex) {
-			b=false;
-			try {
-				String sql="INSERT INTO config values ('"+id+"','"+newValue+"')";
-				PreparedStatement ps = con.prepareStatement(sql);
-				ps.execute();
-				b=true;
-			}
-			catch(Exception e){b=false;}
-			if(b) return;
-			ex.printStackTrace();
-			MainWindow.exceptions=ex.getMessage();
-		}
-		
-	}
-	
 	public static void addDB(Ficha f) {
 		Connection con = UConnection.getConnection();
 		try {
@@ -337,57 +480,6 @@ public class Facade {
 		}
 		return b;		
 	}
-	/**
-	 * 
-	 * @param sql The statement to be executed
-	 * @param result whether or not there is a result expected
-	 * @return
-	 */
-	public static String execute (String sql, boolean result) {
-		String s="";
-		int colcount;
-		Connection con = UConnection.getConnection();
-		PreparedStatement ps;
-		ResultSet rs=null;
-		try {
-			ps=con.prepareStatement(sql);
-			if(result) {
-				rs=ps.executeQuery();
-				if(rs.next()){
-					StringBuilder sb = new StringBuilder("");
-				do {
-					colcount=rs.getMetaData().getColumnCount();
-					for(int i=1;i<=colcount;++i) {
-						sb.append(rs.getMetaData().getColumnLabel(i));
-						sb.append(": ");
-						sb.append(rs.getObject(i).toString());
-						sb.append("\n");
-					}
-					sb.append("\n\n");
-					
-					
-					
-				}while(rs.next());
-				s=sb.toString();
-				}
-					
-				else {
-					s="There is no result to show";
-				}
-			}
-			
-			else {
-				//No result expected
-				 s = Integer.toString(ps.executeUpdate());
-			}
-			
-		}
-		catch(SQLException ex) {
-			s=ex.getMessage();
-			ex.printStackTrace();
-		}
-		return s;
-	}
 	public static void eliminateFicha(Vector <ObservableFicha> list) {
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
@@ -430,64 +522,7 @@ public class Facade {
 		
 		
 	}
-	public static ObservableList<ObservableFicha> selectAll (){
-		Connection con = UConnection.getConnection();
-		String sql= "SELECT * FROM log ORDER BY count";
-		List<ObservableFicha> l = new ArrayList<ObservableFicha>();
-		Ficha f= new Ficha("","","");
-		try {
-			
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs= ps.executeQuery();
-			while(rs.next()) {
-				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
-				f.setSQLExamples(rs.getString("Examp"));
-				f.setDBkey(rs.getInt("count"));
-				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
-				f.setKnownStoE(rs.getBoolean("knownStoE"));
-				l.add(new ObservableFicha(f));
-			}
-			
-			
-		}catch(Exception ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-			MainWindow.exceptions=ex.getMessage();
-			
-		}
-		
-		return FXCollections.observableList(l);
-	}
-	public static ObservableList<ObservableFicha> selectSome (String s){
-		Connection con = UConnection.getConnection();
-		String sql= "SELECT * FROM log ";
-		sql+="WHERE eng='"+s.replace("'", "%&/%");
-		sql+="' ORDER BY count";
-		List<ObservableFicha> l = new ArrayList<ObservableFicha>();
-		Ficha f= new Ficha("","","");
-		try {
-			
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs= ps.executeQuery();
-			while(rs.next()) {
-				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
-				f.setSQLExamples(rs.getString("Examp"));
-				f.setDBkey(rs.getInt("count"));
-				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
-				f.setKnownStoE(rs.getBoolean("knownStoE"));
-				l.add(new ObservableFicha(f));
-			}
-			
-			
-		}catch(Exception ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-			MainWindow.exceptions=ex.getMessage();
-			
-		}
-		
-		return FXCollections.observableList(l);
-	}
+	
 	public static Ficha getRndFichaEtoS () {
 		Connection con = UConnection.getConnection();
 		String sql= "SELECT * FROM log WHERE knownEtoS='FALSE' ORDER BY RAND() LIMIT 1";
@@ -533,33 +568,6 @@ public class Facade {
 		
 		return f;
 		
-	}
-	public static ArrayList<Ficha> getAll(){
-		Connection con = UConnection.getConnection();
-		String sql= "SELECT * FROM log ORDER BY count";
-		ArrayList<Ficha> l = new ArrayList<Ficha>();
-		Ficha f= new Ficha("","","");
-		try {
-			
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs= ps.executeQuery();
-			while(rs.next()) {
-				f = new Ficha(rs.getString("eng"),rs.getString("pronunciation"),rs.getString("use"));
-				f.setSQLExamples(rs.getString("Examp"));
-				f.setDBkey(rs.getInt("count"));
-				f.setKnownEtoS(rs.getBoolean("knownEtoS"));
-				l.add(f);
-			}
-			
-			
-		}catch(Exception ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-			MainWindow.exceptions=ex.getMessage();
-			
-		}
-		
-		return l;
 	}
 	public static void Speak(String s) {
 		int speed;
@@ -611,6 +619,86 @@ public class Facade {
 		}
 		return arr;
 		
+	}
+	public static ArrayList<String> getData(String word){
+		ArrayList<String> arrl= new ArrayList<String>();
+		
+		try {
+			String comm="curl 'https://www.wordreference.com/es/translation.asp?tranword="+word+"' -H 'authority: www.wordreference.com' -H 'cache-control: max-age=0' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'sec-fetch-site: none' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: es-ES,es;q=0.9,en;q=0.8' -H 'cookie: _ga=GA1.2.704726212.1532023789; per_Mc_x=cae8e901f6c944e48ad7f084342f1e42; euconsent=BORKE6BORKE6BABABAESBS-AAAAeZ7_______9______9uz_Gv_v_f__33e8__9v_l_7_-___u_-33d4-_1vX99yfm1-7ftr1tp386ues2LDiCA; llang=enesi; per24h=1; _gid=GA1.2.428927050.1565467301; per24c=2; per_M_08=2' --compressed  >web.txt";
+			
+			BufferedWriter writ = new BufferedWriter(new FileWriter("ex"));
+			writ.write("#!/bin/zsh\n");
+			writ.write(comm);
+			writ.close();
+			
+			Process p=Runtime.getRuntime().exec("./ex");
+			p.waitFor();
+			File f= new File("web.txt");
+			 BufferedReader br= new BufferedReader(new FileReader(f));
+
+		    String line=br.readLine();
+		    try {
+		    while(line!=null&&!line.contains("'pronWR'")) {
+		    	line=br.readLine();
+		    }
+		    String p1=line.substring(line.indexOf('['));
+		    p1=p1.replace("<sup>r</sup>", "ʳ");
+		    StringBuilder sb= new StringBuilder(p1);
+		    while(sb.indexOf("<")!=-1&&sb.indexOf("<")<sb.indexOf("]")) {
+		    	if(sb.indexOf(">")!=-1)sb=sb.delete(sb.indexOf("<"), sb.indexOf(">")+1);
+		    	
+		    }
+		    p1=sb.toString();
+		    p1=p1.substring(0, p1.indexOf(']')+1);
+		    arrl.add(p1);
+		    }
+		    catch(Exception e) {
+		    	arrl.add("Not found");
+		    	br= new BufferedReader(new FileReader(f));
+		    	line=br.readLine();
+		    }
+		    
+		    while(line!=null&&!line.contains("<div id=\"articleWRD\">")) {
+		    	line=br.readLine();
+		    }
+
+		    line=br.readLine();
+		    line=br.readLine();
+		    String[] str= new String[2];
+		    str[0]="<tr class=\'even\'";
+		    str[1]="<tr class=\'odd\'";
+		    String tmp="";
+		    int a=0;
+		    while(line.startsWith(str[0])||line.startsWith(str[1])) {
+		    	if(line.startsWith(str[a]))tmp+=line;
+		    	else {
+		    		arrl.add(tmp);
+		    		tmp=line;
+		    		if(a==0)a=1;
+		    		else a=0;
+		    	}
+		    	line=br.readLine();
+		    	
+		    }
+		    if(tmp!=null &&tmp!="")arrl.add(tmp);
+		    
+		    
+		    if(arrl.get(0).equals("Not found")) {
+		    	// TODO Search in Collins
+		    }
+		    
+		    
+		} catch (MalformedURLException e) {
+			// TODO Handle exception
+			e.printStackTrace();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return arrl;
 	}
 	
 }

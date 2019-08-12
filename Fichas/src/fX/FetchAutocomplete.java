@@ -51,27 +51,7 @@ public class FetchAutocomplete extends Thread {
 
 				@Override
 				public void run() {
-					double scale= MainWindow.scale;
-					FlowPane res= new FlowPane();
-					res.setVgap(10);
-					res.setHgap(10);
-					Button[] autoc= new Button[elements.size()];
-					for(int i=0;i<elements.size();++i) {
-						autoc[i]= new Button(elements.get(i));
-						final String s=elements.get(i);
-						autoc[i].setOnAction(e->{
-							AutoselectWindow a = new AutoselectWindow(s);
-						});
-						HBox.setMargin(autoc[i], new Insets(0,10*scale,0,0));
-						res.getChildren().add(autoc[i]);
-					}
-					res.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-					//TODO  Send this to the MainWindow file
-					//res.minWidth(100*scale);
-					MainWindow.buttonsautocomplete=res;
-					MainWindow.buttonsautocomplete.prefWidthProperty().bind(MainWindow.tot.widthProperty().subtract(MainWindow.grid.widthProperty()));
-					MainWindow.s.setDividerPosition(0, 0.65);
-					MainWindow.scrp.setContent(res);
+					MainWindow.setWRsuggestions(elements);
 					//MainWindow.scrp.minHeightProperty().bind(MainWindow.buttonsautocomplete.heightProperty().add(20));
 				}
 				

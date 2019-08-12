@@ -4,8 +4,8 @@
 <html lang="en,es" >
 <head>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<title>still - English-Spanish Dictionary - WordReference.com</title>
-<meta name="description" content="still - Translation to Spanish, pronunciation, and forum discussions">
+<title>stabilize - English-Spanish Dictionary - WordReference.com</title>
+<meta name="description" content="stabilize - Translation to Spanish, pronunciation, and forum discussions">
 <meta http-equiv="Content-Language" content="en,es">
 <link title="WR English-Spanish" rel="search" type="application/opensearchdescription+xml" href="//www.wordreference.com/2012/OpenSearch.aspx?dict=enes">
 <meta name="google" content="notranslate">
@@ -47,7 +47,7 @@ var AdsRecord = [];
 <link rel="shortcut icon" href="/favicons/favicon.ico">
 <meta name="theme-color" content="#ffffff">
 
-<script type="text/javascript">var strOrig = "still";var strDic = "enes";</script>
+<script type="text/javascript">var strOrig = "stabilize";var strDic = "enes";</script>
 <style type="text/css">
 	
 	
@@ -699,7 +699,7 @@ function poll(fn, timeout, interval) {
 				<a href="/es/translation.asp?tranword=">English-Spanish Dictionary</a>
 			
 				
-				| <a href="">still</a>
+				| <a href="">stabilize</a>
 				
 			</div>
 		</div>
@@ -757,27 +757,27 @@ function poll(fn, timeout, interval) {
 <li class="title1" title="See Also:">Ver También:</li>
 </ul>
 <ul>
-	<li id="link" ><ul><li><a href="/es/translation.asp?tranword=stifled">stifled</a></li>
-<li><a href="/es/translation.asp?tranword=stifling">stifling</a></li>
-<li><a href="/es/translation.asp?tranword=stigma">stigma</a></li>
-<li><a href="/es/translation.asp?tranword=stigmatic">stigmatic</a></li>
-<li><a href="/es/translation.asp?tranword=stigmatism">stigmatism</a></li>
-<li><a href="/es/translation.asp?tranword=stigmatization">stigmatization</a></li>
-<li><a href="/es/translation.asp?tranword=stigmatize">stigmatize</a></li>
-<li><a href="/es/translation.asp?tranword=stigmatized">stigmatized</a></li>
-<li><a href="/es/translation.asp?tranword=stile">stile</a></li>
-<li><a href="/es/translation.asp?tranword=stiletto">stiletto</a></li>
-<li><a href="/es/translation.asp?tranword=still">still</a></li>
-<li><a href="/es/translation.asp?tranword=still%20life">still life</a></li>
-<li><a href="/es/translation.asp?tranword=still-birth">still-birth</a></li>
-<li><a href="/es/translation.asp?tranword=still-born">still-born</a></li>
-<li><a href="/es/translation.asp?tranword=still-life">still-life</a></li>
-<li><a href="/es/translation.asp?tranword=stillage">stillage</a></li>
-<li><a href="/es/translation.asp?tranword=stillbirth">stillbirth</a></li>
-<li><a href="/es/translation.asp?tranword=stillborn">stillborn</a></li>
-<li><a href="/es/translation.asp?tranword=stillness">stillness</a></li>
-<li><a href="/es/translation.asp?tranword=stilly">stilly</a></li>
-<li><a href="/es/translation.asp?tranword=stilt">stilt</a></li>
+	<li id="link" ><ul><li><a href="/es/translation.asp?tranword=St">St</a></li>
+<li><a href="/es/translation.asp?tranword=St.">St.</a></li>
+<li><a href="/es/translation.asp?tranword=St.%20Ex.">St. Ex.</a></li>
+<li><a href="/es/translation.asp?tranword=stab">stab</a></li>
+<li><a href="/es/translation.asp?tranword=stabbed">stabbed</a></li>
+<li><a href="/es/translation.asp?tranword=stabber">stabber</a></li>
+<li><a href="/es/translation.asp?tranword=stabbing">stabbing</a></li>
+<li><a href="/es/translation.asp?tranword=stabile">stabile</a></li>
+<li><a href="/es/translation.asp?tranword=stability">stability</a></li>
+<li><a href="/es/translation.asp?tranword=stabilization">stabilization</a></li>
+<li><a href="/es/translation.asp?tranword=stabilize">stabilize</a></li>
+<li><a href="/es/translation.asp?tranword=stabilizer">stabilizer</a></li>
+<li><a href="/es/translation.asp?tranword=stable">stable</a></li>
+<li><a href="/es/translation.asp?tranword=stableboy">stableboy</a></li>
+<li><a href="/es/translation.asp?tranword=stableman">stableman</a></li>
+<li><a href="/es/translation.asp?tranword=stablemate">stablemate</a></li>
+<li><a href="/es/translation.asp?tranword=staccato">staccato</a></li>
+<li><a href="/es/translation.asp?tranword=stack">stack</a></li>
+<li><a href="/es/translation.asp?tranword=stack%20up">stack up</a></li>
+<li><a href="/es/translation.asp?tranword=stackable">stackable</a></li>
+<li><a href="/es/translation.asp?tranword=stacked">stacked</a></li>
 </ul></li>
 </ul>
 
@@ -857,10 +857,10 @@ function poll(fn, timeout, interval) {
 <div id="articleHead">
 
 
-				<h3 class="headerWord">still</h3>
+				<h3 class="headerWord">stabilize</h3>
 			
 <div id="footerlink"><a href="#footer">[links]</a></div>
-<div id='listen_widget'><span id='listen_txt'>Listen:</span><input type='hidden' id='audT' value='8' /><div style='display:none'><audio id='aud0' preload='none'><source src='/audio/en/us/us/en084333.mp3' type='audio/mpeg'></audio><audio id='aud1' preload='none'><source src='/audio/en/uk/general/en084333.mp3' type='audio/mpeg'></audio><audio id='aud2' preload='none'><source src='/audio/en/uk/rp/en084333.mp3' type='audio/mpeg'></audio><audio id='aud3' preload='none'><source src='/audio/en/uk/Yorkshire/en084333-55.mp3' type='audio/mpeg'></audio><audio id='aud4' preload='none'><source src='/audio/en/Irish/en084333.mp3' type='audio/mpeg'></audio><audio id='aud5' preload='none'><source src='/audio/en/scot/en084333.mp3' type='audio/mpeg'></audio><audio id='aud6' preload='none'><source src='/audio/en/us/south/en084333.mp3' type='audio/mpeg'></audio><audio id='aud7' preload='none'><source src='/audio/en/Jamaica/en084333.mp3' type='audio/mpeg'></audio></div><span id='audiodrop'><select id='accentSelection'><optgroup label='Accents'><option title='US' value='0' >US</option><option title='UK' value='1' >UK</option><option title='UK-RP' value='2' selected='selected'>UK-RP</option><option title='UK-Yorkshire' value='3' >UK-Yorkshire</option><option title='Irish' value='4' >Irish</option><option title='Scottish' value='5' >Scottish</option><option title='US Southern' value='6' >US Southern</option><option title='Jamaican' value='7' >Jamaican</option></optgroup><optgroup label='Playback rate'><option title='Speed at 100%' value='%100'>100%</option><option title='Speed at 50%' value='%50'>50%</option><option title='Speed at 25%' value='%25'>25%</option></optgroup></select></span></div>
+<div id='listen_widget'><span id='listen_txt'>Listen:</span><input type='hidden' id='audT' value='8' /><div style='display:none'><audio id='aud0' preload='none'><source src='/audio/en/us/us/en083208.mp3' type='audio/mpeg'></audio><audio id='aud1' preload='none'><source src='/audio/en/uk/general/en083208.mp3' type='audio/mpeg'></audio><audio id='aud2' preload='none'><source src='/audio/en/uk/rp/en083208.mp3' type='audio/mpeg'></audio><audio id='aud3' preload='none'><source src='/audio/en/uk/Yorkshire/en083208-55.mp3' type='audio/mpeg'></audio><audio id='aud4' preload='none'><source src='/audio/en/Irish/en083208.mp3' type='audio/mpeg'></audio><audio id='aud5' preload='none'><source src='/audio/en/scot/en083208.mp3' type='audio/mpeg'></audio><audio id='aud6' preload='none'><source src='/audio/en/us/south/en083208.mp3' type='audio/mpeg'></audio><audio id='aud7' preload='none'><source src='/audio/en/Jamaica/en083208.mp3' type='audio/mpeg'></audio></div><span id='audiodrop'><select id='accentSelection'><optgroup label='Accents'><option title='US' value='0' >US</option><option title='UK' value='1' >UK</option><option title='UK-RP' value='2' selected='selected'>UK-RP</option><option title='UK-Yorkshire' value='3' >UK-Yorkshire</option><option title='Irish' value='4' >Irish</option><option title='Scottish' value='5' >Scottish</option><option title='US Southern' value='6' >US Southern</option><option title='Jamaican' value='7' >Jamaican</option></optgroup><optgroup label='Playback rate'><option title='Speed at 100%' value='%100'>100%</option><option title='Speed at 50%' value='%50'>50%</option><option title='Speed at 25%' value='%25'>25%</option></optgroup></select></span></div>
 <script type='text/javascript'>
 //Select Audio in local storage
 var audPref = localStorage['wr_audio-'+strDic.substr(0,2)];
@@ -872,18 +872,18 @@ if ((audT) && (audPref)) {
 				option.selected = true;
 				break;}}}
 </script>
- &nbsp;<span id='pronWR' dir='ltr' style='font-size:16px;color:#003399;white-space:nowrap;' title='Pronunciación'>[ˈstɪl]</span><div id='dummyspan'></div><br />
+ &nbsp;<span id='pronWR' dir='ltr' style='font-size:16px;color:#003399;white-space:nowrap;' title='Pronunciación'>[ˈsteɪb<i>ɪ</i>laɪz]</span><div id='dummyspan'></div><br />
 <div id="forumNotes"><a id="forumNotesLink">ⓘ One or more forum threads is an exact match of your searched term</a></div>
 <div id="WHlinks" style="padding-top: 8px;">
 
-	<a href="/definition/still">definition</a> | 
-	
+	<a href="/definition/stabilize">definition</a> | 
+	<a href="/enfr/stabilize">in French</a> | 
 	<a href="/conj/EsVerbs.aspx" title="conjugate Spanish verbs">Conjugación&nbsp;<span style="font-size:smaller">[ES]</span></a> | 
-	<a href="/synonyms/still">English synonyms</a> |
-	<a href="/encol/still">English collocations</a> | 
+	<a href="/synonyms/stabilize">English synonyms</a> |
+	
     <a href="/conj/EnVerbs.aspx" title="conjugate English verbs">Conjugator&nbsp;<span style="font-size:smaller">[EN]</span></a> |
-    <a title="in Context" href='http://www.google.com/search?tbm=nws&amp;ned=us&amp;hl=en&amp;q=%22still%22' target=gg>in context</a> |
-	<a href='https://www.google.com/search?tbm=isch&amp;safe=active&amp;q=%22still%22' target=gg>images</a>
+    <a title="in Context" href='http://www.google.com/search?tbm=nws&amp;ned=us&amp;hl=en&amp;q=%22stabilize%22' target=gg>in context</a> |
+	<a href='https://www.google.com/search?tbm=isch&amp;safe=active&amp;q=%22stabilize%22' target=gg>images</a>
 
     <span id='WHlinks_forMobile'>
     <a href='/tools/Tools.aspx#mobileapps'>WR Apps: Android & iPhone</a>
@@ -909,7 +909,7 @@ if ((audT) && (audPref)) {
                         <script>
                             function loadCollinsJS() {
                                 var oTabHC = document.getElementById('tabHC')
-                                var sWord = 'still', sDic = 'enes', getCollins = document.createElement("script");
+                                var sWord = 'stabilize', sDic = 'enes', getCollins = document.createElement("script");
                                 getCollins.type = "text/javascript";
                                 getCollins.src = "/2012/collins/loadCollins.aspx?dict=" + sDic + "&w=" + sWord;
                                 getCollins.onload = function() {
@@ -933,9 +933,9 @@ if ((audT) && (audPref)) {
         var li  = document.createElement("li");
         var a   = document.createElement("a");
 
-        a.href = "/enes/reverse/still";
-        a.appendChild(document.createTextNode("WR Reverse (64)"));
-        a.title = "Translations to &#39;still&#39; on the other side of this WordReference dictionary.";
+        a.href = "/enes/reverse/stabilize";
+        a.appendChild(document.createTextNode("WR Reverse (10)"));
+        a.title = "Translations to &#39;stabilize&#39; on the other side of this WordReference dictionary.";
 
         li.setAttribute("id", "tabRev");
         li.appendChild(a);
@@ -949,7 +949,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     (/.wordreference.com\/(?:.*?)\/reverse\//i.test(document.referrer) === false) &&
     (!document.getElementById('tabHC'))) {
         document.getElementById('articleWRD').innerHTML = '<p style="direction: ltr;">Redirecting you to the reverse page...</p>';
-        location.href = "/enes/reverse/still";
+        location.href = "/enes/reverse/stabilize";
     }
 });
 
@@ -957,340 +957,72 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		   
 
 <div id="articleWRD">
-<!-- copyright 2 --><div><p class='wrcopyright'><a name="still115"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2019:</span></p></div><table class='WRD' onclick='redirectWR(event,"WRenes")'><tr class='wrtopsection'><td colspan='3' title='Principal Translations'><strong><span class='ph' data-ph='sMainMeanings'>Principal Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
-<tr class='even' id='enes:2428'><td class='FrWrd' ><strong><a href='/EnglishUsage/still#1' target='_blank' class='engusg' title='English Usage information available'></a>still</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> (as before)</td><td class='ToWrd' >aún <em class='tooltip POS2'>adv<span><i>adverbio</i>: Describe al verbo, al adjetivo o a otro adverbio ("corre <b>rápidamente</b>", "sucede <b>ahora</b>", "<b>muy</b> extraño").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >todavía <em class='tooltip POS2'>adv<span><i>adverbio</i>: Describe al verbo, al adjetivo o a otro adverbio ("corre <b>rápidamente</b>", "sucede <b>ahora</b>", "<b>muy</b> extraño").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>He hadn't eaten breakfast, but he was still not hungry.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Él no había desayunado pero aún no tenía hambre.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Él no había desayunado pero todavía no tenía hambre.</td></tr>
-<tr class='odd' id='enes:3041008'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> <i class='Fr2'>with a negative</i> (yet, even now)</td><td class='ToWrd' >todavía <em class='tooltip POS2'>adv<span><i>adverbio</i>: Describe al verbo, al adjetivo o a otro adverbio ("corre <b>rápidamente</b>", "sucede <b>ahora</b>", "<b>muy</b> extraño").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >aún <em class='tooltip POS2'>adv<span><i>adverbio</i>: Describe al verbo, al adjetivo o a otro adverbio ("corre <b>rápidamente</b>", "sucede <b>ahora</b>", "<b>muy</b> extraño").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>I can't talk to him; we still haven't been introduced.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>No puedo hablar con él; todavía no nos han presentado.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>No puedo hablar con él; aún no nos han presentado.</td></tr>
-<tr class='even' id='enes:2430'><td class='FrWrd' ><strong>still,<br> but still</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> (even so)</td><td class='ToWrd' >aun así <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >sin embargo <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>He hadn't eaten breakfast; still he was not hungry.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>No había desayunado; aún así, no tenía hambre.</td></tr>
-<tr class='odd' id='enes:2416'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (motionless)</td><td class='ToWrd' >inmóvil <em class='tooltip POS2'>adj mf<span><i>adjetivo de una sola terminación</i>: Adjetivos de una sola terminación en singular ("amable", "constante") pero que sí varían en plural ("amables", "constantes"). </span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >quieto/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The still water of the lake was beautiful.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Las aguas inmóviles del lago eran hermosas.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Las agua quietas del lago eran hermosas.</td></tr>
-<tr class='even' id='enes:2420'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (calm, silent)</td><td class='ToWrd' >calmo/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >tranquilo/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The woods were completely still with not a sound to be heard.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El bosque estaba completamente calmo y no se escuchaba ningún sonido.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El bosque estaba completamente tranquilo y no se escuchaba ningún sonido.</td></tr>
-<tr class='odd' id='enes:2422'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> <i class='Fr2'>UK</i> (drink: not fizzy)</td><td class='ToWrd' >sin gas <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Please bring me some still water.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Por favor, tráeme un poco de agua mineral sin gas.</td></tr>
-<tr class='odd'><td colspan='3' class='wrtopsection'>&nbsp;</td></tr><tr class='wrtopsection'><td colspan='3' title='Additional Translations' class='additional'><strong><span class='ph' data-ph='sAddTrans'>Additional Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
-<tr class='even' id='enes:2417'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (at rest)</td><td class='ToWrd' >quieto/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The children were at last still and slept quietly in their beds.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Los niños se quedaron por fin quietos y durmieron tranquilamente en sus camas.</td></tr>
-<tr class='odd' id='enes:2418'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (silent)</td><td class='ToWrd' >calmado <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >tranquilo/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >silencioso/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>It was a very still night and not a sound could be heard.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Era una noche muy calmada y no se oía ni un sonido.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Era una noche muy tranquila y no se oía ni un sonido.</td></tr>
-<tr class='even' id='enes:2419'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (hushed)</td><td class='ToWrd' >enmudecido <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >en silencio <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The shocked spectators, so loud a moment before, were in a still state after seeing the champion lose.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Los sorprendidos espectadores, estrepitosos un rato antes, quedaron enmudecidos al ver al campeón perder.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Los sorprendidos espectadores, estrepitosos un rato antes, quedaron en silencio al ver al campeón perder.</td></tr>
-<tr class='odd' id='enes:2421'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (water: without waves)&nbsp;<span class='dsense' >(<i>agua</i>)</span></td><td class='ToWrd' >calmado <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >en calma <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The sea looked very still and flat that day.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El mar lucía calmado y sereno ese día.</td></tr>
-<tr class='even' id='enes:2423'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (photography)&nbsp;<span class='dsense' >(<i>fotografía</i>)</span></td><td class='ToWrd' >instantánea <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >toma <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The still shot was beautiful.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La instantánea era hermosa.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La toma era preciosa.</td></tr>
-<tr class='odd' id='enes:2424'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (silence)</td><td class='ToWrd' >calma, quietud <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >tranquilidad <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >silencio <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>In the still of the night, he took her in his arms.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>En la calma (<i>or: </i> quietud) de la noche él la tomó entre sus brazos.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>En la tranquilidad de la noche él la tomó entre sus brazos.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>En el silencio de la noche él la tomó entre sus brazos.</td></tr>
-<tr class='even' id='enes:2425'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (stillness)</td><td class='ToWrd' >calma, quietud <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >sosiego <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >tranquilidad <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >silencio <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The still of the morning was beautiful.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La calma de la mañana era hermosa.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El sosiego de la mañana era hermoso.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La tranquilidad de la mañana era hermosa.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El silencio de la mañana era hermoso.</td></tr>
-<tr class='odd' id='enes:2426'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (photography)</td><td class='ToWrd' >instantánea <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The art exhibition displayed some of his stills of birds flying.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La muestra artística exhibía algunas de sus instantáneas de pájaros en vuelo.</td></tr>
-<tr class='even' id='enes:17566'><td class='FrWrd' ><strong>still</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (alcohol: distilling)</td><td class='ToWrd' >alambique <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >destilador <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>This whiskey still has been used for over 40 years.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Este alambique de güisqui se viene usando desde hace más de 40 años.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Este destilador de güisqui se viene usando desde hace más de 40 años.</td></tr>
-<tr class='odd' id='enes:2433'><td class='FrWrd' ><strong>still<a title='conjugate still' class='conjugate' href='/conj/EnVerbs.aspx?v=still'>⇒</a></strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> (make motionless)</td><td class='ToWrd' >inmovilizar<a title="conjugate inmovilizar" class='conjugate' href="/conj/EsVerbs.aspx?v=inmovilizar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>He stilled the camera before taking the shot.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Inmovilizó la cámara antes de tomar la foto.</td></tr>
-<tr class='even' id='enes:2431'><td class='FrWrd' ><strong>still <span title='somebody or something'>[sb/sth]</span><a title='conjugate still' class='conjugate' href='/conj/EnVerbs.aspx?v=still'>⇒</a></strong> <em class='tooltip POS2'>vtr<span><i>transitive verb</i>: Verb taking a direct object--for example, "<b>Say</b> something." "She <b>found</b> the cat." </span></em></td><td> (to silence)&nbsp;<span class='dsense' >(<i>a alguien</i>)</span></td><td class='ToWrd' >silenciar<a title="conjugate silenciar" class='conjugate' href="/conj/EsVerbs.aspx?v=silenciar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>algo</i>)</span></td><td class='ToWrd' >silenciar<a title="conjugate silenciar" class='conjugate' href="/conj/EsVerbs.aspx?v=silenciar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>He stilled the crowd with his shocking speech.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Silenció a la multitud con su estremecedor discurso.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> El profesor le pidió que silenciara su teléfono.</td></tr>
-<tr class='odd' id='enes:2432'><td class='FrWrd' ><strong>still <span title='something or somebody'>[sth/sb]</span><a title='conjugate still' class='conjugate' href='/conj/EnVerbs.aspx?v=still'>⇒</a></strong> <em class='tooltip POS2'>vtr<span><i>transitive verb</i>: Verb taking a direct object--for example, "<b>Say</b> something." "She <b>found</b> the cat." </span></em></td><td> (to calm)&nbsp;<span class='dsense' >(<i>algo, a alguien</i>)</span></td><td class='ToWrd' >calmar<a title="conjugate calmar" class='conjugate' href="/conj/EsVerbs.aspx?v=calmar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>algo, a alguien</i>)</span></td><td class='ToWrd' >tranquilizar<a title="conjugate tranquilizar" class='conjugate' href="/conj/EsVerbs.aspx?v=tranquilizar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>algo, a alguien</i>)</span></td><td class='ToWrd' >aplacar<a title="conjugate aplacar" class='conjugate' href="/conj/EsVerbs.aspx?v=aplacar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>She stilled the excited children with a calming look.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Ella calmó a los inquietos niños con una mirada tranquilizadora.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Ella tranquilizó a los inquietos niños con una mirada sosegadora.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Ella aplacó a los inquietos niños con una mirada tranquilizadora.</td></tr>
-</table>
-<table class='WRreporterror'>
-<tr class='even more'><td>&nbsp;</td>
-<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="/english/suggestions.aspx?w=still&amp;dict=enes"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
-
-                  <!-- This mobileAd_holder is from buildWRD5.aspx -->
-                  <div id='mobileAd_holder' style='display:none;'>
-                  </div><!-- copyright 5 --><div><p class='wrcopyright'><a name="still115"></a><span dir='auto'>WordReference English-Spanish Dictionary © 2019:</span></p></div><table class='WRD' id='compound_forms' onclick='redirectWR(event,"WRenes")'><tr class='wrtopsection'><td colspan='3' title='Compound Forms' id='compounds'><strong>Compound Forms:</strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
-<tr class='even' id='enes:3186928'><td class='FrWrd' ><strong>but still</strong> <em class='tooltip POS2'>expr<span><i>expression</i>: Prepositional phrase, adverbial phrase, or other phrase or expression--for example, "behind the times," "on your own."</span></em></td><td> (even so)</td><td class='ToWrd' >aun así <em class='tooltip POS2'>expr<span><i>expresión</i>: Expresiones idiomáticas, dichos, refranes y frases hechas de tres o más palabras ("Dios nos libre", "a lo hecho, pecho").</span></em></td></tr>
-<tr class='odd' id='enes:3061758'><td class='FrWrd' ><strong>it's early days,<br> it's still early days,<br> it's early days yet</strong> <em class='tooltip POS2'>expr<span><i>expression</i>: Prepositional phrase, adverbial phrase, or other phrase or expression--for example, "behind the times," "on your own."</span></em></td><td> <i class='Fr2'>UK, informal</i> (situation may change)</td><td class='ToWrd' >todavía es temprano <em class='tooltip POS2'>expr<span><i>expresión</i>: Expresiones idiomáticas, dichos, refranes y frases hechas de tres o más palabras ("Dios nos libre", "a lo hecho, pecho").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >todavía es pronto <em class='tooltip POS2'>expr<span><i>expresión</i>: Expresiones idiomáticas, dichos, refranes y frases hechas de tres o más palabras ("Dios nos libre", "a lo hecho, pecho").</span></em></td></tr>
-<tr class='even' id='enes:103000'><td class='FrWrd' ><strong>keep still</strong> <em class='POS2'>vi + adj</em></td><td> (not move)</td><td class='ToWrd' >quedarse quieto <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The mother told her son to keep still as she tried to cut his hair.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La madre le dijo al chico que se quedara quieto mientras le cortaba el pelo.</td></tr>
-<tr class='odd' id='enes:103001'><td class='FrWrd' ><strong>keep <span title='something or somebody'>[sth/sb]</span> still</strong> <em class='POS2'>vtr + adj</em></td><td> (hold steady)</td><td class='ToWrd' >sujetar<a title="conjugate sujetar" class='conjugate' href="/conj/EsVerbs.aspx?v=sujetar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >sujetar a <em class='POS2'>vtr + prep</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>You need one person to keep the cat still and another to trim its claws.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Necesitas una persona para sujetar al gato y otra para cortarle las uñas.</td></tr>
-<tr class='even' id='enes:3181747'><td class='FrWrd' ><strong>pot still</strong> <em class='POS2'></em></td><td> (brewing)&nbsp;<span class='dsense' >(<i>destilación</i>)</span></td><td class='ToWrd' >alambique <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='odd' id='enes:104907'><td class='FrWrd' ><strong>stand still</strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> (not move)</td><td class='ToWrd' >quedarse quieto <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Stand still or the photo will turn out blurred.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Quédense quietos o la foto saldrá borrosa.</td></tr>
-<tr class='even' id='enes:104908'><td class='FrWrd' ><strong>stand still</strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> <i class='Fr2'>figurative</i> (not change, progress)&nbsp;<span class='dsense' >(<i>figurado</i>)</span></td><td class='ToWrd' >paralizarse<a title="conjugate paralizarse" class='conjugate' href="/conj/EsVerbs.aspx?v=paralizarse">⇒</a> <em class='tooltip POS2'>v prnl<span><i>verbo pronominal</i>: Verbo que se conjuga con un pronombre átono ("me", "te", "se") que concuerda con el sujeto ("lavarse", "irse", "enojarse"). </span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >pararse<a title="conjugate pararse" class='conjugate' href="/conj/EsVerbs.aspx?v=pararse">⇒</a> <em class='tooltip POS2'>v prnl<span><i>verbo pronominal</i>: Verbo que se conjuga con un pronombre átono ("me", "te", "se") que concuerda con el sujeto ("lavarse", "irse", "enojarse"). </span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Time had stood still: my grandparents' house looked exactly as it did when I was a child.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El tiempo se ha paralizado: la casa de mis abuelos se ve exactamente igual a cuando yo era chico.</td></tr>
-<tr class='odd' id='enes:138094'><td class='FrWrd' ><strong>stay still</strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> (remain motionless)</td><td class='ToWrd' >quedarse quieto <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >no moverse <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
-<tr class='even' id='enes:3185250'><td class='FrWrd' ><strong>still and all</strong> <em class='tooltip POS2'>expr<span><i>expression</i>: Prepositional phrase, adverbial phrase, or other phrase or expression--for example, "behind the times," "on your own."</span></em></td><td> <i class='Fr2'>US, informal</i> (nonetheless)</td><td class='ToWrd' >con todo <em class='tooltip POS2'>loc prep<span><i>locución preposicional</i>: Unidad léxica estable formada de dos o más palabras que funciona como preposición ("a favor de", "en torno a").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >aun así <em class='tooltip POS2'>loc prep<span><i>locución preposicional</i>: Unidad léxica estable formada de dos o más palabras que funciona como preposición ("a favor de", "en torno a").</span></em></td></tr>
-<tr class='odd' id='enes:3183785'><td class='FrWrd' ><strong>still hunt</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (stealthy hunt for game)</td><td class='ToWrd' >caza sigilosa <em class='POS2'>nf + adj</em></td></tr>
-<tr class='even' id='enes:3183786'><td class='FrWrd' ><strong>still hunt</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (stealthy pursuit)</td><td class='ToWrd' >persecución sigilosa <em class='POS2'>nf + adj</em></td></tr>
-<tr class='odd' id='enes:138130'><td class='FrWrd' ><strong>still image</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (static or still-frame picture)</td><td class='ToWrd' >imagen congelada <em class='POS2'>nf + adj</em></td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>En la imagen congelada los rasgos del otro individuo se veían muy desdibujados.</td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >imagen fija <em class='POS2'>nf + adj</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>cine</i>)</span></td><td class='ToWrd' >fotograma <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even' id='enes:104937'><td class='FrWrd' ><strong>still life</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (art form)</td><td class='ToWrd' >naturaleza muerta <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>This artist specializes in still life, but occasionally does portraits.</td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El artista se especializa en naturalezas muertas, aunque cada tanto hace retratos.</td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >bodegón <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El artista se especializa en bodegones, aunque cada tanto hace retratos.</td></tr>
-<tr class='odd' id='enes:3026616'><td class='FrWrd' ><strong>still life,<br> plural: still lifes</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (artwork)</td><td class='ToWrd' >naturaleza muerta <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>I hung a Cezanne print on the wall: a still life of a bowl of apples.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Colgué una pintura de Cezanne en la pared, una naturaleza muerta de un tazón de manzanas.</td></tr>
-<tr class='even' id='enes:138131'><td class='FrWrd' ><strong>still more</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> (even more, yet more)</td><td class='ToWrd' >incluso más <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Sometimes if you tell someone that they cannot have something, they want it still more.</td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >aún más <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >todavía más <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='odd' id='enes:138133'><td class='FrWrd' ><strong>still photography</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (art of taking static pictures)</td><td class='ToWrd' >fotografía fija <em class='POS2'>nf + adj</em></td></tr>
-<tr class='even' id='enes:138134'><td class='FrWrd' ><strong>still standing</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (having survived or endured)&nbsp;<span class='dsense' >(<i>figurado</i>)</span></td><td class='ToWrd' >en pie <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Sigue en pie a pesar de todas las penas que ha sufrido en la vida.</td></tr>
-<tr class='odd' id='enes:128213'><td class='FrWrd' ><strong>still water</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (mineral water without bubbles)</td><td class='ToWrd' >agua sin gas <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>I prefer still water to carbonated.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Prefiero el agua mineral sin gas.</td></tr>
-<tr class='even' id='enes:138135'><td class='FrWrd' ><strong>still-birth</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (delivery of a dead baby)</td><td class='ToWrd' >pérdida fetal <em class='POS2'>nf + adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >muerte fetal <em class='POS2'>nf + adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>formal</i>)</span></td><td class='ToWrd' >óbito fetal <em class='POS2'>nm + adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >parto de niño muerto <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >parto de bebé muerto <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >alumbramiento de un mortinato <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
-<tr class='odd' id='enes:138136'><td class='FrWrd' ><strong>still-born</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (baby: dead at birth)</td><td class='ToWrd' >mortinato <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even' id='enes:3026618'><td class='FrWrd' ><strong>still-life painting</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (art form)</td><td class='ToWrd' >naturaleza muerta <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Era una naturaleza muerta que parecía una fotografía por los efectos de luz.</td></tr>
-<tr class='odd' id='enes:104938'><td class='FrWrd' ><strong>still-life painting</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (artwork)</td><td class='ToWrd' >pintura de bodegones <em class='POS2'>nf + loc adj</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >pintura de naturalezas muertas <em class='POS2'>nf + loc adj</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Van Gogh did many still-life paintings of flowers.</td></tr>
-<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Van Gogh produjo varias pinturas de bodegones de flores.</td></tr>
-<tr class='even' id='enes:138144'><td class='FrWrd' ><strong>stock still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (completely unmoving)&nbsp;<span class='dsense' >(<i>figurado</i>)</span></td><td class='ToWrd' >petrificado/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >completamente inmóvil <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
-<tr class='odd' id='enes:3200032'><td class='FrWrd' ><strong>the jury is out,<br> the jury is still out</strong> <em class='tooltip POS2'>expr<span><i>expression</i>: Prepositional phrase, adverbial phrase, or other phrase or expression--for example, "behind the times," "on your own."</span></em></td><td> <i class='Fr2'>figurative, informal</i> (decision has yet to be given)</td><td class='ToWrd' >el jurado sigue reunido <em class='tooltip POS2'>expr<span><i>expresión</i>: Expresiones idiomáticas, dichos, refranes y frases hechas de tres o más palabras ("Dios nos libre", "a lo hecho, pecho").</span></em></td></tr>
-<tr class='even' id='enes:139762'><td class='FrWrd' ><strong>worse still</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> (even more unfortunately)</td><td class='ToWrd' >peor aún <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >peor todavía <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Peor aún, al llegar a mi casa me di cuenta de que no traía las llaves.</td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >incluso peor <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
-<tr class='odd' id='enes:139763'><td class='FrWrd' ><strong>worse still</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (even more unfortunate)</td><td class='ToWrd' >peor <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
-<tr class='even' id='enes:3170774'><td class='FrWrd' ><strong>yet still</strong> <em class='tooltip POS2'>expr<span><i>expression</i>: Prepositional phrase, adverbial phrase, or other phrase or expression--for example, "behind the times," "on your own."</span></em></td><td> (even so)</td><td class='ToWrd' >pero <em class='tooltip POS2'>conj<span><i>conjunción</i>: Une palabras, cláusulas y oraciones ("y", "o", "pero").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >a pesar de <em class='tooltip POS2'>loc conj<span><i>locución conjuntiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como conjunción ("ya que", "a fin de", "ahora que").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >sin embargo <em class='tooltip POS2'>loc conj<span><i>locución conjuntiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como conjunción ("ya que", "a fin de", "ahora que").</span></em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Miranda says she eats a gluten-free diet; yet still, I saw her eating a bagel yesterday.</td></tr>
+<!-- copyright 2 --><div><p class='wrcopyright'><a name="stabilize115"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2019:</span></p></div><table class='WRD' onclick='redirectWR(event,"WRenes")'><tr class='wrtopsection'><td colspan='3' title='Principal Translations'><strong><span class='ph' data-ph='sMainMeanings'>Principal Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
+<tr class='even' id='enes:70660'><td class='FrWrd' ><strong>stabilize <span title='something or somebody'>[sth/sb]</span>,<br> also UK: stabilise <span title='something or somebody'>[sth/sb]</span><a title='conjugate stabilize' class='conjugate' href='/conj/EnVerbs.aspx?v=stabilize'>⇒</a></strong> <em class='tooltip POS2'>vtr<span><i>transitive verb</i>: Verb taking a direct object--for example, "<b>Say</b> something." "She <b>found</b> the cat." </span></em></td><td> (make stable, steady)</td><td class='ToWrd' >estabilizar<a title="conjugate estabilizar" class='conjugate' href="/conj/EsVerbs.aspx?v=estabilizar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The doctor was able to stabilize the patient's heart rate with medication.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El doctor pudo estabilizar el corazón del paciente con medicamentos.</td></tr>
+<tr class='odd' id='enes:3079251'><td class='FrWrd' ><strong>stabilize <span title='something'>[sth]</span>,<br> also UK: stabilise <span title='something'>[sth]</span><a title='conjugate stabilize' class='conjugate' href='/conj/EnVerbs.aspx?v=stabilize'>⇒</a></strong> <em class='tooltip POS2'>vtr<span><i>transitive verb</i>: Verb taking a direct object--for example, "<b>Say</b> something." "She <b>found</b> the cat." </span></em></td><td> (make even)</td><td class='ToWrd' >enderezar<a title="conjugate enderezar" class='conjugate' href="/conj/EsVerbs.aspx?v=enderezar">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The ship's crew was able to stabilize the angle of the deck after the storm damaged it.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La tripulación del barco pudo estabilizar el ángulo de la cubierta después de que la tormenta lo dañara.</td></tr>
+<tr class='even' id='enes:3099761'><td class='FrWrd' ><strong>stabilize <span title='somebody'>[sb]</span>,<br> also UK: stabilise <span title='somebody'>[sb]</span><a title='conjugate stabilize' class='conjugate' href='/conj/EnVerbs.aspx?v=stabilize'>⇒</a></strong> <em class='tooltip POS2'>vtr<span><i>transitive verb</i>: Verb taking a direct object--for example, "<b>Say</b> something." "She <b>found</b> the cat." </span></em></td><td> (patient: make condition stable)</td><td class='ToWrd' >estabilizar a <em class='POS2'>vtr + prep</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Doctors have succeeded in stabilising him.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Los doctores han estabilizado al paciente con éxito.</td></tr>
+<tr class='odd' id='enes:70661'><td class='FrWrd' ><strong>stabilize,<br> also UK: stabilise</strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> (become steady)</td><td class='ToWrd' >estabilizarse<a title="conjugate estabilizarse" class='conjugate' href="/conj/EsVerbs.aspx?v=estabilizarse">⇒</a> <em class='tooltip POS2'>v prnl<span><i>verbo pronominal</i>: Verbo que se conjuga con un pronombre átono ("me", "te", "se") que concuerda con el sujeto ("lavarse", "irse", "enojarse"). </span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The underpinning should help the wall to stabilize.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La pared se estabilizará con otra viga.</td></tr>
+<tr class='even' id='enes:3079252'><td class='FrWrd' ><strong>stabilize,<br> also UK: stabilise</strong> <em class='tooltip POS2'>vi<span><i>intransitive verb</i>: Verb not taking a direct object--for example, "She <b>jokes</b>." "He <b>has arrived</b>." </span></em></td><td> (condition: not worsen)</td><td class='ToWrd' >estabilizarse<a title="conjugate estabilizarse" class='conjugate' href="/conj/EsVerbs.aspx?v=estabilizarse">⇒</a> <em class='tooltip POS2'>v prnl<span><i>verbo pronominal</i>: Verbo que se conjuga con un pronombre átono ("me", "te", "se") que concuerda con el sujeto ("lavarse", "irse", "enojarse"). </span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The patient's condition has stabilized.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El paciente se estabilizó.</td></tr>
 </table>
 <table class='WRreporterror'>
 <tr class='odd more'><td>&nbsp;</td>
-<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="/english/suggestions.aspx?w=still&amp;dict=enes">Is something important missing? Report an error or suggest an improvement.</a></td></tr></table>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="/english/suggestions.aspx?w=stabilize&amp;dict=enes"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
 
+                  <!-- This mobileAd_holder is from buildWRD5.aspx -->
+                  <div id='mobileAd_holder' style='display:none;'>
+                  </div>
 </div>
 <div id="collinsdiv"></div>
 <div id="article">
 
 <!--<div style="margin-bottom: 30px;">Click the Collins tab</div>-->
-	<br><div id='FTintro'>&#39;<b>still</b>&#39; aparece también en las siguientes entradas:
+	<br><div id='FTintro'>&#39;<b>stabilize</b>&#39; aparece también en las siguientes entradas:
 </div>
 <div class='FTsource'>In the English description:</div><div class='FTlist'>
-<a href="/es/translation.asp?tranword=a%20long%20way%20to%20go">a long way to go</a>
- - <a href="/es/translation.asp?tranword=alembic">alembic</a>
- - <a href="/es/translation.asp?tranword=alive">alive</a>
- - <a href="/es/translation.asp?tranword=alive%20and%20well">alive and well</a>
- - <a href="/es/translation.asp?tranword=always%20on%20the%20move">always on the move</a>
- - <a href="/es/translation.asp?tranword=and%20counting">and counting</a>
- - <a href="/es/translation.asp?tranword=becalm">becalm</a>
- - <a href="/es/translation.asp?tranword=emeritus">emeritus</a>
- - <a href="/es/translation.asp?tranword=even">even</a>
- - <a href="/es/translation.asp?tranword=even%20better">even better</a>
- - <a href="/es/translation.asp?tranword=even%20more">even more</a>
- - <a href="/es/translation.asp?tranword=even%20now">even now</a>
- - <a href="/es/translation.asp?tranword=extant">extant</a>
- - <a href="/es/translation.asp?tranword=frame">frame</a>
- - <a href="/es/translation.asp?tranword=going%20strong">going strong</a>
- - <a href="/es/translation.asp?tranword=holdover">holdover</a>
- - <a href="/es/translation.asp?tranword=in%20the%20middle%20of">in the middle of</a>
- - <a href="/es/translation.asp?tranword=keep%20moving">keep moving</a>
- - <a href="/es/translation.asp?tranword=medium">medium</a>
- - <a href="/es/translation.asp?tranword=none%20the%20wiser">none the wiser</a>
- - <a href="/es/translation.asp?tranword=not%20move">not move</a>
- - <a href="/es/translation.asp?tranword=outstanding%20balance">outstanding balance</a>
- - <a href="/es/translation.asp?tranword=outstanding%20charges">outstanding charges</a>
- - <a href="/es/translation.asp?tranword=outstanding%20debt">outstanding debt</a>
- - <a href="/es/translation.asp?tranword=outstanding%20invoice">outstanding invoice</a>
- - <a href="/es/translation.asp?tranword=outstanding%20taxes">outstanding taxes</a>
- - <a href="/es/translation.asp?tranword=outstanding%20work">outstanding work</a>
- - <a href="/es/translation.asp?tranword=quiescent">quiescent</a>
- - <a href="/es/translation.asp?tranword=restlessness">restlessness</a>
- - <a href="/es/translation.asp?tranword=spinster">spinster</a>
- - <a href="/es/translation.asp?tranword=standing">standing</a>
- - <a href="/es/translation.asp?tranword=standing%20water">standing water</a>
- - <a href="/es/translation.asp?tranword=still%20image">still image</a>
- - <a href="/es/translation.asp?tranword=surviving">surviving</a>
- - <a href="/es/translation.asp?tranword=survivor">survivor</a>
- - <a href="/es/translation.asp?tranword=time-lapse%20photography">time-lapse photography</a>
- - <a href="/es/translation.asp?tranword=unborn">unborn</a>
- - <a href="/es/translation.asp?tranword=unchanged">unchanged</a>
- - <a href="/es/translation.asp?tranword=undischarged">undischarged</a>
- - <a href="/es/translation.asp?tranword=unexpired">unexpired</a>
- - <a href="/es/translation.asp?tranword=unfixed">unfixed</a>
- - <a href="/es/translation.asp?tranword=unhealed">unhealed</a>
- - <a href="/es/translation.asp?tranword=unmoving">unmoving</a>
- - <a href="/es/translation.asp?tranword=unopened">unopened</a>
- - <a href="/es/translation.asp?tranword=unreleased">unreleased</a>
- - <a href="/es/translation.asp?tranword=unsaturated">unsaturated</a>
- - <a href="/es/translation.asp?tranword=unspoiled">unspoiled</a>
- - <a href="/es/translation.asp?tranword=wiggler">wiggler</a>
- - <a href="/es/translation.asp?tranword=working%20lunch">working lunch</a>
- - <a href="/es/translation.asp?tranword=working%20version">working version</a>
+<a href="/es/translation.asp?tranword=ballast">ballast</a>
 </div>
 <div class='FTsource'>
 Spanish:</div>
 <div class='FTlist'>
-<a href="/es/en/translation.asp?spen=a+pesar+de+ello">a pesar de ello</a>
- - <a href="/es/en/translation.asp?spen=alambique">alambique</a>
- - <a href="/es/en/translation.asp?spen=alquitara">alquitara</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban">aún</a>
- - <a href="/es/en/translation.asp?spen=destilador">destilador</a>
- - <a href="/es/en/translation.asp?spen=todav%c3%ada">todavía</a>
- - <a href="/es/en/translation.asp?spen=aun+as%c3%ad">aun así</a>
- - <a href="/es/en/translation.asp?spen=fotograma">fotograma</a>
- - <a href="/es/en/translation.asp?spen=callar">callar</a>
- - <a href="/es/en/translation.asp?spen=aqu%c3%ad+ando">aquí ando</a>
- - <a href="/es/en/translation.asp?spen=as%c3%ad+sigo">así sigo</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+en+pa%c3%b1ales">aún en pañales</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+falta+algo">aún falta algo</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+hay+m%c3%a1s">aún hay más</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+hay+mucho+por+hacer">aún hay mucho por hacer</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+m%c3%a1s">aún más</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+m%c3%a1s+grande">aún más grande</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+me+falta">aún me falta</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+por+nacer">aún por nacer</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+queda+camino+por+recorrer">aún queda camino por recorrer</a>
- - <a href="/es/en/translation.asp?spen=aun+queriendo">aun queriendo</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+sigue+con+lo+mismo">aún sigue con lo mismo</a>
- - <a href="/es/en/translation.asp?spen=a%c3%ban+sue%c3%b1o+contingo">aún sueño contingo</a>
- - <a href="/es/en/translation.asp?spen=aunque+todav%c3%ada+no+est%c3%a1+claro">aunque todavía no está claro</a>
- - <a href="/es/en/translation.asp?spen=bodeg%c3%b3n">bodegón</a>
- - <a href="/es/en/translation.asp?spen=con+el+bocado+en+la+boca">con el bocado en la boca</a>
- - <a href="/es/en/translation.asp?spen=continuar+existiendo">continuar existiendo</a>
- - <a href="/es/en/translation.asp?spen=cuadrar">cuadrar</a>
- - <a href="/es/en/translation.asp?spen=dar+para+m%c3%a1s">dar para más</a>
- - <a href="/es/en/translation.asp?spen=de+todo+lo+habido+y+por+haber">de todo lo habido y por haber</a>
- - <a href="/es/en/translation.asp?spen=durar">durar</a>
- - <a href="/es/en/translation.asp?spen=empero">empero</a>
- - <a href="/es/en/translation.asp?spen=en+plena+vigencia">en plena vigencia</a>
- - <a href="/es/en/translation.asp?spen=estar+todav%c3%ada+a+tiempo">estar todavía a tiempo</a>
- - <a href="/es/en/translation.asp?spen=humear">humear</a>
- - <a href="/es/en/translation.asp?spen=inm%c3%b3vil">inmóvil</a>
- - <a href="/es/en/translation.asp?spen=inmovilizar">inmovilizar</a>
- - <a href="/es/en/translation.asp?spen=la+oferta+sigue+en+pie">la oferta sigue en pie</a>
- - <a href="/es/en/translation.asp?spen=la+procesi%c3%b3n+va+por+dentro">la procesión va por dentro</a>
- - <a href="/es/en/translation.asp?spen=lo+mejor+est%c3%a1+por+llegar">lo mejor está por llegar</a>
- - <a href="/es/en/translation.asp?spen=los+a%c3%b1os+no+pasan+en+balde">los años no pasan en balde</a>
- - <a href="/es/en/translation.asp?spen=los+d%c3%adas+se+hacen+eternos">los días se hacen eternos</a>
- - <a href="/es/en/translation.asp?spen=naturaleza+muerta">naturaleza muerta</a>
- - <a href="/es/en/translation.asp?spen=parar+el+tiempo">parar el tiempo</a>
- - <a href="/es/en/translation.asp?spen=por+si+quedara+alguna+duda">por si quedara alguna duda</a>
- - <a href="/es/en/translation.asp?spen=quedarse+con+hambre">quedarse con hambre</a>
- - <a href="/es/en/translation.asp?spen=quedarse+en+el+camino">quedarse en el camino</a>
- - <a href="/es/en/translation.asp?spen=quedo">quedo</a>
- - <a href="/es/en/translation.asp?spen=quieto">quieto</a>
- - <a href="/es/en/translation.asp?spen=quieto+ah%c3%ad">quieto ahí</a>
+<a href="/es/en/translation.asp?spen=consolidar">consolidar</a>
+ - <a href="/es/en/translation.asp?spen=desdramatizar">desdramatizar</a>
+ - <a href="/es/en/translation.asp?spen=centrar">centrar</a>
+ - <a href="/es/en/translation.asp?spen=volver+a+su+sitio">volver a su sitio</a>
+ - <a href="/es/en/translation.asp?spen=estabilizar">estabilizar</a>
 </div><br />
 
 </div> 
 
 <div id="postArticle">
 
-<div class='extras even'><div><span class='extra_category'>In Lists: </span><a href='https://lists.wordreference.com/show/top-2000-english-words.1/'>Top 2000 English words</a>, <a href='https://lists.wordreference.com/show/weather-descriptions.44/'>Weather descriptions</a>, <a href='https://lists.wordreference.com/show/weather.344/'>Weather</a>, <a href='https://lists.wordreference.com/'> more...</a></div><div><span class='extra_category'>Synonymes: </span><a href='/enes/calm'>calm</a>, <a href='/enes/tranquil'>tranquil</a>, <a href='/enes/noiseless'>noiseless</a>, <a href='/enes/quiet'>quiet</a>, <a href='/enes/motionless'>motionless</a>, <a href='/synonyms/still'> more...</a></div><div><span class='extra_category'>Collocations: </span>still my [mind, heartbeat], the still of the [day, night, evening, summer], is still in [development, progress, place], <a href='/EnglishCollocations/still'> more...</a></div></div><br><p id='threadsHeader'>Forum discussions with the word(s) "still" in the title:</p><div id="lista_link"><a target='_blank' href='https://forum.wordreference.com/threads/a-crescent-still-abides.1635292/'>A crescent still abides</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-great-deal-is-still-to-be-learned.964807/'>A great deal is still to be learned...</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-house-still-doesnt-make-a-home.2087435/'>A house still doesn&#39;t make a home</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-more-sensitive-approach-is-still-to-emerge.2438027/'>a more [sensitive] approach is still to emerge</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-more-complex-but-still-very-broad-matrix.249328/'>A more complex but still very broad matrix</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-part-of-me-died-with-father-but-i-still-fear-him.488410/'>A part of me died with Father, but I still fear him</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/a-still-uncut-cord.1586584/'>a still uncut cord</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/account-still-open.1763352/'>account still open</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/advanced-learners-will-still-making-that-mistake.1688940/'>advanced learners will still making that mistake.</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/aint-still-tappin.2624468/'>ain&#39;t still tappin&#39;</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/all-the-still-born-love-that-couldve-happened.484085/'>All the still-born love that could&#39;ve happened</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/already-yet-still.1831420/'>already / yet / still</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/already-yet-still.156149/'>already / yet / still</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/although-the-debate-about-when-it-could-no-longer-be-reversed-is-still-important.1147991/'>although the debate about when it could no longer be reversed is still important.</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/although-the-workers-are-still-subjunctive.1519929/'>although the workers are still (subjunctive)</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/although-they-had-still-to-join-him.680255/'>although they had still to join him</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/am-i-still-an-only-child.2654166/'>Am I still an only child?</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/am-i-still-not-it.1001566/'>Am I still not it?</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-are-still-being-felt.2840302/'>and are still being felt</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-ask-that-it-still-have-life.1414831/'>and ask that it still have life</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-at-the-same-time-show-that-they-were-still-in-with-a-chance-of-winning-the-war.784210/'>And at the same time show that they were still in with a chance of winning the war.</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-i-still-an-all-around-pain-in-my-rear.466046/'>and I still an all-around pain in my rear</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-i-still-do.2292851/'>and I still do</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-i-still-dream-ed-of-that-day.3320053/'>And I still dream(ed) of that day</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-i-was-rendered-still.608754/'>And I was rendered still...</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-still-be-addicted-to-them-hoodrats.2154409/'>And still be addicted to them hoodrats.</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-still-he-didnt-return-preterito-imperfecto.2423245/'>And still he didn&#39;t return (preterito/imperfecto)</a> - grammar<br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-yet-and-still.2887439/'>and yet - and still</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/and-you-still-dont-get-how-far.3018147/'>and you still don&#39;t get how far</a><br>
-<a target='_blank' href='https://forum.wordreference.com/threads/angels-still-your-beating-wings-her-prince.639216/'>Angels, still your beating wings, her prince...</a><br>
-<a href="?forumtitles=1&amp;tranword=still" title='more...'><strong>more...</strong></a><div class='extra_links'><a href='https://forum.wordreference.com/forums/83/' title="Visit the Spanish-English Forum">Visit the Spanish-English Forum.</a><a href='https://forum.wordreference.com/forums/83/' title="Ask in the forums yourself">Help WordReference: Ask in the forums yourself.</a></div></div><div id='extra_links'><a href='/definition/still#threadsHeader'><span class='boxed last' title='Discussions in the monolingual forum'>Discussions about &#39;still&#39; in the English Only forum</span></a></div>
-		<span style="border: 0 none;" id="gtrans" dir="auto"><a href="#" rel="nofollow" onclick="iframeGGapi(); return false">See Google Translate&#39;s machine translation of 'still'.</a><br></span>
+<div class='extras even'><div><span class='extra_category'>In Lists: </span><a href='https://lists.wordreference.com/show/verbs-to-describe-trends.685/'>Verbs to describe trends</a>, <a href='https://lists.wordreference.com/'> more...</a></div><div><span class='extra_category'>Synonymes: </span><a href='/enes/steady'>steady</a>, <a href='/enes/settle'>settle</a>, <a href='/enes/regulate'>regulate</a>, <a href='/enes/equilibrize'>equilibrize</a>, <a href='/enes/hold down'>hold down</a>, <a href='/synonyms/stabilize'> more...</a></div></div><br><p id='threadsHeader'>Forum discussions with the word(s) "stabilize" in the title:</p><div id="lista_link"><a target='_blank' href='https://forum.wordreference.com/threads/a-values-range-to-stabilize-the.1623026/'>a values range to stabilize the</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/retract-protracted-shoulders-and-stabilize-the-scapulae.1964828/'>retract protracted shoulders and stabilize the scapulae</a> - medical<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/stabilize-at-room-temperature.199082/'>Stabilize at room temperature</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/valve-stabilize-shifting-control-pressure-cars.1239040/'>valve stabilize shifting control pressure (cars)</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/to-do-everything-from-stabilize-whipped-cream-to-reduce-the-discoloration-of-boiled-vegetables.3043188/'>...to do everything from stabilize whipped cream to reduce the discoloration of boiled vegetables</a> - English Only forum<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/ballast-to-stabilize-her-clearly-genuine-preoccupation.2771738/'>ballast to stabilize her clearly genuine preoccupation ...</a> - English Only forum<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/to-stabilize-to-stabilise-and-pressurization-pressurisation.3234139/'>To stabilize/to stabilise and pressurization/pressurisation</a> - English Only forum<br>
+<div class='extra_links'><a href='https://forum.wordreference.com/forums/83/' title="Visit the Spanish-English Forum">Visit the Spanish-English Forum.</a><a href='https://forum.wordreference.com/forums/83/' title="Ask in the forums yourself">Help WordReference: Ask in the forums yourself.</a></div></div><div id='extra_links'><a href='/definition/stabilize#threadsHeader'><span class='boxed last' title='Discussions in the monolingual forum'>Discussions about &#39;stabilize&#39; in the English Only forum</span></a></div>
+		<span style="border: 0 none;" id="gtrans" dir="auto"><a href="#" rel="nofollow" onclick="iframeGGapi(); return false">See Google Translate&#39;s machine translation of 'stabilize'.</a><br></span>
 		<script type="text/javascript">
 		function iframeGGapi() {
-			var sOriginal = 'still';
+			var sOriginal = 'stabilize';
 			var DestLang = "es";
 			var SourceLang = "en";
 			document.getElementById('gtrans').innerHTML = "<iframe style='border: 0 none;' src='/2012/GoogTranslate.aspx?dict=" + SourceLang + DestLang + "&w=" + sOriginal + "&sk=t' width='100%' height='55'><\/iframe>";
 			}
 		</script>
-		<p class='other_languages'>In other languages: <a href="/enfr/still">French</a> | <a href="/enit/still">Italian</a> | <a href="/enpt/still">Portuguese</a> | <a href="/enro/still">Romanian</a> | <a href="/ende/still">German</a> | <a href="/ennl/still">Dutch</a> | <a href="/ensv/still">Swedish</a> | <a href="/enru/still">Russian</a> | <a href="/enpl/still">Polish</a> | <a href="/encz/still">Czech</a> | <a href="/engr/still">Greek</a> | <a href="/entr/still">Turkish</a> | <a href="/enzh/still">Chinese</a> | <a href="/enja/still">Japanese</a> | <a href="/enko/still">Korean</a> | <a href="/enar/still">Arabic</a> </p>
+		<p class='other_languages'>In other languages: <a href="/enfr/stabilize">French</a> | <a href="/enit/stabilize">Italian</a> | <a href="/enpt/stabilize">Portuguese</a> | <a href="/enro/stabilize">Romanian</a> | <a href="/ende/stabilize">German</a> | <a href="/ennl/stabilize">Dutch</a> | <a href="/ensv/stabilize">Swedish</a> | <a href="/enru/stabilize">Russian</a> | <a href="/enpl/stabilize">Polish</a> | <a href="/encz/stabilize">Czech</a> | <a href="/engr/stabilize">Greek</a> | <a href="/entr/stabilize">Turkish</a> | <a href="/enzh/stabilize">Chinese</a> | <a href="/enja/stabilize">Japanese</a> | <a href="/enko/stabilize">Korean</a> | <a href="/enar/stabilize">Arabic</a> </p>
 <div id="oldaudiospan"></div>
 </div>
 <script type='text/javascript' src='/2012/scripts/bundle.min.js?v=07082019084658'></script>
@@ -1362,7 +1094,7 @@ if (oTabRev) {
                                 googletag.display('adrightbottom');
                             });
                         </script>
-                </td></tr><tr style='width:100%;'><td class='ad' colspan='2' style='text-align:center;border-bottom:solid 1px #dcdcdc;border-collapse:collapse'><p style='margin-right:-2px'><a id='GooglePlay' href='https://play.google.com/store/apps/details?id=com.wordreference' title='Android App' style='background-position:0px -60px;background-repeat:no-repeat;'></a><a href='http://itunes.apple.com/us/app/wordreference-dictionary/id515127233?mt=8&uo=4' id='AppStore' title='iPhone App' style='background-position:0px -110px;background-repeat:no-repeat;'></a></td></tr><tr style='width:100%'><td colspan='2'><a href="/docs/report.ad.aspx?country=ES&amp;number=1" target="_blank" title="Report an inappropriate ad." style="font-size:12px;text-align:left;margin-left:5px;">Infórmanos de los anuncios inapropiados.</a></td></tr><tr style='width:100%'><td colspan='2' class='wrSupportRightAdLink' style='border-top:solid 1px #dcdcdc;border-collapse:collapse;font-size:12px;text-align:left;padding-left:5px;padding-top:10px'><a href="/docs/supporter.aspx" target="_blank" title="WordReference Supporter - no ads">Become a WordReference Supporter to view the site ad-free.</a></td></tr>
+                </td></tr><tr style='width:100%;'><td class='ad' colspan='2' style='text-align:center;border-bottom:solid 1px #dcdcdc;border-collapse:collapse'><p style='margin-right:-2px'><a id='GooglePlay' href='https://play.google.com/store/apps/details?id=com.wordreference' title='Android App' style='background-position:0px -60px;background-repeat:no-repeat;'></a><a href='http://itunes.apple.com/us/app/wordreference-dictionary/id515127233?mt=8&uo=4' id='AppStore' title='iPhone App' style='background-position:0px -110px;background-repeat:no-repeat;'></a></td></tr><tr style='width:100%'><td colspan='2'><a href="/docs/report.ad.aspx?country=ES&amp;number=4" target="_blank" title="Report an inappropriate ad." style="font-size:12px;text-align:left;margin-left:5px;">Infórmanos de los anuncios inapropiados.</a></td></tr><tr style='width:100%'><td colspan='2' class='wrSupportRightAdLink' style='border-top:solid 1px #dcdcdc;border-collapse:collapse;font-size:12px;text-align:left;padding-left:5px;padding-top:10px'><a href="/docs/supporter.aspx" target="_blank" title="WordReference Supporter - no ads">Become a WordReference Supporter to view the site ad-free.</a></td></tr>
 <script type="text/javascript">
 function isFirefox() { return (navigator.userAgent.indexOf('Firefox') > 0);}
 function isChrome() { return (navigator.userAgent.indexOf('Chrome') > 0);}
@@ -1499,8 +1231,8 @@ if (typeof GDPRcookieYes !== "undefined") {
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "//www.wordreference.com/es/translation.asp?tranword=still",
-      "name": "still"
+      "@id": "//www.wordreference.com/es/translation.asp?tranword=stabilize",
+      "name": "stabilize"
     }
   }]
 }

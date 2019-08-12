@@ -1,0 +1,9 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+    -fx-border-style:none solid none solid ;
+}
+#tabborder{
+	-fx-border-style:solid none none none ;
+	-fx-border-width: 2;
+    -fx-border-color: #E6E6E6;
+}

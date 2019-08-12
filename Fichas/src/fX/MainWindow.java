@@ -64,16 +64,15 @@ public class MainWindow extends Application{
 public static Stage primaryStage;
 public static Font tit, head;
 public static Font text;
-private Font extext;
-private Font extext2;
+public static Font extext;
+public static Font extext2;
 private HBox menu;
 private Button b_intro, b_exam, b_consul, b_options, b_StoE;
-public static FlowPane buttonsautocomplete;
 public static ScrollPane scrp,scrplocal;
 private final double M_w=500;
 private final double M_h=110;
 //Introduction scene
-private Font textf;
+public static Font textf;
 public static Text state;
 private static TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, use1, use2, use3,pronun;
 private static TextArea indications;
@@ -82,7 +81,7 @@ TextField ex_eng;
 public static VBox tot;
 public static SplitPane s;
 public static GridPane grid;
-private final double I_w=550;
+private final double I_w=650;
 private final double I_h=860;
 
 Stack<ArrayList<Ficha>> mem;
@@ -107,12 +106,7 @@ public static TableView<ObservableFicha> table;
 public static ObservableList <ObservableFicha> data;
 private Button eliminate, edit;
 //Update
-private TextField up_eng, up_engExamp1,up_engExamp2, up_engExamp3, up_espExamp1, up_espExamp2, up_espExamp3, up_esp1, up_esp2, up_esp3, up_pronun;
-private TextArea up_indications;
-private Button update;
-private CheckBox up_known_E_1, up_known_E_2, up_known_E_3;
-private CheckBox up_known_S_1, up_known_S_2, up_known_S_3;
-private Ficha up_f;
+
 //SQLConsole
 private TextField sql_query;
 private CheckBox sql_w_result;
@@ -139,7 +133,7 @@ public static ConfigData cfd;
 		MainWindow.exceptions="";
 		tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
 		text = Font.font("Helvetica",FontWeight.LIGHT, 14*scale);
-		head = Font.font("Gill Sans",FontWeight.LIGHT, 18*scale);
+		head = Font.font("Gill Sans",FontWeight.NORMAL, 19*scale);
 		extext= Font.font("Helvetica Neue", FontWeight.BOLD,18*scale);
 		extext2= Font.font("Arial", FontWeight.NORMAL,18*scale);
 		textf= Font.font("Helvetica",FontWeight.NORMAL,12*scale);
@@ -306,150 +300,6 @@ public static ConfigData cfd;
 			}
 			
 		});
-		/*
-		eng.setOnKeyPressed(new EventHandler<KeyEvent>(){
-			
-			@Override
-			public void handle(KeyEvent event) {
-				String s="";
-				
-					if(event.getCode()==KeyCode.BACK_SPACE) {
-						if(eng.getText().length()==0) {
-							state.setText("New");
-							return;
-						}
-						s=eng.getText().substring(0, eng.getText().length()-1);
-						
-						boolean found=false;
-						Iterator<Ficha> it;
-						Ficha f;
-						if(mem.size()<=1) {
-							state.setText("New");
-							suggestions.setText("");
-							return;
-						}
-						mem.pop();
-						it=mem.peek().iterator();
-						while(it.hasNext()) {
-							f=it.next();
-							if(f.getEnglish().toLowerCase().equals(s.toLowerCase())) {
-								found=true;
-								break;
-							}
-						}
-						if(found) {
-							state.setText("Not new");
-						}
-						else state.setText("New");
-					}
-					else if(!event.getText().equals("")){
-						s=eng.getText()+event.getText();
-						Autocompletator.search(s);
-						boolean found=false;
-						ArrayList<Ficha> nal= new ArrayList<Ficha>();
-						Iterator<Ficha> it;
-						Ficha f;
-						if(mem==null||mem.isEmpty()) {
-							state.setText("New");
-							mem=new Stack<ArrayList<Ficha>>();
-							mem.push(Facade.getAll());
-						}
-						it=mem.peek().iterator();
-						while(it.hasNext()) {
-							f=it.next();
-							if(f.getEnglish().toLowerCase().equals(s.toLowerCase())) {
-								found=true;
-								nal.add(f);
-							}
-							else if(f.getEnglish().toLowerCase().contains(s.toLowerCase())) {
-								nal.add(f);
-							}
-						}
-						mem.push(nal);
-						if(found) {
-							state.setText("Not new");
-						}
-						else state.setText("New");
-					}
-					
-					if(mem!=null&&mem.size()>1&&!s.equals("")) {
-						String str="";
-						Ficha f;
-						int i;
-						Iterator<Ficha> it=mem.peek().iterator();
-						for(i=0;i<s_amount;++i) {
-							if(!it.hasNext()) break;
-							while(it.hasNext()) {
-								f=it.next();
-								if(f.getEnglish().toLowerCase().startsWith(s.toLowerCase())) {
-									str+=f.getEnglish();
-									str+="   ";
-									break;
-								}
-								
-							}
-							if(!it.hasNext()) break;
-						}
-						if(i==s_amount) {
-							suggestions.setText(str);
-							return;
-						}
-						it=mem.peek().iterator();
-						for(;i<s_amount;++i) {
-							if(!it.hasNext()) break;
-							while(it.hasNext()) {
-								f=it.next();
-								if(f.getEnglish().toLowerCase().endsWith(s.toLowerCase())) {
-									str+=f.getEnglish();
-									str+="   ";
-									break;
-								}
-								
-							}
-							if(!it.hasNext()) break;
-						}
-						if(i==s_amount) {
-							suggestions.setText(str);
-							return;
-						}
-						it=mem.peek().iterator();
-						for(;i<s_amount;++i) {
-							if(!it.hasNext()) break;
-							while(it.hasNext()) {
-								f=it.next();
-								if(f.getEnglish().toLowerCase().contains(s.toLowerCase())&&!(f.getEnglish().toLowerCase().startsWith(s.toLowerCase()))&&!(f.getEnglish().toLowerCase().endsWith(s.toLowerCase()))) {
-									str+=f.getEnglish();
-									str+="   ";
-									break;
-								}
-								
-							}
-							if(!it.hasNext()) break;
-						}
-						suggestions.setText(str);
-						return;
-					}
-					else {
-						suggestions.setText("");
-					}
-					
-				
-			}
-			
-		});*/
-		buttonsautocomplete= new FlowPane();
-		/*ArrayList<String> autores= Testing.getAutocomplete("ca");
-		Button[] autoc= new Button[autores.size()];
-		
-		for(int i=0;i<autores.size();++i) {
-			autoc[i]= new Button(autores.get(i));
-			buttonsautocomplete.getChildren().add(autoc[i]);
-		}
-		*/
-		//buttonsautocomplete.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-		scrp= new ScrollPane(buttonsautocomplete);
-		
-		//scrp.minHeightProperty().bind(buttonsautocomplete.heightProperty().add(50));
 		
 		
 		engExamp1 = new TextField();
@@ -563,8 +413,6 @@ public static ConfigData cfd;
 		//grid.add(menu, 			0, row, 2, 1); row++;
 		//grid.add(tit, 			0, row, 2, 1); row++;
 		grid.add(h,            	0, row ,2, 1); row++;
-		grid.add(suggestions,  	0, row ,2, 1); row++;
-		grid.add(scrp,  		0, row ,2, 1); row++;
 		grid.add(pronunciation, 0, row ,2, 1); row++;
 		grid.add(pronun,        0, row ,2, 1); row++;
 		
@@ -597,23 +445,90 @@ public static ConfigData cfd;
 		
 		grid.add(add,           0, row ,2, 1); row++; 
 		
+		SplitPane ss= new SplitPane();
 		tot= new VBox();
 		s= new SplitPane();
-		SplitPane ss= new SplitPane();
+		
 		s.getItems().add(0,grid);
 		s.getItems().add(1,ss);
 		grid.prefWidthProperty().bind(s.widthProperty());
 		
-		s.setDividerPosition(0, 1);
-		
-		scrplocal= new ScrollPane();
+		s.setDividerPosition(0, 0.65);
+		Text t2 = new Text("Local suggestions");
+		Text t = new Text("WR suggestions");
+		t.setFont(MainWindow.head);
+		t2.setFont(MainWindow.head);
+		FlowPane a= new FlowPane(t);
+		a.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		FlowPane a2= new FlowPane(t2);
+		a2.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		scrp=new ScrollPane(a);
+		scrplocal= new ScrollPane(a2);
 		ss.setOrientation(Orientation.VERTICAL);
 		ss.getItems().addAll(scrp,scrplocal);
+		
 		tot.getChildren().addAll(top,s);
 		Scene scene = new Scene(tot,I_w*scale,I_h*scale);
 		primaryStage.setX(primaryStage.getX()-(I_w*scale-width)/2);
 		primaryStage.setY(primaryStage.getY()-(I_h*scale+22-height)/2);
 		return scene;
+		
+	}
+	public static void setWRsuggestions(ArrayList<String> elements) {
+		VBox whole= new VBox();
+		Text t = new Text("WR suggestions");
+		t.setFont(MainWindow.head);
+
+		FlowPane res= new FlowPane();
+		res.setVgap(10);
+		res.setHgap(10);
+		Button[] autoc= new Button[elements.size()];
+		for(int i=0;i<elements.size();++i) {
+			autoc[i]= new Button(elements.get(i));
+			final String s=elements.get(i);
+			autoc[i].setOnAction(e->{
+				AutoselectWindow a = new AutoselectWindow(s);
+			});
+			HBox.setMargin(autoc[i], new Insets(0,10*scale,0,0));
+			res.getChildren().add(autoc[i]);
+		}
+		whole.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		res.prefWidthProperty().bind(tot.widthProperty().subtract(grid.widthProperty()).subtract(30));
+	    s.setDividerPosition(0, 0.65);
+	    VBox.setMargin(res, new Insets(10*scale,0,0,0));
+	    whole.getChildren().addAll(t,res);
+		scrp.setContent(whole);
+		
+		
+		
+		
+		
+	}
+	public static void setLocalsuggestions(ArrayList<Ficha>candidates) {
+		VBox whole= new VBox();
+		Text t = new Text("Local suggestions");
+		t.setFont(MainWindow.head);
+		FlowPane res= new FlowPane();
+		res.setVgap(10);
+		res.setHgap(10);
+		
+		Button[] autoc= new Button[candidates.size()];
+		for(int i=0;i<candidates.size();++i) {
+			autoc[i]= new Button(candidates.get(i).getEnglish());
+			final Ficha s=candidates.get(i);
+			autoc[i].setOnAction(e->{
+				MainWindow.detail(s,primaryStage.getWidth(),primaryStage.getHeight());
+			});
+			HBox.setMargin(autoc[i], new Insets(0,10*scale,0,0));
+			res.getChildren().add(autoc[i]);
+		}
+		whole.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		res.prefWidthProperty().bind(tot.widthProperty().subtract(grid.widthProperty()).subtract(30));
+		s.setDividerPosition(0, 0.65);
+		whole.getChildren().addAll(t,res);
+		VBox.setMargin(res, new Insets(10*scale,0,0,0));
+		scrplocal.setContent(whole);
+		
 		
 	}
 	private Scene examEtoS (double width,double height) {
@@ -799,7 +714,7 @@ public static ConfigData cfd;
 		grid.setHgap(10);
 		grid.setVgap(10);
 		grid.add(menu, 0, 0, 2, 1);
-		grid.add(ex_eng, 0, 2);
+		grid.add(ex_eng, 0, 2,2,1);
 		grid.add(ex_examp, 0, 3, 2, 1);
 		grid.add(ex_spa, 0, 4, 2, 1);
 		ex_spa.requestFocus();
@@ -1427,7 +1342,7 @@ public static ConfigData cfd;
 		
 	}
 	private Scene options(double width,double height) {
-		Font up_head = head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 17*scale);
+		Font up_head = head;
 		Text tit = new Text("Settings");
 		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
@@ -1732,6 +1647,7 @@ public static ConfigData cfd;
 		});
 		
 		VBox va = new VBox();
+		va.setId("tabborder");
 		HBox hh= new HBox();
 		hh.getChildren().addAll(aab,ceeb,aa,dl);
 		hh.setAlignment(Pos.CENTER);
@@ -1750,6 +1666,10 @@ public static ConfigData cfd;
 		va.setAlignment(Pos.TOP_CENTER);
 		voice.setContent(va);
 		voice.setClosable(false);
+		consol.getContent().setId("tabborder");
+		backup.getContent().setId("tabborder");
+		voice.getContent().setId("tabborder");
+		adjust.getContent().setId("tabborder");
 		tp.getTabs().addAll(consol,backup,voice,adjust);
 		VBox vb= new VBox();
 		vb.setAlignment(Pos.TOP_CENTER);
@@ -1761,6 +1681,7 @@ public static ConfigData cfd;
 		hh1.setAlignment(Pos.CENTER_LEFT);
 		vb.getChildren().addAll(menu, hh1,tp);
 		Scene scene = new Scene(vb,A_w*scale,A_h*scale);
+		scene.getStylesheets().add("Settings.css");
 		primaryStage.setX(primaryStage.getX()-(A_w*scale-width)/2);
 		primaryStage.setY(primaryStage.getY()-(A_h*scale+22-height)/2);
 		return scene;
@@ -1842,13 +1763,7 @@ public static ConfigData cfd;
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
+
 	/**
 	 *
 	 * @param width: The width of the previous component
@@ -1996,338 +1911,11 @@ public static ConfigData cfd;
 		});
 	}
 	public void editWindow(Ficha f, double width, double height) {
-		up_f=f;
-		Stage stage = new Stage();
-		Text tit = new Text("Update");
-		tit.setFont(MainWindow.tit);
-		tit.setFontSmoothingType(FontSmoothingType.LCD);
-		tit.setTextAlignment(TextAlignment.CENTER);
-		Text ing = new Text("English:");
-		ing.setFont(MainWindow.text);
-		ing.setFontSmoothingType(FontSmoothingType.LCD);
-		Text ex1 = new Text("Example 1");
-		ex1.setFont(head);
-		ex1.setFontSmoothingType(FontSmoothingType.LCD);
-		ex1.setTextAlignment(TextAlignment.CENTER);
-		Text ex2 = new Text("Example 2");
-		ex2.setFont(head);
-		ex2.setFontSmoothingType(FontSmoothingType.LCD);
-		ex2.setTextAlignment(TextAlignment.CENTER);
-		Text ex3 = new Text("Example 3");
-		ex3.setFont(head);
-		ex3.setFontSmoothingType(FontSmoothingType.LCD);
-		ex3.setTextAlignment(TextAlignment.CENTER);
-		Text trad1 = new Text("Translation:");
-		trad1.setFont(MainWindow.text);
-		trad1.setFontSmoothingType(FontSmoothingType.LCD);
-		Text trad2 = new Text("Translation:");
-		trad2.setFont(MainWindow.text);
-		trad2.setFontSmoothingType(FontSmoothingType.LCD);
-		Text trad3 = new Text("Translation:");
-		trad3.setFont(MainWindow.text);
-		trad3.setFontSmoothingType(FontSmoothingType.LCD);
-		Text indicate = new Text("Use instructions");
-		indicate.setFont(MainWindow.text);
-		indicate.setFontSmoothingType(FontSmoothingType.LCD);
-		Text pronunciation = new Text("Pronunciation");
-		pronunciation.setFont(MainWindow.text);
-		pronunciation.setFontSmoothingType(FontSmoothingType.LCD);
+		EditWindow e= new EditWindow(f);
 		
-		
-		up_eng = new TextField(f.getEnglish());
-		up_engExamp1 = new TextField(f.getExample(0).getEng_example());
-		up_engExamp2 = new TextField(f.getExample(1).getEng_example());
-		up_engExamp3 = new TextField(f.getExample(2).getEng_example());
-		up_espExamp1 = new TextField(f.getExample(0).getEsp_example());
-		up_espExamp2 = new TextField(f.getExample(1).getEsp_example());
-		up_espExamp3 = new TextField(f.getExample(2).getEsp_example());
-		up_indications = new TextArea(f.getUse());
-		up_indications.maxWidthProperty().bind(stage.widthProperty());
-		up_indications.setOnKeyPressed(new EventHandler<KeyEvent>() {
-			@Override
-			public void handle(KeyEvent event) {
-				
-				if(event.getCode()==KeyCode.TAB) {
-					up_pronun.requestFocus();
-					event.consume();
-					}
-					else {
-						
-					}
-					
-				}
-				
-			});
-		up_esp1 = new TextField(f.getExample(0).getTranslation());
-		up_esp2 = new TextField(f.getExample(1).getTranslation());
-		up_esp3 = new TextField(f.getExample(2).getTranslation());
-		up_pronun = new TextField(f.getPronunciation());
-		update= new Button("Update");
-		update.maxWidthProperty().bind(stage.widthProperty());
-		update.setFont(MainWindow.text);
-		
-		update.setOnAction((ActionEvent e)->{
-			if(!up_eng.getText().equals("")) {
-				try {
-					up_f.setEnglish(Facade.autotrim(up_eng.getText()));
-					up_f.setPronunciation(up_pronun.getText());
-					up_f.setUse(up_indications.getText());
-					up_f.clearExamples();
-					if(!up_engExamp1.getText().equals("")) {
-						up_f.addExample((new Example(up_engExamp1.getText(), up_espExamp1.getText(), up_esp1.getText())));
-						up_f.getExample(0).setEtoSKnown(up_known_E_1.isSelected());
-						up_f.getExample(0).setStoEKnown(up_known_S_1.isSelected());
-					}
-					
-					if(!up_engExamp2.getText().equals("")) {
-						up_f.addExample((new Example(up_engExamp2.getText(), up_espExamp2.getText(), up_esp2.getText())));
-						up_f.getExample(1).setEtoSKnown(up_known_E_2.isSelected());
-						up_f.getExample(1).setStoEKnown(up_known_S_2.isSelected());
-
-					}
-					
-					if(!up_engExamp3.getText().equals("")) {
-						up_f.addExample((new Example(up_engExamp3.getText(), up_espExamp3.getText(), up_esp3.getText())));
-						up_f.getExample(2).setEtoSKnown(up_known_E_3.isSelected());
-						up_f.getExample(2).setStoEKnown(up_known_S_2.isSelected());
-
-					}
-					if(up_f.allKnownEtoS()){
-						up_f.setKnownEtoS(true);
-					}
-					else {
-						up_f.setKnownEtoS(false);
-					}
-					if(up_f.allKnownStoE()) {
-						up_f.setKnownStoE(true);
-					}
-					else {
-						up_f.setKnownStoE(false);
-					}
-					Facade.updateFicha(up_f);
-					mssgWindow("Success");
-				}
-				catch(Exception ex) {
-					
-				}
-				mssgWindow();
-				stage.close();
-				data=Facade.selectAll();
-				table.setItems(data);
-				table.getSortOrder().add(table.getColumns().get(1));
-				//table.refresh();
-				
-				
-			}
-			
-		});
-		Tooltip t= new Tooltip();
-		t.setText("English to Spanish");
-		up_known_E_1 = new CheckBox();
-		up_known_E_2 = new CheckBox();
-		up_known_E_3 = new CheckBox();
-		up_known_E_1.setSelected(f.getExampleKnownEtoS(0));
-		up_known_E_2.setSelected(f.getExampleKnownEtoS(1));
-		up_known_E_3.setSelected(f.getExampleKnownEtoS(2));
-		
-		up_known_E_1.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.show(up_known_E_1,up_known_E_1.localToScreen(up_known_E_1.getBoundsInLocal()).getMaxX(),up_known_E_1.localToScreen(up_known_E_1.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_E_1.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.hide();
-				
-			}
-			
-		});
-		
-		up_known_E_2.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.show(up_known_E_2,up_known_E_2.localToScreen(up_known_E_2.getBoundsInLocal()).getMaxX(),up_known_E_2.localToScreen(up_known_E_2.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_E_2.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.hide();
-				
-			}
-			
-		});
-		
-		up_known_E_3.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.show(up_known_E_3,up_known_E_3.localToScreen(up_known_E_3.getBoundsInLocal()).getMaxX(),up_known_E_3.localToScreen(up_known_E_3.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_E_3.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t.hide();
-				
-			}
-			
-		});
-		
-		Tooltip t2= new Tooltip();
-		t2.setText("Spanish to English");
-		
-		up_known_S_1 = new CheckBox();
-		up_known_S_2 = new CheckBox();
-		up_known_S_3 = new CheckBox();
-		
-		up_known_S_1.setSelected(f.getExampleKnownStoE(0));
-		up_known_S_2.setSelected(f.getExampleKnownStoE(1));
-		up_known_S_3.setSelected(f.getExampleKnownStoE(2));
-		
-		up_known_S_1.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.show(up_known_S_1,up_known_S_1.localToScreen(up_known_S_1.getBoundsInLocal()).getMaxX(),up_known_S_1.localToScreen(up_known_S_1.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_S_1.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.hide();
-				
-			}
-			
-		});
-		up_known_S_2.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.show(up_known_S_2,up_known_S_2.localToScreen(up_known_S_2.getBoundsInLocal()).getMaxX(),up_known_S_2.localToScreen(up_known_S_2.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_S_2.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.hide();
-				
-			}
-			
-		});
-		up_known_S_3.setOnMouseEntered(new EventHandler <MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.show(up_known_S_3,up_known_S_3.localToScreen(up_known_S_3.getBoundsInLocal()).getMaxX(),up_known_S_3.localToScreen(up_known_S_3.getBoundsInLocal()).getMaxY());
-				
-			}
-			
-		});
-		up_known_S_3.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-			@Override
-			public void handle(MouseEvent event) {
-				t2.hide();
-				
-			}
-			
-		});
-		
-		
-		GridPane.setFillWidth(tit,true);
-		GridPane.setFillWidth(up_eng, true);
-		GridPane.setFillWidth(ex1,true);
-		GridPane.setFillWidth(ex2,true);
-		GridPane.setFillWidth(ex3,true);
-		GridPane.setFillWidth(up_engExamp1, true);
-		GridPane.setFillWidth(up_engExamp2, true);
-		GridPane.setFillWidth(up_engExamp3, true);
-		GridPane.setFillWidth(up_espExamp1, true);
-		GridPane.setFillWidth(up_espExamp2, true);
-		GridPane.setFillWidth(up_espExamp3, true);
-		GridPane.setFillWidth(up_esp1, true);
-		GridPane.setFillWidth(up_esp2, true);
-		GridPane.setFillWidth(up_esp3, true);
-		GridPane.setFillWidth(up_pronun, true);
-		GridPane.setFillWidth(pronunciation,true);
-		GridPane.setFillWidth(update,true);
-		GridPane.setFillWidth(up_indications, true);
-		GridPane.setHgrow(up_eng, Priority.ALWAYS);
-		GridPane.setHgrow(up_engExamp1, Priority.ALWAYS);
-		GridPane.setHgrow(up_engExamp2, Priority.ALWAYS);
-		GridPane.setHgrow(up_engExamp3, Priority.ALWAYS);
-		GridPane.setHgrow(up_espExamp1, Priority.ALWAYS);
-		GridPane.setHgrow(up_espExamp2, Priority.ALWAYS);
-		GridPane.setHgrow(up_espExamp3, Priority.ALWAYS);
-		GridPane.setHgrow(up_esp1, Priority.ALWAYS);
-		GridPane.setHgrow(up_esp2, Priority.ALWAYS);
-		GridPane.setHgrow(up_esp3, Priority.ALWAYS);
-		GridPane.setHgrow(up_pronun, Priority.ALWAYS);
-		GridPane.setHgrow(update, Priority.ALWAYS);
-		GridPane.setHgrow(up_indications, Priority.ALWAYS);
-		GridPane.setHgrow(up_known_E_1, Priority.NEVER);
-		up_engExamp3.minWidthProperty().bind(stage.widthProperty().subtract(30).subtract(up_known_E_1.widthProperty()));
-		GridPane grid = new GridPane();
-		grid.minWidthProperty().bind(stage.widthProperty().subtract(30));
-		grid.maxWidthProperty().bind(stage.maxWidthProperty());
-		grid.setPadding(new Insets(10,10,10,10));
-		grid.setAlignment(Pos.TOP_CENTER);
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.add           (tit, 0, 0, 3, 1);
-		grid.add           (ing, 0, 1);
-		grid.add        (up_eng, 1, 1, 2, 1);
-		grid.add           (ex1, 0, 2, 3, 1);
-		grid.add  (up_engExamp1, 0, 3, 2, 1);
-		grid.add  (up_known_E_1, 2, 3, 1, 1);
-		grid.add  (up_espExamp1, 0, 4, 2, 1);
-		grid.add  (up_known_S_1, 2, 4, 1, 1);
-		grid.add         (trad1, 0, 5);
-		grid.add       (up_esp1, 1, 5, 2, 1);
-		grid.add           (ex2, 0, 6, 3, 1);
-		grid.add  (up_engExamp2, 0, 7, 2, 1);
-		grid.add  (up_known_E_2, 2, 7, 1, 1);
-		grid.add  (up_espExamp2, 0, 8, 2, 1);
-		grid.add  (up_known_S_2, 2, 8, 1, 1);
-		grid.add         (trad2, 0, 9);
-		grid.add       (up_esp2, 1, 9, 2, 1);
-		grid.add           (ex3, 0, 10, 3, 1);
-		grid.add  (up_engExamp3, 0, 11, 2, 1);
-		grid.add  (up_known_E_3, 2, 11, 1, 1);
-		grid.add  (up_espExamp3, 0, 12, 2, 1);
-		grid.add  (up_known_S_3, 2, 12, 1, 1);
-		grid.add         (trad3, 0, 13);
-		grid.add       (up_esp3, 1, 13, 2, 1);
-		grid.add      (indicate, 0, 14, 3, 1);
-		grid.add(up_indications, 0, 15, 3, 1);
-		grid.add (pronunciation, 0, 16, 3, 1);
-		grid.add     (up_pronun, 0, 17, 3, 1);
-		grid.add        (update, 0, 18, 3, 1);
-		Scene scene = new Scene(grid,510,750);
-		stage.setX(primaryStage.getX()-(420-width)/2);
-		stage.setY(primaryStage.getY()-(772-height)/2);
-		stage.setScene(scene);
-		stage.show();
+		e.setX(primaryStage.getX()-(420-width)/2);
+		e.setY(primaryStage.getY()-(772-height)/2);
+		e.show();
 	}
 	public static void detail(Ficha f,double width,double height) {
 		//TODO: Move to another place

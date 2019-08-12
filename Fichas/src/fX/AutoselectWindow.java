@@ -2,13 +2,9 @@ package fX;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 
-import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -25,7 +21,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
-import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -41,8 +36,6 @@ import javafx.stage.Stage;
 public class AutoselectWindow extends Stage {
 	private Label eng,pronun;
 	private Button finish;
-	private ScrollPane mid;
-	private VBox examples;
 	private String word;
 	public static Font res_tit, res_head, res_text, res_extext, res_tra,res_et;
 	public Set<Integer> selected;
@@ -89,11 +82,21 @@ public class AutoselectWindow extends Stage {
 		h.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale) );
 		h.getChildren().addAll(eng,pronun);
 		
-		dat=Testing.getWord(word);
+		dat=Block.getWord(word);
+		
 		pronun.setText(dat.get(0).eng);
+		Text tt=null;
+		dat.remove(0);
+		if(dat.size()==0) {
+			tt= new Text("There are no examples");
+		}
+		dat=Block.filter(word, dat);
+		if(tt==null&&dat.size()==0) {
+			tt= new Text("There are no more new examples");
+		}
+		
 		if(pronun.getText().equals("Not found"))pronun.setText("");
 		eng.setText(word);
-		dat.remove(0);
 		VBox wrap=new VBox();
 		wrap.setPadding(new Insets(0,10*scale,10*scale,10*scale));
 		double mw=0;
@@ -136,6 +139,11 @@ public class AutoselectWindow extends Stage {
 			mem.add(c);
 			wrap.getChildren().add(c);
 			VBox.setMargin(c, new Insets(20*scale,0,0,0));
+		}
+		mw+=30;
+		if(mem.size()==0) {
+			tt.setFont(res_text);
+			wrap.getChildren().add(tt);
 		}
 		
 		dic= new HashMap<String,Integer>();
@@ -218,7 +226,7 @@ public class AutoselectWindow extends Stage {
 		}
 		scrll.setMaxWidth(wid-20*scale);
 		wrap.setMaxWidth(wid-20*scale);
-		hei=500+50*scale;
+		hei=500-90*(Math.max(0,4-mem.size()))+50*scale;
 		Scene sc= new Scene(tot,wid,hei);
 		sc.getStylesheets().add("Data.css");
 		this.setScene(sc);

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -52,10 +53,10 @@ public class AuxiliarBuilder {
 		h1=h11=h2=h22=h3=h33=null;
 		tr1=tr2=tr3=null;
 		tr11=tr22=tr33=null;
-		res_tit = 	Font.font("Helvetica",FontWeight.BOLD,20*MainWindow.scale);
-		res_text = 	Font.font("Helvetica",FontWeight.LIGHT, 14*MainWindow.scale);
-		res_head = 	Font.font("Helvetica Neue",FontWeight.MEDIUM, 18*MainWindow.scale);
-		res_extext= Font.font("Helvetica Neue", FontWeight.BOLD,18*MainWindow.scale);
+		res_tit = 	MainWindow.tit;
+		res_text = 	MainWindow.text;
+		res_head = 	MainWindow.head;
+		res_extext= MainWindow.extext;
 		res_et= Font.font("Arial", FontWeight.NORMAL,18*MainWindow.scale);
 		res_tra = 	Font.font("Arial",FontWeight.NORMAL,15*MainWindow.scale);
 		int len = f.getExampVec().size();
@@ -310,6 +311,12 @@ public class AuxiliarBuilder {
 		
 		GridPane.setFillWidth(res_eng, true);
 		GridPane.setFillWidth(res_pronun, true);
+		
+		if(ex1!=null)GridPane.setHalignment(ex1, HPos.CENTER);
+		if(ex2!=null)GridPane.setHalignment(ex2, HPos.CENTER);
+		if(ex3!=null)GridPane.setHalignment(ex3, HPos.CENTER);
+		
+		
 		
 		GridPane grid = new GridPane();
 		int row=0;
