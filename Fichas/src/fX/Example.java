@@ -3,6 +3,7 @@ package fX;
 public class Example {
 	private String translation;
 	private String eng_example, esp_example;
+	private String use;
 	private boolean knownEtoS=false;
 	private boolean knownStoE=false;
 	public Example(String eng_example, String esp_example, String translation) {
@@ -29,7 +30,14 @@ public class Example {
 			//New one
 			knownEtoS=Boolean.parseBoolean(str.substring(0,str.indexOf('|')));
 			str=str.substring(str.indexOf('|')+1);
-			knownStoE=Boolean.parseBoolean(str);
+			if(str.contains("|")) {
+				knownStoE=Boolean.parseBoolean(str.substring(0,str.indexOf('|')));
+				use=str.substring(str.indexOf('|')+1);
+			}
+			else {
+				knownStoE=Boolean.parseBoolean(str);
+			}
+			
 		}
 		else {
 			//Old one
@@ -47,6 +55,8 @@ public class Example {
 		s.append(Boolean.toString(knownEtoS));
 		s.append("|");
 		s.append(Boolean.toString((knownStoE)));
+		s.append("|");
+		s.append(use);
 		return s.toString();
 	}
 	public String toBasicString() {
@@ -73,6 +83,9 @@ public class Example {
 	public String getEsp_example() {
 		return esp_example;
 	}
+	public String getUse() {
+		return use;
+	}
 	public void setTranslation(String translation) {
 		this.translation = translation;
 	}
@@ -87,6 +100,9 @@ public class Example {
 	}
 	public void setStoEKnown (boolean b) {
 		this.knownStoE=b;
+	}
+	public void setUse(String us) {
+		this.use=us;
 	}
 	
 }

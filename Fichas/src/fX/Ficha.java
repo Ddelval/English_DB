@@ -35,6 +35,8 @@ public class Ficha {
 		this.use=(s.substring(0,s.indexOf("%%"))).replace("%&/%", "'");
 		s=s.substring(s.indexOf("%%")+2);
 		this.pronunciation=(s.substring(0,s.indexOf("%%"))).replace("%&/%", "'");
+		
+		addExamplesUse();
 	}
 	public void addExample(Example ex) {
 		if(examp==null) {
@@ -192,8 +194,21 @@ public class Ficha {
 		for(int i = 0; i<vec.size();i++){
 			examp.add(new Example(vec.elementAt(i).replace("%&/%", "'")));
 		}
+		addExamplesUse();
 	}
-	
+	public void addExamplesUse() {
+		boolean empt=true;
+		for(Example e:examp)if(e.getUse()!=null&&!e.getUse().equals(""))empt=false;
+		if(empt) {
+			StringTokenizer strt= new StringTokenizer(use,"\n");
+			if(strt.countTokens()==examp.size()) {
+				for(int i=0;i<examp.size();++i) {
+					examp.get(i).setUse(strt.nextToken());
+				}
+			}
+			use="";
+		}
+	}
 	public boolean getExampleKnownEtoS(int i) {
 		if(i<examp.size()) {
 			if( examp.elementAt(i).getEtoSKnown()) {

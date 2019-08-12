@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class Mssgwindow extends Stage {
 	public Mssgwindow(String s) {
-		double scale=1;
+		double scale=MainWindow.scale;
 		Label l = new Label(s);
 		l.setTextAlignment(TextAlignment.CENTER);
 		l.minWidthProperty().bind(this.widthProperty());

@@ -1,3 +1,7 @@
 .text-area .scroll-pane .content{
     -fx-background-color: transparent;
 }
+.custom-border{
+	-fx-border-color: black;
+	-fx-border-radius: 5;
+}

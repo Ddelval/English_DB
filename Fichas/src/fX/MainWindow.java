@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -62,12 +63,12 @@ private final double M_w=500;
 private final double M_h=110;
 //Introduction scene
 private Font textf;
-private TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, pronun;
+private TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, use1, use2, use3,pronun;
 private TextArea indications;
 private Button add;
 TextField ex_eng;
 private final double I_w=550;
-private final double I_h=800;
+private final double I_h=860;
 
 Stack<ArrayList<Ficha>> mem;
 private final int s_amount=10;
@@ -247,6 +248,15 @@ public static ConfigData cfd;
 		Text trad3 = new Text("Translation:");
 		trad3.setFont(MainWindow.text);
 		trad3.setFontSmoothingType(FontSmoothingType.LCD);
+		Text use_1 = new Text("Use:");
+		use_1.setFont(MainWindow.text);
+		use_1.setFontSmoothingType(FontSmoothingType.LCD);
+		Text use_2 = new Text("Use:");
+		use_2.setFont(MainWindow.text);
+		use_2.setFontSmoothingType(FontSmoothingType.LCD);
+		Text use_3 = new Text("Use:");
+		use_3.setFont(MainWindow.text);
+		use_3.setFontSmoothingType(FontSmoothingType.LCD);
 		Text indicate = new Text("Use notes");
 		indicate.setFont(MainWindow.text);
 		indicate.setFontSmoothingType(FontSmoothingType.LCD);
@@ -404,6 +414,19 @@ public static ConfigData cfd;
 			}
 			
 		});
+		HBox buttons= new HBox();
+		ArrayList<String> autores= Testing.getAutocomplete("ca");
+		Button[] autoc= new Button[autores.size()];
+		
+		for(int i=0;i<autores.size();++i) {
+			autoc[i]= new Button(autores.get(i));
+			buttons.getChildren().add(autoc[i]);
+		}
+		buttons.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		ScrollPane scrp= new ScrollPane(buttons);
+		scrp.minHeightProperty().bind(buttons.heightProperty().add(20));
+		
+		
 		engExamp1 = new TextField();
 		engExamp2 = new TextField();
 		engExamp3 = new TextField();
@@ -445,6 +468,14 @@ public static ConfigData cfd;
 		esp2.setFont(textf);
 		esp3.setFont(textf);
 		
+		use1 = new TextField();
+		use2 = new TextField();
+		use3 = new TextField();
+		
+		use1.setFont(textf);
+		use2.setFont(textf);
+		use3.setFont(textf);
+		
 		pronun = new TextField();
 		pronun.setFont(textf);
 		add= new Button("Add");
@@ -475,6 +506,9 @@ public static ConfigData cfd;
 		GridPane.setFillWidth(esp1, true);
 		GridPane.setFillWidth(esp2, true);
 		GridPane.setFillWidth(esp3, true);
+		GridPane.setFillWidth(use1, true);
+		GridPane.setFillWidth(use2, true);
+		GridPane.setFillWidth(use3, true);
 		GridPane.setFillWidth(pronun, true);
 		GridPane.setFillWidth(pronunciation,true);
 		GridPane.setFillWidth(add,true);
@@ -490,30 +524,41 @@ public static ConfigData cfd;
 		grid.setAlignment(Pos.TOP_CENTER);
 		grid.setHgap(10*scale);
 		grid.setVgap(10*scale);
-		grid.add(menu, 0, 0, 2, 1);
-		grid.add(tit, 0, 1, 2, 1);
-		grid.add(h, 0, 2,2,1);
-		grid.add(suggestions, 0, 3,2,1);
-		grid.add(pronunciation, 0, 4, 2, 1);
-		grid.add(pronun, 0, 5, 2, 1);
+		int row=0;
+		grid.add(menu, 			0, row, 2, 1); row++;
+		grid.add(tit, 			0, row, 2, 1); row++;
+		grid.add(h,            	0, row ,2, 1); row++;
+		grid.add(suggestions,  	0, row ,2, 1); row++;
+		grid.add(scrp,  		0, row ,2, 1); row++;
+		grid.add(pronunciation, 0, row ,2, 1); row++;
+		grid.add(pronun,        0, row ,2, 1); row++;
 		
-		grid.add(ex1, 0, 6, 2, 1);
-		grid.add(engExamp1, 0, 7, 2, 1);
-		grid.add(espExamp1, 0, 8, 2, 1);
-		grid.add(trad1, 0, 9);
-		grid.add(esp1, 1, 9);
-		grid.add(ex2, 0, 10, 2, 1);
-		grid.add(engExamp2, 0, 11, 2, 1);
-		grid.add(espExamp2, 0, 12, 2, 1);
-		grid.add(trad2, 0, 13);
-		grid.add(esp2, 1, 13);
-		grid.add(ex3, 0, 14, 2, 1);
-		grid.add(engExamp3, 0, 15, 2, 1);
-		grid.add(espExamp3, 0, 16, 2, 1);
-		grid.add(trad3, 0, 17);
-		grid.add(esp3, 1, 17);
-		grid.add(indicate, 0, 18,2,1);
-		grid.add(indications, 0, 19, 2, 1);
+		grid.add(ex1, 			0, row ,2, 1); row++;
+		grid.add(engExamp1, 	0, row ,2, 1); row++;
+		grid.add(espExamp1, 	0, row ,2, 1); row++;
+		grid.add(trad1, 		0, row, 1, 1); 
+		grid.add(esp1, 			1, row, 1, 1); row++;
+		grid.add(use_1, 		0, row, 1, 1); 
+		grid.add(use1, 			1, row, 1, 1); row++;
+		
+		grid.add(ex2, 			0, row ,2, 1); row++;
+		grid.add(engExamp2, 	0, row ,2, 1); row++;
+		grid.add(espExamp2, 	0, row ,2, 1); row++;
+		grid.add(trad2, 		0, row, 1, 1); 
+		grid.add(esp2, 			1, row, 1, 1); row++;
+		grid.add(use_2, 		0, row, 1, 1); 
+		grid.add(use2, 			1, row, 1, 1); row++;
+		
+		grid.add(ex3, 			0, row ,2, 1); row++;
+		grid.add(engExamp3, 	0, row ,2, 1); row++;
+		grid.add(espExamp3, 	0, row ,2, 1); row++;
+		grid.add(trad3, 		0, row, 1, 1); 
+		grid.add(esp3, 			1, row, 1, 1); row++;
+		grid.add(use_3, 		0, row, 1, 1); 
+		grid.add(use3, 			1, row, 1, 1); row++;
+		
+		grid.add(indicate, 		0, row ,2, 1); row++;
+		grid.add(indications, 	0, row ,2, 1); row++;
 		
 		grid.add(add, 0, 21, 2, 1);
 		Scene scene = new Scene(grid,I_w*scale,I_h*scale);
@@ -1675,13 +1720,20 @@ public static ConfigData cfd;
 		if(!eng.getText().equals("")) {
 			Ficha f = new Ficha(eng.getText(),pronun.getText(),indications.getText());
 			if(!engExamp1.getText().equals("")) {
-				f.addExample(new Example(engExamp1.getText(), espExamp1.getText(), esp1.getText()));
+				Example e=new Example(engExamp1.getText(), espExamp1.getText(), esp1.getText());
+				e.setUse(use1.getText());;
+				f.addExample(e);
+				
 			}
 			if(!engExamp2.getText().equals("")) {
-				f.addExample(new Example(engExamp2.getText(), espExamp2.getText(), esp2.getText()));
+				Example e=new Example(engExamp2.getText(), espExamp2.getText(), esp2.getText());
+				e.setUse(use2.getText());;
+				f.addExample(e);
 			}
 			if(!engExamp3.getText().equals("")) {
-				f.addExample(new Example(engExamp3.getText(), espExamp3.getText(), esp3.getText()));
+				Example e=new Example(engExamp3.getText(), espExamp3.getText(), esp3.getText());
+				e.setUse(use3.getText());;
+				f.addExample(e);
 			}
 			Facade.addDB(f);
 			if(exceptions.equals("")) {
@@ -1695,6 +1747,9 @@ public static ConfigData cfd;
 				esp1.clear();
 				esp2.clear();
 				esp3.clear();
+				use1.clear();
+				use2.clear();
+				use3.clear();
 				pronun.clear();
 				indications.clear();
 				mem=null;
@@ -2193,6 +2248,14 @@ public static ConfigData cfd;
 		
 	}
 	public static void main (String[]args) {
+		
+//			Platform.runLater(new Runnable() {
+//				public void run() {
+//					AutoselectWindow aw= new AutoselectWindow();
+//				}
+//			});
+//			
+		
 		launch(args);
 	}
 }

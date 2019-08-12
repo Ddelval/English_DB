@@ -1,0 +1,1624 @@
+
+
+<!DOCTYPE html>
+<html lang="en,es" >
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Car - English-Spanish Dictionary - WordReference.com</title>
+<meta name="description" content="Car - Translation to Spanish, pronunciation, and forum discussions">
+<meta http-equiv="Content-Language" content="en,es">
+<link title="WR English-Spanish" rel="search" type="application/opensearchdescription+xml" href="//www.wordreference.com/2012/OpenSearch.aspx?dict=enes">
+<meta name="google" content="notranslate">
+<META NAME='ROBOTS' CONTENT='NOINDEX'>
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=4, minimum-scale=0.1, target-densitydpi=device-dpi, user-scalable=yes">
+<meta property="og:image" content="//www.wordreference.com/images/WR_fbicon_200x200.png" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-187118-1', 'auto');
+  
+
+  ga('set', 'dimension5', 'ES');
+  ga('set', 'dimension3', '1');
+  ga('send', 'pageview');
+
+	window.onerror = function(message, file, line) { 
+	   var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message; 
+	   ga('send', 'exception', {'exDescription': sFormattedMessage,'exFatal': false});
+  }
+</script>
+
+<script type="text/javascript">
+function resizeWR(size){
+	document.getElementById("ad1").style.maxWidth = size + 'px';
+}
+var AdsRecord = [];
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#3660cc">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="theme-color" content="#ffffff">
+
+<script type="text/javascript">var strOrig = "Car";var strDic = "enes";</script>
+<style type="text/css">
+	
+	
+		
+	/* SECTION: GLOBAL RULES */
+	span.b{font-weight:700}.bl,span.i,span.ic{font-style:italic;color:#039}span.r{color:red}span.supr1{vertical-align:super;color:#039}span.ac{font-variant:small-caps;color:red;font-weight:700}div.trans{padding:0}ol.entry li{margin-top:5px}.hide{display:none}.clickable{cursor:pointer}.small1{font-size:x-small}html{font-size:100%;overflow:auto;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0;font-size:12px;line-height:1.231;font-family:Arial,"Helvetica Neue",sans-serif;background:#fff}body,button,input,select,textarea{font-family:sans-serif;color:#222}a{text-decoration:none;color:#0645ad}a:hover{text-decoration:underline}a:visited{color:#819}a img{border:0}.mobileblock{display:inline}.alwaysblock{display:block}.alwaysblock:active,.alwaysblock:focus,.alwaysblock:hover{color:#dcdcdc}input:-moz-placeholder{color:#b3b3b3}[placeholder]{padding-left:5px!important}a .listen_language,a.conjugate_link:visited{color:#707070}.clickable ul li.last:after{content:''}.even{background-color:#ebebf2;vertical-align:top}.odd{vertical-align:top}:not(.even)+.even,:not(.odd)+.odd{border-top:1px solid #dcdcdc}input::-webkit-input-placeholder:active,input::-webkit-input-placeholder:focus{color:#fff!important}input:-moz-placeholder:focus{color:#fff!important}input:-ms-input-placeholder:focus{color:#fff!important}#container{width:1002px;margin:0 auto;overflow:hidden;box-shadow:0 0 5px 1px #5e58c7;margin-bottom:3px;border-radius:3px;min-width:300px}@media screen and (max-width:1002px){#container{width:100vw}}#header{background:#5e58c7;position:static;margin:0 auto;height:41px;line-height:38px;border-bottom-left-radius:3px;border-bottom-right-radius:3px;-webkit-border-bottom-left-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-bottomleft:3px;-moz-border-radius-bottomright:3px}#logo{color:#f8f7ff;float:left;font-family:Arial,Helvetica-Bold;font-size:16px;padding-left:16px;white-space:nowrap}#logo a{color:#f8f7ff;font-family:Arial,Helvetica-Bold;font-size:22px}#nav{color:#f7f6ff;float:right;font-family:Arial,"Helvetica Neue";font-size:13px;padding-right:13px;padding-top:2px;overflow:hidden;white-space:nowrap;max-width:45%;text-overflow:ellipsis}#nav a{font-weight:700;color:#f7f6ff;font-size:13px;font-family:Arial,"Helvetica Neue"}#logo h1{color:#e5e3ff;font-family:Arial,Helvetica;font-size:12px;display:inline}.content{margin-top:-5px;background-color:#f6f6f9;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;border:1px #dcdcdc solid;overflow:hidden;clear:both}#contenttable{border-collapse:collapse}#centercolumn,#leftcolumn,#rightcolumn{vertical-align:top}#footer{font-size:11px;position:relative;padding-top:7px;padding-bottom:5px}.footer{width:1000px}#logo a span{color:#b2aef4}#leftcolumn{width:164px;line-height:1.4;border-right:1px solid #dcdcdc}#leftcolumn ul{list-style-type:none}#left{padding-left:0;margin-top:0;font-size:11px}#left ul li{padding-right:1px}#left ul{padding-left:15px;padding-right:1px}#rstitle{margin-top:15px}#rsinfo{padding-left:25px}#rsinfo,#rstitle{display:none}#wrsave{list-style-type:none}td .title1{font-size:13px;font-weight:700;border-bottom:1px solid #dcdcdc;margin-bottom:7px;padding-top:25px;padding-bottom:6px;padding-left:16px;color:#777}.FCboxes{margin-top:5px;margin-left:-5px;padding-top:7px;padding-left:10px;border-top:solid 1px #dcdcdc}#rightcolumn,.rightcolumn{width:304px}#rightcolumn{border-left:1px solid #dcdcdc}#wotdCalendar{width:16px;height:17px;display:inline-block;padding-right:3px}#AppStore,#GooglePlay{width:150px;height:45px;display:inline-block}table.rightcolumn{table-layout:fixed}#centercolumn{width:524px;padding:0}#article,#articleHead,#postArticle{padding:0 20px;font-size:14px}#article a,#articleHead a,#articleWRD a{font-size:13px}#article p,#articleHead p,#articleWRD p{font-size:13px;margin-bottom:3px}div#article .noword p{font-size:14px}div#article p#noEntryFound{font-size:12px}div#article p.tobetranslated{font-size:12px}h3.headerWord{display:inline-block;font-family:"Times New Roman";font-size:25px;margin:20px 18px 20px 0}h3.headerWord.ar{margin:20px 0 20px 18px}#footerlink{display:none}#article p.EngInf{font-size:12px;padding-bottom:0;margin-bottom:5px}.inflections{font-size:13px;margin-left:10px}p.other_languages{line-height:1.5em;font-size:12px!important}#WHlinks_forMobile,#WHlinksmoved{display:none}#WHlinks{padding-top:8px}#checkMonoMatch{display:block;font-size:14px!important;font-weight:700;margin:2em 0 1.5em 0;background:#ebebf2;padding:10px;border:1px solid #0645ad;border-radius:8px;text-align:center;text-decoration:none;color:#0645ad}#checkMonoMatch:hover,#checkMonoMatch:visited:hover{background:#0645ad;color:#ebebf2}.col_link:hover{color:#635eff}#checkMonoMatch:visited,.col_link:visited{color:#0645ad}.dismissBox{display:flex}.dismissBox :first-child{flex:1}.dismissBox :last-child{flex:0 0 16px;cursor:pointer}.dismissBox :last-child>div{text-align:center;vertical-align:middle;line-height:13px;width:13px;height:13px;border:1px solid #d3d3d3;border-radius:50%;transition:all .2s ease-in}.dismissBox :last-child>div:hover{background-color:#5e58c7;color:#fff;transition:all 0s ease-out}.dismissBoxAnimate{opacity:1;max-height:999px;transition:opacity 1s,max-height 0s}.dismissBoxHidden{opacity:.01;max-height:0;transition:opacity 1s,max-height 0s 1s}#search{height:50px;background:#ebebf2;position:static;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;border:1px #dcdcdc solid}#search input{background:#fff;border:1px solid #d3d3d3;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;height:30px;width:280px;font-size:20px;padding-right:2px}#search input:active,#search input:focus{color:#000}#text_form{display:flex;float:left;margin-left:184px;margin-top:6px}#text_form input.button{border:0;width:12px;height:12px;background-color:#d7d7d7;cursor:pointer;background-position:5px;line-height:31px;vertical-align:bottom;background-image:none;position:relative;bottom:1px;padding:8px 7px 8px 7px}.inputcontainer{margin-left:5px;border:solid 1px #b7b7b7;background-color:#d7d7d7;cursor:pointer;line-height:35px;height:32px;text-align:center;border-radius:2px;width:30px;display:inline-block}label.custom-select{margin-left:5px;position:relative;display:inline-block}.custom-select select{height:100%;position:relative;border:1px solid #b7b7b7;padding-left:3px;margin:0;font:inherit;font-size:13px;font-weight:700;width:164px;outline:0;line-height:1.2;background-color:#d7d7d7;border-radius:2px}.custom-select select:focus{-webkit-box-shadow:0 0 3px 1px #ccc;-moz-box-shadow:0 0p 3px 1px #ccc;box-shadow:0 0 3px 1px #ccc}.lang{background-color:#b7b7b7;color:#fff;font-weight:700;padding:1px}.dark{background-color:#878787}.ACconj{float:right}#kbd-logo-cell{display:none}audio:not([controls]){display:none}#listen_widget{color:#707070;background-color:#f9f9f9;font-size:12px;display:inline-block;white-space:nowrap;padding:3px 0 2px;border:1px solid #c5c5c5;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin-left:0}#listen_txt{cursor:pointer}#listen_txt,.listen_language{top:-1px;padding:7px 7px 5px 0;position:relative;left:4px;text-transform:uppercase;border-right:1px solid #c5c5c5;margin-right:1em}#listen_widget a:hover,.conjugate_link:hover{text-decoration:none;font-weight:700!important}#listen_widget{overflow:hidden;vertical-align:middle;margin-bottom:5px}#dummyspan{display:none}#accentSelection{border:0;text-transform:uppercase;color:#707070;background:0 0;padding:2px 0 0 3px;position:relative;top:-1px}#pronWR{font-size:16px;color:#039;white-space:nowrap}td.nums1{font-weight:700;color:#5e58c7;vertical-align:top;text-align:right}td.roman1{font-weight:700;color:#5e58c7;vertical-align:top;font-size:16px}span.roman1{font-weight:700;color:#5e58c7;vertical-align:bottom}.conjugate_link{color:#707070;background-color:#f9f9f9;font-size:12px;display:inline-block;white-space:nowrap;padding:3px 0 2px;border:1px solid #c5c5c5;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin-left:0}.conjugate_link{height:10px;font-variant:small-caps;vertical-align:bottom;padding:0 2px 2px 2px;line-height:.7;top:-1px;text-transform:none}div.conv{margin-left:20px}div.notConv{margin-left:0;padding-left:0;border-left:0}ul.hEntry{margin-left:-20px}.espb ul,.espl ul{list-style-type:none}table #right{padding-left:18px;margin-top:0}li.synonym{margin-left:auto}.thumbs{display:none}.engthes ul{list-style-type:none;padding-top:0;margin-top:0}.liSense{margin-left:-40px}span.syno:hover{text-decoration:underline}div.tags{display:inline;width:50%;float:right;font-style:italic}.clickable ul li.liSense ul li.synonym{display:inline-block;font-size:14px}.clickable ul li.synonym{display:inline-block;font-size:14px}.tags{color:gray}.clickable ul li.synonym:after{content:',\00a0'}.reseta{font-weight:700}.inps{font-size:12px;border:solid 1px gray;background-color:#f0f0f0;padding-bottom:5px;padding-left:10px;width:80%}.inps label{font-weight:700}.inps input{width:300px}.addterm{margin-top:5px}div#spellSug{margin-left:2px!important}#spellSug table{border-style:hidden;border-collapse:collapse}#spellSug td{border-width:0}.notfound{padding:2px;border-top:solid #c8c8c8 1px;border-bottom:solid #c8c8c8 1px;background-color:#f8f8f8;margin-top:5px}.wrcopyright{font-family:Verdana;margin-left:20px}table.WRD{width:100%;border-collapse:collapse;border-top:solid 1px #dcdcdc;border-bottom:solid 1px #dcdcdc;cursor:pointer}tr.wrtopsection td{padding-bottom:7px;padding-top:7px;font-size:13px;text-align:center}#articleWRD p.note-othersideonly{margin-left:20px;font-size:12px}tr.more td{border-bottom:1px solid #dcdcdc}.WRD td{padding:2px}.WRD td.FrWrd{padding-left:20px}.WRD td.ToWrd{color:#000;padding-right:20px}td.FrEx,td.ToEx{color:gray}.To2{font-style:italic}.dsense{float:right!important;font-style:normal}.ltr{direction:ltr}.notePubl{padding-left:20px!important;padding-right:20px!important}table.WRD .additional{border-top:solid 1px #dcdcdc}table.WRDrefl{border-bottom:0;margin-bottom:15px}.WRreporterror{width:100%;border-collapse:collapse;border-bottom:1px solid #dcdcdc;margin-bottom:40px}.WRreporterror td{padding-left:2px;padding-right:4px}a.conjugate{margin-left:.3em}.langHeader{font-size:13px;text-decoration:underline;font-weight:700}.POS2{color:#0645ad}.subEnt ul,.subEntry ul,ul.subEnt{margin-top:0;margin-bottom:0;padding-bottom:0}.subEntry span{display:inline}.FTsource{padding-left:30px}.FTlist{padding-left:60px}#FTintro{padding-top:5px;padding-bottom:5px}.forum{text-overflow:ellipsis;overflow:hidden}#forumapi{background-repeat:no-repeat;float:right;margin-top:15px;margin-right:9px;white-space:nowrap;font-size:12px}#forumapi span.bttn a{font-size:14px;font-weight:700;color:gray;margin-right:-4px;padding:7px;border:1px solid #c9c9c9;background:#f6f6f9}#forumapi span.forum a{-webkit-border-top-left-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-bottomleft:5px;border-top-left-radius:5px;border-bottom-left-radius:5px}#forumapi span.api a{-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}p#threadsHeader{font-size:13px!important;font-weight:700;margin-bottom:0;padding:7px 0;text-align:center;border-top:1px solid #dcdcdc}p.threadsLanguageSection{font-weight:700;margin-bottom:3px}p.threadsLanguageSection>span.Ar{font-size:120%}#lista_link{margin-bottom:5px;padding-left:60px;border-top:1px solid #dcdcdc;padding-top:13px}#lista_link ul li{list-style-type:none;direction:ltr}#lista_link ul{padding-left:0;margin-bottom:5px}.threadnote{margin-bottom:30px;margin-top:15px;font-weight:700}.threadnote ol{font-weight:400;padding-top:2px;padding-bottom:2px}#extra_links{margin-bottom:15px;margin-left:43px}.extra_links{margin-bottom:15px;margin-left:15px;margin-top:10px}#extra_links a,.extra_links a{display:list-item;padding:2px 0}#extra_links .boxed.last,.extra_links .boxed.last{border:none!important}#extra_links a:last-child .boxed,.extra_links a:last-child .boxed{border-bottom:0 none}#forumNotes{display:none;margin:5px 0 25px 0}#forumNotes{font-size:14px!important;font-style:italic;font-weight:700}#ad1{position:static;width:728px;height:86px;margin:6px auto}#top728{border:0 none;height:90px;overflow:hidden;width:100%}#ad2{position:static;width:728px;height:90px;margin:6px auto}td.ad{padding-bottom:10px}td.ad a{display:inherit}.us300c{text-align:center}#WRmobile{text-align:center}#gtrans{border:0 none}::-webkit-input-placeholder{color:#ddf}::-moz-placeholder{color:#ddf;opacity:1}:-ms-input-placeholder{color:#ddf}::-webkit-input-placeholder{color:rgba(0,5,143,.4)}::-moz-placeholder{color:rgba(0,5,143,.4)}:-ms-input-placeholder{color:rgba(0,5,143,.4)}#headerTabs ul{list-style:none;padding:0;margin:0}#headerTabs li{float:left;border:1px solid #bbb;border-bottom-width:0;margin:0}#headerTabs a,#headerTabs span{text-decoration:none;display:block;background:#eee;padding:.24em 1em;color:#00c;width:8em;text-align:center;cursor:pointer;user-select:none}#headerTabs a:hover,#headerTabs span:hover{background:#ddf}#headerTabs .selected{border-color:#000}#headerTabs .selected a,#headerTabs .selected span{position:relative;top:1px;background:#f6f6f9;color:#222;font-weight:700}#collinsdiv{display:none}#headerTabs{margin-top:10px}.noword>p{font-size:14px!important}#tabWR{margin-left:15px!important}table.WRDrefl{border-bottom:none;margin-bottom:15px}.super{color:red;vertical-align:super;font-size:.8em}span.super:hover{text-decoration:none!important}#articleWRD .wrcopyright{font-size:10px}.notePubl_tr{border:1px solid #000;border-right:2px solid #000}#tabRev a,#tabRev span{width:auto}@media only screen and (min-device-width:320px) and (max-device-width:480px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){#listen_txt,.listen_language{font-size:16px!important}}#AppStore,#GooglePlay,#listen_txt:before,#search #searchBtn,#wotdCalendar,.col_link{background:url(/2012/style/sprite.png?v=2)}.col_link{background-position:-25px 0;width:13px;height:13px;display:inline-block;content:' '}.col_link:hover{filter:hue-rotate(40deg)}#listen_txt:before{background-position:0 -22px;width:15px;height:15px;display:inline-block;content:' ';margin-right:4px;vertical-align:middle;margin-left:4px;margin-bottom:2.5px}#search #searchBtn{position:relative;top:-3px;width:100%;height:33px;cursor:pointer;background-position:9px 11px;padding:0;vertical-align:middle;background-repeat:no-repeat;border:none;line-height:33px}#search #reverseBtn{width:100%;height:33px;position:relative;top:-3px;cursor:pointer;padding:0;vertical-align:middle;border:none;background:0 0;line-height:33px}#search #reverseBtn:active{background-color:#b7b7b7}.FrWrd .engusg:before{content:"\1F4AC";vertical-align:middle;margin-right:3px}@media only screen and (max-width:769px){.FrWrd .engusg{margin-right:4px;font-size:19px!important;vertical-align:middle}}#ad_728{position:absolute;color:transparent}.heavyUser:hover{border:1px solid #6f6e6e}.heavyUser{background-color:#ffffc8;width:70%;text-align:center;font-weight:700;margin:3vh 0 1vh 0;border-radius:10px;padding:10px;border:1px solid #c5c5c5}.extras{margin-top:2vh;border-radius:10px;padding:10px}.extras div:nth-child(n+2){margin-top:10px}.extras .extra_category{font-weight:700}.WRD tr td:nth-child(2):not(.FrEx):not(.ToEx){width:48%}.WRD tr td:nth-child(1):not(.FrEx):not(.ToEx){width:18%}.WRD tr td:nth-child(3):not(.FrEx):not(.ToEx){width:34%}.WRD td.FrWrd{padding-left:5px}.WRD td.ToWrd{padding-right:5px}@media screen and (max-width:769px){#ad1,#ad1_holder,#ad2,#audiodrop a:nth-child(n+3),#logo h1,#nav,.OxAd,.eslinks,.mobileremove,td#rightcolumn{display:none}#forumapi{display:none}.small1{font-size:small}.content{min-width:inherit;border:0;margin-top:0}#content{margin-bottom:0}#WHlinksmoved{display:block}#WHlinksmoved a,.mobileblock{display:block;font-size:1.5em;border-bottom:solid 1px #dcdcdc;margin-top:0;margin-bottom:0;padding-left:5px;padding-top:12px;padding-bottom:12px}#WHlinksmoved a:first-child{border-top:solid 1px #dcdcdc}#contenttable,#header,.content{width:auto}#footer{margin-top:0;padding-top:0}#WHlinksmoved a:active,#WHlinksmoved a:focus,#WHlinksmoved a:hover,.mobileblock:active,.mobileblock:focus,.mobileblock:hover{color:#dcdcdc}#logo{padding-left:10px}#container{width:100%;position:absolute}#article,#postArticle{padding:0 3px}h3.headerWord{margin:5px 20px 5px 2px}h3.headerWord.ar{margin:5px 20px 5px 2px}#WHlinks{display:none}.first{border-top:solid 1px #dcdcdc;padding-left:0}#article,#postArticle{width:inherit;padding-left:3px}#centercolumn{width:auto}#spellSug table{margin-top:1em}#spellSug td{padding:0 15vw 0 0}#spellSug a{line-height:10vw;font-size:16px!important}#noEntryFound,#spellSug{font-size:16px}#article{font-size:19px}#footerlink a{font-variant:small-caps;font-size:18px!important}#footerlink{display:inline-block;margin-right:5px;float:right;padding-top:10px}.FTlist,.FTsource{padding-left:5px;padding-right:5px}#text_form{left:auto;margin-left:auto;margin-top:2px;float:none}#search{height:auto;padding-bottom:3px}#search{width:inherit;padding-left:3px}#search{width:auto}#articleWRD{padding:0}#articleWRD{width:inherit;padding-left:3px}#articleWRD{font-size:16px}.WRD td.FrWrd{padding-left:10px}.WRD td.ToWrd{padding-right:5px}#collinsdiv{font-size:16px}}@media screen and (max-width:480px){#articleHead,.mobiletop{padding:0!important}}@media only screen and (max-device-width:300px){.WRD td.FrWrd{padding-left:1px}#articleWRD{font-size:15px}table.WRD{width:100vw}#article{font-size:16px}ul #tabWR{margin-left:0!important}#headerTabs a,#headerTabs span{width:auto!important}#centercolumn div#collinsdiv{padding:0!important}}@media only screen and (max-device-width:560px){div#headerTabs li a,div#headerTabs li span{padding:2vw 3vw;font-size:3vw}p.other_languages{line-height:3.1vh;margin-top:2vh}p.other_languages a{font-size:1.2em;margin-right:1.5vw;margin-left:1.5vw}.footer td{height:30px;vertical-align:bottom}.WRreporterror td{height:30px;vertical-align:bottom}.FTlist a{font-size:1.3em;margin-right:.5vw;margin-left:.5vw}.FTlist{line-height:3vh}#lista_link{line-height:3.5vh}#lista_link a{font-size:1.3em}#extra_links,.extra_links{margin-top:2vh;line-height:4vh}}@media screen and (max-width:769px){td#leftcolumn{display:none}#text_form .inputcontainer{width:32px;height:31px}label.custom-select{margin-right:2px;height:33px}#fSelect{width:140px}#search{height:41px}#search input[type=text]{width:100%}#search #searchBtn{height:32px;width:32px;background-position:10px 10px;top:-2px}#search #reverseBtn{height:32px;width:100%;line-height:1.2;top:-3px;font-size:13px;font-weight:700}#search #reverseBtnContainer{margin-left:0;width:26px}#text_form{display:flex;padding:0 5px 0 5px;align-items:center;width:100%}#myAutoComplete{margin-right:10px;width:calc(100% - 238px)}}.autocomplete-suggestions{text-align:left;cursor:default;border:1px solid #ccc;border-top:0;background:#fff;box-shadow:-1px 1px 3px rgba(0,0,0,.1);position:absolute;display:none;z-index:9999;box-sizing:border-box}.autocomplete-suggestion,.autocomplete-suggestions>.autocomplete-footer{position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-top:solid 1px #dcdcdc;cursor:pointer}.autocomplete-suggestion{padding:0 .6em;line-height:23px;font-size:1.02em;color:#333}.autocomplete-suggestion b{font-weight:400;color:#1f8dd6}.autocomplete-suggestion.hover{background:#5e58c7;color:#FFF}@media screen and (max-width:769px){.autocomplete-suggestion{font-size:1.6em;line-height:40px!important;padding:.2em .6em}.autocomplete-footer,.autocomplete-header{font-size:1.5em;line-height:40px!important;padding:.2em 2.2em!important}.autocomplete-footer:active,.autocomplete-suggestion:active{background:#5e58c7;color:#FFF}}.autocomplete-suggestions>.autocomplete-footer{font-weight:700;font-style:italic;border-bottom:1px solid #DCDCDC;padding:0 2.4em;line-height:23px;color:#333}.autocomplete-suggestions>.autocomplete-footer.hover{background:#5e58c7;color:#FFF}.autocomplete-suggestions>.autocomplete-header{font-weight:700;padding-left:2.4em;border-bottom:1px solid #DCDCDC}/* ##### BEGIN tooltip.css ##### */
+.tooltip span:not(.ph):not(.rh_sc):not(.ford){z-index:10;display:none;padding:14px 20px;bottom:18px;margin-left:-160px;width:240px;line-height:16px;border-radius:5px;opacity:.8;font-style:normal;text-decoration:none;cursor:default}
+.tooltip:hover span:not(.ph):not(.rh_sc):not(.ford){display:inline;position:absolute;border:2px solid #000;color:#EEE;background:#000}.tooltip{display:inline;position:relative}
+.tooltip:hover:before{display:inline;border:solid;border-color:#000 transparent;border-width:6px 6px 0;bottom:12px;content:"";position:absolute;z-index:9;font-style:normal;opacity:.8}
+@media only screen and (max-device-width: 480px) {
+    .FrWrd .tooltip span:not(.ph):not(.rh_sc):not(.ford){ margin-left:-14px !important;bottom: 17px; }
+    .ToWrd .tooltip span:not(.ph):not(.rh_sc):not(.ford){ margin-left:-200px !important;bottom: 17px; }
+}
+.tooltip2 span {top:-30px;border:0;color:#EEE;background:rgba(0,0,0,0.9);z-index:10;display:inline;position:absolute;padding:10px;width:240px;line-height:16px;border-radius:5px;opacity:.9;}
+.tooltip2 {display:inline;position:absolute}
+.tooltip2:after{opacity: .8;content: '';position: absolute;right: 100%;border-right: 8px solid #000000;border-top: 8px solid transparent;border-bottom: 8px solid transparent;}
+.tooltip.tooltipvirtual:hover span:not(.ph):not(.rh_sc):not(.ford) { 
+    padding: 10px 10px;
+    width: auto;
+    white-space: nowrap;
+}
+/* ##### END tooltip.css ##### */
+
+	/* SECTION: BROWSER/PLATFORM RULES */
+	#listen_txt{ top: 1px !important}#accentSelection{ top: 1px !important}tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:gold;}
+
+	/* SECTION: CONDITIONAL LANGUAGE FILES */
+		
+	
+	/* SECTION: OTHER DICTIONARIES RULES */	
+	
+</style>
+        <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+        <script async src="/2012/publ/prebid2.22.0.js"></script>
+
+            <script>
+            !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+            </script>
+
+        <script>			 
+
+            var sizes300 = [[300, 250]];
+            var sizes728 = [[728, 90]];
+            var sizes728forum = [[728, 90],[320, 50],[300, 50]];
+            var sizes_m320x50 = [[320, 50]];
+            var sizes_mf320x50 = [[320, 50]];
+            var sizes_m300x250 = [[300, 250]];
+            var PREBID_TIMEOUT   = 4000;
+            var FAILSAFE_TIMEOUT = 5000;
+
+            var adUnits = [
+                {
+                    code: 'ad1',
+					labelAny: ["show728s"],
+                    mediaTypes: {
+                        banner: {sizes: sizes728}
+                    },
+					bids: [
+					{ bidder: 'ix', params: { siteId: '311552', size: [728, 90] } },
+					{ bidder: 'openx', params: { delDomain: 'wordreference-d.openx.net', unit: '540405434' } },
+					{ bidder: 'appnexus', params: { placementId: '14193894' } },
+					{ bidder: 'rubicon', params: { accountId: '19572', siteId: '222190', zoneId: '1097110' } },
+					{ bidder: 'sovrn', params: { tagid: '615328' } }
+					]
+                },
+                {
+                    code: 'adrighttop',
+					labelAny: ["show300s"],
+                    mediaTypes: {
+                        banner: {sizes: sizes300}
+                    },
+					bids: [
+					{ bidder: 'ix', params: { siteId: '311550', size: [300, 250] } },
+					{ bidder: 'openx', params: { delDomain: 'wordreference-d.openx.net', unit: '540405432' } },
+					{ bidder: 'appnexus', params: { placementId: '14193888' } },
+					{ bidder: 'rubicon', params: { accountId: '19572', siteId: '222190', zoneId: '1096030' } },
+					{ bidder: 'sovrn', params: { tagid: '615326' } }
+					]
+                },
+                {
+                    code: 'adrightbottom',
+					labelAny: ["show300s"],
+                    mediaTypes: {
+                        banner: {sizes: sizes300}
+                    },
+					bids: [
+					{ bidder: 'ix', params: { siteId: '311551', size: [300, 250] } },
+					{ bidder: 'openx', params: { delDomain: 'wordreference-d.openx.net', unit: '540405433' } },
+					{ bidder: 'appnexus', params: { placementId: '14193891' } },
+					{ bidder: 'rubicon', params: { accountId: '19572', siteId: '222190', zoneId: '1097080' } },
+					{ bidder: 'sovrn', params: { tagid: '615327' } }
+					]
+                }
+				];
+
+					
+			// ======== DO NOT EDIT BELOW THIS LINE =========== //
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+            googletag.nAdsShown = 0;        //This is the number of rendered slots
+            googletag.nAdsRequested = 0;    //This is the number of requested slots
+
+            //This is the polling timeout in milliseconds for DFP and SlotRendering check
+            var DFPTimeout = 3000;
+            var SlotRenderingTimeout = 5000;
+
+            //Ads viewability event
+            googletag.cmd.push(function() {
+                //This event will fire if an ad was rendered
+                googletag.pubads().addEventListener('slotRenderEnded', function(e) {
+                    if (!e.isEmpty) {	// If the ad isn't empty
+                        googletag.nAdsShown++;
+                        console.log(">> Slot rendered: ", e.slot.getSlotElementId());
+                    }
+                });
+
+                //This event will fire whenever a slot is requested
+                googletag.pubads().addEventListener('slotRequested', function(e) {
+                    googletag.nAdsRequested++;
+                    console.log('>> Slot has been requested:', e.slot.getSlotElementId());
+                });
+            });
+            
+			const wrPriceGranularity = {
+						'buckets': [
+						  { 'precision': 2, 'min': 0, 'max': 4,  'increment': 0.01 },
+						  { 'precision': 2, 'min': 4, 'max': 10, 'increment': 0.10 },
+						  { 'precision': 3, 'min':10, 'max': 30, 'increment': 0.50 }
+						]
+			};
+
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+				pbjs.setConfig({                    
+					enableSendAllBids: true, //Send all bids into DFP
+					// for 33across
+					userSync: {
+					iframeEnabled: true
+					},
+
+					sizeConfig: [{
+						   mediaQuery: '(min-width: 770px)',
+						   sizesSupported: [[728,90]],
+						   labels: ["show728s"]
+					}, {
+						   mediaQuery: '(min-width: 880px)',
+						   sizesSupported: [[300,250]],
+						   labels: ["show300s"]
+					}],
+					priceGranularity: wrPriceGranularity
+				});
+				pbjs.enableAnalytics([{
+					provider: 'ga',
+					options: {
+						enableDistribution: false
+					}
+				}]);
+
+            });
+
+
+    var devicew = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var deviceh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var sizesDisplayforum = [[728,90],[300,250]];
+    var sizesPhoneforum = [[320,50],[300,50],[300,250]];
+
+    console.log(">> Amazon Pulisher Services activated.");
+
+                var apstagSlots = [
+                    {
+                        slotID: 'ad1',
+                        slotName: '/1005951/728_ES',
+                        sizes: sizes728
+                    },
+                    {
+                        slotID: 'adrighttop',
+                        slotName: '/1005951/300A_ES',
+                        sizes: sizes300
+                    },
+                    {
+                        slotID: 'adrightbottom',
+                        slotName: '/1005951/300B_ES',
+                        sizes: sizes300
+                    }
+                ];
+    
+
+    //Send all bids into DFP
+    /*pbjs.que.push(function() {
+        pbjs.enableSendAllBids(); //Deprecated
+    });*/
+
+    //set APS config
+    apstag.init({
+        pubID: 'ee8fe529-69da-4d94-b1c8-3db82bdd9248',
+        adServer: 'googletag'
+    });
+
+    function fetchHeaderBids(apstagSlots, adUnits) {        
+        var TIMEOUT = 5000;
+
+        //declare bidders
+        var bidders = ['a9', 'prebid'];
+
+        // create a requestManager to keep track of bidder state to determine when to send ad server
+        // request and what apstagSlots to request from the ad server
+        var requestManager = {
+            adserverRequestSent: false,
+            apstagSlots: apstagSlots,
+            adUnits: adUnits
+        };
+
+        //loop through bidder array and add the bidders to the request manager:
+        bidders.forEach(function(bidder) {
+            requestManager[bidder] = false;
+        })
+
+        // return true if all bidders have returned
+        function allBiddersBack() {
+            var allBiddersBack = bidders
+                // get the booleans from the object
+                .map(function(bidder) {
+                    return requestManager[bidder];
+                })
+                // get rid of false values - indicates that the bidder has responded
+                .filter(Boolean)
+                // if length is equal to bidders, all bidders are back
+                .length === bidders.length;
+            return allBiddersBack;
+        }
+
+        // handler for header bidder responses
+        function headerBidderBack(bidder) {
+            // return early if request to adserver is already sent
+            if (requestManager.adserverRequestSent === true) {
+                return;
+            }
+            // set the bidder targeting and flip bidder back flag
+            if (bidder === 'a9') {
+                requestManager.a9 = true;
+            } else if (bidder === 'prebid') {
+                requestManager.prebid = true;
+            }
+
+            // if all bidders are back, send the request to the ad server
+            if (allBiddersBack()) {
+                //We need to do a polling for DFP readiness
+                //Firefox fix, issue #1099
+                poll(function() {
+                    return googletag.pubadsReady;
+                }, DFPTimeout, 50).then(function() {
+                    // Polling done.
+                    console.log('>> DFP is ready.');                    
+                    sendAdserverRequest();
+                }).catch(function() {
+                    // Polling timed out. We need to send to GA
+                    console.log(">> DFP failed after " + DFPTimeout + " milliseconds.");
+                });
+                //console.log("requestManager: ", requestManager);
+            }
+        }
+
+        // actually get ads from DFP
+        function sendAdserverRequest() {
+            // return early if request already sent
+            if (requestManager.adserverRequestSent === true) {
+                return;
+            }
+
+            // flip the boolean that keeps track of whether the adserver request was sent
+            requestManager.adserverRequestSent = true;
+
+            // Send request to DFP
+            googletag.cmd.push(function() {
+                apstag.setDisplayBids();
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+
+                //Polling for ads rendering
+                poll(function() {
+                    //console.log('>> nAdsShown:', googletag.nAdsShown, 'nAdsRequested:', googletag.nAdsRequested);
+                    return (googletag.nAdsRequested > 0  && googletag.nAdsShown == googletag.nAdsRequested);
+                }, SlotRenderingTimeout, 150).then(function() {
+                    // Polling done.
+                    //Check slot rendering status
+                    areSlotsRendered();
+                    // Check slots requests
+                    areSlotsRequested();
+                    // Check DFP status
+                    isDFPReady();
+                    // Check if we've got answers from the bidders
+                    areBiddersBackInTime();
+                }).catch(function() {
+                    // Polling timed out. We need to send to GA
+                    //Check slot rendering status
+                    areSlotsRendered();
+                    // Check slots requests
+                    areSlotsRequested();
+                    // Check DFP status
+                    isDFPReady();
+                    // Check if we've got answers from the bidders
+                    areBiddersBackInTime();
+                });		
+            });
+        }
+
+        function requestBids() {
+            // request bids from prebid
+            pbjs.que.push(function() {
+                    //pbjs.addAdUnits(requestManager.adUnits);      //Already added in prebid.aspx
+                    pbjs.requestBids({
+                        bidsBackHandler: function (bidResponses) {
+                            headerBidderBack('prebid');
+                        }
+                    });
+            });
+
+            // fetch bids from APS
+            apstag.fetchBids({
+                slots: requestManager.apstagSlots
+            }, function(bids) {
+                headerBidderBack('a9');
+            });
+        }
+
+        requestBids();
+
+        //This function will send the status of DFP to GA
+        function isDFPReady(){
+            if(googletag.pubadsReady){
+                console.log('>> DFP success');
+                ga('send', 'event', 'WR_Header_Bidding', 'DFP-loading', 'DFP-Success', '1', {
+                    nonInteraction: true,
+                    hitCallback: function() {
+                        console.log(">> DFP-loading: DFP-Success -> GA");
+                    }
+                });
+            } else {
+                console.log('>> DFP failed to load');
+                ga('send', 'event', 'WR_Header_Bidding', 'DFP-loading', 'DFP-Failure', '0', {
+                    nonInteraction: true,
+                    hitCallback: function() {
+                        console.log(">> DFP-loading: DFP-Failure -> GA");
+                    }
+                });
+            }
+        }
+
+        //This function will send a GA event if prebid did not get a response soon enough before displaying the ads
+        function areBiddersBackInTime(){
+            if(googletag.nAdsRequested == 0)        //No ads were requested
+                return;
+
+            //if(!allBiddersBack()){
+                if(requestManager.prebid == false){
+                    console.log('>> Prebid response was too slow');
+                    ga('send', 'event', 'WR_Header_Bidding', 'Prebid-Response', 'PR-Failure', '0', {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> Prebid-Response: PR-Failure -> GA");
+                        }
+                    });
+                } else {
+                    console.log('>> Prebid responded in time.');
+                    ga('send', 'event', 'WR_Header_Bidding', 'Prebid-Response', 'PR-Success', '1', {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> Prebid-Response: PR-Success -> GA");
+                        }
+                    });
+                }
+                if(requestManager.a9 == false){
+                    console.log('>> Amazon response was too slow');
+                    ga('send', 'event', 'WR_Header_Bidding', 'APS-Response', 'AR-Failure', 'O', {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> APS-Response: AR-Failure -> GA");
+                        }
+                    });
+                } else {
+                    console.log('>> a9 responded in time.');
+                    ga('send', 'event', 'WR_Header_Bidding', 'APS-Response', 'AR-Success', '1', {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> APS-Response: AR-Success -> GA");
+                        }
+                    });
+                }
+            //}
+        }
+
+        //This function checks if any slots were requested and send a report to GA
+        function areSlotsRequested(){
+            if(googletag.nAdsRequested > 0){
+                //Reports about slots requests
+                ga('send', 'event', 'WR_Header_Bidding', 'Slots-Requested', 'SReq-Yes', googletag.nAdsRequested, {
+                    nonInteraction: true,
+                    hitCallback: function() {
+                        console.log(">> Slots-Requested: SReq-Yes -> GA");
+                    }
+                });
+            } else {
+                console.log('>> No slots were requested.');
+                ga('send', 'event', 'WR_Header_Bidding', 'Slots-Requested', 'SReq-No', googletag.nAdsRequested, {
+                    nonInteraction: true,
+                    hitCallback: function() {
+                        console.log(">> Slots-Requested: SReq-No -> GA");
+                    }
+                });
+            }
+        }
+
+        //This function will check if slots were rendered and send a report to GA
+        function areSlotsRendered(){
+            if(googletag.nAdsRequested > 0){
+                if(googletag.nAdsShown == googletag.nAdsRequested){
+                    console.log('>> All the Ads were shown..' + googletag.nAdsShown + '/' + googletag.nAdsRequested);
+                    ga('send', 'event', 'WR_Header_Bidding', 'Slots-Rendering', 'SR-Success', googletag.nAdsShown, {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> Slots-Rendering: SR-Success -> GA");
+                        }
+                    });
+                } else  {
+                    console.log('>> Some Ads failed..' + googletag.nAdsShown + '/' + googletag.nAdsRequested);
+                    ga('send', 'event', 'WR_Header_Bidding', 'Slots-Rendering', 
+                        (googletag.nAdsShown > 0 ? 'SR-PartialSuccess' : 'SR-Failure'), 
+                        googletag.nAdsShown, {
+                        nonInteraction: true,
+                        hitCallback: function() {
+                            console.log(">> Slots-Rendering: " + (googletag.nAdsShown > 0 ? 'SR-PartialSuccess' : 'SR-Failure') + " -> GA");
+                        }
+                    });
+                }
+            }
+        }
+
+        // set timeout to send request to call sendAdserverRequest() after timeout 
+        // if all bidders haven't returned before then
+        window.setTimeout(function() {
+            if(!requestManager.adserverRequestSent) console.log('>> Ads Failsafe timeout');
+            sendAdserverRequest();
+        }, TIMEOUT);
+    };
+
+    fetchHeaderBids(apstagSlots, adUnits);     
+
+            googletag.cmd.push(function() {
+				var headerMap = googletag.sizeMapping().
+					addSize([770, 0], [[728, 90]]).
+					addSize([0,0], []).
+					build();
+                googletag.defineSlot('/1005951/728_ES', sizes728, 'ad1')
+					.defineSizeMapping(headerMap)
+                	.addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+
+            googletag.cmd.push(function() {
+				var headerMap = googletag.sizeMapping().
+					addSize([880, 0], [[300, 250]]).
+					addSize([0,0], []).
+					build();
+                googletag.defineSlot('/1005951/300A_ES', sizes300, 'adrighttop')
+					.defineSizeMapping(headerMap)
+                	.addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+
+          googletag.cmd.push(function() {
+				var headerMap = googletag.sizeMapping().
+					addSize([880, 0], [[300, 250]]).
+					addSize([0,0], []).
+					build();
+                googletag.defineSlot('/1005951/300B_ES', sizes300, 'adrightbottom')
+					.defineSizeMapping(headerMap)
+                	.addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+
+
+// Polling function
+function poll(fn, timeout, interval) {
+    var endTime = Number(new Date()) + (timeout || 2000);
+    interval = interval || 100;
+
+    var checkCondition = function(resolve, reject) {
+        // If the condition is met, we're done! 
+        var result = fn();
+        if(result) {
+            resolve(result);
+        }
+        // If the condition isn't met but the timeout hasn't elapsed, go again
+        else if (Number(new Date()) < endTime) {
+            setTimeout(checkCondition, interval, resolve, reject);
+        }
+        // Didn't match and too much time, reject!
+        else {
+            reject(new Error('timed out for ' + fn + ': ' + arguments));
+        }
+    };
+
+    return new Promise(checkCondition);
+}
+
+
+        </script>
+
+</head>
+<body>
+
+  <script>
+    //var GDPRcookieYes = 1;
+    //These variables are used for stats
+    var GDPRconsent = true;
+    var GDPRnoConsent = false;
+    var GDPRnoCookie = false;
+    var GDPRconsentAllAccepted = true;
+    var GDPRconsentAllRejected = false;
+
+    if(GDPRconsent == false){        //Has 'Ad selection, delivery, reporting' purpose set to true
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() {
+            googletag.pubads().setRequestNonPersonalizedAds(1);
+        });
+        
+        (adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds = 1;
+        //GDPRcookieYes = 0;  
+    }
+
+    //Show in the log
+    /*console.log(":> GDPRconsent: ", GDPRconsent);
+    console.log(":> GDPRnoConsent: ", GDPRnoConsent);
+    console.log(":> GDPRnoCookie: ", GDPRnoCookie);
+    console.log(":> GDPRconsentAllAccepted: ", GDPRconsentAllAccepted);
+    console.log(":> GDPRconsentAllRejected: ", GDPRconsentAllRejected);*/
+</script>
+<script>
+(function(window, document) {
+  if (!window.__cmp) {
+    window.__cmp = (function() {
+      var listen = window.attachEvent || window.addEventListener;
+      listen('message', function(event) {
+        window.__cmp.receiveMessage(event);
+      }, false);
+
+      function addLocatorFrame() {
+        if (!window.frames['__cmpLocator']) {
+          if (document.body) {
+            var frame = document.createElement('iframe');
+            frame.style.display = 'none';
+            frame.name = '__cmpLocator';
+            document.body.appendChild(frame);
+          } else {
+            setTimeout(addLocatorFrame, 5);
+          }
+        }
+      }
+      addLocatorFrame();
+
+      var commandQueue = [];
+      var cmp = function(command, parameter, callback) {
+        if (command === 'ping') {
+          if (callback) {
+            callback({
+              gdprAppliesGlobally: !!(window.__cmp && window.__cmp.config && window.__cmp.config.storeConsentGlobally),
+              cmpLoaded: false
+            });
+          }
+        } else {
+          commandQueue.push({
+            command: command,
+            parameter: parameter,
+            callback: callback
+          });
+        }
+      }
+      cmp.commandQueue = commandQueue;
+      cmp.receiveMessage = function(event) {
+        var data = event && event.data && event.data.__cmpCall;
+        if (data) {
+          commandQueue.push({
+            callId: data.callId,
+            command: data.command,
+            parameter: data.parameter,
+            event: event
+          });
+        }
+      };
+      cmp.config = {
+        //
+        // Modify config values here
+        //
+        globalVendorListLocation: '/.well-known/pubvendors.json',
+        customPurposeListLocation: './purposes.json',
+        globalConsentLocation: './portal.html',
+        storeConsentGlobally: false,
+        storePublisherData: false,
+        logging: 'debug',
+        localization: {
+          en: {
+            banner: {
+              title: 'We value your privacy',
+              description: 'We and our partners use technology such as cookies on our site to personalise content and ads, provide social media features, and analyse our traffic. Click below to consent to the use of this technology across the web. You can change your mind and change your consent choices at anytime by returning to this site.',
+              links: {
+                manage: 'Show purposes',
+                accept: 'I accept'
+              }
+            },
+            details: {
+              save: 'I agree'
+            },
+          }
+        },
+        // forceLocale: 'en-us'
+      }
+      return cmp;
+    }());
+        var t = document.createElement('script');
+        t.async = false;
+        t.src = '/cmp/cmp.complete.bundle.js';
+        //t.src = 'http://localhost:8080/cmp.complete.bundle.js';
+        var tag = document.getElementsByTagName('head')[0];
+        tag.appendChild(t);
+  }
+})(window, document);
+</script>
+
+<div id="container">
+    <!-- header -->
+	
+		<div id="header">
+			<div id="logo">
+				<a href="/">WordReference<span style="color:#b2aef4">.com</span></a><span class="mobileremove">  |  </span><h1>Online Language Dictionaries</h1>
+			</div>
+			
+			<div id="nav" >
+			
+				<a href="/es/translation.asp?tranword=">English-Spanish Dictionary</a>
+			
+				
+				| <a href="">Car</a>
+				
+			</div>
+		</div>
+	
+		<div id="ad1">		
+			
+				<script type='text/javascript'>
+					googletag.cmd.push(function() {
+						googletag.display('ad1');
+					});
+				</script>
+			
+		</div>
+	
+
+    <!-- search -->
+    
+    <div id="search">
+
+<form method="GET" action="/redirect/translation.aspx" id="text_form" name="sbox" onsubmit="if(document.sbox.dict.value=='enes'){location.href = '/enes/' + document.sbox.w.value;return(false);}">
+    <div id="myAutoComplete" style="display:inline">
+		<input type="text" name="w" id="si" oninvalid="alert('Invalid characters in search input field');" pattern="^[^<>%\\]*$" size="20" maxlength="200" tabindex="1" onKeyDown="keyDown(event)" accesskey="s" title="accesskey: s" value="" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="none"> 
+		<div id="myACContainer" style="display:inline"></div>
+	</div>
+	<label class="custom-select">
+		<select size="1" name="dict" tabindex="2" id="fSelect">
+<option value='enes'>English-Spanish</option><option value='esen'>Spanish-English</option><option value='enit'>English-Italian</option><option value='iten'>Italian-English</option><option value='enfr'>English-French</option><option value='fren'>French-English</option><option value='enen'>English definition</option><option value='synonyms'>English synonyms</option><option value='esfr'>Español-Français</option><option value='fres'>Français-Español</option><option value='espt'>Español-Português</option><option value='ptes'>Português-Español</option><option value='eses'>Español: definición</option><option value='essin'>Español: sinónimos</option><option value='esgram'>Español: gramática</option><option value='caca'>Català: definició</option><option value='other'>more...</option>
+        </select>
+	</label>
+    <div id="reverseBtnContainer" class="inputcontainer">
+        <input type="button" id="reverseBtn" title="" tabindex="4" value="&#8646;" />
+    </div>
+	<div class="inputcontainer">
+        <input type="submit" id="searchBtn" name="B" title="Search" tabindex="3" value="">
+    </div>
+
+</form>
+
+        <div id="forumapi">
+            <span class="forum api bttn"><a href="https://forum.wordreference.com">Foros</a></span>
+        </div>
+    </div>
+
+
+<div class="content">
+<table id="contenttable">
+<!-- left column -->
+<tr>
+
+<td id="leftcolumn">
+	<ul id="left" class="leftcolumn">
+		<li>
+		
+<ul>
+<li class="title1" title="See Also:">Ver También:</li>
+</ul>
+<ul>
+	<li id="link" ><ul><li><a href="/es/translation.asp?tranword=captivating">captivating</a></li>
+<li><a href="/es/translation.asp?tranword=captivation">captivation</a></li>
+<li><a href="/es/translation.asp?tranword=captivator">captivator</a></li>
+<li><a href="/es/translation.asp?tranword=captive">captive</a></li>
+<li><a href="/es/translation.asp?tranword=captivity">captivity</a></li>
+<li><a href="/es/translation.asp?tranword=captor">captor</a></li>
+<li><a href="/es/translation.asp?tranword=capture">capture</a></li>
+<li><a href="/es/translation.asp?tranword=captured">captured</a></li>
+<li><a href="/es/translation.asp?tranword=capuchin">capuchin</a></li>
+<li><a href="/es/translation.asp?tranword=capybara">capybara</a></li>
+<li><a href="/es/translation.asp?tranword=car">car</a></li>
+<li><a href="/es/translation.asp?tranword=car-jacker">car-jacker</a></li>
+<li><a href="/es/translation.asp?tranword=car-sick">car-sick</a></li>
+<li><a href="/es/translation.asp?tranword=caracal">caracal</a></li>
+<li><a href="/es/translation.asp?tranword=Caracas">Caracas</a></li>
+<li><a href="/es/translation.asp?tranword=caracole">caracole</a></li>
+<li><a href="/es/translation.asp?tranword=carafe">carafe</a></li>
+<li><a href="/es/translation.asp?tranword=carambola">carambola</a></li>
+<li><a href="/es/translation.asp?tranword=caramel">caramel</a></li>
+<li><a href="/es/translation.asp?tranword=caramelize">caramelize</a></li>
+<li><a href="/es/translation.asp?tranword=carapace">carapace</a></li>
+</ul></li>
+</ul>
+
+<ul>
+	<li class="title1" title="Settings">Settings:</li>
+</ul>
+
+<ul>
+	<li>
+		<ul>
+		<li class="setclick" title="Options">Click on word:
+			<div>
+				<input type="radio" name="forClicks" value="1" id="cl1" onclick="setClickW(this.id);" checked="checked"><label for="cl1">gets translation</label><br>
+				<input type="radio" name="forClicks" value="0" id="cl0" onclick="setClickW(this.id);"><label for="cl0">does nothing</label>
+			</div>
+		</li>
+		</ul>
+	</li>
+	<li>
+		<ul>
+		<li class="setclick" id="rstitle">Recent searches:
+			<ul id="rsinfo">
+			
+			<li id="wrsave">		
+				<div>
+					<input type="checkbox" name="saveWR" id="saveWR" onclick="setSaveWR();"><label for="saveWR">Save history</label>
+				</div>
+			</li>
+			<li style="list-style-type:none;" id="viewallhistory">
+			<a href="/docs/searchHistory.aspx?dict=enes" target="_blank">View All</a>
+				<script type="text/javascript">
+				if ('localStorage' in window && window['localStorage'] !== null){
+					document.getElementById("rstitle").style.display = 'block';
+					document.getElementById("rsinfo").style.display = 'block';
+					if ((!localStorage["bWRsaveHistory"]) || (localStorage["bWRsaveHistory"] == "true")) {
+						document.getElementById('saveWR').checked = true;
+					} else {
+						document.getElementById('saveWR').checked = false;
+						document.getElementById("viewallhistory").style.display="none";
+					};
+				}
+				</script>
+			</li>	
+			
+			</ul>
+		</li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li class="title1" title="Links">Links:</li>
+</ul>
+<ul>
+	<li>
+	<ul>
+	<li><a href="/2012/preferences.aspx">⚙️Preferences</a></li>
+		
+<li><a href="/es/Abbreviations-Spanish.aspx" title="Abbreviations">Abreviaturas</a></li>
+						 <li><a href="/es/phonetic_symbols.aspx" title="símbolos/pronunciation">Pron. Symbols</a></li>
+
+    <li><a href='/docs/support-wordreference.aspx' title='Support WR'>Apoyar WR</a></li>
+    <li><a href='/english/Privacy%20Policy.htm'>Privacy Policy</a></li>
+	<li><a href="https://forum.wordreference.com/" title="Forums">Foros</a></li>
+	
+	<li title="Suggestions"><a href="https://forum.wordreference.com/misc/contact">Suggestions</a></li>
+	</ul>
+	</li>
+</ul>
+
+		</li>
+	</ul>
+</td>
+
+<!-- center column -->
+<td id="centercolumn">
+<div id="articleHead">
+
+
+				<h3 class="headerWord">Car</h3>
+			
+<div id="footerlink"><a href="#footer">[links]</a></div>
+<div id='listen_widget'><span id='listen_txt'>Listen:</span><input type='hidden' id='audT' value='8' /><div style='display:none'><audio id='aud0' preload='none'><source src='/audio/en/us/us/en012858.mp3' type='audio/mpeg'></audio><audio id='aud1' preload='none'><source src='/audio/en/uk/general/en012858.mp3' type='audio/mpeg'></audio><audio id='aud2' preload='none'><source src='/audio/en/uk/rp/en012858.mp3' type='audio/mpeg'></audio><audio id='aud3' preload='none'><source src='/audio/en/uk/Yorkshire/en012858-55.mp3' type='audio/mpeg'></audio><audio id='aud4' preload='none'><source src='/audio/en/Irish/en012858.mp3' type='audio/mpeg'></audio><audio id='aud5' preload='none'><source src='/audio/en/scot/en012858.mp3' type='audio/mpeg'></audio><audio id='aud6' preload='none'><source src='/audio/en/us/south/en012858.mp3' type='audio/mpeg'></audio><audio id='aud7' preload='none'><source src='/audio/en/Jamaica/en012858.mp3' type='audio/mpeg'></audio></div><span id='audiodrop'><select id='accentSelection'><optgroup label='Accents'><option title='US' value='0' >US</option><option title='UK' value='1' >UK</option><option title='UK-RP' value='2' selected='selected'>UK-RP</option><option title='UK-Yorkshire' value='3' >UK-Yorkshire</option><option title='Irish' value='4' >Irish</option><option title='Scottish' value='5' >Scottish</option><option title='US Southern' value='6' >US Southern</option><option title='Jamaican' value='7' >Jamaican</option></optgroup><optgroup label='Playback rate'><option title='Speed at 100%' value='%100'>100%</option><option title='Speed at 50%' value='%50'>50%</option><option title='Speed at 25%' value='%25'>25%</option></optgroup></select></span></div>
+<script type='text/javascript'>
+//Select Audio in local storage
+var audPref = localStorage['wr_audio-'+strDic.substr(0,2)];
+if ((audT) && (audPref)) {
+		var sel = document.getElementById('accentSelection')
+		for (var i=0; i<sel.options.length; i++){
+			var option = sel.options[i];
+			if (option.title == audPref){
+				option.selected = true;
+				break;}}}
+</script>
+ &nbsp;<span id='pronWR' dir='ltr' style='font-size:16px;color:#003399;white-space:nowrap;' title='Pronunciación'>[ˈkɑː<sup>r</sup>]</span><div id='dummyspan'></div><br />
+<div id="forumNotes"><a id="forumNotesLink">ⓘ One or more forum threads is an exact match of your searched term</a></div>
+<div id="WHlinks" style="padding-top: 8px;">
+
+	<a href="/definition/Car">definition</a> | 
+	
+	<a href="/conj/EsVerbs.aspx" title="conjugate Spanish verbs">Conjugación&nbsp;<span style="font-size:smaller">[ES]</span></a> | 
+	<a href="/synonyms/Car">English synonyms</a> |
+	<a href="/encol/car">English collocations</a> | 
+    <a href="/conj/EnVerbs.aspx" title="conjugate English verbs">Conjugator&nbsp;<span style="font-size:smaller">[EN]</span></a> |
+    <a title="in Context" href='http://www.google.com/search?tbm=nws&amp;ned=us&amp;hl=en&amp;q=%22Car%22' target=gg>in context</a> |
+	<a href='https://www.google.com/search?tbm=isch&amp;safe=active&amp;q=%22Car%22' target=gg>images</a>
+
+    <span id='WHlinks_forMobile'>
+    <a href='/tools/Tools.aspx#mobileapps'>WR Apps: Android & iPhone</a>
+    <a href='https://daily.wordreference.com/'>Word of the day</a>
+    </span> 
+</div>
+
+
+
+
+<span id='strAnchors'></span>
+
+<br>
+
+</div><!-- End of articleHead -->
+					<div id="headerTabs"><ul>
+					    <li id="tabWR" class="selected">
+                        <span>WordReference</span>
+                        </li>
+					    <li id="tabHC"><span>Collins</span></li>
+					    </ul></div>
+					    <style>	#collinsdiv, #articleWRD {border-top: 1px #222222 solid;clear:both;}</style>
+                        <script>
+                            function loadCollinsJS() {
+                                var oTabHC = document.getElementById('tabHC')
+                                var sWord = 'Car', sDic = 'enes', getCollins = document.createElement("script");
+                                getCollins.type = "text/javascript";
+                                getCollins.src = "/2012/collins/loadCollins.aspx?dict=" + sDic + "&w=" + sWord;
+                                getCollins.onload = function() {
+                                    oTabHC.className= 'selected';
+                                };
+                                document.body.appendChild(getCollins);
+                        //        var ah2 = document.getElementById('mobileAd_holder2');
+                        //        if (ah2)
+                        //        {
+                        //            ah2.style.display = '';
+                        //            ah2.appendChild(document.getElementById('mobileAd'));
+                        //        }
+                                return false;
+                            }
+                        </script>
+    
+<script>
+    var ul  = document.getElementById("headerTabs");
+    if (ul) {
+        ul = ul.querySelector('ul');
+        var li  = document.createElement("li");
+        var a   = document.createElement("a");
+
+        a.href = "/enes/reverse/Car";
+        a.appendChild(document.createTextNode("WR Reverse (85)"));
+        a.title = "Translations to &#39;Car&#39; on the other side of this WordReference dictionary.";
+
+        li.setAttribute("id", "tabRev");
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    if ((document.getElementById('articleWRD').children.length === 0) && 
+    (/.wordreference.com\/(?:.*?)\/reverse\//i.test(document.referrer) === false) &&
+    (!document.getElementById('tabHC'))) {
+        document.getElementById('articleWRD').innerHTML = '<p style="direction: ltr;">Redirecting you to the reverse page...</p>';
+        location.href = "/enes/reverse/Car";
+    }
+});
+
+</script>
+		   
+
+<div id="articleWRD">
+<!-- copyright 2 --><div><p class='wrcopyright'><a name="car99"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2019:</span></p></div><table class='WRD' onclick='redirectWR(event,"WRenes")'><tr class='wrtopsection'><td colspan='3' title='Principal Translations'><strong><span class='ph' data-ph='sMainMeanings'>Principal Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
+<tr class='even' id='enes:3487'><td class='FrWrd' ><strong>car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (automobile)&nbsp;<span class='dsense' >(<i>ES</i>)</span></td><td class='ToWrd' >coche <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AmL</i>)</span></td><td class='ToWrd' >carro <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >auto <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The car sped down the highway.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El coche iba a toda velocidad por la carretera.</td></tr>
+<tr class='odd' id='enes:3489'><td class='FrWrd' ><strong><a href='/EnglishUsage/carriage#2' target='_blank' class='engusg' title='English Usage information available'></a>car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (railway coach)</td><td class='ToWrd' >vagón <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The brakeman uncoupled the cars.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El operario desacopló los vagones.</td></tr>
+<tr class='even' id='enes:3488'><td class='FrWrd' ><strong>car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (streetcar)</td><td class='ToWrd' >tranvía <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>I paid my fare as I stepped into the car.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Ni bien subí al tranvía, pagué mi boleto.</td></tr>
+<tr class='odd'><td colspan='3' class='wrtopsection'>&nbsp;</td></tr><tr class='wrtopsection'><td colspan='3' title='Additional Translations' class='additional'><strong><span class='ph' data-ph='sAddTrans'>Additional Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
+<tr class='even' id='enes:3490'><td class='FrWrd' ><strong>car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (elevator)</td><td class='ToWrd' >ascensor <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>CU, SV, GT, MX</i>)</span></td><td class='ToWrd' >elevador <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >cabina del ascensor <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The car stopped on the second floor.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El ascensor se detuvo en el segundo piso.</td></tr>
+</table>
+<table class='WRreporterror'>
+<tr class='odd more'><td>&nbsp;</td>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="/english/suggestions.aspx?w=car&amp;dict=enes"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
+
+                  <!-- This mobileAd_holder is from buildWRD5.aspx -->
+                  <div id='mobileAd_holder' style='display:none;'>
+                  </div><!-- copyright 5 --><div><p class='wrcopyright'><a name="car99"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2019:</span></p></div><table class='WRD' id='compound_forms' onclick='redirectWR(event,"WRenes")'><tr class='wrtopsection'><td colspan='3' title='Compound Forms' id='compounds'><strong><span class='ph' data-ph='sCmpdForms'>Compound Forms:</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'>Inglés</td><td></td><td class='ToWrd'>Español</td></tr>
+<tr class='even' id='enes:119718'><td class='FrWrd' ><strong>armored car (US),<br> armoured car (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (reinforced vehicle)</td><td class='ToWrd' >coche blindado, auto blindado <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >carro blindado <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Brinks company sends its agents in armored cars to collect money from the banks.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >coche blindado <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >carro blindado <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >auto blindado <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La compañía envía a sus agentes en coches blindados para que recojan el dinero de los bancos.</td></tr>
+<tr class='odd' id='enes:3179576'><td class='FrWrd' ><strong>baggage car (US),<br> baggage van (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (coach of train for luggage, etc.)</td><td class='ToWrd' >vagón de equipaje <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='even' id='enes:18228'><td class='FrWrd' ><strong>battery,<br> car battery</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (for car's lights, etc.)</td><td class='ToWrd' >batería <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The battery died because Wilma left the headlights on all night.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La batería se descargó porque Wilma dejó las luces encendidas toda la noche.</td></tr>
+<tr class='odd' id='enes:129474'><td class='FrWrd' ><strong>be hit by a car</strong> <em class='tooltip POS2'>v expr<span><i>verbal expression</i>: Phrase with special meaning functioning as verb--for example, "put their heads together," "come to an end."</span></em></td><td> (be knocked down)&nbsp;<span class='dsense' >(<i>coloquial</i>)</span></td><td class='ToWrd' >llevárselo un auto por delante, llevárselo un coche por delante, llevárselo un carro por delante <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR, coloquial</i>)</span></td><td class='ToWrd' >llevárselo puesto un auto <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Greg crossed the street without checking for traffic, and was consequently hit by a car.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Greg cruzó la calle sin mirar y se lo llevó un auto por delante.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >ser atropellado por un coche, ser atropellado por un auto, ser atropellado por un carro <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Greg cruzó la calle sin mirar y fue atropellado por un coche.</td></tr>
+<tr class='even' id='enes:129751'><td class='FrWrd' ><strong>beat-up car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US, slang</i> (car in poor condition)&nbsp;<span class='dsense' >(<i>AR, coloquial, figurado</i>)</span></td><td class='ToWrd' >cafetera <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>UR, coloquial</i>)</span></td><td class='ToWrd' >cachilo <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>I love my beat-up car, even though it´s covered in dents and scratches.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Me encanta mi cafetera, aunque esté llena de abolladuras y rayaduras.</td></tr>
+<tr class='odd' id='enes:30309'><td class='FrWrd' ><strong><a href='/EnglishUsage/bonnet#1' target='_blank' class='engusg' title='English Usage information available'></a>bonnet</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>UK</i> (hood: part covering car's engine)</td><td class='ToWrd' >capó <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >capota <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>MX</i>)</span></td><td class='ToWrd' >capote <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even' id='enes:3118445'><td class='FrWrd' ><strong>bubble car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (small 1950s car)</td><td class='ToWrd' >coche burbuja <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >auto burbuja <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='odd' id='enes:125603'><td class='FrWrd' ><strong>buffet car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (train: refreshments carriage)&nbsp;<span class='dsense' >(<i>coloquial</i>)</span></td><td class='ToWrd' >cafetería <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The train doesn't have a buffet car so be sure to bring some snacks for the trip.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>En el tren no hay cafetería, así que lleva algo para picar.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>Argentina</i>)</span></td><td class='ToWrd' >buffet <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Ese tren no tiene coche-comedor, pero sí tiene un buffet.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >vagón restaurante <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El tren no tiene vagón restaurante, así que lleva algo para picar en el viaje.</td></tr>
+<tr class='even' id='enes:3179855'><td class='FrWrd' ><strong>bumper car</strong> <em class='POS2'></em></td><td> (amusement parks)&nbsp;<span class='dsense' >(<i>AmL</i>)</span></td><td class='ToWrd' >carro chocón, carrito chocón <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >coche de choque, auto de choque <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:130242'><td class='FrWrd' ><strong>by car</strong> <em class='tooltip POS2'>adv<span><i>adverb</i>: Describes a verb, adjective, adverb, or clause--for example, "come <b>quickly</b>," "<b>very</b> rare,"  "happening <b>now</b>," "fall <b>down</b>." </span></em></td><td> (via motor vehicle)</td><td class='ToWrd' >en auto <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>By car, you could get from Lansing to Detroit in about two hours.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> En auto se llega en unas dos horas.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >en coche <em class='tooltip POS2'>loc adv<span><i>locución adverbial</i>: Unidad léxica estable formada de dos o más palabras que funciona como adverbio ("en vilo", "de seguido", "a quemarropa").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> No hace falta que vayamos en coche, queda cerca; podemos ir caminando.</td></tr>
+<tr class='even' id='enes:112030'><td class='FrWrd' ><strong>cable car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (streetcar on cable railway)&nbsp;<span class='dsense' >(<i>AR</i>)</span></td><td class='ToWrd' >tranvía <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' id='enes:112029'><td class='FrWrd' ><strong>cable car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>UK</i> (ski lift)</td><td class='ToWrd' >teleférico <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Para disfrutar de la vista en Zacatecas puedes tomar el teleférico en el Cerro de la Bufa.</td></tr>
+<tr class='even' id='enes:125667'><td class='FrWrd' ><strong>car accident</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (automobile crash)&nbsp;<span class='dsense' >(<i>España</i>)</span></td><td class='ToWrd' >accidente de tráfico <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The number of car accidents has fallen in Western Europe over the past 3 years.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Los accidentes de tráfico han disminuido gracias a la campaña de prevención.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >accidente de tránsito <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Los accidentes de tránsito continuarán en tanto no se respeten las normas vigentes.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >accidente de circulación <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> El 90% de los accidentes de circulación en fin de semana se producen por el abuso del alcohol.</td></tr>
+<tr class='odd' id='enes:130326'><td class='FrWrd' ><strong>car bomb</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (incendiary device in an automobile)</td><td class='ToWrd' >coche-bomba <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Explotó un coche-bomba.</td></tr>
+<tr class='even' id='enes:130328'><td class='FrWrd' ><strong>car boot sale</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>UK</i> (sale of used items in public place)</td><td class='ToWrd' >mercadillo, rastrillo <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >rastrillo de segunda mano <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >venta de garaje <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>There is a car boot sale every week in the town's main car park.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Hay un mercadillo todas las semanas en el principal estacionamiento del pueblo.</td></tr>
+<tr class='odd' id='enes:130329'><td class='FrWrd' ><strong>car chase</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (pursuit by vehicle)</td><td class='ToWrd' >persecución automovilística <em class='POS2'>nf+ adj</em></td></tr>
+<tr class='even' id='enes:3179920'><td class='FrWrd' ><strong>car coat</strong> <em class='POS2'></em></td><td> (clothing)&nbsp;<span class='dsense' >(<i>ropa: abrigo</i>)</span></td><td class='ToWrd' >sobretodo <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' id='enes:125668'><td class='FrWrd' ><strong>car crash</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (automobile accident)</td><td class='ToWrd' >accidente de coche <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >accidente de automóvil <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >accidente automovilístico <em class='POS2'>nm + adj mf</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The driver was killed in the car crash but the passenger survived.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El conductor murió en el accidente de coche, pero el pasajero sobrevivió.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >choque <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >accidente <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El conductor murió en el choque, pero el pasajero sobrevivió</td></tr>
+<tr class='even' id='enes:112116'><td class='FrWrd' ><strong>car frame</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (chassis)</td><td class='ToWrd' >chasis <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>CO</i>)</span></td><td class='ToWrd' >chasís <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even notePubl_tr' ><td colspan='3' class='notePubl' ><i><span class='ph' data-ph='sNote'>Note</span></i>: Plural: chasises</td></tr><tr class='odd' id='enes:125669'><td class='FrWrd' ><strong>car hire</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>UK</i> (vehicle rental)</td><td class='ToWrd' >alquiler de coches <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >alquiler de auto <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>CL</i>)</span></td><td class='ToWrd' >arriendo de autos, arriendo de vehículos <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Low cost airlines can often offer you special low cost car hire too.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Las aerolíneas de descuento a menudo también te ofrecen alquiler de coches de descuento.</td></tr>
+<tr class='even' id='enes:130327'><td class='FrWrd' ><strong>car hood (US),<br> car bonnet (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (part covering car's engine)</td><td class='ToWrd' >capó <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >cofre <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >capote <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >capó <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>MX</i>)</span></td><td class='ToWrd' >cofre <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' id='enes:130330'><td class='FrWrd' ><strong>car horn</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (automobile's warning hooter)</td><td class='ToWrd' >claxon <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AmL</i>)</span></td><td class='ToWrd' >bocina <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The proper use of the car horn is overlooked by a lot of motorists.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Muchos automovilistas usan el claxon de forma inapropiada.</td></tr>
+<tr class='even' id='enes:130331'><td class='FrWrd' ><strong>car keys</strong> <em class='tooltip POS2'>npl<span><i>plural noun</i>: Noun always used in plural form--for example, "jeans," "scissors."</span></em></td><td> (to unlock, start a car)</td><td class='ToWrd' >llaves del coche <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >llaves del auto, llaves del automóvil <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>I lost my car keys, so I had to walk home to get an extra set.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Perdí las llaves del coche, así que tuve que caminar a casa para traer el juego extra.</td></tr>
+<tr class='odd' id='enes:112118'><td class='FrWrd' ><strong>car lot</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (car sales area)</td><td class='ToWrd' >concesionario <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>That vehicle dealership has a huge car lot.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >concesionaria <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>PR</i>)</span></td><td class='ToWrd' >lote de carros <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Por desgracia actualmente en los Estados Unidos hay lotes de carros totalmente vacíos.</td></tr>
+<tr class='even' id='enes:130332'><td class='FrWrd' ><strong>car maintenance</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (care and repair of an automobile)</td><td class='ToWrd' >servicio al automóvil <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >revisión <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>Regular car maintenance helps prolong the life of your car.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >mantenimiento del coche <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Es necesario un mantenimiento constante del coche.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >mantenimiento del auto, mantenimiento del automóvil <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:112119'><td class='FrWrd' ><strong>car mileage</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (fuel consumption)</td><td class='ToWrd' >consumo por kilómetro <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >kilómetros por litros <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>CO</i>)</span></td><td class='ToWrd' >kilómetros por galón <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>PR</i>)</span></td><td class='ToWrd' >millaje <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Este vehículo le ofrece más kilómetros por galón.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Y ese carro... ¿te da buen millaje?</td></tr>
+<tr class='even' id='enes:112120'><td class='FrWrd' ><strong>car mileage</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (miles travelled)</td><td class='ToWrd' >kilometraje <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>PR</i>)</span></td><td class='ToWrd' >millas <em class='tooltip POS2'>nfpl<span><i>nombre femenino plural</i>: Sustantivo femenino que se usa únicamente en plural ("exequias", "albricias").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El kilometraje normal de un auto por año, en la ciudad de México, es 20,000.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El carro tiene pocas millas.</td></tr>
+<tr class='odd' id='enes:3179921'><td class='FrWrd' ><strong>car park</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>UK</i> (parking lot)</td><td class='ToWrd' >aparcamiento <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >estacionamiento <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even' id='enes:130333'><td class='FrWrd' ><strong>car payment</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (car loan repayment)</td><td class='ToWrd' >cuota del auto, cuota del automóvil <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>I lost my job so I'm afraid I won't be able to make my car payment this month.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Me quedé sin trabajo así este mes no voy a poder pagar la cuota del auto.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >cuota del coche <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd' id='enes:130334'><td class='FrWrd' ><strong>car plate,<br> plate</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>usually plural</i> (vehicle: registration plaque)</td><td class='ToWrd' >matrícula <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >placa <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The hit and run happened so fast no one saw the car plates.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El atropello con fuga ocurrió tan rápido que nadie tuvo tiempo de mirar la matrícula del coche.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >patente <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >chapa <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even' id='enes:3187093'><td class='FrWrd' ><strong>car polish</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (product for shining car)</td><td class='ToWrd' >cera para coches <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >abrillantador para carrocerías <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:130335'><td class='FrWrd' ><strong>car port</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (covered parking)&nbsp;<span class='dsense' >(<i>cubierto</i>)</span></td><td class='ToWrd' >garaje <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >estacionamiento <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES, particular</i>)</span></td><td class='ToWrd' >cochera <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES, compartida</i>)</span></td><td class='ToWrd' >plaza de garaje <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even' id='enes:3192646'><td class='FrWrd' ><strong>car rental,<br> also UK: car hire</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (hiring a motor vehicle)</td><td class='ToWrd' >alquiler de vehículos <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >alquiler de coches <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:112122'><td class='FrWrd' ><strong>car ride</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (journey, outing in a car)</td><td class='ToWrd' >viaje en coche <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >viaje en auto <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >viaje en carro <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>When I was a child, my family went for a car ride every Sunday.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Cuando era chico, mi familia hacía un viaje en coche todos los domingos.</td></tr>
+<tr class='even' id='enes:130336'><td class='FrWrd' ><strong>car salesman,<br> plural: car salesmen</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (male: sells automobiles)&nbsp;<span class='dsense' >(<i>AR</i>)</span></td><td class='ToWrd' >vendedor de autos, vendedora de autos <em class='POS2'>nm, nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>A good car salesman will not let you walk away without buying a car.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Un buen vendedor de autos no deja que te vayas sin comprar un auto.</td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AmL</i>)</span></td><td class='ToWrd' >vendedor de carros, vendedora de carros <em class='POS2'>nm, nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >vendedor de coches, vendedora de coches <em class='POS2'>nm, nf + loc adj</em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Un buen vendedor de carros no deja que te vayas sin comprar un carro.</td></tr>
+<tr class='odd' id='enes:3089543'><td class='FrWrd' ><strong>car seat</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (child's removable seat in a car)&nbsp;<span class='dsense' >(<i>ES</i>)</span></td><td class='ToWrd' >elevador <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >silla infantil <em class='POS2'>nf + adj mf</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>A car seat must fit the child correctly.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El niño debe encajar correctamente en el elevador.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El niño debe encajar correctamente en la silla infantil.</td></tr>
+<tr class='even' id='enes:3198767'><td class='FrWrd' ><strong>car starter</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (device used to start car engine)&nbsp;<span class='dsense' >(<i>vehículo</i>)</span></td><td class='ToWrd' >arranque <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >motor de arranque <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:130337'><td class='FrWrd' ><strong>car thief</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (<span title='somebody'>[sb]</span> who steals automobiles)</td><td class='ToWrd' >ladrón de autos, ladrona de autos <em class='POS2'>nm, nf + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >ladrón de coches, ladrona de coches <em class='POS2'>nm, nf + loc adj</em></td></tr>
+<tr class='even' id='enes:130338'><td class='FrWrd' ><strong>car trunk (US),<br> car boot (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (boot: car's rear compartment)</td><td class='ToWrd' >maletero <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>MX</i>)</span></td><td class='ToWrd' >cajuela <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >baúl <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>When we went to the drive-in we would usually sneak in some friends in the car trunk.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Cuando íbamos al autocine solíamos meter varios amigos en el maletero.</td></tr>
+<tr class='odd' id='enes:112123'><td class='FrWrd' ><strong>car wash</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (facility: vehicle cleaning)&nbsp;<span class='dsense' >(<i>MX</i>)</span></td><td class='ToWrd' >taller de lavado <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >autolavado <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>My car is so dirty that I must take it to the car wash.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mi carro está tan sucio que debo llevarlo al taller de lavado.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AmL</i>)</span></td><td class='ToWrd' >lavadero de carros <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >lavadero de coches <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >lavadero de autos <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mi carro está tan sucio que debo llevarlo al lavadero de carros.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >lavaautos <em class='tooltip POS2'>nm inv<span><i>nombre masculino invariable</i>: Sustantivo masculino que tiene la misma forma en singular y en plural ("apocalipsis", "paréntesis").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mi auto está tan sucio que debo llevarlo al lavaautos.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >tren de lavado, túnel de lavado, túnel  de lavado de coches <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd notePubl_tr' ><td colspan='3' class='notePubl' ><i><span class='ph' data-ph='sNote'>Note</span></i>: Se refiere a los mecanizados en los que en un túnel hay máquinas que enjabonan aclaran y secan el coche.</td></tr><tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mi coche está tan sucio que tengo que llevarlo al túnel de lavado.</td></tr>
+<tr class='even' id='enes:3187094'><td class='FrWrd' ><strong>car wax</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (car cleaning product)</td><td class='ToWrd' >cera para vehículos <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >abrillantador para carrocerías <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:3199317'><td class='FrWrd' ><strong>car wheel</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>often plural</i> (wheel of an automobile)</td><td class='ToWrd' >rueda de automóvil <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >rueda de coche <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even' id='enes:130339'><td class='FrWrd' ><strong>car window</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (window of an automobile)</td><td class='ToWrd' >ventanilla del coche, ventanilla del auto <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>She rolled down the car window to say hello to the neighbors.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'><span class='tooltip'><b>ⓘ</b><span>This sentence is not a translation of the original sentence.</span></span> Bajá la ventanilla y preguntale a ese señor de la esquina dónde queda el parque.</td></tr>
+<tr class='odd' id='enes:90097'><td class='FrWrd' ><strong>carfare,<br> car fare</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (fee paid for a bus or taxi ride)&nbsp;<span class='dsense' >(<i>ES</i>)</span></td><td class='ToWrd' >precio del billete <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >pasaje <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >precio del boleto <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='even' id='enes:90102'><td class='FrWrd' ><strong>carjacker,<br> car-jacker,<br> car jacker</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (robber who hijacks a car)</td><td class='ToWrd' >ladrón de automóviles, ladrona de automóviles <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd' id='enes:59516'><td class='FrWrd' ><strong>carpool,<br> car pool</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (car-sharing arrangement)</td><td class='ToWrd' >compartir el vehículo <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Mandy and her friends arranged a carpool for their weekly art class.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mandy y sus amigas comparten el vehículo para  ir a su clase semanal de arte.</td></tr>
+<tr class='even' id='enes:59517'><td class='FrWrd' ><strong>carpool,<br> car pool</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (group of car sharers)</td><td class='ToWrd' >personas que comparten el vehículo <em class='POS2'>nfpl + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>We added another driver to the carpool.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Agregamos a otro conductor a las personas que comparten el vehículo.</td></tr>
+<tr class='odd' id='enes:71606'><td class='FrWrd' ><strong>carsick,<br> UK: car-sick,<br> car sick</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (nauseous from car travel)&nbsp;<span class='dsense' >(<i>por andar en automóvil</i>)</span></td><td class='ToWrd' >mareado/a <em class='tooltip POS2'>adj<span><i>adjetivo</i>: Describe el sustantivo. Puede ser posesivo, numeral, demostrativo ("casa <b>grande</b>", "mujer <b>alta</b>").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Reading in the car can make some people carsick.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Andar en auto hace que algunas personas se sientan mareadas.</td></tr>
+<tr class='even' id='enes:3179011'><td class='FrWrd' ><strong>chair car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (railroad car)&nbsp;<span class='dsense' >(<i>dos asientos a cada lado del pasillo</i>)</span></td><td class='ToWrd' >vagón de primera clase <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:3180052'><td class='FrWrd' ><strong>club car</strong> <em class='POS2'></em></td><td> (train car)</td><td class='ToWrd' >vagón restaurante <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even' id='enes:101049'><td class='FrWrd' ><strong>compact car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (small economical car)</td><td class='ToWrd' >automóvil compacto <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >coche compacto <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The company launched a new model of the compact car about a month ago.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La compañía lanzó un nuevo modelo de automóvil compacto hace un mes.</td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >auto compacto <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La compañía lanzó un nuevo modelo de auto compacto hace un mes.</td></tr>
+<tr class='odd' id='enes:131097'><td class='FrWrd' ><strong>courtesy car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (vehicle provided free of charge)&nbsp;<span class='dsense' >(<i>Vehículo de renta gratuito.</i>)</span></td><td class='ToWrd' >vehículo de cortesía <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Al's Garage always lends me a courtesy car to drive while they repair my own car.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El taller mecánico siempre me da un vehículo de cortesía mientras reparan mi auto.</td></tr>
+<tr class='even' id='enes:101278'><td class='FrWrd' ><strong>dining car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (train carriage where food is served)</td><td class='ToWrd' >vagón restaurante <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El vagón restaurante suele estar  hacia adelante.</td></tr>
+<tr class='odd' id='enes:114106'><td class='FrWrd' ><strong>electric car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (car powered by electricity)</td><td class='ToWrd' >auto eléctrico, carro eléctrico <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The auto industry needs to develop a cost-effective electric car.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La industria automotriz necesita desarrollar un auto eléctrico rentable.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >coche eléctrico <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La industria automotriz necesita desarrollar un coche eléctrico rentable.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >automóvil eléctrico <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La industria automotriz necesita desarrollar un automóvil eléctrico rentable.</td></tr>
+<tr class='even' id='enes:91807'><td class='FrWrd' ><strong>flatcar,<br> flat car (US),<br> flat wagon (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (railway: car with no sides)&nbsp;<span class='dsense' >(<i>vagón</i>)</span></td><td class='ToWrd' >plataforma <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='odd' id='enes:114885'><td class='FrWrd' ><strong>freight car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (railway carriage for cargo)</td><td class='ToWrd' >vagón de carga <em class='tooltip POS2'>grupo nom<span><i>grupo nominal</i>: Expresión que combina un sustantivo con sus modificadores y complementos, que forman una expresión compuesta usual, sin llegar a ser una locución nominal fija ("adjudicación de herencia", "despedida de soltero").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>The train was made up of about 40 freight cars.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El tren estaba formado por unos 40 vagones de carga.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >furgón <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>El tren estaba formado por unos 40 furgones.</td></tr>
+<tr class='even' id='enes:115074'><td class='FrWrd' ><strong>funny car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (type of drag racing)&nbsp;<span class='dsense' >(<i>usado en arrancones</i>)</span></td><td class='ToWrd' >carro chistoso <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>usado en arrancones</i>)</span></td><td class='ToWrd' >auto chistoso <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>They're called funny cars because the placement of the rear wheels gives them a funny appearance.</td></tr>
+<tr class='odd' id='enes:101842'><td class='FrWrd' ><strong>garage sale,<br> yard sale</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (sale of used items)</td><td class='ToWrd' >venta de garaje <em class='tooltip POS2'>loc nom f<span><i>locución nominal femenina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo femenino ("casa de citas", "zona cero", "arma secreta").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>formal</i>)</span></td><td class='ToWrd' >venta de objetos de segunda mano <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>They sold a lot of their old things in a garage sale.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Vendieron muchas de sus cosas viejas en una venta de garaje.</td></tr>
+<tr class='even' id='enes:3187214'><td class='FrWrd' ><strong>gondola car,<br> gondola</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (railroad: open freight car)</td><td class='ToWrd' >vagón abierto <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >vagón batea <em class='POS2'>nm + adj</em></td></tr>
+<tr class='odd' id='enes:22082'><td class='FrWrd' ><strong><a href='/EnglishUsage/bonnet#2' target='_blank' class='engusg' title='English Usage information available'></a>hood</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (part covering car's engine)</td><td class='ToWrd' >capó <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >toldo <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Jaime looked under the hood to see if she could see what the problem with her car was.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Jazmín miró bajo el capó a ver si podía ver cuál era el problema con su auto.</td></tr>
+<tr class='even' id='enes:116596'><td class='FrWrd' ><strong>hybrid car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (vehicle with combined power source)&nbsp;<span class='dsense' >(<i>coloquial</i>)</span></td><td class='ToWrd' >híbrido <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >coche híbrido, auto híbrido, carro híbrido <em class='POS2'>nm + adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>I bought a hybrid car to avoid high gasoline costs.</td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Me compré un híbrido para evitar los altos costos del combustible.</td></tr>
+<tr class='odd' id='enes:3195706'><td class='FrWrd' ><strong>in-car</strong> <em class='tooltip POS2'>adj<span><i>adjective</i>: Describes a noun or pronoun--for example, "a <b>tall</b> girl," "an <b>interesting</b> book," "a <b>big</b> house." </span></em></td><td> (installed in a car)</td><td class='ToWrd' >para coche <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >instalado en automóviles <em class='tooltip POS2'>loc adj<span><i>locución adjetiva</i>: Unidad léxica estable formada de dos o más palabras que funciona como adjetivo ("de fácil manejo", "a contraluz", "de fiar").</span></em></td></tr>
+<tr class='even' id='enes:133874'><td class='FrWrd' ><strong>jump a car</strong> <em class='tooltip POS2'>v expr<span><i>verbal expression</i>: Phrase with special meaning functioning as verb--for example, "put their heads together," "come to an end."</span></em></td><td> <i class='Fr2'>slang</i> (start a car using jump leads)&nbsp;<span class='dsense' >(<i>PR</i>)</span></td><td class='ToWrd' >prender<a title="conjugate prender" class='conjugate' href="/conj/EsVerbs.aspx?v=prender">⇒</a>, yompear<a title="conjugate yompear" class='conjugate' href="/conj/EsVerbs.aspx?v=yompear">⇒</a> <em class='tooltip POS2'>vtr<span><i>verbo transitivo</i>: Verbo que requiere de un objeto directo ("<b>di</b> la verdad", "<b>encontré</b> una moneda").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'>The battery was dead, so I had to jump-start the car.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >hacer puente <em class='tooltip POS2'>loc verb<span><i>locución verbal</i>: Unidad léxica estable formada de dos o más palabras que funciona como verbo ("sacar fuerzas de flaqueza", "acusar recibo").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>La batería estaba muerte así que tuve que hacer puente usando la batería de otro auto.</td></tr>
+<tr class='odd' id='enes:3191019'><td class='FrWrd' ><strong>larry,<br> larry car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (metallurgy: car on rails)</td><td class='ToWrd' >vagoneta <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even' id='enes:134785'><td class='FrWrd' ><strong>model car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (miniature or toy vehicle)</td><td class='ToWrd' >coche en miniatura <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='even' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Mi hermano tienes una colección de coches en miniatura de los años 60 muy completa.</td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >auto de juguete <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' id='enes:118846'><td class='FrWrd' ><strong>motor car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>dated</i> (car, automobile)</td><td class='ToWrd' >automóvil <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >auto <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >vehículo de motor <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>Un vehículo de motor puede ser un coche, un camión, un motocarro...</td></tr>
+<tr class='even' id='enes:3181532'><td class='FrWrd' ><strong>observation car</strong> <em class='POS2'></em></td><td> (railroad passenger car)</td><td class='ToWrd' >vagón mirador <em class='POS2'>nm + adj</em></td></tr>
+<tr class='odd' id='enes:3002777'><td class='FrWrd' ><strong>pace car</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (in race)</td><td class='ToWrd' >coche de seguridad <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+<tr class='even' id='enes:3181588'><td class='FrWrd' ><strong>panda car</strong> <em class='POS2'></em></td><td> <i class='Fr2'>UK</i> (police car)</td><td class='ToWrd' >patrulla <em class='tooltip POS2'>nf<span><i>nombre femenino</i>: Sustantivo de género exclusivamente femenino ("mesa", "tabla").</span></em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >patrulla de policía <em class='POS2'>nf + loc adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >coche de policía, auto de policía <em class='POS2'>nm + loc adj</em></td></tr>
+<tr class='odd' id='enes:120202'><td class='FrWrd' ><strong>parking lot,<br> car lot,<br> lot (US),<br> car park (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> (vehicle parking area)&nbsp;<span class='dsense' >(<i>PA</i>)</span></td><td class='ToWrd' >parqueadero <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>CR</i>)</span></td><td class='ToWrd' >parqueo <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'>Those high-school kids like to hang out in the parking lot and drink beer.</td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>A esos adolescentes les gusta juntarse en el parqueadero a beber cerveza.</td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>ES</i>)</span></td><td class='ToWrd' >aparcamiento <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>AR</i>)</span></td><td class='ToWrd' >estacionamiento <em class='tooltip POS2'>nm<span><i>nombre masculino</i>: Sustantivo de género exclusivamente masculino ("televisor", "piso").</span></em></td></tr>
+<tr class='odd' ><td>&nbsp;</td><td colspan='2' class='ToEx'>A esos adolescentes les gusta juntarse en el aparcamiento a beber cerveza.</td></tr>
+<tr class='even' id='enes:3185771'><td class='FrWrd' ><strong>parlor car (US),<br> parlour car (UK)</strong> <em class='tooltip POS2'>n<span><i>noun</i>: Refers to person, place, thing, quality, etc. </span></em></td><td> <i class='Fr2'>US</i> (railroad: passenger car)&nbsp;<span class='dsense' >(<i>tren</i>)</span></td><td class='ToWrd' >coche salón <em class='tooltip POS2'>loc nom m<span><i>locución nominal masculina</i>: Unidad léxica estable formada de dos o más palabras que funciona como sustantivo masculino ("ojo de buey", "agua mala").</span></em></td></tr>
+</table>
+<table class='WRreporterror'>
+<tr class='odd more'><td><a href='/enes/car?start=100' style='font-weight:bold;'><span class='ph' data-ph='sNext100'>Next 100</span></a></td>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="/english/suggestions.aspx?w=car&amp;dict=enes"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
+
+</div>
+<div id="collinsdiv"></div>
+<div id="article">
+
+<!--<div style="margin-bottom: 30px;">Click the Collins tab</div>-->
+	<br><div id='FTintro'>&#39;<b>Car</b>&#39; aparece también en las siguientes entradas:
+</div>
+<div class='FTsource'>In the English description:</div><div class='FTlist'>
+<a href="/es/translation.asp?tranword=accelerate">accelerate</a>
+ - <a href="/es/translation.asp?tranword=auto%20part">auto part</a>
+ - <a href="/es/translation.asp?tranword=auto%20racing">auto racing</a>
+ - <a href="/es/translation.asp?tranword=auto%20worker">auto worker</a>
+ - <a href="/es/translation.asp?tranword=automatic">automatic</a>
+ - <a href="/es/translation.asp?tranword=automobile">automobile</a>
+ - <a href="/es/translation.asp?tranword=banger">banger</a>
+ - <a href="/es/translation.asp?tranword=battery">battery</a>
+ - <a href="/es/translation.asp?tranword=be%20picked%20up">be picked up</a>
+ - <a href="/es/translation.asp?tranword=beat-up%20car">beat-up car</a>
+ - <a href="/es/translation.asp?tranword=Beetle">Beetle</a>
+ - <a href="/es/translation.asp?tranword=body">body</a>
+ - <a href="/es/translation.asp?tranword=body%20panel">body panel</a>
+ - <a href="/es/translation.asp?tranword=bonnet">bonnet</a>
+ - <a href="/es/translation.asp?tranword=booster%20seat">booster seat</a>
+ - <a href="/es/translation.asp?tranword=boot">boot</a>
+ - <a href="/es/translation.asp?tranword=brake%20drum">brake drum</a>
+ - <a href="/es/translation.asp?tranword=break%20in">break in</a>
+ - <a href="/es/translation.asp?tranword=breakdown">breakdown</a>
+ - <a href="/es/translation.asp?tranword=bubble%20car">bubble car</a>
+ - <a href="/es/translation.asp?tranword=bumper%20sticker">bumper sticker</a>
+ - <a href="/es/translation.asp?tranword=cabriolet">cabriolet</a>
+ - <a href="/es/translation.asp?tranword=camber">camber</a>
+ - <a href="/es/translation.asp?tranword=car%20hood">car hood</a>
+ - <a href="/es/translation.asp?tranword=car%20keys">car keys</a>
+ - <a href="/es/translation.asp?tranword=car%20lot">car lot</a>
+ - <a href="/es/translation.asp?tranword=car%20payment">car payment</a>
+ - <a href="/es/translation.asp?tranword=car%20polish">car polish</a>
+ - <a href="/es/translation.asp?tranword=car%20ride">car ride</a>
+ - <a href="/es/translation.asp?tranword=car%20seat">car seat</a>
+ - <a href="/es/translation.asp?tranword=car%20starter">car starter</a>
+ - <a href="/es/translation.asp?tranword=car%20trunk">car trunk</a>
+ - <a href="/es/translation.asp?tranword=car%20wax">car wax</a>
+ - <a href="/es/translation.asp?tranword=carful">carful</a>
+ - <a href="/es/translation.asp?tranword=carjack">carjack</a>
+ - <a href="/es/translation.asp?tranword=carjacker">carjacker</a>
+ - <a href="/es/translation.asp?tranword=carjacking">carjacking</a>
+ - <a href="/es/translation.asp?tranword=carload">carload</a>
+ - <a href="/es/translation.asp?tranword=carpool">carpool</a>
+ - <a href="/es/translation.asp?tranword=carport">carport</a>
+ - <a href="/es/translation.asp?tranword=carriage">carriage</a>
+ - <a href="/es/translation.asp?tranword=carsharing">carsharing</a>
+ - <a href="/es/translation.asp?tranword=carsick">carsick</a>
+ - <a href="/es/translation.asp?tranword=chair%20car">chair car</a>
+ - <a href="/es/translation.asp?tranword=chairlift">chairlift</a>
+ - <a href="/es/translation.asp?tranword=chauffeur">chauffeur</a>
+ - <a href="/es/translation.asp?tranword=chauffeur-driven">chauffeur-driven</a>
+ - <a href="/es/translation.asp?tranword=checkered%20flag">checkered flag</a>
+ - <a href="/es/translation.asp?tranword=Chevy">Chevy</a>
+ - <a href="/es/translation.asp?tranword=club%20car">club car</a>
+</div>
+<div class='FTsource'>
+Spanish:</div>
+<div class='FTlist'>
+<a href="/es/en/translation.asp?spen=auto">auto</a>
+ - <a href="/es/en/translation.asp?spen=autom%c3%b3vil">automóvil</a>
+ - <a href="/es/en/translation.asp?spen=automovil%c3%adstico">automovilístico</a>
+ - <a href="/es/en/translation.asp?spen=buga">buga</a>
+ - <a href="/es/en/translation.asp?spen=cabina">cabina</a>
+ - <a href="/es/en/translation.asp?spen=carro">carro</a>
+ - <a href="/es/en/translation.asp?spen=accidente+de+tr%c3%a1nsito">accidente de tránsito</a>
+ - <a href="/es/en/translation.asp?spen=antig%c3%bcedad+de+un+veh%c3%adculo">antigüedad de un vehículo</a>
+ - <a href="/es/en/translation.asp?spen=aparatosa+colisi%c3%b3n">aparatosa colisión</a>
+ - <a href="/es/en/translation.asp?spen=aparcamiento">aparcamiento</a>
+ - <a href="/es/en/translation.asp?spen=aparcamiento+para+coches">aparcamiento para coches</a>
+ - <a href="/es/en/translation.asp?spen=aros+para+auto">aros para auto</a>
+ - <a href="/es/en/translation.asp?spen=arrancar+el+auto">arrancar el auto</a>
+ - <a href="/es/en/translation.asp?spen=arrancar+el+carro">arrancar el carro</a>
+ - <a href="/es/en/translation.asp?spen=asiento+de+seguridad">asiento de seguridad</a>
+ - <a href="/es/en/translation.asp?spen=auto+chocado">auto chocado</a>
+ - <a href="/es/en/translation.asp?spen=auto+de+alquiler">auto de alquiler</a>
+ - <a href="/es/en/translation.asp?spen=auto+de+choque">auto de choque</a>
+ - <a href="/es/en/translation.asp?spen=auto+de+colecci%c3%b3n">auto de colección</a>
+ - <a href="/es/en/translation.asp?spen=auto+de+seguridad">auto de seguridad</a>
+ - <a href="/es/en/translation.asp?spen=auto+usado">auto usado</a>
+ - <a href="/es/en/translation.asp?spen=automotor">automotor</a>
+ - <a href="/es/en/translation.asp?spen=autom%c3%b3vil+de+pasajeros">automóvil de pasajeros</a>
+ - <a href="/es/en/translation.asp?spen=autom%c3%b3vil+de+turismo">automóvil de turismo</a>
+ - <a href="/es/en/translation.asp?spen=automovilismo">automovilismo</a>
+ - <a href="/es/en/translation.asp?spen=aver%c3%ada+de+coche">avería de coche</a>
+ - <a href="/es/en/translation.asp?spen=batata">batata</a>
+ - <a href="/es/en/translation.asp?spen=b%c3%a1varo">bávaro</a>
+ - <a href="/es/en/translation.asp?spen=b%c3%b3lido">bólido</a>
+ - <a href="/es/en/translation.asp?spen=bomba+lapa">bomba lapa</a>
+ - <a href="/es/en/translation.asp?spen=cochazo">cochazo</a>
+ - <a href="/es/en/translation.asp?spen=coche">coche</a>
+ - <a href="/es/en/translation.asp?spen=coche+bomba">coche bomba</a>
+ - <a href="/es/en/translation.asp?spen=coche+cama">coche cama</a>
+ - <a href="/es/en/translation.asp?spen=coche+de+empresa">coche de empresa</a>
+ - <a href="/es/en/translation.asp?spen=coche+patrulla">coche patrulla</a>
+ - <a href="/es/en/translation.asp?spen=coche+tuneado">coche tuneado</a>
+ - <a href="/es/en/translation.asp?spen=coche-bomba">coche-bomba</a>
+ - <a href="/es/en/translation.asp?spen=coche-cabina">coche-cabina</a>
+ - <a href="/es/en/translation.asp?spen=coche-cama">coche-cama</a>
+ - <a href="/es/en/translation.asp?spen=coche-comedor">coche-comedor</a>
+ - <a href="/es/en/translation.asp?spen=coger+el+coche">coger el coche</a>
+ - <a href="/es/en/translation.asp?spen=corral%c3%b3n">corralón</a>
+ - <a href="/es/en/translation.asp?spen=deportivo">deportivo</a>
+ - <a href="/es/en/translation.asp?spen=dep%c3%b3sito+de+coches">depósito de coches</a>
+ - <a href="/es/en/translation.asp?spen=en+coche">en coche</a>
+ - <a href="/es/en/translation.asp?spen=estacionamiento">estacionamiento</a>
+ - <a href="/es/en/translation.asp?spen=esterilla">esterilla</a>
+ - <a href="/es/en/translation.asp?spen=funicular">funicular</a>
+ - <a href="/es/en/translation.asp?spen=furgoneta">furgoneta</a>
+</div><br />
+
+</div> 
+
+<div id="postArticle">
+
+<div class='extras even'><div><span class='extra_category'>In Lists: </span><a href='https://lists.wordreference.com/show/top-2000-english-words.1/'>Top 2000 English words</a>, <a href='https://lists.wordreference.com/show/vehicles.10/'>Vehicles</a>, <a href='https://lists.wordreference.com/show/things-with-an-internet-connection.213/'>Things with an Internet connection</a>, <a href='https://lists.wordreference.com/'> more...</a></div></div><br><p id='threadsHeader'>Forum discussions with the word(s) "Car" in the title:</p><div id="lista_link"><a target='_blank' href='https://forum.wordreference.com/threads/2-car-garage.105318/'>2 car garage</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/6-ways-to-get-your-car-stolen.2685398/'>6 ways to get your car stolen</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-22-car-grid.2644038/'>a 22-car grid</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-door-slammed-outside.1019368/'>A car door slammed outside</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-drives-circulates-goes-runs.354124/'>a car drives / circulates / goes / runs...?</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-for-parts.1936948/'>a car for parts</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-had-actually-been-driving-by.699925/'>a car had actually been driving by</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-in-that-area.1936863/'>a car in that area</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-like-that-as%c3%ad-como-ese.719568/'>a car like that = as&#237; / como ese</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-parking-space.1200791/'>a car parking space</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-ran-over-your-cats-jaw.3446957/'>A car ran over your cat&#39;s jaw</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-sheared-off-a-fire-hydrant.400952/'>A car sheared off a fire hydrant</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-struck-him.687525/'>A car struck him</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-that-suits-my-budget.1275716/'>a car that suits my budget</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-whose-alarm-was-going-off.3593758/'>A car whose alarm was going off</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-car-with-chrome-swoosh-on-the-sides.2505382/'>A car with chrome swoosh on the sides</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-demonstrator-car.3030047/'>a demonstrator car</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-dog-of-a-car.3359717/'>A dog of a car</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-guy-crashed-into-me-the-girl-in-the-car-said-sorry.2774436/'>A guy crashed into me. The girl in the car said &quot;Sorry!&quot;</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-kind-of-car-a-kind-of-a-car.1552991/'>A kind of car / A kind of a car</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-luxurious-car.2509479/'>a luxurious car</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-new-car-can-set-you-back-a-bit.1978046/'>A new car can set you back a bit</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-pilot-car.2553798/'>A pilot car</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-police-car-is-on-its-way-over-there-now.971585/'>A police car is on its way over there now</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-search-luggage-car.3154870/'>a search (luggage, car)</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-stolen-car-a-car-stolen.774785/'>a stolen car/a car stolen</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-strangers-car.14612/'>a stranger&#39;s car</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-used-car-that-had-new-tyres-subjunctive.2104416/'>a used car that had new tyres - subjunctive?</a> - grammar<br>
+<a target='_blank' href='https://forum.wordreference.com/threads/a-wiper-cleans-it-when-a-car-drives-over-it.864228/'>a wiper cleans it when a car drives over it</a><br>
+<a target='_blank' href='https://forum.wordreference.com/threads/accident-to-on-or-involving-cable-car-not-on-rails.2224877/'>accident to, on or involving cable-car, not on rails</a><br>
+<a href="?forumtitles=1&amp;tranword=Car" title='more...'><strong>more...</strong></a><div class='extra_links'><a href='https://forum.wordreference.com/forums/83/' title="Visit the Spanish-English Forum">Visit the Spanish-English Forum.</a><a href='https://forum.wordreference.com/forums/83/' title="Ask in the forums yourself">Help WordReference: Ask in the forums yourself.</a></div></div><div id='extra_links'><a href='/definition/Car#threadsHeader'><span class='boxed last' title='Discussions in the monolingual forum'>Discussions about &#39;Car&#39; in the English Only forum</span></a></div>
+		<span style="border: 0 none;" id="gtrans" dir="auto"><a href="#" rel="nofollow" onclick="iframeGGapi(); return false">See Google Translate&#39;s machine translation of 'Car'.</a><br></span>
+		<script type="text/javascript">
+		function iframeGGapi() {
+			var sOriginal = 'Car';
+			var DestLang = "es";
+			var SourceLang = "en";
+			document.getElementById('gtrans').innerHTML = "<iframe style='border: 0 none;' src='/2012/GoogTranslate.aspx?dict=" + SourceLang + DestLang + "&w=" + sOriginal + "&sk=t' width='100%' height='55'><\/iframe>";
+			}
+		</script>
+		<p class='other_languages'>In other languages: <a href="/enfr/Car">French</a> | <a href="/enit/Car">Italian</a> | <a href="/enpt/Car">Portuguese</a> | <a href="/enro/Car">Romanian</a> | <a href="/ende/Car">German</a> | <a href="/ennl/Car">Dutch</a> | <a href="/ensv/Car">Swedish</a> | <a href="/enru/Car">Russian</a> | <a href="/enpl/Car">Polish</a> | <a href="/encz/Car">Czech</a> | <a href="/engr/Car">Greek</a> | <a href="/entr/Car">Turkish</a> | <a href="/enzh/Car">Chinese</a> | <a href="/enja/Car">Japanese</a> | <a href="/enko/Car">Korean</a> | <a href="/enar/Car">Arabic</a> </p>
+<div id="oldaudiospan"></div>
+</div>
+<script type='text/javascript' src='/2012/scripts/bundle.min.js?v=07082019084658'></script>
+
+<script type="text/javascript">
+var oTabHC = document.getElementById('tabHC'), oTabWR = document.getElementById('tabWR'), oTabRev = document.getElementById('tabRev');
+if (oTabHC && oTabWR)
+    {
+// only run if both WR and HC tabs
+ 	var idWRD = document.getElementById('articleWRD');
+    
+ oTabHC.onclick = loadCollinsJS;
+ oTabWR.onclick = function() {
+	idWRD.style.display = 'block';
+	idWRD.style.clear = 'both';
+	document.getElementById('collinsdiv').style.display = 'none';
+ //   var ah2 = document.getElementById('mobileAd_holder2');
+ //   if (ah2)
+ //   {
+ //       ah.appendChild(document.getElementById('mobileAd'));
+ //       ah2.style.display = 'none';
+ //   }
+	oTabWR.className= 'selected';
+	oTabHC.className= '';
+    if (oTabWR.querySelector('a'))
+        location.href = oTabWR.querySelector('a').href;
+	return false;
+ };
+if (oTabRev) {
+    oTabRev.onclick = function() {
+	    idWRD.style.display = 'block';
+	    idWRD.style.clear = 'both';
+	    document.getElementById('collinsdiv').style.display = 'none';
+//        var ah2 = document.getElementById('mobileAd_holder2');
+//        if (ah2)
+//        {
+//            ah.appendChild(document.getElementById('mobileAd'));
+//            ah2.style.display = 'none';
+//        }
+	    oTabRev.className= 'selected';
+	    oTabHC.className= '';
+        location.href = oTabRev.querySelector('a').href;
+	    return false;
+     };
+}
+ if (localStorage.getItem) {
+ // if set, then load HC
+  var HCsetDate = localStorage.getItem("HCdefault"),
+	now = new Date().getTime();
+  if ((now-HCsetDate<2629740000)&&(!(window.location.search.indexOf("start=")>0))){loadCollinsJS();}
+ }
+ //  if no WRD content, load HC
+ if(idWRD && idWRD.innerHTML.length < 10){loadCollinsJS();}
+}
+</script>
+
+</td>
+
+<!-- right column -->
+<td id="rightcolumn">
+	<table class="rightcolumn">
+        <tr style='width:100%'><td colspan='2' style='text-align:center;color:gray;'>Advertisements</td></tr><tr style='width:100%'><td colspan='2' id='adrighttop' style='max-height:250px;border-bottom: solid 1px #dcdcdc;padding-bottom:5px'>      <script type='text/javascript'>
+                            googletag.cmd.push(function() {
+                                googletag.display('adrighttop');
+                            });
+                        </script>
+                </td></tr><tr style='width:100%;'><td class='ad wotd' colspan='2' style='padding:0;text-align:center;border-bottom:solid 1px #dcdcdc;border-collapse:collapse'><p style='display:block;margin: 8px 0 8px 0;'><span id='wotdCalendar' style='background-position:0px -39px;background-repeat:no-repeat;'></span><span style='font-weight:bold;position:relative;top:-3px;'>Word of the day: <a href='https://daily.wordreference.com/' style='font-weight:normal'>clear | file</a></span></p></td></tr><tr style='width:100%'><td colspan='2' style='text-align: center;color: gray;'>Advertisements</td></tr><tr><td id ='adrightbottom' class='ad' style='max-height:250px;'>      <script type='text/javascript'>
+                            googletag.cmd.push(function() {
+                                googletag.display('adrightbottom');
+                            });
+                        </script>
+                </td></tr><tr style='width:100%;'><td class='ad' colspan='2' style='text-align:center;border-bottom:solid 1px #dcdcdc;border-collapse:collapse'><p style='margin-right:-2px'><a id='GooglePlay' href='https://play.google.com/store/apps/details?id=com.wordreference' title='Android App' style='background-position:0px -60px;background-repeat:no-repeat;'></a><a href='http://itunes.apple.com/us/app/wordreference-dictionary/id515127233?mt=8&uo=4' id='AppStore' title='iPhone App' style='background-position:0px -110px;background-repeat:no-repeat;'></a></td></tr><tr style='width:100%'><td colspan='2'><a href="/docs/report.ad.aspx?country=ES&amp;number=7" target="_blank" title="Report an inappropriate ad." style="font-size:12px;text-align:left;margin-left:5px;">Infórmanos de los anuncios inapropiados.</a></td></tr><tr style='width:100%'><td colspan='2' class='wrSupportRightAdLink' style='border-top:solid 1px #dcdcdc;border-collapse:collapse;font-size:12px;text-align:left;padding-left:5px;padding-top:10px'><a href="/docs/supporter.aspx" target="_blank" title="WordReference Supporter - no ads">Become a WordReference Supporter to view the site ad-free.</a></td></tr>
+<script type="text/javascript">
+function isFirefox() { return (navigator.userAgent.indexOf('Firefox') > 0);}
+function isChrome() { return (navigator.userAgent.indexOf('Chrome') > 0);}
+if (isFirefox()) {document.writeln('<tr><td colspan="2"><div dir="auto" class="FCboxes" title="Firefox users: use search shortcuts for the fastest search of WordReference."><b style="color:red">Usuario de Firefox<\/b>: usa <a href="\/tools\/Firefox-search-shortcut.aspx">accesos directos<\/a> para acelerar tus búsquedas en WordReference.<\/div></td></tr>');}
+if (isChrome()) {document.writeln('<tr><td colspan="2"><div dir="auto" class="FCboxes" title="Shortcut for Chrome"> <b style="color:red">Chrome users:<\/b> Use <a href="\/tools\/Chrome-search-shortcut.aspx">search shortcuts<\/a> for the fastest search of WordReference.<\/div></td></tr>');}
+</script>
+	</table>
+</td>
+
+</tr>
+</table>
+</div>
+
+<div id="footer">
+<table class='footer'><tr><td><a href="/english/copyright.asp">Copyright</a> © 2019 WordReference.com</td><td style="text-align:right;" title="Please report any problems.">Please <a href="https://forum.wordreference.com/misc/contact">report</a> any problems.</td></tr></table>
+</div>
+</div>
+
+
+<script type="text/javascript">
+window.onresize= function(){
+		return moveWHLinks();
+	}
+
+var moveWHLinks = function (){
+	if(document.body.offsetWidth < 769){
+		if (!document.getElementById('WHlinksmoved')){
+			var WHspan = document.createElement("span");
+				if (document.getElementById("WHlinks")){
+                    WHspan.innerHTML = document.getElementById("WHlinks").innerHTML
+						.replace(/\|/gi, '')
+						.replace('<span id="WHlinks_forMobile">', '<a href="/docs/searchHistory.aspx?dict=' + strDic + '">Search History</a><span id="WHlinks_onMobile">');
+					WHspan.id = 'WHlinksmoved';
+					document.getElementById("footer").insertBefore(WHspan, document.getElementById("footer").children[0]);
+				}
+			}
+		}	
+	};
+
+moveWHLinks();	
+
+//for placeholder text to fade on focus
+if (document.getElementById("si")){
+	document.getElementById("si").onfocus = function(){
+		document.getElementById("si").placeholder = '';
+	};
+}
+</script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript">
+if (document.getElementById("listen_widget")){
+	function addUpgradeNotice(){
+		if (!document.getElementById("audtag")){
+			if (!document.getElementById("ieupgrade")){
+				var upgradeDiv = document.createElement("div");
+				upgradeDiv.id = 'ieupgrade';
+				upgradeDiv.innerHTML = 'The audio on WordReference works best with the latest version of Internet Explorer. <a target="_blank" href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie/">Upgrade now!</a>';
+				document.getElementById("listen_widget").parentElement.insertBefore(upgradeDiv, document.getElementById("listen_widget").nextSibling);
+			}
+		}
+	}
+	
+	document.getElementById("listen_widget").onclick = function(){
+		return addUpgradeNotice();
+	}
+	function dismissUpgrade(){
+		document.getElementById("ieupgrade").parentElement.removeChild(document.getElementById("ieupgrade"));
+	}
+
+}
+</script>
+<![endif]-->
+
+<script>
+    
+    var dMatch = true;
+    var fMatch = false;
+    var isReverseDict = false;
+    var isVirtualDict = false;
+
+    visitor = {
+        browser: 0,
+        browserOS: 1,
+        browserVersion: 0,
+        platform: 0,
+        country: "ES"
+    };
+    
+ga('send', 'event', 'site', 'www', {
+  nonInteraction: true
+});
+
+//ga('send', { hitType: 'event', eventCategory: '', eventAction: 'www'}, {nonInteraction: true});
+/*
+if (typeof GDPRcookieYes !== "undefined") {
+    ga('send', 'GDPRcookieYes', {
+    'dimension3':   GDPRcookieYes.toString()
+    });
+}
+*/
+
+
+    //Report the euconsent cookie state (only for EU users)
+    if(GDPRconsent)
+        ga('send', 'event', 'GDPR', 'GDPR-consent', 'GDPR-consent-' + GDPRconsent, (GDPRconsent ? '1' : '0'), 
+                    { nonInteraction: true, hitCallback: function() { console.log(":> GDPR: GDPR-consent-"  + GDPRconsent + " -> GA"); } });
+    if(GDPRnoConsent)
+        ga('send', 'event', 'GDPR', 'GDPR-noConsent', 'GDPR-noConsent-' + GDPRnoConsent, (GDPRnoConsent ? '1' : '0'), 
+                    { nonInteraction: true, hitCallback: function() { console.log(":> GDPR: GDPR-noConsent-"  + GDPRnoConsent + " -> GA"); } });
+    if(GDPRnoCookie)
+        ga('send', 'event', 'GDPR', 'GDPR-noCookie', 'GDPR-noCookie-' + GDPRnoCookie, (GDPRnoCookie ? '1' : '0'), 
+                    { nonInteraction: true, hitCallback: function() { console.log(":> GDPR: GDPR-noCookie-"  + GDPRnoCookie + " -> GA"); } });
+    if(GDPRconsentAllAccepted)
+        ga('send', 'event', 'GDPR', 'GDPR-consentAllAccepted', 'GDPR-consentAllAccepted-' + GDPRconsentAllAccepted, (GDPRconsentAllAccepted ? '1' : '0'), 
+                    { nonInteraction: true, hitCallback: function() { console.log(":> GDPR: GDPR-consentAllAccepted-"  + GDPRconsentAllAccepted + " -> GA"); } });
+    if(GDPRconsentAllRejected)
+        ga('send', 'event', 'GDPR', 'GDPR-consentAllRejected', 'GDPR-consentAllRejected-' + GDPRconsentAllRejected, (GDPRconsentAllRejected ? '1' : '0'), 
+                    { nonInteraction: true, hitCallback: function() { console.log(":> GDPR: GDPR-consentAllRejected-"  + GDPRconsentAllRejected + " -> GA"); } });
+
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "//www.wordreference.com/es/translation.asp?tranword=",
+      "name": "English-Spanish Dictionary"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "//www.wordreference.com/es/translation.asp?tranword=Car",
+      "name": "Car"
+    }
+  }]
+}
+</script>
+
+
+<script src="/2012/scripts/adBlockerDetector.js"></script>
+</body>
+</html>
