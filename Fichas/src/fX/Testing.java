@@ -138,44 +138,6 @@ public class Testing {
 		
 		
 	}
-	public static ArrayList<String> getAutocomplete(String s){
-		ArrayList<String> elements= new ArrayList<String>();
-		try {
-			String comm="curl 'https://www.wordreference.com/2012/autocomplete/autocomplete.aspx?dict=enes&query="+s+"' -H 'authority: www.wordreference.com' -H 'cache-control: max-age=0' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'sec-fetch-site: none' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: es-ES,es;q=0.9,en;q=0.8' -H 'cookie: _ga=GA1.2.704726212.1532023789; per_Mc_x=cae8e901f6c944e48ad7f084342f1e42; euconsent=BORKE6BORKE6BABABAESBS-AAAAeZ7_______9______9uz_Gv_v_f__33e8__9v_l_7_-___u_-33d4-_1vX99yfm1-7ftr1tp386ues2LDiCA; llang=enesi; per24h=1; _gid=GA1.2.428927050.1565467301; per24c=2; per_M_08=2' --compressed  >com.txt";
-			
-			BufferedWriter writ = new BufferedWriter(new FileWriter("ex"));
-			writ.write("#!/bin/zsh\n");
-			writ.write(comm);
-			writ.close();
-			
-			Process p=Runtime.getRuntime().exec("./ex");
-			p.waitFor();
-			
-			File f= new File("com.txt");
-			BufferedReader br= new BufferedReader(new FileReader(f));
-
-		    String line=br.readLine();
-		    for(int i=0;i<15;++i) {
-		    	if(line==null)break;
-		    	if(line.substring(line.indexOf('\t')).contains("es"))break;
-		    	String w=line.substring(0,line.indexOf('\t'));
-		    	elements.add(w);
-		    	line=br.readLine();
-		    	
-		    }
-			
-			
-			
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
-		return elements;
-	}
 
 	public static ArrayList<String> getData(){
 		ArrayList<String> arrl= new ArrayList<String>();
@@ -184,15 +146,26 @@ public class Testing {
 			 BufferedReader br= new BufferedReader(new FileReader(f));
 
 		    String line=br.readLine();
-		    
+		    try {
 		    while(line!=null&&!line.contains("'pronWR'")) {
 		    	line=br.readLine();
 		    }
 		    String p=line.substring(line.indexOf('['));
 		    p=p.replace("<sup>r</sup>", "ʳ");
+		    StringBuilder sb= new StringBuilder(p);
+		    while(sb.indexOf("<")!=-1&&sb.indexOf("<")<sb.indexOf("]")) {
+		    	if(sb.indexOf(">")!=-1)sb=sb.delete(sb.indexOf("<"), sb.indexOf(">")+1);
+		    	
+		    }
+		    p=sb.toString();
 		    p=p.substring(0, p.indexOf(']')+1);
 		    arrl.add(p);
-		    System.out.println("Pronunciation: "+p+"\n");
+		    }
+		    catch(Exception e) {
+		    	arrl.add("Not found");
+		    	br= new BufferedReader(new FileReader(f));
+		    	line=br.readLine();
+		    }
 		    
 		    while(line!=null&&!line.contains("<div id=\"articleWRD\">")) {
 		    	line=br.readLine();
@@ -218,11 +191,17 @@ public class Testing {
 		    }
 		    if(tmp!=null &&tmp!="")arrl.add(tmp);
 		    
+		    
+		    if(arrl.get(0).equals("Not found")) {
+		    	// TODO Search in Collins
+		    }
+		    
+		    
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
+			// TODO Handle exception
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -247,51 +226,7 @@ public class Testing {
 		}
 		return b;
 	}
-	public static VBox render(Block b,Font f) {
-		VBox whole= new VBox();
-		Node a;
-		double scale=MainWindow.scale;
-		if(b.tr.size()>1) {
-			a= new ComboBox<String>();
-			
-			((ComboBoxBase<String>) a).setEditable(true);
-			for(String ab:b.tr)((ComboBox<String>) a).getItems().add(ab);
-			((ComboBox<String>) a).getSelectionModel().select(0);
-			((ComboBox<String>)a).minWidthProperty().bind(whole.widthProperty().subtract(20*scale));
-		}
-		else {
-			a= new TextField();
-			if(b.tr.size()>0)((TextField) a).setText(b.tr.get(0));
-		}
-		
-		Label l= new Label();
-		if(b.ex_eng.size()>0)l.setText(b.ex_eng.get(0));
-		Node esp;
-		if(b.ex_spa.size()<=1) {
-			esp=new Label();
-			if(b.ex_spa.size()>0)((Labeled) esp).setText(b.ex_spa.get(0));
-		}
-		else {
-			esp= new ChoiceBox<String>();
-			for(String ab:b.ex_spa)((ChoiceBox<String>) esp).getItems().add(ab);
-			((ChoiceBox<String>) esp).getSelectionModel().select(0);
-		}
-		
-		
-		//whole.setFillWidth(true);
-		String fon="-fx-font: "+f.getSize()+"px"+" \""+f.getName()+"\" ;";
-		whole.setStyle(fon);
-		Label l2= new Label("Use: "+b.use);
-		whole.getChildren().addAll(a,l,esp,l2);
-		
-		whole.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-		whole.getStyleClass().add("custom-border");
-		javafx.scene.paint.Color c=javafx.scene.paint.Color.WHITE;
-		whole.setBackground(new Background(new BackgroundFill(c,new CornerRadii(5), Insets.EMPTY)));
-		
-		return whole;
-		
-	}
+	
 	
 	/*
 	public static void main(String[]args) {

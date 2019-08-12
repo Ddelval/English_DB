@@ -4,6 +4,7 @@ public class Example {
 	private String translation;
 	private String eng_example, esp_example;
 	private String use;
+	private String english;
 	private boolean knownEtoS=false;
 	private boolean knownStoE=false;
 	public Example(String eng_example, String esp_example, String translation) {
@@ -32,7 +33,16 @@ public class Example {
 			str=str.substring(str.indexOf('|')+1);
 			if(str.contains("|")) {
 				knownStoE=Boolean.parseBoolean(str.substring(0,str.indexOf('|')));
-				use=str.substring(str.indexOf('|')+1);
+				str=str.substring(str.indexOf('|')+1);
+				if(str.contains("|")) {
+					use=str.substring(0,str.indexOf('|'));
+					english=str.substring(str.indexOf('|'));
+				}
+				else {
+					use=str;
+				}
+				
+				
 			}
 			else {
 				knownStoE=Boolean.parseBoolean(str);
@@ -57,6 +67,8 @@ public class Example {
 		s.append(Boolean.toString((knownStoE)));
 		s.append("|");
 		s.append(use);
+		s.append("|");
+		s.append(english);
 		return s.toString();
 	}
 	public String toBasicString() {
@@ -86,6 +98,9 @@ public class Example {
 	public String getUse() {
 		return use;
 	}
+	public String getEnglish() {
+		return english;
+	}
 	public void setTranslation(String translation) {
 		this.translation = translation;
 	}
@@ -103,6 +118,9 @@ public class Example {
 	}
 	public void setUse(String us) {
 		this.use=us;
+	}
+	public void setEnglish(String en) {
+		this.english=en;
 	}
 	
 }

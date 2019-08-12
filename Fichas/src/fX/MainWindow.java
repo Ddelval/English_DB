@@ -7,6 +7,8 @@ import java.util.Random;
 import java.util.Stack;
 import java.util.Vector;
 
+import javax.swing.GroupLayout.Alignment;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -14,15 +16,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableCell;
@@ -36,6 +43,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -59,14 +68,20 @@ private Font extext;
 private Font extext2;
 private HBox menu;
 private Button b_intro, b_exam, b_consul, b_options, b_StoE;
+public static FlowPane buttonsautocomplete;
+public static ScrollPane scrp,scrplocal;
 private final double M_w=500;
 private final double M_h=110;
 //Introduction scene
 private Font textf;
-private TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, use1, use2, use3,pronun;
-private TextArea indications;
-private Button add;
+public static Text state;
+private static TextField eng, engExamp1,engExamp2, engExamp3, espExamp1, espExamp2, espExamp3, esp1, esp2, esp3, use1, use2, use3,pronun;
+private static TextArea indications;
+private static Button add;
 TextField ex_eng;
+public static VBox tot;
+public static SplitPane s;
+public static GridPane grid;
 private final double I_w=550;
 private final double I_h=860;
 
@@ -124,8 +139,8 @@ public static ConfigData cfd;
 		MainWindow.exceptions="";
 		tit = Font.font("Helvetica",FontWeight.BOLD,20*scale);
 		text = Font.font("Helvetica",FontWeight.LIGHT, 14*scale);
-		head = Font.font("Helvetica Neue",FontWeight.MEDIUM, 15*scale);
-		extext= Font.font("Helvetica Neue", FontWeight.BOLD,17*scale);
+		head = Font.font("Gill Sans",FontWeight.LIGHT, 18*scale);
+		extext= Font.font("Helvetica Neue", FontWeight.BOLD,18*scale);
 		extext2= Font.font("Arial", FontWeight.NORMAL,18*scale);
 		textf= Font.font("Helvetica",FontWeight.NORMAL,12*scale);
 		
@@ -219,6 +234,7 @@ public static ConfigData cfd;
 		return scene;
 	}
 	private Scene introduction(double width,double height) {
+		grid = new GridPane();
 		
 		Text tit = new Text("Addition of words");
 		tit.setFont(MainWindow.tit);
@@ -228,16 +244,14 @@ public static ConfigData cfd;
 		ing.setFont(MainWindow.text);
 		ing.setFontSmoothingType(FontSmoothingType.LCD);
 		Text ex1 = new Text("Example 1");
+		ex1.setTextAlignment(TextAlignment.CENTER);
 		ex1.setFont(head);
-		ex1.setFontSmoothingType(FontSmoothingType.LCD);
 		ex1.setTextAlignment(TextAlignment.CENTER);
 		Text ex2 = new Text("Example 2");
 		ex2.setFont(head);
-		ex2.setFontSmoothingType(FontSmoothingType.LCD);
 		ex2.setTextAlignment(TextAlignment.CENTER);
 		Text ex3 = new Text("Example 3");
 		ex3.setFont(head);
-		ex3.setFontSmoothingType(FontSmoothingType.LCD);
 		ex3.setTextAlignment(TextAlignment.CENTER);
 		Text trad1 = new Text("Translation:");
 		trad1.setFont(MainWindow.text);
@@ -258,13 +272,12 @@ public static ConfigData cfd;
 		use_3.setFont(MainWindow.text);
 		use_3.setFontSmoothingType(FontSmoothingType.LCD);
 		Text indicate = new Text("Use notes");
-		indicate.setFont(MainWindow.text);
+		indicate.setFont(MainWindow.head);
 		indicate.setFontSmoothingType(FontSmoothingType.LCD);
 		Text pronunciation = new Text("Pronunciation");
-		pronunciation.setFont(MainWindow.text);
-		pronunciation.setFontSmoothingType(FontSmoothingType.LCD);
+		pronunciation.setFont(MainWindow.head);
 		
-		Text state = new Text("New");
+		state = new Text("New");
 		state.setFont(MainWindow.tit);
 		state.setFontSmoothingType(FontSmoothingType.LCD);
 		Text suggestions = new Text();
@@ -273,6 +286,13 @@ public static ConfigData cfd;
 		eng = new TextField();
 		eng.setFont(textf);
 		mem=null;
+		eng.textProperty().addListener((observable,oldvalue,newvalue)->{
+			
+			Autocompletator.search(newvalue);
+			FindLocal.find(newvalue);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(newvalue), null);
+			
+		});
 		eng.setOnAction(new EventHandler<ActionEvent>(){
 
 			@Override
@@ -286,6 +306,7 @@ public static ConfigData cfd;
 			}
 			
 		});
+		/*
 		eng.setOnKeyPressed(new EventHandler<KeyEvent>(){
 			
 			@Override
@@ -298,6 +319,7 @@ public static ConfigData cfd;
 							return;
 						}
 						s=eng.getText().substring(0, eng.getText().length()-1);
+						
 						boolean found=false;
 						Iterator<Ficha> it;
 						Ficha f;
@@ -322,6 +344,7 @@ public static ConfigData cfd;
 					}
 					else if(!event.getText().equals("")){
 						s=eng.getText()+event.getText();
+						Autocompletator.search(s);
 						boolean found=false;
 						ArrayList<Ficha> nal= new ArrayList<Ficha>();
 						Iterator<Ficha> it;
@@ -348,7 +371,7 @@ public static ConfigData cfd;
 						}
 						else state.setText("New");
 					}
-					Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(s), null);
+					
 					if(mem!=null&&mem.size()>1&&!s.equals("")) {
 						String str="";
 						Ficha f;
@@ -413,18 +436,20 @@ public static ConfigData cfd;
 				
 			}
 			
-		});
-		HBox buttons= new HBox();
-		ArrayList<String> autores= Testing.getAutocomplete("ca");
+		});*/
+		buttonsautocomplete= new FlowPane();
+		/*ArrayList<String> autores= Testing.getAutocomplete("ca");
 		Button[] autoc= new Button[autores.size()];
 		
 		for(int i=0;i<autores.size();++i) {
 			autoc[i]= new Button(autores.get(i));
-			buttons.getChildren().add(autoc[i]);
+			buttonsautocomplete.getChildren().add(autoc[i]);
 		}
-		buttons.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-		ScrollPane scrp= new ScrollPane(buttons);
-		scrp.minHeightProperty().bind(buttons.heightProperty().add(20));
+		*/
+		//buttonsautocomplete.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		scrp= new ScrollPane(buttonsautocomplete);
+		
+		//scrp.minHeightProperty().bind(buttonsautocomplete.heightProperty().add(50));
 		
 		
 		engExamp1 = new TextField();
@@ -443,7 +468,7 @@ public static ConfigData cfd;
 		
 		indications = new TextArea();
 		indications.setFont(textf);
-		indications.maxWidthProperty().bind(primaryStage.widthProperty());
+		indications.maxWidthProperty().bind(grid.widthProperty().subtract(20));
 		indications.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
@@ -479,7 +504,7 @@ public static ConfigData cfd;
 		pronun = new TextField();
 		pronun.setFont(textf);
 		add= new Button("Add");
-		add.maxWidthProperty().bind(primaryStage.widthProperty());
+		add.maxWidthProperty().bind(grid.widthProperty());
 		add.setFont(MainWindow.text);
 		add.setOnAction((ActionEvent e)->{
 			if(Facade.selectSome(Facade.autotrim(eng.getText())).size()!=0) {
@@ -490,7 +515,7 @@ public static ConfigData cfd;
 			}
 			
 		});
-		engExamp1.minWidthProperty().bind(primaryStage.widthProperty().subtract(30));
+		engExamp1.prefWidthProperty().bind(grid.widthProperty());
 		GridPane.setFillWidth(tit,true);
 		GridPane.setFillWidth(menu, true);
 		GridPane.setFillWidth(eng, true);
@@ -513,20 +538,30 @@ public static ConfigData cfd;
 		GridPane.setFillWidth(pronunciation,true);
 		GridPane.setFillWidth(add,true);
 		GridPane.setFillWidth(indications, true);
+		
+		GridPane.setHalignment(ex1, HPos.CENTER);
+		GridPane.setHalignment(ex2, HPos.CENTER);
+		GridPane.setHalignment(ex3, HPos.CENTER);
+		GridPane.setHalignment(indicate, HPos.CENTER);
+		GridPane.setHalignment(pronunciation, HPos.CENTER);
+		
 		HBox h= new HBox();
 		h.setAlignment(Pos.CENTER);
 		HBox.setMargin(eng, new Insets(0,10*scale,0,10*scale));
 		HBox.setHgrow(eng, Priority.ALWAYS);
 		h.getChildren().addAll(ing,eng,state);
+		VBox top= new VBox();
+		top.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		VBox.setMargin(menu, new Insets(0,0,10*scale,0));
+		top.getChildren().addAll(menu,tit);
 		
-		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
 		grid.setHgap(10*scale);
 		grid.setVgap(10*scale);
 		int row=0;
-		grid.add(menu, 			0, row, 2, 1); row++;
-		grid.add(tit, 			0, row, 2, 1); row++;
+		//grid.add(menu, 			0, row, 2, 1); row++;
+		//grid.add(tit, 			0, row, 2, 1); row++;
 		grid.add(h,            	0, row ,2, 1); row++;
 		grid.add(suggestions,  	0, row ,2, 1); row++;
 		grid.add(scrp,  		0, row ,2, 1); row++;
@@ -560,8 +595,22 @@ public static ConfigData cfd;
 		grid.add(indicate, 		0, row ,2, 1); row++;
 		grid.add(indications, 	0, row ,2, 1); row++;
 		
-		grid.add(add, 0, 21, 2, 1);
-		Scene scene = new Scene(grid,I_w*scale,I_h*scale);
+		grid.add(add,           0, row ,2, 1); row++; 
+		
+		tot= new VBox();
+		s= new SplitPane();
+		SplitPane ss= new SplitPane();
+		s.getItems().add(0,grid);
+		s.getItems().add(1,ss);
+		grid.prefWidthProperty().bind(s.widthProperty());
+		
+		s.setDividerPosition(0, 1);
+		
+		scrplocal= new ScrollPane();
+		ss.setOrientation(Orientation.VERTICAL);
+		ss.getItems().addAll(scrp,scrplocal);
+		tot.getChildren().addAll(top,s);
+		Scene scene = new Scene(tot,I_w*scale,I_h*scale);
 		primaryStage.setX(primaryStage.getX()-(I_w*scale-width)/2);
 		primaryStage.setY(primaryStage.getY()-(I_h*scale+22-height)/2);
 		return scene;
@@ -1758,6 +1807,48 @@ public static ConfigData cfd;
 			mssgWindow();
 		}
 	}
+	
+	
+	
+	public static void prepareInput(Ficha f) {
+		eng.setText(f.getEnglish());
+		pronun.setText(f.getPronunciation());
+		int nex;
+		if(f.getExampVec()!=null)nex=f.getExampVec().size();
+		else nex=0;
+		if(nex>0) {
+			engExamp1.setText(f.getExample(0).getEng_example());
+			espExamp1.setText(f.getExample(0).getEsp_example());
+			esp1.setText(f.getExample(0).getTranslation());
+			use1.setText(f.getExample(0).getUse());
+			if(nex>1) {
+				engExamp2.setText(f.getExample(1).getEng_example());
+				espExamp2.setText(f.getExample(1).getEsp_example());
+				esp2.setText(f.getExample(1).getTranslation());
+				use2.setText(f.getExample(1).getUse());
+				if(nex>2) {
+					engExamp3.setText(f.getExample(2).getEng_example());
+					espExamp3.setText(f.getExample(2).getEsp_example());
+					esp3.setText(f.getExample(2).getTranslation());
+					use3.setText(f.getExample(2).getUse());
+				}
+			}
+		}
+		indications.setText(f.getUse());
+		add.requestFocus();
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 *
 	 * @param width: The width of the previous component
@@ -1998,7 +2089,7 @@ public static ConfigData cfd;
 					if(!up_engExamp3.getText().equals("")) {
 						up_f.addExample((new Example(up_engExamp3.getText(), up_espExamp3.getText(), up_esp3.getText())));
 						up_f.getExample(2).setEtoSKnown(up_known_E_3.isSelected());
-						up_f.getExample(1).setStoEKnown(up_known_S_2.isSelected());
+						up_f.getExample(2).setStoEKnown(up_known_S_2.isSelected());
 
 					}
 					if(up_f.allKnownEtoS()){
@@ -2238,9 +2329,9 @@ public static ConfigData cfd;
 		stage.setScene(scene);
 		stage.show();
 	}
-	public void detail(Ficha f,double width,double height) {
+	public static void detail(Ficha f,double width,double height) {
+		//TODO: Move to another place
 		resStage = new Stage();
-		
 		resStage.setScene(AuxiliarBuilder.displayFicha(f,resStage));
 		resStage.setX(primaryStage.getX()-(AuxiliarBuilder.expWidth-width)/2);
 		resStage.setY(primaryStage.getY()-(AuxiliarBuilder.expHeight+20-height)/2);

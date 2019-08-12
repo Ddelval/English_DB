@@ -47,8 +47,6 @@ public class Voice {
 	public String toString() {
 		return name+" ("+language+"-"+dialect+")";
 	}
-	
-	
-	
+
 }
 
