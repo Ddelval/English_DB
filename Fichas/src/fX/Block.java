@@ -67,7 +67,7 @@ class Block{
 			while(t.endsWith(" "))t=t.substring(0,t.length()-1);
 			el.add(new Element(c,t));
 			//System.out.println(ss);
-			}catch(Exception e) {}
+			}catch(Exception e) {}//Exception is not important. It only means that that Element was not useful
 			
 		}
 		

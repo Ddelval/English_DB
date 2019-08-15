@@ -8,13 +8,13 @@ public class Example {
 	private boolean knownEtoS=false;
 	private boolean knownStoE=false;
 	public Example(String eng_example, String esp_example, String translation) {
-		this.translation=translation;
+		this.translation=translation.toLowerCase();
 		this.eng_example=eng_example;
 		this.esp_example=esp_example;
 		
 	}
 	public Example(String eng_example, String esp_example, String translation, boolean EtoS,boolean StoE) {
-		this.translation=translation;
+		this.translation=translation.toLowerCase();
 		this.eng_example=eng_example;
 		this.esp_example=esp_example;
 		this.knownEtoS=EtoS;
@@ -25,7 +25,7 @@ public class Example {
 		str=str.substring(str.indexOf('|')+1);
 		esp_example= str.substring(0, str.indexOf('|'));
 		str=str.substring(str.indexOf('|')+1);
-		translation= str.substring(0, str.indexOf('|'));
+		translation= str.substring(0, str.indexOf('|')).toLowerCase();
 		str=str.substring(str.indexOf('|')+1);
 		if(str.contains("|")) {
 			//New one

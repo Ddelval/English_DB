@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -24,10 +25,10 @@ public class ConfirmWindow extends Stage {
 		l.setPadding(new Insets(10*sc,10*sc,10*sc,10*sc));
 		l.setWrapText(true);
 		l.setFont(MainWindow.text);
-		b2 = new Button("Confirmar");
+		b2 = new Button("Confirm");
 		b2.setFont(MainWindow.text);
 		b2.minWidthProperty().bind(widthProperty().divide(2).subtract(30*sc));
-		b1 = new Button ("Cancelar");
+		b1 = new Button ("Cancel");
 		b1.setFont(MainWindow.text);
 		b1.minWidthProperty().bind(widthProperty().divide(2).subtract(30*sc));
 		grid = new GridPane();
@@ -43,15 +44,21 @@ public class ConfirmWindow extends Stage {
 		hei=grid.getPrefHeight()+120*sc;
 		sc1 = new Scene(grid,wid,hei);
 		setScene(sc1);
-		setX(MainWindow.primaryStage.getX()-(wid-MainWindow.primaryStage.getWidth())/2);
-		setY(MainWindow.primaryStage.getY()-(hei-MainWindow.primaryStage.getHeight())/2);
+		setX(MainWindow.getX()-(wid-MainWindow.getW())/2);
+		setY(MainWindow.getY()-(hei-MainWindow.getH())/2);
 		show();
 		b1.requestFocus();
 	}
 	public void setCancelEvent(EventHandler<ActionEvent> e) {
 		b1.setOnAction(e);
+		b1.setOnKeyPressed(ev->{
+			if(ev.getCode()==KeyCode.ENTER)b1.getOnAction().handle(new ActionEvent());
+		});
 	}
 	public void setOkEvent(EventHandler<ActionEvent> e) {
 		b2.setOnAction(e);
+		b2.setOnKeyPressed(ev->{
+			if(ev.getCode()==KeyCode.ENTER)b2.getOnAction().handle(new ActionEvent());
+		});
 	}
 }

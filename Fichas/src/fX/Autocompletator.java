@@ -9,8 +9,8 @@ public class Autocompletator {
 	public static void search(String s){
 		System.out.println("Interrupting-1");
 		if(e!=null&&e.isAlive()) {
-			e.interrupt();
 			try {
+				e.interrupt();
 				e.join();
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block

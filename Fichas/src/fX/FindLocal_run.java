@@ -5,10 +5,6 @@ import java.util.Iterator;
 import java.util.Stack;
 
 import javafx.application.Platform;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 
 public class FindLocal_run extends Thread {
 	private String text;
@@ -40,10 +36,7 @@ public class FindLocal_run extends Thread {
 					
 				}
 			}
-			//TODO Change implementation of this code
-			if  (found) MainWindow.state.setText("Not new");
-			else 		MainWindow.state.setText("New"); 
-				
+			MainWindow.updateStatus(found);
 			if(candidates.size()<N) {
 				it=FindLocal.his.peek().res.iterator();
 				while(it.hasNext()) {
@@ -76,7 +69,7 @@ public class FindLocal_run extends Thread {
 			}
 			
 		});
-		this.stop();
+		
 		
 		
 	}

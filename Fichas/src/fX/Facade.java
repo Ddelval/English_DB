@@ -6,8 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,9 +16,6 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.Vector;
 
 import javafx.collections.FXCollections;
@@ -173,7 +168,7 @@ public class Facade {
 				ps.execute();
 				b=true;
 			}
-			catch(Exception e){b=false;}
+			catch(Exception e){b=false;e.printStackTrace();}
 			if(b) return;
 			ex.printStackTrace();
 			MainWindow.exceptions=ex.getMessage();
@@ -184,6 +179,14 @@ public class Facade {
 	 *  This method creates a file that starts with the length of the database, then a separator(\n\n@\n) and then all Ficha objects with separators between them
 	 * @param path:the path to which the file is written
 	 */
+	public static void initialCheck() {
+		
+		execute("CREATE TABLE log (count INTEGER IDENTITY, eng VARCHAR(100), Examp VARCHAR(10000), pronunciation VARCHAR(100), use VARCHAR (10000), knownEtoS BOOLEAN DEFAULT FALSE NOT NULL,knownStoE BOOLEAN DEFAULT FALSE NOT NULL, PRIMARY KEY (count))",false);
+		execute("CREATE TABLE config (id VARCHAR(100),data VARCHAR (100),PRIMARY KEY (id))",false);
+		
+		
+		
+	}
 	public static void backup(String path) {
 		StringBuilder sbp = new StringBuilder(path);
 		StringBuilder sb = new StringBuilder("");
@@ -204,15 +207,13 @@ public class Facade {
 		Path file = Paths.get(sbp.toString());
 		try {
 			Files.write(file, sb.toString().getBytes("UTF-8"));
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			MainWindow.exceptions=e.getMessage();
 		}
 	}
+	
 	public static void restore(String path) {
 		Path file = Paths.get(path);
 		String data="";
@@ -450,7 +451,7 @@ public class Facade {
 			
 		}
 		catch(Exception ex) {
-			
+			ex.printStackTrace();
 			MainWindow.exceptions=ex.getMessage();
 			
 		}
@@ -474,7 +475,7 @@ public class Facade {
 			
 		}
 		catch(Exception ex) {
-			
+			ex.printStackTrace();
 			MainWindow.exceptions=ex.getMessage();
 			
 		}
@@ -616,25 +617,29 @@ public class Facade {
 
 		} catch (Exception e) {
 			MainWindow.exceptions=e.getMessage();
+			e.printStackTrace();
 		}
 		return arr;
 		
 	}
 	public static ArrayList<String> getData(String word){
 		ArrayList<String> arrl= new ArrayList<String>();
+		BufferedReader br = null;
 		
 		try {
-			String comm="curl 'https://www.wordreference.com/es/translation.asp?tranword="+word+"' -H 'authority: www.wordreference.com' -H 'cache-control: max-age=0' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'sec-fetch-site: none' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: es-ES,es;q=0.9,en;q=0.8' -H 'cookie: _ga=GA1.2.704726212.1532023789; per_Mc_x=cae8e901f6c944e48ad7f084342f1e42; euconsent=BORKE6BORKE6BABABAESBS-AAAAeZ7_______9______9uz_Gv_v_f__33e8__9v_l_7_-___u_-33d4-_1vX99yfm1-7ftr1tp386ues2LDiCA; llang=enesi; per24h=1; _gid=GA1.2.428927050.1565467301; per24c=2; per_M_08=2' --compressed  >web.txt";
+			String comm=MainWindow.cfd.getWord_1+word+MainWindow.cfd.getWord_2;
 			
 			BufferedWriter writ = new BufferedWriter(new FileWriter("ex"));
-			writ.write("#!/bin/zsh\n");
+			writ.write("#!/bin/bash\n");
 			writ.write(comm);
 			writ.close();
 			
-			Process p=Runtime.getRuntime().exec("./ex");
+			Process p=Runtime.getRuntime().exec("chmod +x ./ex ");
+			p.waitFor();
+			p=Runtime.getRuntime().exec("./ex");
 			p.waitFor();
 			File f= new File("web.txt");
-			 BufferedReader br= new BufferedReader(new FileReader(f));
+			 br= new BufferedReader(new FileReader(f));
 
 		    String line=br.readLine();
 		    try {
@@ -654,6 +659,7 @@ public class Facade {
 		    }
 		    catch(Exception e) {
 		    	arrl.add("Not found");
+		    	br.close();
 		    	br= new BufferedReader(new FileReader(f));
 		    	line=br.readLine();
 		    }
@@ -687,17 +693,12 @@ public class Facade {
 		    	// TODO Search in Collins
 		    }
 		    
-		    
-		} catch (MalformedURLException e) {
-			// TODO Handle exception
-			e.printStackTrace();
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
+		    if(br!=null)br.close();
+		}catch (Exception e1) {
+			MainWindow.exceptions=e1.getMessage();
 			e1.printStackTrace();
 		}
+		
 		return arrl;
 	}
 	

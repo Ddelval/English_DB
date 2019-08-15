@@ -2,7 +2,6 @@ package fX;
 
 import java.util.ArrayList;
 import java.util.Stack;
-import java.util.Vector;
 
 public class FindLocal {
 	public static Stack<LocalHistory> his;

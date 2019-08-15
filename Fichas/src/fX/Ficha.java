@@ -125,17 +125,6 @@ public class Ficha {
 	public boolean getExampleKnownStoE(int i) {
 		if(i<examp.size()) return examp.elementAt(i).getStoEKnown();
 		return false;
-		/*if(i<examp.size()) {
-			if( examp.elementAt(i).getStoEKnown()) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		else {
-			return false;
-		}*/
 	}
 	
 	

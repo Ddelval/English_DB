@@ -33,8 +33,8 @@ public class Mssgwindow extends Stage {
 		hei=l.getBoundsInLocal().getHeight()+50*scale;
 		Scene sc = new Scene(l,wid,hei);
 		this.setScene(sc);
-		setX(MainWindow.primaryStage.getX()-(wid-MainWindow.primaryStage.getWidth())/2);
-		setY(MainWindow.primaryStage.getY()-(hei+12-MainWindow.primaryStage.getHeight())/2);
+		setX(MainWindow.getX()-(wid-MainWindow.getW())/2);
+		setY(MainWindow.getY()-(hei+12-MainWindow.getH())/2);
 		this.show();
 		
 	}

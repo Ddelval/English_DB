@@ -2,12 +2,8 @@ package fX;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
-import java.util.Stack;
 import java.util.Vector;
-
-import javax.swing.GroupLayout.Alignment;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -20,14 +16,12 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
@@ -37,13 +31,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -61,7 +53,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 public class MainWindow extends Application{
 
-public static Stage primaryStage;
+private static Stage primaryStage;
 public static Font tit, head;
 public static Font text;
 public static Font extext;
@@ -84,8 +76,6 @@ public static GridPane grid;
 private final double I_w=650;
 private final double I_h=860;
 
-Stack<ArrayList<Ficha>> mem;
-private final int s_amount=10;
 
 // Exam scene
 private Label ex_pronun;
@@ -127,6 +117,7 @@ public static double scale=1;
 public static ConfigData cfd;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		Facade.initialCheck();
 		cfd= new ConfigData();
 		scale=cfd.scaling;
 		/***  Fonts definition  ***/
@@ -140,10 +131,19 @@ public static ConfigData cfd;
 		
 		
 		/***  Initialization ***/
+		exceptions= new String();
 		MainWindow.primaryStage=primaryStage;
 		MainWindow.primaryStage.setTitle("Vocabulary Archive");
 		MainWindow.primaryStage.setScene(mainMenu());
 		MainWindow.primaryStage.show();
+		
+		primaryStage.setOnCloseRequest(e->{
+			exceptions="";
+			Facade.backup(cfd.backupPath);
+			if(exceptions!=null&&!exceptions.isEmpty()) {
+				mssgWindow("Error in automated backup");
+			}
+		});
 		
 	}
 	private Scene mainMenu () {
@@ -279,7 +279,6 @@ public static ConfigData cfd;
 		suggestions.setFont(textf);
 		eng = new TextField();
 		eng.setFont(textf);
-		mem=null;
 		eng.textProperty().addListener((observable,oldvalue,newvalue)->{
 			
 			Autocompletator.search(newvalue);
@@ -287,20 +286,18 @@ public static ConfigData cfd;
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(newvalue), null);
 			
 		});
-		eng.setOnAction(new EventHandler<ActionEvent>(){
+		EventHandler<KeyEvent> evhand=new EventHandler<KeyEvent>() {
 
 			@Override
-			public void handle(ActionEvent event) {
-				if(Facade.selectSome(Facade.autotrim(eng.getText())).size()!=0) {
-					mssgWindow("This word is already in the system.");
+			public void handle(KeyEvent event) {
+				if(event.getCode()==KeyCode.ENTER) {
+					add.requestFocus();
 				}
-				else {
-					mssgWindow("This word is NOT in the system.");
-				}
+				
 			}
 			
-		});
-		
+		};
+		eng.setOnKeyPressed(evhand);
 		
 		engExamp1 = new TextField();
 		engExamp2 = new TextField();
@@ -315,6 +312,13 @@ public static ConfigData cfd;
 		espExamp1.setFont(textf);
 		espExamp2.setFont(textf);
 		espExamp3.setFont(textf);
+		
+		engExamp1.setOnKeyPressed(evhand);
+		engExamp2.setOnKeyPressed(evhand);
+		engExamp3.setOnKeyPressed(evhand);
+		espExamp1.setOnKeyPressed(evhand);
+		espExamp2.setOnKeyPressed(evhand);
+		espExamp3.setOnKeyPressed(evhand);
 		
 		indications = new TextArea();
 		indications.setFont(textf);
@@ -343,6 +347,10 @@ public static ConfigData cfd;
 		esp2.setFont(textf);
 		esp3.setFont(textf);
 		
+		esp1.setOnKeyPressed(evhand);
+		esp2.setOnKeyPressed(evhand);
+		esp3.setOnKeyPressed(evhand);
+		
 		use1 = new TextField();
 		use2 = new TextField();
 		use3 = new TextField();
@@ -351,6 +359,10 @@ public static ConfigData cfd;
 		use2.setFont(textf);
 		use3.setFont(textf);
 		
+		use1.setOnKeyPressed(evhand);
+		use2.setOnKeyPressed(evhand);
+		use3.setOnKeyPressed(evhand);
+		
 		pronun = new TextField();
 		pronun.setFont(textf);
 		add= new Button("Add");
@@ -358,11 +370,37 @@ public static ConfigData cfd;
 		add.setFont(MainWindow.text);
 		add.setOnAction((ActionEvent e)->{
 			if(Facade.selectSome(Facade.autotrim(eng.getText())).size()!=0) {
-				confirmWindowintro("This word is already in the system. Are you sure you wan to include it?");
+				
+				Platform.runLater(new Runnable() {
+				    @Override
+				    public void run() {
+				    	ConfirmWindow m= new ConfirmWindow("This word is already in the system. Are you sure you wan to include it?");
+				    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent event) {
+								add();
+								m.close();
+							}
+				    	};
+				    	m.setOkEvent(e1);
+				    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent event) {
+								m.close();	
+							}
+				    	};
+				    	m.setCancelEvent(e2);
+				    }
+				});
 			}
 			else {
 				add();
 			}
+			eng.requestFocus();
+			
+		});
+		add.setOnKeyPressed(e->{
+			if(e.getCode()==KeyCode.ENTER) add.getOnAction().handle(new ActionEvent());
 			
 		});
 		engExamp1.prefWidthProperty().bind(grid.widthProperty());
@@ -474,6 +512,12 @@ public static ConfigData cfd;
 		return scene;
 		
 	}
+	public static void finishInsert() {
+		eng.clear();
+		eng.setPromptText("Enter successfully");
+		eng.requestFocus();
+		
+	}
 	public static void setWRsuggestions(ArrayList<String> elements) {
 		VBox whole= new VBox();
 		Text t = new Text("WR suggestions");
@@ -498,11 +542,6 @@ public static ConfigData cfd;
 	    VBox.setMargin(res, new Insets(10*scale,0,0,0));
 	    whole.getChildren().addAll(t,res);
 		scrp.setContent(whole);
-		
-		
-		
-		
-		
 	}
 	public static void setLocalsuggestions(ArrayList<Ficha>candidates) {
 		VBox whole= new VBox();
@@ -528,8 +567,10 @@ public static ConfigData cfd;
 		whole.getChildren().addAll(t,res);
 		VBox.setMargin(res, new Insets(10*scale,0,0,0));
 		scrplocal.setContent(whole);
-		
-		
+	}
+	public static void updateStatus(boolean alreadypresent) {
+		if(alreadypresent)state.setText("Not new");
+		else state.setText("New");
 	}
 	private Scene examEtoS (double width,double height) {
 		ex_f = Facade.getRndFichaEtoS();
@@ -637,6 +678,7 @@ public static ConfigData cfd;
 		primaryStage.setY(primaryStage.getY()-(E_h*scale+22-height)/2);
 		if(cfd.s_readauto) {
 			Facade.SpeakwDelay(ex_examp.getText());
+			mssgWindow();
 		}
 		
 		
@@ -727,14 +769,6 @@ public static ConfigData cfd;
 		return scene;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * 
@@ -1252,7 +1286,7 @@ public static ConfigData cfd;
 			public void handle(MouseEvent event) {
 				if(event.getClickCount()==2) {
 				Ficha f=new Ficha(table.getSelectionModel().getSelectedItem());
-				detail(f,primaryStage.getWidth(),primaryStage.getHeight());
+				MainWindow.detail(f,primaryStage.getWidth(),primaryStage.getHeight());
 				}
 			}
 			
@@ -1263,7 +1297,7 @@ public static ConfigData cfd;
 			public void handle(KeyEvent event) {
 				if(event.getCode()==KeyCode.ENTER) {
 					Ficha f=new Ficha(table.getSelectionModel().getSelectedItem());
-					detail(f,primaryStage.getWidth(),primaryStage.getHeight());
+					MainWindow.detail(f,primaryStage.getWidth(),primaryStage.getHeight());
 				}
 				
 			}
@@ -1282,7 +1316,7 @@ public static ConfigData cfd;
 						v.add(table.getSelectionModel().getSelectedItems().get(j));
 					}
 					
-					confirmWindow("¿Desea eliminar "+i.size()+" filas?", v);
+					MainWindow.confirmWindow("¿Desea eliminar "+i.size()+" filas?", v);
 					data=Facade.selectAll();
 					table.setItems(data);
 					table.refresh();
@@ -1292,7 +1326,7 @@ public static ConfigData cfd;
 				}
 				else {
 					//There is only one row selected
-					confirmWindow("¿Desea eliminar "+(data.get(table.getSelectionModel().getSelectedIndex()).getEnglish())+"?",table.getSelectionModel().getSelectedItem().getDBkey());
+					MainWindow.confirmWindow("¿Desea eliminar "+(data.get(table.getSelectionModel().getSelectedIndex()).getEnglish())+"?",table.getSelectionModel().getSelectedItem().getDBkey());
 					data=Facade.selectAll();
 					table.setItems(data);
 					table.refresh();
@@ -1310,7 +1344,7 @@ public static ConfigData cfd;
 			if(table.getSelectionModel().getSelectedIndex()!=-1) {
 				if( table.getSelectionModel().getSelectedIndices().size()<2) {
 					//There is only one row selected
-					editWindow(new Ficha(table.getSelectionModel().getSelectedItem()),primaryStage.getWidth(),primaryStage.getHeight());
+					MainWindow.editWindow(new Ficha(table.getSelectionModel().getSelectedItem()),primaryStage.getWidth(),primaryStage.getHeight());
 					
 					
 				}
@@ -1392,7 +1426,7 @@ public static ConfigData cfd;
 		adjust.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		
 		Text scal = new Text("Select the scale for the graphical interface:");
-		scal.setFont(text);
+		scal.setFont(head);
 		TextField ts = new TextField(Double.toString(cfd.scaling));
 		ts.setFont(textf);
 		ts.setOnAction((ActionEvent e)->{
@@ -1410,14 +1444,24 @@ public static ConfigData cfd;
 		resetEtoS = new Button ("English to Spanish");
 		resetEtoS.setFont(text);
 		resetEtoS.setOnAction((ActionEvent e)->{
-			confirmWindowEtoS("Are you sure you want to make every register as unknown from English to Spanish?");
+			MainWindow.confirmWindowEtoS("Are you sure you want to make every register as unknown from English to Spanish?");
 		});
 		Button resetStoE = new Button("Spanish to English");
 		resetStoE.setFont(text);
 		resetStoE.setOnAction((ActionEvent e)->{
-			confirmWindowStoE("Are you sure you want to make every register as unknown from Spanish to English?");
+			MainWindow.confirmWindowStoE("Are you sure you want to make every register as unknown from Spanish to English?");
 		});
-		
+		Text t2 = new Text ("Retrocompatibility");
+		t2.setFont(head);
+		t2.setTextAlignment(TextAlignment.LEFT);
+		CheckBox cbb1= new CheckBox("Insert existing use data into the examples");
+		cbb1.setSelected(MainWindow.cfd.convertUses);
+		cbb1.setAllowIndeterminate(false);
+		cbb1.setOnAction(e->{
+			MainWindow.cfd.update_convertUses(cbb1.isSelected());
+			MainWindow.cfd.convertUses=cbb1.isSelected();
+		});
+		cbb1.setFont(text);
 		GridPane g = new GridPane();
 		GridPane.setFillWidth(resetEtoS, true);
 		GridPane.setFillWidth(resetStoE, true);
@@ -1432,6 +1476,9 @@ public static ConfigData cfd;
 		g.add(t, 0, 2,2,1);
 		g.add(resetEtoS, 0, 3);
 		g.add(resetStoE, 1, 3);
+		g.add(t2, 0, 4);
+		g.add(cbb1, 0, 5,2,1);
+		GridPane.setHalignment(cbb1, HPos.CENTER);
 		g.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		adjust.setContent(g);
 		adjust.setClosable(false);
@@ -1564,7 +1611,7 @@ public static ConfigData cfd;
 				e.consume();
 				cfd.update_s_speed(Integer.parseInt(tf.getText()));
 			}
-			catch(Exception ex) {}
+			catch(Exception ex) {exceptions=ex.getMessage();}
 			mssgWindow();
 		});
 		CheckBox ceeb= new CheckBox();
@@ -1598,7 +1645,7 @@ public static ConfigData cfd;
 				e.consume();
 				cfd.update_s_delay(Integer.parseInt(dl.getText()));
 			}
-			catch(Exception ex) {}
+			catch(Exception ex) {exceptions=ex.getMessage(); }
 			mssgWindow();
 		});
 		CheckBox cbb= new CheckBox("Show all installed voices");
@@ -1666,11 +1713,65 @@ public static ConfigData cfd;
 		va.setAlignment(Pos.TOP_CENTER);
 		voice.setContent(va);
 		voice.setClosable(false);
+		
+		//Network
+		
+		Tab network = new Tab ("Network");
+		network.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
+		
+		Text autoc = new Text("Fetching autocomplete data:");
+		autoc.setFont(head);
+		TextField auto1 = new TextField(cfd.autoco_1);
+		TextField auto2 = new TextField(cfd.autoco_2);
+		auto1.setFont(textf);
+		auto2.setFont(textf);
+		auto1.setOnAction((ActionEvent e)->{
+			cfd.update_autoco(auto1.getText(), auto2.getText());
+		});
+		auto2.setOnAction((ActionEvent e)->{
+			cfd.update_autoco(auto1.getText(), auto2.getText());
+		});
+		
+		Text sear = new Text("Fetching search data:");
+		sear.setFont(head);
+		TextField sear1 = new TextField(cfd.getWord_1);
+		TextField sear2 = new TextField(cfd.getWord_2);
+		sear1.setFont(textf);
+		sear2.setFont(textf);
+		sear1.setOnAction((ActionEvent e)->{
+			cfd.update_getWord(auto1.getText(), auto2.getText());
+		});
+		sear2.setOnAction((ActionEvent e)->{
+			cfd.update_getWord(auto1.getText(), auto2.getText());
+		});
+		
+		GridPane g2 = new GridPane();
+
+		auto1.prefWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20*scale));
+		auto2.prefWidthProperty().bind(primaryStage.widthProperty().divide(2).subtract(20*scale));
+		g2.setHgap(10*scale);
+		g2.setVgap(10*scale);
+		g2.add(autoc, 0, 0,2,1);
+		g2.add(auto1, 0, 1,1,1);
+		g2.add(auto2, 1, 1,1,1);
+		
+		g2.add(sear, 0,  2,2,1);
+		g2.add(sear1, 0, 3,1,1);
+		g2.add(sear2, 1, 3,1,1);
+
+		g2.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		network.setContent(g2);
+		network.setClosable(false);
+		
+		
+		
+		
 		consol.getContent().setId("tabborder");
 		backup.getContent().setId("tabborder");
 		voice.getContent().setId("tabborder");
 		adjust.getContent().setId("tabborder");
-		tp.getTabs().addAll(consol,backup,voice,adjust);
+		network.getContent().setId("tabborder");
+		tp.getTabs().addAll(consol,backup,voice,network,adjust);
 		VBox vb= new VBox();
 		vb.setAlignment(Pos.TOP_CENTER);
 		VBox.setVgrow(tp, Priority.ALWAYS);
@@ -1706,7 +1807,7 @@ public static ConfigData cfd;
 				f.addExample(e);
 			}
 			Facade.addDB(f);
-			if(exceptions.equals("")) {
+			if(exceptions==null||exceptions.isEmpty()) {
 				eng.clear();
 				engExamp1.clear();
 				engExamp2.clear();
@@ -1722,7 +1823,6 @@ public static ConfigData cfd;
 				use3.clear();
 				pronun.clear();
 				indications.clear();
-				mem=null;
 				eng.setPromptText("Enter successfully");
 			}
 			mssgWindow();
@@ -1764,18 +1864,7 @@ public static ConfigData cfd;
 		
 	}
 
-	/**
-	 *
-	 * @param width: The width of the previous component
-	 * @param height: The height of the previous component
-	 */
-	/*private void setPositionOnScreen(double width, double height){
-		primaryStage.setX(primaryStage.getX()-(primaryStage.getWidth()-width)/2);
-		primaryStage.setY(primaryStage.getY()-(primaryStage.getHeight()-height)/2);
-		
-		
-	}
-	*/
+
 	static public void mssgWindow() {
 		if(exceptions==null) exceptions="";
 		if(!exceptions.equals("")) {
@@ -1796,7 +1885,7 @@ public static ConfigData cfd;
 			
 		
 	}
-	public void confirmWindow(String s, Object list) {
+	public static void confirmWindow(String s, Object list) {
 		Platform.runLater(new Runnable() {
 		    @Override
 		    public void run() {
@@ -1833,7 +1922,7 @@ public static ConfigData cfd;
 		    }
 		});
 	}
-	public void confirmWindowEtoS(String s) {
+	public static void confirmWindowEtoS(String s) {
 		
 		Platform.runLater(new Runnable() {
 		    @Override
@@ -1860,7 +1949,7 @@ public static ConfigData cfd;
 		
 	}
 	
-	public void confirmWindowStoE(String s) {
+	public static void confirmWindowStoE(String s) {
 		
 		Platform.runLater(new Runnable() {
 		    @Override
@@ -1886,54 +1975,37 @@ public static ConfigData cfd;
 		});
 		
 	}
-	public void confirmWindowintro(String s) {
-		
-		Platform.runLater(new Runnable() {
-		    @Override
-		    public void run() {
-		    	ConfirmWindow m= new ConfirmWindow(s);
-		    	EventHandler<ActionEvent> e1 = new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent event) {
-						add();
-						m.close();
-					}
-		    	};
-		    	m.setOkEvent(e1);
-		    	EventHandler<ActionEvent> e2 = new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent event) {
-						m.close();	
-					}
-		    	};
-		    	m.setCancelEvent(e2);
-		    }
-		});
-	}
-	public void editWindow(Ficha f, double width, double height) {
+	public static void editWindow(Ficha f, double width, double height) {
 		EditWindow e= new EditWindow(f);
 		
-		e.setX(primaryStage.getX()-(420-width)/2);
-		e.setY(primaryStage.getY()-(772-height)/2);
+		e.setX(getX()-(420-width)/2);
+		e.setY(getY()-(772-height)/2);
 		e.show();
 	}
 	public static void detail(Ficha f,double width,double height) {
 		//TODO: Move to another place
-		resStage = new Stage();
+		Stage resStage = new Stage();
 		resStage.setScene(AuxiliarBuilder.displayFicha(f,resStage));
-		resStage.setX(primaryStage.getX()-(AuxiliarBuilder.expWidth-width)/2);
-		resStage.setY(primaryStage.getY()-(AuxiliarBuilder.expHeight+20-height)/2);
+		resStage.setX(getX()-(AuxiliarBuilder.expWidth-width)/2);
+		resStage.setY(getY()-(AuxiliarBuilder.expHeight+20-height)/2);
 		resStage.show();
 		
 	}
+	
+	
+	public static double getX() {
+		return primaryStage.getX();
+	}
+	public static double getY() {
+		return primaryStage.getY();
+	}
+	public static double getW() {
+		return primaryStage.getWidth();
+	}
+	public static double getH() {
+		return primaryStage.getHeight();
+	}
 	public static void main (String[]args) {
-		
-//			Platform.runLater(new Runnable() {
-//				public void run() {
-//					AutoselectWindow aw= new AutoselectWindow();
-//				}
-//			});
-//			
 		
 		launch(args);
 	}

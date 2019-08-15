@@ -18,7 +18,7 @@ public class Speak extends Thread {
 	}
 	public void run() {
 		try {
-			if(tim!=0)this.sleep(tim);
+			if(tim!=0)sleep(tim);
 			String s="say -v "+voice+" -r "+Integer.toString(speed)+" "+text;
 			Process p=Runtime.getRuntime().exec(s);
 			int exitVal =p.waitFor();

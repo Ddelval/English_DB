@@ -1,5 +1,7 @@
 package fX;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -81,7 +83,12 @@ public class AutoselectWindow extends Stage {
 		HBox h= new HBox();
 		h.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale) );
 		h.getChildren().addAll(eng,pronun);
-		
+		try {
+			word=URLEncoder.encode(word,StandardCharsets.UTF_8.toString());
+		}catch(Exception e) {
+			MainWindow.exceptions=e.getMessage();
+			e.printStackTrace();
+		}
 		dat=Block.getWord(word);
 		
 		pronun.setText(dat.get(0).eng);
@@ -171,12 +178,12 @@ public class AutoselectWindow extends Stage {
 					//Not selected;
 					c.setEffect(d2);
 					selected.add(dic.get(c.toString()));
-					System.out.println("Adding: "+Integer.toString(dic.get(c.toString())));
+					//System.out.println("Adding: "+Integer.toString(dic.get(c.toString())));
 				}
 				else {
 					//Already selected
 					c.setEffect(d);
-					System.out.println("Removing: "+Integer.toString(dic.get(c.toString())));
+					//System.out.println("Removing: "+Integer.toString(dic.get(c.toString())));
 					selected.remove(dic.get(c.toString()));
 				}
 				
@@ -197,6 +204,7 @@ public class AutoselectWindow extends Stage {
 			while(selected.size()>0) arrl.add(createFicha());
 			Facade.insertAll(arrl);
 			this.close();
+			MainWindow.finishInsert();
 		});
 		Button fc= new Button("Finish and check");
 		fc.setOnAction(e->{
@@ -226,7 +234,7 @@ public class AutoselectWindow extends Stage {
 		}
 		scrll.setMaxWidth(wid-20*scale);
 		wrap.setMaxWidth(wid-20*scale);
-		hei=500-90*(Math.max(0,4-mem.size()))+50*scale;
+		hei=500-80*(Math.max(0,4-mem.size()))+50*scale;
 		Scene sc= new Scene(tot,wid,hei);
 		sc.getStylesheets().add("Data.css");
 		this.setScene(sc);
@@ -236,7 +244,7 @@ public class AutoselectWindow extends Stage {
 		
 	}
 	private Ficha createFicha() {
-		Ficha f= new Ficha(word,pronun.getText(),"");
+		Ficha f= new Ficha(word.toLowerCase(),pronun.getText(),"");
 		int added=0;
 		ArrayList<Integer> tmp= new ArrayList<Integer>();
 		for(int i:selected) {
@@ -268,7 +276,7 @@ public class AutoselectWindow extends Stage {
 			}
 		
 			
-			Example examp= new Example(eng,esp,tra);
+			Example examp= new Example(eng,esp,tra.toLowerCase());
 			examp.setUse(use);
 			examp.setEnglish(b.eng);
 			f.addExample(examp);
