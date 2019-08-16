@@ -150,7 +150,8 @@ public class Ficha {
 		
 	}
 	public void addExamplesUse() {
-		for(Example e:examp)if(e.getUse()!=null&&!e.getUse().equals(""))return;
+		if(MainWindow.cfd.convertUses==false) return;
+		for(Example e:examp)if((e.getUse()!=null||e.getUse().equals(""))&&!e.getUse().equals(""))return;
 		
 		StringTokenizer strt= new StringTokenizer(use,"\n");
 		if(strt.countTokens()==examp.size()) {

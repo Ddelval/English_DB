@@ -96,10 +96,8 @@ public class ConfigData {
 		if(aux!="")getWord_2=aux;
 		else autoco_2=C_autoco_2;
 		
-		aux=Facade.getConfig("convertUses");
-		MainWindow.mssgWindow();
-		if(aux!="")convertUses=(aux.equals("0"))? false:true;
-		else convertUses=C_convertUses;
+
+		convertUses=C_convertUses;
 		
 	}
 	public void update_backupPath (String s) {
@@ -155,7 +153,7 @@ public class ConfigData {
 	}
 	public void update_convertUses (boolean b) {
 		convertUses=b;
-		Facade.updateConfig("convertUses", b? "1":"0");
-		MainWindow.mssgWindow();
+		//Facade.updateConfig("convertUses", b? "1":"0");
+		//MainWindow.mssgWindow();
 	}
 }

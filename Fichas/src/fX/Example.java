@@ -53,6 +53,9 @@ public class Example {
 			//Old one
 			knownEtoS=Boolean.parseBoolean(str);
 		}
+		if (use==null) {
+			use="";
+		}
 		
 	}
 	public String toString() {
@@ -65,10 +68,16 @@ public class Example {
 		s.append(Boolean.toString(knownEtoS));
 		s.append("|");
 		s.append(Boolean.toString((knownStoE)));
-		s.append("|");
-		s.append(use);
-		s.append("|");
-		s.append(english);
+		if(use!=null&&!use.equals("")) {
+			s.append("|");
+			s.append(use);
+		}
+		if(english!=null&&!english.equals("")) {
+			s.append("|");
+			s.append(english);
+		}
+		
+		
 		return s.toString();
 	}
 	public String toBasicString() {

@@ -1,0 +1,6 @@
+outside	en	10152	0
+outsider	en	1725	0
+outside-right	en	80	0
+outside-forward	en	57	0
+outside-left	en	36	0
+outsider	es	44	0

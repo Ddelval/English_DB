@@ -79,6 +79,8 @@ public class Facade {
 		}
 		return sb.toString();
 	}
+	
+	
 	/**
 	 * 
 	 * @param sql The statement to be executed
@@ -675,6 +677,7 @@ public class Facade {
 		    str[1]="<tr class=\'odd\'";
 		    String tmp="";
 		    int a=0;
+		    if (line==null)return arrl;
 		    while(line.startsWith(str[0])||line.startsWith(str[1])) {
 		    	if(line.startsWith(str[a]))tmp+=line;
 		    	else {

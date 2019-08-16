@@ -76,7 +76,7 @@ class Block{
 			if(e.text.contains("Español")||e.text.contains("Ingles")||e.text.contains("Inglés"))continue;
 			while(e.text.length()>0&&e.text.charAt(0)==' ')e.text=e.text.substring(1);
 			if(e.type.equals("FrWrd"))eng=e.text;
-			else if(e.type.equals("ToWrd"))tr.add(e.text.substring(0,1).toUpperCase()+e.text.substring(1).toLowerCase());
+			else if(e.type.equals("ToWrd"))tr.add(e.text);
 			else if(e.type.equals("FrEx")) ex_eng.add(e.text);
 			else if(e.type.equals("ToEx")) ex_spa.add(e.text);
 			else if(e.type.equals("use")) use="("+e.text+")";

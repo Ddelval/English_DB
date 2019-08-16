@@ -3,6 +3,7 @@ package fX;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.StringTokenizer;
 import java.util.Vector;
 
 import javafx.application.Application;
@@ -16,6 +17,8 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -73,7 +76,7 @@ TextField ex_eng;
 public static VBox tot;
 public static SplitPane s;
 public static GridPane grid;
-private final double I_w=650;
+private final double I_w=800;
 private final double I_h=860;
 
 
@@ -102,6 +105,11 @@ private TextField sql_query;
 private CheckBox sql_w_result;
 private Button execute;
 private TextArea sql_result;
+//Console
+private TextField g_query;
+private CheckBox g_w_result;
+private Button g_execute;
+private static TextArea g_result;
 //Adjust
 private Button resetEtoS;
 private final double A_w=500;
@@ -297,7 +305,22 @@ public static ConfigData cfd;
 			}
 			
 		};
-		eng.setOnKeyPressed(evhand);
+		eng.setOnKeyPressed(e->{
+			if(e.getCode()==KeyCode.ENTER)add.requestFocus();
+			if(e.getCode()==KeyCode.TAB) {
+				if(scrp.getContent()!=null) {
+					VBox fl =(VBox)scrp.getContent();
+					if(fl!=null&&fl.getChildren()!=null&&fl.getChildren().size()>1) {
+						FlowPane f= (FlowPane)fl.getChildren().get(1);
+						if(f!=null&&f.getChildren()!=null&&f.getChildren().size()>0) {
+							e.consume();
+							f.getChildren().get(0).requestFocus();
+						}
+						
+					}
+				}
+			}
+		});
 		
 		engExamp1 = new TextField();
 		engExamp2 = new TextField();
@@ -305,6 +328,7 @@ public static ConfigData cfd;
 		espExamp1 = new TextField();
 		espExamp2 = new TextField();
 		espExamp3 = new TextField();
+		
 		
 		engExamp1.setFont(textf);
 		engExamp2.setFont(textf);
@@ -496,9 +520,9 @@ public static ConfigData cfd;
 		Text t = new Text("WR suggestions");
 		t.setFont(MainWindow.head);
 		t2.setFont(MainWindow.head);
-		FlowPane a= new FlowPane(t);
+		VBox a= new VBox(t);
 		a.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
-		FlowPane a2= new FlowPane(t2);
+		VBox a2= new VBox(t2);
 		a2.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		scrp=new ScrollPane(a);
 		scrplocal= new ScrollPane(a2);
@@ -536,12 +560,42 @@ public static ConfigData cfd;
 			HBox.setMargin(autoc[i], new Insets(0,10*scale,0,0));
 			res.getChildren().add(autoc[i]);
 		}
+		if(elements.size()>0) {
+			autoc[0].setOnKeyPressed(e->{
+				if(e.isShiftDown()&&e.getCode()==KeyCode.TAB) {
+					eng.requestFocus();
+					eng.positionCaret(eng.getText().length());
+					e.consume();
+				}
+			});
+		}
 		whole.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		res.prefWidthProperty().bind(tot.widthProperty().subtract(grid.widthProperty()).subtract(30));
 	    s.setDividerPosition(0, 0.65);
 	    VBox.setMargin(res, new Insets(10*scale,0,0,0));
 	    whole.getChildren().addAll(t,res);
+	    
+	    int foc=-1;
+	    if(scrp.getContent()!=null) {
+			VBox fl =(VBox)scrp.getContent();
+			if(fl!=null&&fl.getChildren()!=null&&fl.getChildren().size()>1) {
+				FlowPane f= (FlowPane)fl.getChildren().get(1);
+				if(f!=null&&f.getChildren()!=null&&f.getChildren().size()>0) {
+					for(int i=0;i<f.getChildren().size();++i) {
+						if(f.getChildren().get(i).isFocused()) {
+							foc=i;
+							break;
+						}
+					}
+				}
+				
+			}
+		}
+	    
 		scrp.setContent(whole);
+		if(foc!=-1) {
+	    	autoc[Math.min(foc, elements.size())].requestFocus();
+	    }
 	}
 	public static void setLocalsuggestions(ArrayList<Ficha>candidates) {
 		VBox whole= new VBox();
@@ -1381,7 +1435,7 @@ public static ConfigData cfd;
 		tit.setFont(MainWindow.tit);
 		tit.setFontSmoothingType(FontSmoothingType.LCD);
 		tit.setTextAlignment(TextAlignment.LEFT);
-		
+		TabPane tp = new TabPane(); 
 		//SQL console
 		
 		
@@ -1406,7 +1460,7 @@ public static ConfigData cfd;
 		GridPane.setFillWidth(sql_query, true);
 		GridPane.setFillWidth(execute, true);
 		GridPane.setFillWidth(sql_result, true);
-		TabPane tp = new TabPane();
+
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
 		grid.setAlignment(Pos.TOP_CENTER);
@@ -1420,6 +1474,51 @@ public static ConfigData cfd;
 		consol.setClosable(false);
 		consol.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
 		consol.setContent(grid);
+		
+		
+		
+		//General console
+		
+		g_query= new TextField();
+		g_query.setFont(textf);
+		g_query.prefWidthProperty().bind(primaryStage.widthProperty().subtract(150*scale));
+		g_query.setPromptText("Enter the command");
+	
+		g_result = new TextArea("");
+		g_result.setFont(textf);
+		g_result.minWidthProperty().bind(primaryStage.widthProperty().subtract(30*scale));
+		g_result.minHeightProperty().bind(primaryStage.heightProperty().subtract(250*scale));
+
+		g_execute = new Button("Execute");
+		g_execute.setFont(MainWindow.text);
+		g_execute.setOnAction( (ActionEvent e)->{
+			CommandProcessor c= new CommandProcessor(g_query.getText());
+			c.start();
+		});
+		
+		GridPane.setFillWidth(g_query, true);
+		GridPane.setFillWidth(execute, true);
+		GridPane.setFillWidth(g_result, true);
+		
+		GridPane grid2 = new GridPane();
+		grid2.setPadding(new Insets(10*scale,10*scale,10*scale,10*scale));
+		grid2.setAlignment(Pos.TOP_CENTER);
+		grid2.setHgap(10*scale);
+		grid2.setVgap(10*scale);
+		grid2.add   (g_query, 0, 0, 2, 1);
+
+		grid2.add     (g_execute, 0, 1, 2, 1);
+		grid2.add  (g_result, 0, 2, 2, 1);
+		Tab consol2 = new Tab("Console");
+		consol2.setClosable(false);
+		consol2.setStyle("-fx-font-size:"+text.getSize()*0.8+"px;");
+		consol2.setContent(grid2);
+		
+		
+		
+		
+		
+		
 		
 		//Settings
 		Tab adjust = new Tab ("Other");
@@ -1454,12 +1553,14 @@ public static ConfigData cfd;
 		Text t2 = new Text ("Retrocompatibility");
 		t2.setFont(head);
 		t2.setTextAlignment(TextAlignment.LEFT);
-		CheckBox cbb1= new CheckBox("Insert existing use data into the examples");
-		cbb1.setSelected(MainWindow.cfd.convertUses);
-		cbb1.setAllowIndeterminate(false);
+		Button cbb1= new Button("Insert existing use data into the examples");
+	
 		cbb1.setOnAction(e->{
-			MainWindow.cfd.update_convertUses(cbb1.isSelected());
-			MainWindow.cfd.convertUses=cbb1.isSelected();
+			MainWindow.cfd.update_convertUses(true);
+			ArrayList<Ficha> all=Facade.getAll(); 
+			for(Ficha a:all) Facade.updateFicha(a);
+			MainWindow.cfd.update_convertUses(false);
+			mssgWindow("Update successful");
 		});
 		cbb1.setFont(text);
 		GridPane g = new GridPane();
@@ -1767,11 +1868,12 @@ public static ConfigData cfd;
 		
 		
 		consol.getContent().setId("tabborder");
+		consol2.getContent().setId("tabborder");
 		backup.getContent().setId("tabborder");
 		voice.getContent().setId("tabborder");
 		adjust.getContent().setId("tabborder");
 		network.getContent().setId("tabborder");
-		tp.getTabs().addAll(consol,backup,voice,network,adjust);
+		tp.getTabs().addAll(consol2,consol,backup,voice,network,adjust);
 		VBox vb= new VBox();
 		vb.setAlignment(Pos.TOP_CENTER);
 		VBox.setVgrow(tp, Priority.ALWAYS);
@@ -1829,7 +1931,16 @@ public static ConfigData cfd;
 		}
 	}
 	
-	
+	public static void addCommandout(String s) {
+		StringTokenizer st= new StringTokenizer(g_result.getText(),"\n");
+		int lines = st.countTokens();
+		if(lines>10) {
+			g_result.setText(g_result.getText().substring(g_result.getText().indexOf('\n')+1)+"\n"+s);
+		}
+		else {
+			g_result.setText(g_result.getText()+"\n"+s);
+		}
+	}
 	
 	public static void prepareInput(Ficha f) {
 		eng.setText(f.getEnglish());
