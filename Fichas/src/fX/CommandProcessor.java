@@ -123,7 +123,7 @@ public class CommandProcessor extends Thread {
 			b=Block.filter(word, b);
 			if(b.size()<1)return -2;
 			
-			for(int i=1;i<Math.min(4,b.size());++i) {
+			for(int i=0;i<Math.min(4,b.size());++i) {
 				Example ex= new Example(b.get(i).ex_eng.get(0),b.get(i).ex_spa.get(0),b.get(i).tr.get(0));
 				ex.setEnglish(b.get(i).eng);
 				ex.setUse(b.get(i).use);
