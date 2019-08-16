@@ -8,7 +8,7 @@ public class FindLocal {
 	private static FindLocal_run th;
 	public static void find(String s) {
 		if(th!=null&&th.isAlive()) {
-			System.out.println("Interrupting-2");
+			//System.out.println("Interrupting-2");
 			th.interrupt();
 			try {
 				th.join();

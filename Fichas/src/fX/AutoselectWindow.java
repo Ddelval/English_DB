@@ -239,7 +239,7 @@ public class AutoselectWindow extends Stage {
 		sc.getStylesheets().add("Data.css");
 		this.setScene(sc);
 		this.show();
-		
+		finish.requestFocus();
 		
 		
 	}

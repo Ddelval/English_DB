@@ -88,6 +88,7 @@ public class Facade {
 	 * @return
 	 */
 	public static String execute (String sql, boolean result) {
+		FindLocal_run.refresh=true;
 		String s="";
 		int colcount;
 		Connection con = UConnection.getConnection();
@@ -316,6 +317,7 @@ public class Facade {
 		return FXCollections.observableList(dat);
 	}
 	public static void insertAll(ArrayList<Ficha> arrl) {
+		FindLocal_run.refresh=true;
 		Connection con = UConnection.getConnection();
 		try {
 			for(int i=0;i<arrl.size();i++) {
@@ -332,6 +334,7 @@ public class Facade {
 		}
 	} 
 	public static void addDB(Ficha f) {
+		FindLocal_run.refresh=true;
 		Connection con = UConnection.getConnection();
 		try {
 			if(f.getExamplesString().length()>10000) {
@@ -421,6 +424,7 @@ public class Facade {
 		}
 	}
 	public static void updateFicha(Ficha f) {
+		FindLocal_run.refresh=true;
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
 		String sql="UPDATE log SET eng='"+f.getEnglish().replace("'", "%&/%")+"', Examp='"+f.getExamplesString().replace("'", "%&/%")
@@ -484,6 +488,7 @@ public class Facade {
 		return b;		
 	}
 	public static void eliminateFicha(Vector <ObservableFicha> list) {
+		FindLocal_run.refresh=true;
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
 		String sql;
@@ -502,6 +507,7 @@ public class Facade {
 		
 	}
 	public static void eliminateFicha(int index) {
+		FindLocal_run.refresh=true;
 		Connection con = UConnection.getConnection();
 		PreparedStatement ps;
 		String sql="DELETE FROM log WHERE count="+Integer.toString(index);

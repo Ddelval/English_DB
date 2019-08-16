@@ -8,11 +8,15 @@ import javafx.application.Platform;
 
 public class FindLocal_run extends Thread {
 	private String text;
+	public static volatile boolean refresh=false;
 	private final int N=10; //Number of elements
 	public FindLocal_run(String a) {
 		text=a.toLowerCase();
 	}
 	public void run() {
+		if (FindLocal.his==null)FindLocal.his=new Stack<LocalHistory>();
+		if(refresh)FindLocal.his.clear();
+		
 		if (FindLocal.his==null||FindLocal.his.empty()) {
 			if(FindLocal.his==null)FindLocal.his=new Stack<LocalHistory>();
 			ArrayList<Ficha> f= Facade.getAll();
